@@ -1,0 +1,136 @@
+// Application
+"application.name" = "CS:GO Configs";
+
+// Players
+"players.title" = "Игроки";
+
+// Teams
+"teams.title" = "Команды";
+
+// Favorites
+"favorites.title" = "Избранные";
+
+// News
+"news.title" = "Новости";
+
+// Map events
+"map_events.title" = "Карта событий";
+
+// Skins price
+"skins_price.title" = "Цены скинов";
+
+// About
+"app_tools.title" = "О приложении";
+
+
+
+
+
+
+
+
+
+
+
+// AppSectionTitles
+"kPlayerNavigationTitle" = "Игроки";
+"kTeamsNavigationTitle" = "Команды";
+"kFavoritePlayerNavigationTitle" = "Избранные";
+"kNewsNavigationTitle" = "Новости";
+"kMapEventsNavigationTitle" = "Карта событий";
+"kSkinPriceNavigationTitle" = "Цены скинов";
+"kAppToolsNavigationTitle" = "О приложении";
+
+// Banner
+
+"kTodayTitle" = "Сегодня был обнавлен CFG";
+"kYesterdayTitle" = "Вчера был обнавлен CFG";
+"kDaysAgoTitle" = "дней назад был обновлен CFG";
+"kWasUpdateCFGTitle" = "был обнавлен CFG";
+
+// NotificationMessage
+
+"kOfflineModeNotificationText" = "Вы работаете в режиме оффлайн";
+"kNoDataNotificationText" = "У вас нету данных в кэше";
+
+// MapEvents
+
+"kPrizePool" = "Призовой фонд";
+"kDate" = "Дата";
+"kLocation" = "Локация";
+"kDescription" = "Детальные";
+
+// Errors
+
+"kSomeWentWrongText" = "Что то пошло не так";
+
+// PlayerDescription
+
+"kPlayerDescriptionNavigationTitle" = "Описание";
+"kTeamLabel" = "Команда";
+"kCountryLabel" = "Страна";
+"kMoreInfoButton" = "Больше информации";
+"kHardwareSectionTitle" = "Девайсы";
+"kGameSectionTitle" = "Иговые настройки";
+"kDownloadButton" = "Скачать";
+"kMouseCellLabel" = "Мышь";
+"kMousePadCellLabel" = "Коврик";
+"kMonitorCellLabel" = "Монитор";
+"kKeyboardCellLabel" = "Клавиатура";
+"kHeadsetCellLabel" = "Наушники";
+"kEffectiveDPICellLabel" = "DPI";
+"kGameResoulutionCellLabel" = "Разришение";
+"kWindowsSensitivyCellLabel" = "Чувствительность";
+"kPollingRateCellLabel" = "Частота";
+"kPlayerAddedToFavoritesText" = "Игрок успешно добавлен в \"Избранные\"";
+
+// Email
+
+"kNoEmailAccountMessageText" = "Нет учетной записи электронной почты на устройстве";
+"kEmailDownloadSubjectText" = "cfg файл от CS:GO Configs";
+"kEmailBodyTextPart1" = "Твой .cfg файл ждет тебя! Кликай на ссылку и качай конфиг от";
+"kEmailBodyTextPart2" = "Скачать";
+"kEmailBodyTextPart3" = "Спасибо";
+
+// FavoritePlayers
+
+"kNoFavoritePlayersLabel" = "У вас нет любимых игроков";
+
+// NewsDescription
+
+"kPostDateLabel" = "Время";
+"kAuthorLabel" = "Автор";
+
+// Skins
+
+"kSkinNameCell" = "Название";
+"kSkinExteriorCell" = "Состояние";
+"kSkinPriceCell" = "Цена";
+
+"kConnectedText" = "Вы подключены, ждите обновления";
+"kNoConnectionText" = "Вы отключены";
+
+// Tutorial
+
+"kSkipButton" = "Пропустить";
+
+// Tutorial
+
+"kPlayerText" = "Look for your player in the \"Players\" section";
+"kTeamsText" = "Look for your player in the \"Teams\" section";
+"kFavoritesText" = "Add favorite players for easy access";
+"kNewsTutorialText" = "Keep up to date with the latest news in the world of CS:GO";
+"kEventsTutorialText" = "Easily view the next tournament on the map";
+"kSkinPriceTutorialText" = "Watch for updates skins prices";
+
+// AppTools
+
+"kFAQNavigationTitle" = "FAQ";
+"kTutorialCell" = "Посмотреть туториал";
+"kClearCacheCell" = "Очистить кэш";
+"kDonateSteamCell" = "Донат в Steam";
+"kContactWithDeveloperCell" = "Написать разработчику";
+"kShareWithFriendsCell" = "Поделится с друзьями";
+"kRateAppCell" = "Оценить приложение в App Store";
+"kNoCasheCell" = "Пусто";
+"kShareAppText" = "С этим приложениям ты всегда будешь в курсе последних обновлений";

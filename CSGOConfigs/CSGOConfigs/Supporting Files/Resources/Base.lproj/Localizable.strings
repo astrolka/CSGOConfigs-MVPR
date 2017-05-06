@@ -1,0 +1,106 @@
+"kApplicationName" = "CS:GO Configs";
+
+// AppSectionTitles
+
+"kPlayerNavigationTitle" = "Payers";
+"kTeamsNavigationTitle" = "Teams";
+"kFavoritePlayerNavigationTitle" = "Favorite";
+"kNewsNavigationTitle" = "News";
+"kMapEventsNavigationTitle" = "Map Events";
+"kSkinPriceNavigationTitle" = "Skinks price";
+"kAppToolsNavigationTitle" = "About app";
+
+// Banner
+
+"kTodayTitle" = "Today CGF was updated";
+"kYesterdayTitle" = "Yesterday CFG was updated";
+"kDaysAgoTitle" = "days ago CFG was updated";
+"kWasUpdateCFGTitle" = "was updated CFG";
+
+// NotificationMessage
+
+"kOfflineModeNotificationText" = "You are working in offline mode";
+"kNoDataNotificationText" = "You don't have any cashe data";
+
+// MapEvents
+
+"kPrizePool" = "Prize pool";
+"kDate" = "Date";
+"kLocation" = "Location";
+"kDescription" = "Description";
+
+// Errors
+
+"kSomeWentWrongText" = "Oops, something went wrong";
+
+// PlayerDescription
+
+"kPlayerDescriptionNavigationTitle" = "Description";
+"kTeamLabel" = "Team";
+"kCountryLabel" = "Country";
+"kMoreInfoButton" = "More information";
+"kHardwareSectionTitle" = "Hardware";
+"kGameSectionTitle" = "Game settings";
+"kDownloadButton" = "Download";
+"kMouseCellLabel" = "Mouse";
+"kMousePadCellLabel" = "Mousepad";
+"kMonitorCellLabel" = "Monitor";
+"kKeyboardCellLabel" = "Keyboard";
+"kHeadsetCellLabel" = "Headset";
+"kEffectiveDPICellLabel" = "DPI";
+"kGameResoulutionCellLabel" = "Game resolution";
+"kWindowsSensitivyCellLabel" = "Windows sensitivity";
+"kPollingRateCellLabel" = "Polling";
+
+"kPlayerAddedToFavoritesText" = "The player successfully added to \"Favorites\"";
+
+// Email
+
+"kNoEmailAccountMessageText" = "No email account on your device";
+"kEmailDownloadSubjectText" = "cfg file by CS:GO Configs";
+"kEmailBodyTextPart1" = "Your .cfg file is waiting for you! Click on the link and download config b";
+"kEmailBodyTextPart2" = "Download";
+"kEmailBodyTextPart3" = "Thanks";
+
+// FavoritePlayers
+
+"kNoFavoritePlayersLabel" = "You don't have favorite players";
+
+// NewsDescription
+
+"kPostDateLabel" = "Time";
+"kAuthorLabel" = "Author";
+
+// Skins
+
+"kSkinNameCell" = "Name";
+"kSkinExteriorCell" = "Exterior";
+"kSkinPriceCell" = "Price";
+
+"kConnectedText" = "You are connected, wait for the updates";
+"kNoConnectionText" = "You are disconnected";
+
+// Tutorial
+
+"kSkipButton" = "Skip";
+
+// Tutorial
+
+"kPlayerText" = "Look for your player in the \"Players\" section";
+"kTeamsText" = "Look for your player in the \"Teams\" section";
+"kFavoritesText" = "Add favorite players for easy access";
+"kNewsTutorialText" = "Keep up to date with the latest news in the world of CS:GO";
+"kEventsTutorialText" = "Easily view the next tournament on the map";
+"kSkinPriceTutorialText" = "Watch for updates skins prices";
+
+// AppTools
+
+"kFAQNavigationTitle" = "FAQ";
+"kTutorialCell" = "Watch tutorial";
+"kClearCacheCell" = "Clear cache";
+"kDonateSteamCell" = "Donate on Steam";
+"kContactWithDeveloperCell" = "Write to developer";
+"kShareWithFriendsCell" = "Share with friends";
+"kRateAppCell" = "Rate app in App Store";
+"kNoCasheCell" = "No cache";
+"kShareAppText" = "With this app you will always be up to date with the latest updates";

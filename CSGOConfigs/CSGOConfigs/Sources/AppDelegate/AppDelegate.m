@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "CCPlayersRouter.h"
+#import "CCSideMenuRouter.h"
 
 @interface AppDelegate ()
 
@@ -26,12 +26,12 @@
     // SAVE CONTEXT
 }
 
-#pragma mark -Private
+#pragma mark - Private
 
 - (void)navigationSetup {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    CCPlayersRouter *playersRouter = [[CCPlayersRouter alloc] init];
-    [playersRouter goToPlayersViewControllerFromWindow:self.window];
+    CCSideMenuRouter *sideMenuRouter = [[CCSideMenuRouter alloc] init];
+    [sideMenuRouter goToAppFromWindow:self.window];
 }
 
 @end
