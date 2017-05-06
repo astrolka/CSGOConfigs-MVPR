@@ -8,10 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		404948A75EF559A68F9349F0 /* libPods-CSGOConfigs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5EC4207C582A5EB77824E1 /* libPods-CSGOConfigs.a */; };
+		A618AD081EBD0C3A00AF6E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A618ACE11EBD0C3A00AF6E1D /* AppDelegate.m */; };
+		A618AD091EBD0C3A00AF6E1D /* CCCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = A618ACE81EBD0C3A00AF6E1D /* CCCoreDataService.m */; };
+		A618AD0A1EBD0C3A00AF6E1D /* CSGOConfigs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A618ACE91EBD0C3A00AF6E1D /* CSGOConfigs.xcdatamodeld */; };
+		A618AD0B1EBD0C3A00AF6E1D /* CCParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A618ACF01EBD0C3A00AF6E1D /* CCParentViewController.m */; };
+		A618AD0C1EBD0C3A00AF6E1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A618ACF21EBD0C3A00AF6E1D /* LaunchScreen.storyboard */; };
+		A618AD0D1EBD0C3B00AF6E1D /* CCPlayersPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A618ACFB1EBD0C3A00AF6E1D /* CCPlayersPresenter.m */; };
+		A618AD0E1EBD0C3B00AF6E1D /* CCPlayersRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A618ACFE1EBD0C3A00AF6E1D /* CCPlayersRouter.m */; };
+		A618AD0F1EBD0C3B00AF6E1D /* CCPlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A618AD021EBD0C3A00AF6E1D /* CCPlayersViewController.m */; };
+		A618AD101EBD0C3B00AF6E1D /* CCSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A618AD071EBD0C3A00AF6E1D /* CCSideMenuViewController.m */; };
+		A618AD141EBD0C7D00AF6E1D /* CCSideMenuPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A618AD131EBD0C7D00AF6E1D /* CCSideMenuPresenter.m */; };
+		A618AD181EBD0C9700AF6E1D /* CCSideMenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A618AD171EBD0C9700AF6E1D /* CCSideMenuRouter.m */; };
 		A642CB1D1EBA491B00BFD470 /* CSGOConfigsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */; };
-		A642CB401EBA4C5100BFD470 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB2B1EBA4C5100BFD470 /* AppDelegate.m */; };
-		A642CB411EBA4C5100BFD470 /* CSGOConfigs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A642CB301EBA4C5100BFD470 /* CSGOConfigs.xcdatamodeld */; };
-		A642CB421EBA4C5100BFD470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A642CB391EBA4C5100BFD470 /* LaunchScreen.storyboard */; };
 		A642CB431EBA4C5100BFD470 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A642CB3B1EBA4C5100BFD470 /* Info.plist */; };
 		A642CB441EBA4C5100BFD470 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB3C1EBA4C5100BFD470 /* main.m */; };
 		A642CB451EBA4C5100BFD470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A642CB3F1EBA4C5100BFD470 /* Assets.xcassets */; };
@@ -30,14 +38,36 @@
 /* Begin PBXFileReference section */
 		2DECB3A2F0C8EE77851075B8 /* Pods-CSGOConfigs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOConfigs.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSGOConfigs/Pods-CSGOConfigs.release.xcconfig"; sourceTree = "<group>"; };
 		80CC47E941882B41B55784CE /* Pods-CSGOConfigs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOConfigs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSGOConfigs/Pods-CSGOConfigs.debug.xcconfig"; sourceTree = "<group>"; };
+		A618ACE01EBD0C3A00AF6E1D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A618ACE11EBD0C3A00AF6E1D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A618ACE61EBD0C3A00AF6E1D /* CCCoreDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCoreDataProtocol.h; sourceTree = "<group>"; };
+		A618ACE71EBD0C3A00AF6E1D /* CCCoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCoreDataService.h; sourceTree = "<group>"; };
+		A618ACE81EBD0C3A00AF6E1D /* CCCoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCoreDataService.m; sourceTree = "<group>"; };
+		A618ACEA1EBD0C3A00AF6E1D /* CSGOConfigs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSGOConfigs.xcdatamodel; sourceTree = "<group>"; };
+		A618ACEF1EBD0C3A00AF6E1D /* CCParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCParentViewController.h; sourceTree = "<group>"; };
+		A618ACF01EBD0C3A00AF6E1D /* CCParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCParentViewController.m; sourceTree = "<group>"; };
+		A618ACF11EBD0C3A00AF6E1D /* CCParentViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCParentViewProtocol.h; sourceTree = "<group>"; };
+		A618ACF21EBD0C3A00AF6E1D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A618ACFA1EBD0C3A00AF6E1D /* CCPlayersPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersPresenter.h; sourceTree = "<group>"; };
+		A618ACFB1EBD0C3A00AF6E1D /* CCPlayersPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersPresenter.m; sourceTree = "<group>"; };
+		A618ACFD1EBD0C3A00AF6E1D /* CCPlayersRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersRouter.h; sourceTree = "<group>"; };
+		A618ACFE1EBD0C3A00AF6E1D /* CCPlayersRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersRouter.m; sourceTree = "<group>"; };
+		A618ACFF1EBD0C3A00AF6E1D /* CCPlayersRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersRouterProtocol.h; sourceTree = "<group>"; };
+		A618AD011EBD0C3A00AF6E1D /* CCPlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersViewController.h; sourceTree = "<group>"; };
+		A618AD021EBD0C3A00AF6E1D /* CCPlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersViewController.m; sourceTree = "<group>"; };
+		A618AD031EBD0C3A00AF6E1D /* CCPlayersViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersViewProtocol.h; sourceTree = "<group>"; };
+		A618AD061EBD0C3A00AF6E1D /* CCSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSideMenuViewController.h; sourceTree = "<group>"; };
+		A618AD071EBD0C3A00AF6E1D /* CCSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSideMenuViewController.m; sourceTree = "<group>"; };
+		A618AD121EBD0C7D00AF6E1D /* CCSideMenuPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSideMenuPresenter.h; path = SideMenuPresenter/CCSideMenuPresenter.h; sourceTree = "<group>"; };
+		A618AD131EBD0C7D00AF6E1D /* CCSideMenuPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSideMenuPresenter.m; path = SideMenuPresenter/CCSideMenuPresenter.m; sourceTree = "<group>"; };
+		A618AD161EBD0C9700AF6E1D /* CCSideMenuRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSideMenuRouter.h; path = SideMenuRouter/CCSideMenuRouter.h; sourceTree = "<group>"; };
+		A618AD171EBD0C9700AF6E1D /* CCSideMenuRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSideMenuRouter.m; path = SideMenuRouter/CCSideMenuRouter.m; sourceTree = "<group>"; };
+		A618AD191EBD0CC300AF6E1D /* CCSideMenuViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSideMenuViewProtocol.h; sourceTree = "<group>"; };
+		A618AD1A1EBD0CDA00AF6E1D /* CCSideMenuRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSideMenuRouterProtocol.h; path = SideMenuRouter/CCSideMenuRouterProtocol.h; sourceTree = "<group>"; };
 		A642CAFC1EBA491B00BFD470 /* CSGOConfigs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGOConfigs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642CB181EBA491B00BFD470 /* CSGOConfigsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOConfigsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGOConfigsTests.m; sourceTree = "<group>"; };
 		A642CB1E1EBA491B00BFD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A642CB2A1EBA4C5100BFD470 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A642CB2B1EBA4C5100BFD470 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A642CB311EBA4C5100BFD470 /* CSGOConfigs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSGOConfigs.xcdatamodel; sourceTree = "<group>"; };
-		A642CB391EBA4C5100BFD470 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A642CB3B1EBA4C5100BFD470 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A642CB3C1EBA4C5100BFD470 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A642CB3F1EBA4C5100BFD470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +102,215 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A618ACDE1EBD0C3A00AF6E1D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACDF1EBD0C3A00AF6E1D /* AppDelegate */,
+				A618ACE21EBD0C3A00AF6E1D /* Categories */,
+				A618ACE31EBD0C3A00AF6E1D /* Core */,
+				A618ACEB1EBD0C3A00AF6E1D /* Libaries */,
+				A618ACEC1EBD0C3A00AF6E1D /* Screens */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A618ACDF1EBD0C3A00AF6E1D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACE01EBD0C3A00AF6E1D /* AppDelegate.h */,
+				A618ACE11EBD0C3A00AF6E1D /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A618ACE21EBD0C3A00AF6E1D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A618ACE31EBD0C3A00AF6E1D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACE41EBD0C3A00AF6E1D /* Services */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A618ACE41EBD0C3A00AF6E1D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACE51EBD0C3A00AF6E1D /* CoreDataService */,
+				A618ACE91EBD0C3A00AF6E1D /* CSGOConfigs.xcdatamodeld */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A618ACE51EBD0C3A00AF6E1D /* CoreDataService */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACE61EBD0C3A00AF6E1D /* CCCoreDataProtocol.h */,
+				A618ACE71EBD0C3A00AF6E1D /* CCCoreDataService.h */,
+				A618ACE81EBD0C3A00AF6E1D /* CCCoreDataService.m */,
+			);
+			path = CoreDataService;
+			sourceTree = "<group>";
+		};
+		A618ACEB1EBD0C3A00AF6E1D /* Libaries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libaries;
+			sourceTree = "<group>";
+		};
+		A618ACEC1EBD0C3A00AF6E1D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACF81EBD0C3A00AF6E1D /* Players */,
+				A618AD041EBD0C3A00AF6E1D /* SideMenu */,
+				A618ACED1EBD0C3A00AF6E1D /* CustomViews */,
+				A618ACF31EBD0C3A00AF6E1D /* Models */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A618ACED1EBD0C3A00AF6E1D /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACEE1EBD0C3A00AF6E1D /* CCParentViewController */,
+				A618ACF21EBD0C3A00AF6E1D /* LaunchScreen.storyboard */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		A618ACEE1EBD0C3A00AF6E1D /* CCParentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACEF1EBD0C3A00AF6E1D /* CCParentViewController.h */,
+				A618ACF01EBD0C3A00AF6E1D /* CCParentViewController.m */,
+				A618ACF11EBD0C3A00AF6E1D /* CCParentViewProtocol.h */,
+			);
+			path = CCParentViewController;
+			sourceTree = "<group>";
+		};
+		A618ACF31EBD0C3A00AF6E1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACF41EBD0C3A00AF6E1D /* BaseModels */,
+				A618ACF51EBD0C3A00AF6E1D /* CoreDataModels */,
+				A618ACF61EBD0C3A00AF6E1D /* ServerModels */,
+				A618ACF71EBD0C3A00AF6E1D /* ViewModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A618ACF41EBD0C3A00AF6E1D /* BaseModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseModels;
+			sourceTree = "<group>";
+		};
+		A618ACF51EBD0C3A00AF6E1D /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		A618ACF61EBD0C3A00AF6E1D /* ServerModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServerModels;
+			sourceTree = "<group>";
+		};
+		A618ACF71EBD0C3A00AF6E1D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A618ACF81EBD0C3A00AF6E1D /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACF91EBD0C3A00AF6E1D /* PlayersPresenter */,
+				A618ACFC1EBD0C3A00AF6E1D /* PlayersRouter */,
+				A618AD001EBD0C3A00AF6E1D /* PlayersViewController */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		A618ACF91EBD0C3A00AF6E1D /* PlayersPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACFA1EBD0C3A00AF6E1D /* CCPlayersPresenter.h */,
+				A618ACFB1EBD0C3A00AF6E1D /* CCPlayersPresenter.m */,
+			);
+			path = PlayersPresenter;
+			sourceTree = "<group>";
+		};
+		A618ACFC1EBD0C3A00AF6E1D /* PlayersRouter */ = {
+			isa = PBXGroup;
+			children = (
+				A618ACFD1EBD0C3A00AF6E1D /* CCPlayersRouter.h */,
+				A618ACFE1EBD0C3A00AF6E1D /* CCPlayersRouter.m */,
+				A618ACFF1EBD0C3A00AF6E1D /* CCPlayersRouterProtocol.h */,
+			);
+			path = PlayersRouter;
+			sourceTree = "<group>";
+		};
+		A618AD001EBD0C3A00AF6E1D /* PlayersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A618AD031EBD0C3A00AF6E1D /* CCPlayersViewProtocol.h */,
+				A618AD011EBD0C3A00AF6E1D /* CCPlayersViewController.h */,
+				A618AD021EBD0C3A00AF6E1D /* CCPlayersViewController.m */,
+			);
+			path = PlayersViewController;
+			sourceTree = "<group>";
+		};
+		A618AD041EBD0C3A00AF6E1D /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A618AD151EBD0C8100AF6E1D /* SideMenuRouter */,
+				A618AD111EBD0C6300AF6E1D /* SideMenuPresenter */,
+				A618AD051EBD0C3A00AF6E1D /* SideMenuViewController */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		A618AD051EBD0C3A00AF6E1D /* SideMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A618AD191EBD0CC300AF6E1D /* CCSideMenuViewProtocol.h */,
+				A618AD061EBD0C3A00AF6E1D /* CCSideMenuViewController.h */,
+				A618AD071EBD0C3A00AF6E1D /* CCSideMenuViewController.m */,
+			);
+			path = SideMenuViewController;
+			sourceTree = "<group>";
+		};
+		A618AD111EBD0C6300AF6E1D /* SideMenuPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				A618AD121EBD0C7D00AF6E1D /* CCSideMenuPresenter.h */,
+				A618AD131EBD0C7D00AF6E1D /* CCSideMenuPresenter.m */,
+			);
+			name = SideMenuPresenter;
+			sourceTree = "<group>";
+		};
+		A618AD151EBD0C8100AF6E1D /* SideMenuRouter */ = {
+			isa = PBXGroup;
+			children = (
+				A618AD1A1EBD0CDA00AF6E1D /* CCSideMenuRouterProtocol.h */,
+				A618AD161EBD0C9700AF6E1D /* CCSideMenuRouter.h */,
+				A618AD171EBD0C9700AF6E1D /* CCSideMenuRouter.m */,
+			);
+			name = SideMenuRouter;
+			sourceTree = "<group>";
+		};
 		A642CAF31EBA491A00BFD470 = {
 			isa = PBXGroup;
 			children = (
@@ -104,117 +343,10 @@
 		A642CB271EBA4C5100BFD470 /* CSGOConfigs */ = {
 			isa = PBXGroup;
 			children = (
-				A642CB281EBA4C5100BFD470 /* Sources */,
+				A618ACDE1EBD0C3A00AF6E1D /* Sources */,
 				A642CB3A1EBA4C5100BFD470 /* Supporting Files */,
 			);
 			path = CSGOConfigs;
-			sourceTree = "<group>";
-		};
-		A642CB281EBA4C5100BFD470 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				A642CB291EBA4C5100BFD470 /* AppDelegate */,
-				A642CB2C1EBA4C5100BFD470 /* Categories */,
-				A642CB2D1EBA4C5100BFD470 /* Core */,
-				A642CB321EBA4C5100BFD470 /* Libaries */,
-				A642CB331EBA4C5100BFD470 /* VIPER Modules */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		A642CB291EBA4C5100BFD470 /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				A642CB2A1EBA4C5100BFD470 /* AppDelegate.h */,
-				A642CB2B1EBA4C5100BFD470 /* AppDelegate.m */,
-			);
-			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		A642CB2C1EBA4C5100BFD470 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		A642CB2D1EBA4C5100BFD470 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				A642CB2E1EBA4C5100BFD470 /* Services */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		A642CB2E1EBA4C5100BFD470 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				A642CB2F1EBA4C5100BFD470 /* CoreDataService */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		A642CB2F1EBA4C5100BFD470 /* CoreDataService */ = {
-			isa = PBXGroup;
-			children = (
-				A642CB301EBA4C5100BFD470 /* CSGOConfigs.xcdatamodeld */,
-			);
-			path = CoreDataService;
-			sourceTree = "<group>";
-		};
-		A642CB321EBA4C5100BFD470 /* Libaries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Libaries;
-			sourceTree = "<group>";
-		};
-		A642CB331EBA4C5100BFD470 /* VIPER Modules */ = {
-			isa = PBXGroup;
-			children = (
-				A642CB341EBA4C5100BFD470 /* Entitys */,
-				A642CB351EBA4C5100BFD470 /* Interactors */,
-				A642CB361EBA4C5100BFD470 /* Presenters */,
-				A642CB371EBA4C5100BFD470 /* Routers */,
-				A642CB381EBA4C5100BFD470 /* Views */,
-			);
-			path = "VIPER Modules";
-			sourceTree = "<group>";
-		};
-		A642CB341EBA4C5100BFD470 /* Entitys */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entitys;
-			sourceTree = "<group>";
-		};
-		A642CB351EBA4C5100BFD470 /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactors;
-			sourceTree = "<group>";
-		};
-		A642CB361EBA4C5100BFD470 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		A642CB371EBA4C5100BFD470 /* Routers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Routers;
-			sourceTree = "<group>";
-		};
-		A642CB381EBA4C5100BFD470 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A642CB391EBA4C5100BFD470 /* LaunchScreen.storyboard */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		A642CB3A1EBA4C5100BFD470 /* Supporting Files */ = {
@@ -339,9 +471,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A618AD0C1EBD0C3A00AF6E1D /* LaunchScreen.storyboard in Resources */,
 				A642CB431EBA4C5100BFD470 /* Info.plist in Resources */,
 				A642CB451EBA4C5100BFD470 /* Assets.xcassets in Resources */,
-				A642CB421EBA4C5100BFD470 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +539,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A642CB401EBA4C5100BFD470 /* AppDelegate.m in Sources */,
+				A618AD081EBD0C3A00AF6E1D /* AppDelegate.m in Sources */,
+				A618AD0F1EBD0C3B00AF6E1D /* CCPlayersViewController.m in Sources */,
+				A618AD0A1EBD0C3A00AF6E1D /* CSGOConfigs.xcdatamodeld in Sources */,
+				A618AD0B1EBD0C3A00AF6E1D /* CCParentViewController.m in Sources */,
 				A642CB441EBA4C5100BFD470 /* main.m in Sources */,
-				A642CB411EBA4C5100BFD470 /* CSGOConfigs.xcdatamodeld in Sources */,
+				A618AD091EBD0C3A00AF6E1D /* CCCoreDataService.m in Sources */,
+				A618AD141EBD0C7D00AF6E1D /* CCSideMenuPresenter.m in Sources */,
+				A618AD101EBD0C3B00AF6E1D /* CCSideMenuViewController.m in Sources */,
+				A618AD181EBD0C9700AF6E1D /* CCSideMenuRouter.m in Sources */,
+				A618AD0D1EBD0C3B00AF6E1D /* CCPlayersPresenter.m in Sources */,
+				A618AD0E1EBD0C3B00AF6E1D /* CCPlayersRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,12 +751,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A642CB301EBA4C5100BFD470 /* CSGOConfigs.xcdatamodeld */ = {
+		A618ACE91EBD0C3A00AF6E1D /* CSGOConfigs.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A642CB311EBA4C5100BFD470 /* CSGOConfigs.xcdatamodel */,
+				A618ACEA1EBD0C3A00AF6E1D /* CSGOConfigs.xcdatamodel */,
 			);
-			currentVersion = A642CB311EBA4C5100BFD470 /* CSGOConfigs.xcdatamodel */;
+			currentVersion = A618ACEA1EBD0C3A00AF6E1D /* CSGOConfigs.xcdatamodel */;
 			path = CSGOConfigs.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '07418681BDDDD9BFE81D9008A2A2E757'
+               BlueprintIdentifier = '23E8AE9D005E9BD383B2C353C8433AE7'
                BlueprintName = 'Pods-CSGOConfigs'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-CSGOConfigs.a'>

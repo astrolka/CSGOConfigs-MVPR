@@ -4,7 +4,42 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BMYScrollableNavigationBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DGActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LCAnimatedPageControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CSGOConfigs.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RESideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -12,7 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07418681BDDDD9BFE81D9008A2A2E757</key>
+		<key>23E8AE9D005E9BD383B2C353C8433AE7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F2706D536054A9E0F1610E2DF3973D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>928353533005A4198EBDA5B700D37B64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6EFAD2E4A6B800DC2A5885007B5D88C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0CB80DD71CB50FB1BA89247DF2A499C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F96A469AA9FD3F087541CD7771129E09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF6C46EC94703007BFD0087FE892F049</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,16 +1,14 @@
 //
-//  AppDelegate.h
+//  CCPlayersRouter.h
 //  CSGOConfigs
 //
 //  Created by Петрічук Олег Аркадійовіч on 03.05.17.
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "CCPlayersRouterProtocol.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface CCPlayersRouter : NSObject <CCPlayersRouterProtocol>
 
 @end
-
