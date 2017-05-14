@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AppleGuice.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>BMYScrollableNavigationBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>23E8AE9D005E9BD383B2C353C8433AE7</key>
+		<key>1C8F18174D7BF9901BC87FC46656FD78</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A883EF03AB9D7FF7D9F4936C1710041</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,7 +77,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6EFAD2E4A6B800DC2A5885007B5D88C</key>
+		<key>9DE27307CA4B68564D733FDC2276D928</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F96A469AA9FD3F087541CD7771129E09</key>
+		<key>F9328C1FA3966F4B3CD6D0F4497A52BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF6C46EC94703007BFD0087FE892F049</key>
+		<key>F96A469AA9FD3F087541CD7771129E09</key>
 		<dict>
 			<key>primary</key>
 			<true/>

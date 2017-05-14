@@ -10,13 +10,13 @@
 
 @protocol CCSideMenuRouterProtocol <NSObject>
 
-- (void)goToPlayersScreen;
+- (void)goToPlayersPreviewScreen;
 
 - (void)goToTeamsScreen;
 
 - (void)goToFavoritePlayersScreen;
 
-- (void)goToNewsScreen;
+- (void)goToNewsPreviewScreen;
 
 - (void)goToMapEventsScreen;
 

@@ -12,5 +12,8 @@ target "CSGOConfigs" do
     # UI
     pod 'DGActivityIndicatorView'
     pod 'LCAnimatedPageControl'
-    pod 'BMYScrollableNavigationBar' 
+    pod 'BMYScrollableNavigationBar'
+    
+    # DI
+    pod 'AppleGuice'
 end

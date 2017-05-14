@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AppleGuice (1.3.0)
   - BMYScrollableNavigationBar (1.0.0)
   - DGActivityIndicatorView (2.1.1)
   - LCAnimatedPageControl (1.1.0)
@@ -25,6 +26,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - AppleGuice
   - BMYScrollableNavigationBar
   - DGActivityIndicatorView
   - LCAnimatedPageControl
@@ -34,6 +36,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AppleGuice: cf5500dbc85e872d9d18135d9aecde3535396f73
   BMYScrollableNavigationBar: 7d3747c9172ccac51836438e594cdae971c6c7f5
   DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
   LCAnimatedPageControl: 2b8e3089392476aadea90bdca80564f8a6cb3468
@@ -41,6 +44,6 @@ SPEC CHECKSUMS:
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 21b9219dd7187d79fa933170b98e9b0e4ca475ba
+PODFILE CHECKSUM: 52a954313c5fb5603fd9a3575958c0a458772eb1
 
 COCOAPODS: 1.0.1

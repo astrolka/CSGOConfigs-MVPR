@@ -34,7 +34,7 @@
 - (void)didSelectAppSection:(CCSideMenuViewAppSections)appSection {
     switch (appSection) {
         case CCSideMenuViewPlayersAppSection:
-            [self.router goToPlayersScreen];
+            [self.router goToPlayersPreviewScreen];
             break;
             
         case CCSideMenuViewTeamsAppSection:
@@ -46,7 +46,7 @@
             break;
             
         case CCSideMenuViewNewsAppSection:
-            [self.router goToNewsScreen];
+            [self.router goToNewsPreviewScreen];
             break;
             
         case CCSideMenuViewMapEventsAppSection:

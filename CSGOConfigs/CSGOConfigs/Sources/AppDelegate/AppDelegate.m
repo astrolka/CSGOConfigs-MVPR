@@ -8,12 +8,20 @@
 
 #import "AppDelegate.h"
 #import "CCSideMenuRouter.h"
+#import "CCDIManager.h"
+#import "CCCoreDataServiceProtocol.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) id <CCCoreDataServiceProtocol> ioc_coreDataService;
 
 @end
 
 @implementation AppDelegate
+
++ (void)initialize {
+    [CCDIManager DISetup];
+}
 
 #pragma mark - UIApplicationDelegate
 
@@ -23,7 +31,7 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // SAVE CONTEXT
+    [self.ioc_coreDataService saveContext];
 }
 
 #pragma mark - Private

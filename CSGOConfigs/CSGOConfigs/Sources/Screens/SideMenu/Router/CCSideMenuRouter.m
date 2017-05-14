@@ -13,11 +13,11 @@
 #import "CCSideMenuPresenter.h"
 #import "RESideMenu.h"
 
-#import "CCPlayersRouter.h"
+#import "CCPlayersPreviewRouter.h"
 #import "CCAppToolsRouter.h"
 #import "CCFavoritePlayersRouter.h"
 #import "CCMapEventsRouter.h"
-#import "CCNewsRouter.h"
+#import "CCNewsPreviewRouter.h"
 #import "CCSkinsPriceRouter.h"
 #import "CCTeamsRouter.h"
 
@@ -35,8 +35,8 @@
 - (void)goToAppFromWindow:(UIWindow *)window {
     NSParameterAssert(window);
     
-    CCPlayersRouter *playersRouter = [[CCPlayersRouter alloc] init];
-    id <CCPlayersViewProtocol> playersView = [playersRouter buildPlayersModule];
+    CCPlayersPreviewRouter *playersRouter = [[CCPlayersPreviewRouter alloc] init];
+    id <CCPlayersPreviewViewProtocol> playersView = [playersRouter buildPlayersPreviewModule];
     self.sideMenuView = [self buildSideMenuModule];
     
     self.navigationController = [[UINavigationController alloc] initWithNavigationBarClass:[BMYScrollableNavigationBar class] toolbarClass:nil];
@@ -50,9 +50,9 @@
 
 #pragma mark - CCSideMenuRouterProtocol
 
-- (void)goToPlayersScreen {
-    CCPlayersRouter *router = [[CCPlayersRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCPlayersViewProtocol> view = [router buildPlayersModule];
+- (void)goToPlayersPreviewScreen {
+    CCPlayersPreviewRouter *router = [[CCPlayersPreviewRouter alloc] initWithNavigationController:self.navigationController];
+    id <CCPlayersPreviewViewProtocol> view = [router buildPlayersPreviewModule];
     [self goToViewController:(UIViewController *)view];
 }
 
@@ -68,9 +68,9 @@
     [self goToViewController:(UIViewController *)view];
 }
 
-- (void)goToNewsScreen {
-    CCNewsRouter *router = [[CCNewsRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCNewsViewProtocol> view = [router buildNewsModule];
+- (void)goToNewsPreviewScreen {
+    CCNewsPreviewRouter *router = [[CCNewsPreviewRouter alloc] initWithNavigationController:self.navigationController];
+    id <CCNewsPreviewViewProtocol> view = [router buildNewsPreviewModule];
     [self goToViewController:(UIViewController *)view];
 }
 
