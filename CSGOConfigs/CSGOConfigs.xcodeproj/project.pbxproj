@@ -1029,8 +1029,8 @@
 		A650F77E1EC8B699004BECC1 /* ServerModels */ = {
 			isa = PBXGroup;
 			children = (
-				A650F77F1EC8B699004BECC1 /* BannerServerModel */,
 				A650F7821EC8B699004BECC1 /* CCServerModelProtocol.h */,
+				A650F77F1EC8B699004BECC1 /* BannerServerModel */,
 				A650F7831EC8B699004BECC1 /* EventServerModel */,
 				A650F7861EC8B699004BECC1 /* News */,
 				A650F7901EC8B699004BECC1 /* Player */,
