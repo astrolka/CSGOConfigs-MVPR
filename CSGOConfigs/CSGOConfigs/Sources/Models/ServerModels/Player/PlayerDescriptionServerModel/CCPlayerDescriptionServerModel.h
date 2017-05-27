@@ -36,6 +36,6 @@
 @property (nonatomic, strong, readonly) NSString *windowsSensitivity;
 @property (nonatomic, strong, readonly) NSString *pollingRate;
 
-@property (nonatomic, strong, readonly) NSURL * downloadURL;
+@property (nonatomic, strong, readonly) NSURL *downloadURL;
 
 @end

@@ -2,13 +2,13 @@
 //  CCPlayerPreviewCoreDataModel+CoreDataClass.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
-@class CCPlayerPreviewServerModel;
+#import <CoreData/NSManagedObject.h>
+#import "CCPlayerPreviewServerModel.h"
 
 @class CCPlayerDescriptionCoreDataModel, CCTeamCoreDataModel;
 
@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CCPlayerPreviewCoreDataModel : NSManagedObject
 
-- (void)updateWithServerModel:(CCPlayerPreviewServerModel *)playerPreviewServerModel andPlayerDescriptionCoreDataModel:(CCPlayerDescriptionCoreDataModel *)playerDescriptionCoreDataModel;
+- (void)updateWithServerModel:(CCPlayerPreviewServerModel *)serverModel andPlayerDescriptionCoreDataModel:(CCPlayerDescriptionCoreDataModel *)playerDescriptionCoreDataModel;
 
-- (void)updateWithServerModel:(CCPlayerPreviewServerModel *)playerPreviewServerModel;
+- (void)updateWithServerModel:(CCPlayerPreviewServerModel *)serverModel;
 
 @end
 

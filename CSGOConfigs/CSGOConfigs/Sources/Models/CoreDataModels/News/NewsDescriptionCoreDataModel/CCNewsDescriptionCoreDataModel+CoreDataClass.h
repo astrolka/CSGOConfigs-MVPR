@@ -2,20 +2,21 @@
 //  CCNewsDescriptionCoreDataModel+CoreDataClass.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
-@class CCNewDescriptionContentCoreDataModel;
+#import <CoreData/NSManagedObject.h>
 @class CCNewsDescriptionServerModel;
+
+@class CCNewDescriptionContentCoreDataModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CCNewsDescriptionCoreDataModel : NSManagedObject
 
-- (void)updateWithServerModel:(CCNewsDescriptionServerModel *)newsDescriptionServerModel;
+- (void)updateWithServerModel:(CCNewsDescriptionServerModel *)serverModel;
 
 @end
 

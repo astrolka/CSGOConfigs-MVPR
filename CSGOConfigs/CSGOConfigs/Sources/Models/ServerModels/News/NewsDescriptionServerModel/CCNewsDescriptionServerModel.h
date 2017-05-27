@@ -16,7 +16,7 @@
 @property (nonatomic, strong, readonly) NSString *subtitle;
 @property (nonatomic, strong, readonly) NSDate *date;
 @property (nonatomic, strong, readonly) NSString *author;
-@property (nonatomic, strong, readonly) NSURL *moreInfoURL;
+@property (nonatomic, strong, readonly) NSURL *descriptionURL;
 
 @property (nonatomic, strong, readonly) NSArray <CCNewsDescriptionContentServerModel *> *content;
 

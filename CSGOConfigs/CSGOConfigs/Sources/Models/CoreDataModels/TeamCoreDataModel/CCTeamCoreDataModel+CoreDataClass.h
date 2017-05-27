@@ -2,21 +2,19 @@
 //  CCTeamCoreDataModel+CoreDataClass.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+#import <CoreData/NSManagedObject.h>
 @class CCTeamServerModel;
-
-@class CCPlayerPreviewCoreDataModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CCTeamCoreDataModel : NSManagedObject
 
-- (void)updateWithServerModel:(CCTeamServerModel *)teamServerModel;
+- (void)updateWithServerModel:(CCTeamServerModel *)serverModel;
 
 @end
 

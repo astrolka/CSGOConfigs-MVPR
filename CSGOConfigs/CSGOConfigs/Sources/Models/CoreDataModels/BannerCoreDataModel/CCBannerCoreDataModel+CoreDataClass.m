@@ -2,7 +2,7 @@
 //  CCBannerCoreDataModel+CoreDataClass.m
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -11,11 +11,11 @@
 
 @implementation CCBannerCoreDataModel
 
-- (void)updateWithServerModel:(CCBannerServerModel *)playerPreviewServerModel {
-    self.updateDate = playerPreviewServerModel.updateDate;
-    self.imageSize = playerPreviewServerModel.imageSize;
-    self.imageURL = playerPreviewServerModel.imageURL.absoluteString;
-    self.playerID = @(playerPreviewServerModel.playerID);
+- (void)updateWithServerModel:(CCBannerServerModel *)serverModel {
+    self.updateData = serverModel.updateDate;
+    self.imageSize = serverModel.imageSize;
+    self.imageURL = serverModel.imageURL.absoluteString;
+    self.playerID = serverModel.playerID;
 }
 
 @end

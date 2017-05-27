@@ -8,7 +8,7 @@
 
 #import "CCPlayersPreviewViewController.h"
 
-@interface CCPlayersPreviewViewController ()
+@interface CCPlayersPreviewViewController () <UITextViewDelegate>
 
 @end
 
@@ -18,7 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    double delayInSeconds = 5.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self.viewAction playersPreviewView:self didSelectPlayerAtIndex:3];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

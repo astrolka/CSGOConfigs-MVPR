@@ -2,7 +2,7 @@
 //  CCEventCoreDataModel+CoreDataClass.m
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -11,19 +11,18 @@
 
 @implementation CCEventCoreDataModel
 
-- (void)updateWithServerModel:(CCEventServerModel *)eventServerModel {
-    self.name = eventServerModel.name;
-    self.city = eventServerModel.city;
-    self.flagImageURL = eventServerModel.flagImageURL.absoluteString;
-    self.desctiptionURL = eventServerModel.desctiptionURL.absoluteString;
-    self.beginDate = eventServerModel.beginDate;
-    self.finishDate = eventServerModel.finishDate;
-    self.logoImageURL = eventServerModel.logoImageURL.absoluteString;
-    self.prizePool = eventServerModel.prizePool;
-    self.countOfTeams = @(eventServerModel.countOfTeams);
-    self.lat = @(eventServerModel.lat);
-    self.lng = @(eventServerModel.lng);
+- (void)updateWithServerModel:(CCEventServerModel *)serverModel {
+    self.name = serverModel.name;
+    self.city = serverModel.city;
+    self.flagImageURL = serverModel.flagImageURL.absoluteString;
+    self.descriptionURL = serverModel.desctiptionURL.absoluteString;
+    self.beginDate = serverModel.beginDate;
+    self.finishDate = serverModel.finishDate;
+    self.logoImageURL = serverModel.logoImageURL.absoluteString;
+    self.prizePool = serverModel.prizePool;
+    self.countOfTeams = serverModel.countOfTeams;
+    self.lat = serverModel.lat;
+    self.lng = serverModel.lng;
 }
-
 
 @end

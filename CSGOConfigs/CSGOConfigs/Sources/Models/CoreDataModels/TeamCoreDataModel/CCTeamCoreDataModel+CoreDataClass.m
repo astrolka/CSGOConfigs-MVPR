@@ -2,19 +2,20 @@
 //  CCTeamCoreDataModel+CoreDataClass.m
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
 #import "CCTeamCoreDataModel+CoreDataClass.h"
+#import "CCPlayerPreviewCoreDataModel+CoreDataClass.h"
 #import "CCTeamServerModel.h"
 
 @implementation CCTeamCoreDataModel
 
-- (void)updateWithServerModel:(CCTeamServerModel *)teamServerModel {
-    self.imageURL = teamServerModel.imageURL.absoluteString;
-    self.name = teamServerModel.name;
-    self.teamID = @(teamServerModel.teamID);
+- (void)updateWithServerModel:(CCTeamServerModel *)serverModel {
+    self.imageURL = serverModel.imageURL.absoluteString;
+    self.name = serverModel.name;
+    self.teamID = serverModel.teamID;
 }
 
 @end

@@ -2,7 +2,7 @@
 //  CCBannerCoreDataModel+CoreDataProperties.m
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -14,9 +14,9 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"CCBannerCoreDataModel"];
 }
 
-@dynamic updateDate;
 @dynamic imageSize;
 @dynamic imageURL;
 @dynamic playerID;
+@dynamic updateData;
 
 @end

@@ -14,7 +14,7 @@
 @property (nonatomic, strong, readwrite) NSString *subtitle;
 @property (nonatomic, strong, readwrite) NSDate *date;
 @property (nonatomic, strong, readwrite) NSString *author;
-@property (nonatomic, strong, readwrite) NSURL *moreInfoURL;
+@property (nonatomic, strong, readwrite) NSURL *descriptionURL;
 
 @property (nonatomic, strong, readwrite) NSArray <CCNewsDescriptionContentServerModel *> *content;
 
@@ -31,7 +31,7 @@
         self.subtitle = serverResponce[@"subtitle"];
         self.date = [NSDate dateWithTimeIntervalSince1970:[serverResponce[@"date"] doubleValue]];
         self.author = serverResponce[@"author"];
-        self.moreInfoURL = [NSURL URLWithString:serverResponce[@"link"]];
+        self.descriptionURL = [NSURL URLWithString:serverResponce[@"link"]];
         
         NSMutableArray <CCNewsDescriptionContentServerModel *> *content = [[NSMutableArray alloc] init];
         NSArray *contentResponceArray = serverResponce[@"content"];

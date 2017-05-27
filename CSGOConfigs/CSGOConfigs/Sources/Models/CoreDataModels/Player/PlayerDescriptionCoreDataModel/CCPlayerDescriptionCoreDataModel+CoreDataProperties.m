@@ -2,17 +2,13 @@
 //  CCPlayerDescriptionCoreDataModel+CoreDataProperties.m
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
 #import "CCPlayerDescriptionCoreDataModel+CoreDataProperties.h"
 
 @implementation CCPlayerDescriptionCoreDataModel (CoreDataProperties)
-
-+ (NSFetchRequest<CCPlayerDescriptionCoreDataModel *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"CCPlayerDescriptionCoreDataModel"];
-}
 
 @dynamic country;
 @dynamic downloadURL;

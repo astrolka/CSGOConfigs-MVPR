@@ -10,21 +10,19 @@
 #import "CCPlayerPreviewServerModel.h"
 #import "CCPlayerPreviewCoreDataModel+CoreDataProperties.h"
 
-NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format: "320x640"
-
 @implementation CCPlayerPreviewViewModel
 
 @end
 
-
+NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format: "320x640"
 
 @implementation CCPlayerPreviewViewModelBuilder
 
 #pragma mark - Public
 
-+ (void)buildViewModelsWithServerModels:(NSArray <CCPlayerPreviewServerModel *> *)serverModels
-                         containerWidth:(CGFloat)containerWidth
-                             viewModels:(playersDataBlock)viewModels {
++ (void)buildWithServerModels:(NSArray <CCPlayerPreviewServerModel *> *)serverModels
+               containerWidth:(CGFloat)containerWidth
+                   viewModels:(playersDataBlock)viewModels {
     
     __block NSMutableArray <CCPlayerPreviewViewModel *> *viewModelsData = [NSMutableArray new];
     
@@ -49,9 +47,9 @@ NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format
     });
 }
 
-+ (void)buildViewModelsWithCoreDataModels:(NSArray <CCPlayerPreviewCoreDataModel *> *)coreDataModels
-                           containerWidth:(CGFloat)containerWidth
-                               viewModels:(playersDataBlock)viewModels {
++ (void)buildWithCoreDataModels:(NSArray <CCPlayerPreviewCoreDataModel *> *)coreDataModels
+                 containerWidth:(CGFloat)containerWidth
+                     viewModels:(playersDataBlock)viewModels {
     
     __block NSMutableArray <CCPlayerPreviewViewModel *> *viewModelsData = [NSMutableArray new];
     
@@ -63,7 +61,7 @@ NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format
             CCPlayerPreviewViewModel *viewModel = [[CCPlayerPreviewViewModel alloc]init];
             viewModel.nickName = coreDataModel.nickName;
             viewModel.imageURL = [NSURL URLWithString:coreDataModel.imageURL];
-            viewModel.playerID = coreDataModel.playerID.integerValue;
+            viewModel.playerID = coreDataModel.playerID;
             viewModel.imageHeight = [self calculateImageHeightForImageSize:coreDataModel.imageSize containerWidth:containerWidth];
             [viewModelsData addObject:viewModel];
         }

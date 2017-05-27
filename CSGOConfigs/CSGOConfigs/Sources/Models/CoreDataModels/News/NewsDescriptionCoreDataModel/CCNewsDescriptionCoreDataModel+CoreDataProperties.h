@@ -2,7 +2,7 @@
 //  CCNewsDescriptionCoreDataModel+CoreDataProperties.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -13,12 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CCNewsDescriptionCoreDataModel (CoreDataProperties)
 
-+ (NSFetchRequest<CCNewsDescriptionCoreDataModel *> *)fetchRequest;
-
 @property (nullable, nonatomic, copy) NSString *author;
 @property (nullable, nonatomic, copy) NSDate *date;
-@property (nullable, nonatomic, copy) NSString *moreInfoURL;
-@property (nullable, nonatomic, copy) NSNumber *newsID;
+@property (nullable, nonatomic, copy) NSString *descriptionURL;
+@property (nonatomic) int64_t newsID;
 @property (nullable, nonatomic, copy) NSString *subtitle;
 @property (nullable, nonatomic, retain) NSSet<CCNewDescriptionContentCoreDataModel *> *contentNewsRelationship;
 

@@ -2,7 +2,7 @@
 //  CCEventCoreDataModel+CoreDataProperties.m
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -17,10 +17,10 @@
 @dynamic beginDate;
 @dynamic city;
 @dynamic countOfTeams;
+@dynamic descriptionURL;
 @dynamic finishDate;
 @dynamic flagImageURL;
 @dynamic lat;
-@dynamic desctiptionURL;
 @dynamic lng;
 @dynamic logoImageURL;
 @dynamic name;

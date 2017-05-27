@@ -10,6 +10,7 @@
 #import "CCSideMenuRouter.h"
 #import "CCDIManager.h"
 #import "CCCoreDataServiceProtocol.h"
+#import "CCCoreDataService.h"
 
 @interface AppDelegate ()
 

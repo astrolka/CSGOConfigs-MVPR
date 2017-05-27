@@ -2,7 +2,7 @@
 //  CCNewsDescriptionCoreDataModel+CoreDataProperties.m
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -10,13 +10,9 @@
 
 @implementation CCNewsDescriptionCoreDataModel (CoreDataProperties)
 
-+ (NSFetchRequest<CCNewsDescriptionCoreDataModel *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"CCNewsDescriptionCoreDataModel"];
-}
-
 @dynamic author;
 @dynamic date;
-@dynamic moreInfoURL;
+@dynamic descriptionURL;
 @dynamic newsID;
 @dynamic subtitle;
 @dynamic contentNewsRelationship;

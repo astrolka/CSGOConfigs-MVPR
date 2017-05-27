@@ -2,12 +2,11 @@
 //  CCNewsPreviewCoreDataModel+CoreDataProperties.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
 #import "CCNewsPreviewCoreDataModel+CoreDataClass.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<CCNewsPreviewCoreDataModel *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSString *imageURL;
-@property (nullable, nonatomic, copy) NSNumber *newsID;
+@property (nonatomic) int64_t newsID;
 @property (nullable, nonatomic, copy) NSString *title;
 
 @end

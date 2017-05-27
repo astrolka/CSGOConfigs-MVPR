@@ -26,13 +26,13 @@ typedef void(^playersDataBlock)(NSArray <CCPlayerPreviewViewModel *> *players);
 
 @interface CCPlayerPreviewViewModelBuilder : NSObject
 
-+ (void)buildViewModelsWithServerModels:(NSArray <CCPlayerPreviewServerModel *> *)serverModels
-                         containerWidth:(CGFloat)containerWidth
-                             viewModels:(playersDataBlock)viewModels;
++ (void)buildWithServerModels:(NSArray <CCPlayerPreviewServerModel *> *)serverModels
+               containerWidth:(CGFloat)containerWidth
+                   viewModels:(playersDataBlock)viewModels;
 
-+ (void)buildViewModelsWithCoreDataModels:(NSArray <CCPlayerPreviewCoreDataModel *> *)coreDataModels
-                           containerWidth:(CGFloat)containerWidth
-                               viewModels:(playersDataBlock)viewModels;
++ (void)buildWithCoreDataModels:(NSArray <CCPlayerPreviewCoreDataModel *> *)coreDataModels
+                 containerWidth:(CGFloat)containerWidth
+                     viewModels:(playersDataBlock)viewModels;
 
 @end
 

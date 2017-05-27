@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@protocol CCPlayersPreviewViewProtocol;
 
 @protocol CCPlayersPreviewViewActionProtocol <NSObject>
 
+//- (BOOL)textViewShouldBeginEditing:(UITextView *)textView;
+
+- (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectPlayerAtIndex:(NSInteger)index;
 
 @end
 

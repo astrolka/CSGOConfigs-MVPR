@@ -25,6 +25,24 @@
 @class CCNewsDescriptionServerModel;
 @class CCNewsDescriptionCoreDataModel;
 
+#import "CCEventCoreDataModel+CoreDataProperties.h"
+#import "CCPlayerPreviewCoreDataModel+CoreDataProperties.h"
+#import "CCBannerCoreDataModel+CoreDataProperties.h"
+#import "CCTeamCoreDataModel+CoreDataProperties.h"
+#import "CCNewsDescriptionCoreDataModel+CoreDataProperties.h"
+#import "CCPlayerDescriptionCoreDataModel+CoreDataProperties.h"
+#import "CCNewsPreviewCoreDataModel+CoreDataProperties.h"
+#import "CCEventServerModel.h"
+#import "CCBannerServerModel.h"
+#import "CCPlayerPreviewServerModel.h"
+#import "CCTeamServerModel.h"
+#import "CCPlayerDescriptionServerModel.h"
+#import "CCNewsPreviewServerModel.h"
+#import "CCNewsDescriptionServerModel.h"
+#import "CCNewsDescriptionCoreDataModel+CoreDataClass.h"
+#import "CCNewDescriptionContentCoreDataModel+CoreDataClass.h"
+#import "CCUserFavoritesPlayersIDCoreDataModel+CoreDataClass.h"
+
 @protocol CCCoreDataServiceProtocol <AppleGuiceInjectable>
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
@@ -56,6 +74,7 @@
 
 - (NSArray *)getUserFavoritePlayersID;
 
+- (NSArray <CCPlayerPreviewCoreDataModel *> *)getFavoritePlayersPreviewWithIDs:(NSArray *)playersIDs;
 
 #pragma mark - PlayerDescription
 

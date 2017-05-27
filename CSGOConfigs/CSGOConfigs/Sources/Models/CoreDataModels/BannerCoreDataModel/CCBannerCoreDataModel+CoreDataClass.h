@@ -2,7 +2,7 @@
 //  CCBannerCoreDataModel+CoreDataClass.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CCBannerCoreDataModel : NSManagedObject
 
-- (void)updateWithServerModel:(CCBannerServerModel *)playerPreviewServerModel;
+- (void)updateWithServerModel:(CCBannerServerModel *)serverModel;
 
 @end
 

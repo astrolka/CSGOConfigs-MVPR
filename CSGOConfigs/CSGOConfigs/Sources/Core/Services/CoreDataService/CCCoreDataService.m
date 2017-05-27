@@ -10,23 +10,6 @@
 #import "AppDelegate.h"
 #import "CCLog.h"
 
-#import "CCEventCoreDataModel+CoreDataProperties.h"
-#import "CCPlayerPreviewCoreDataModel+CoreDataProperties.h"
-#import "CCBannerCoreDataModel+CoreDataProperties.h"
-#import "CCTeamCoreDataModel+CoreDataProperties.h"
-#import "CCNewsDescriptionCoreDataModel+CoreDataProperties.h"
-#import "CCPlayerDescriptionCoreDataModel+CoreDataProperties.h"
-#import "CCNewsPreviewCoreDataModel+CoreDataProperties.h"
-#import "CCEventServerModel.h"
-#import "CCBannerServerModel.h"
-#import "CCPlayerPreviewServerModel.h"
-#import "CCTeamServerModel.h"
-#import "CCPlayerDescriptionServerModel.h"
-#import "CCNewsPreviewServerModel.h"
-#import "CCNewsDescriptionServerModel.h"
-#import "CCNewsDescriptionCoreDataModel+CoreDataClass.h"
-#import "CCNewDescriptionContentCoreDataModel+CoreDataClass.h"
-#import "CCUserFavoritesPlayerIDCoreDataModel+CoreDataClass.h"
 
 @interface CCCoreDataService ()
 
@@ -36,7 +19,7 @@
 
 @implementation CCCoreDataService
 
-NSString * const kPersistentContainerName = @"CSGOConfigs";
+NSString * const kPersistentContainerName = @"CCConfigs";
 
 #pragma mark - CCCoreDataServiceProtocol
 
@@ -86,7 +69,7 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
 
 - (CCNewsDescriptionCoreDataModel *)getNewsDescriptionWithID:(NSInteger)newsID {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"newsID == %d",newsID];
-    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCNewsDescriptionCoreDataModel class])predicate:predicate];
+    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCNewsDescriptionCoreDataModel class]) predicate:predicate];
     if (dataEntity.count > 0) {
         CCNewsDescriptionCoreDataModel *newsDescriptionCoreDataModel = [dataEntity firstObject];
         return newsDescriptionCoreDataModel;
@@ -112,8 +95,7 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
 #pragma mark - NewsPreview
 
 - (void)updateNewsPreview:(NSArray <CCNewsPreviewServerModel *> *)newsPreview {
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:NSStringFromClass([CCNewsPreviewServerModel class])
-                                                          inManagedObjectContext:self.persistentContainer.viewContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:NSStringFromClass([CCNewsPreviewServerModel class]) inManagedObjectContext:self.persistentContainer.viewContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
     
@@ -146,9 +128,9 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
 #pragma mark - FavoritePlayers
 
 - (BOOL)playerIsFavorite:(NSInteger)playerID {
-    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCUserFavoritesPlayerIDCoreDataModel class]) predicate:nil];
+    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCUserFavoritesPlayersIDCoreDataModel class]) predicate:nil];
     if (dataEntity.count > 0) {
-        CCUserFavoritesPlayerIDCoreDataModel *userFavoritesPlayerIDCoreDataModel = [dataEntity firstObject];
+        CCUserFavoritesPlayersIDCoreDataModel *userFavoritesPlayerIDCoreDataModel = [dataEntity firstObject];
         NSArray *favoritePlayersID = [NSKeyedUnarchiver unarchiveObjectWithData:userFavoritesPlayerIDCoreDataModel.playersIDDataArray];
         if ([favoritePlayersID containsObject:@(playerID)]) {
             return YES;
@@ -161,12 +143,12 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
 }
 
 - (void)addPlayerToFavoritesWithPlayerID:(NSInteger)playerID {
-    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCUserFavoritesPlayerIDCoreDataModel class]) predicate:nil];
+    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCUserFavoritesPlayersIDCoreDataModel class]) predicate:nil];
     if (dataEntity.count == 0) {
         NSArray *array = @[@(playerID)];
         [self updateUserFavoritesPlayersWithArray:array];
     } else {
-        CCUserFavoritesPlayerIDCoreDataModel *userFavoritesPlayerIDCoreDataModel = [dataEntity firstObject];
+        CCUserFavoritesPlayersIDCoreDataModel *userFavoritesPlayerIDCoreDataModel = [dataEntity firstObject];
         NSMutableArray * playersIDArray = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:userFavoritesPlayerIDCoreDataModel.playersIDDataArray]];
         [playersIDArray addObject:@(playerID)];
         [self updateUserFavoritesPlayersWithArray:playersIDArray];
@@ -174,16 +156,16 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
 }
 
 - (void)removePlayerFromFavoritesWithID:(NSInteger)playerID {
-    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCUserFavoritesPlayerIDCoreDataModel class]) predicate:nil];
-    CCUserFavoritesPlayerIDCoreDataModel *userFavoritesPlayerIDCoreDataModel = [dataEntity firstObject];
+    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCUserFavoritesPlayersIDCoreDataModel class]) predicate:nil];
+    CCUserFavoritesPlayersIDCoreDataModel *userFavoritesPlayerIDCoreDataModel = [dataEntity firstObject];
     NSMutableArray *playersIDArray = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:userFavoritesPlayerIDCoreDataModel.playersIDDataArray]];
     [playersIDArray removeObject:@(playerID)];
     [self updateUserFavoritesPlayersWithArray:playersIDArray];
 }
 
 - (void)updateUserFavoritesPlayersWithArray:(NSArray *)newPlayersID {
-    [self deleteAllObjectsFromEntity:NSStringFromClass([CCUserFavoritesPlayerIDCoreDataModel class])];
-    CCUserFavoritesPlayerIDCoreDataModel *playerDescriptionCoreDataModel = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([CCUserFavoritesPlayerIDCoreDataModel class])
+    [self deleteAllObjectsFromEntity:NSStringFromClass([CCUserFavoritesPlayersIDCoreDataModel class])];
+    CCUserFavoritesPlayersIDCoreDataModel *playerDescriptionCoreDataModel = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([CCUserFavoritesPlayersIDCoreDataModel class])
                                                                                                           inManagedObjectContext:self.persistentContainer.viewContext];
     NSData *dataArray = [NSKeyedArchiver archivedDataWithRootObject:newPlayersID];
     playerDescriptionCoreDataModel.playersIDDataArray = dataArray;
@@ -191,14 +173,19 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
 }
 
 - (NSArray *)getUserFavoritePlayersID {
-    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCUserFavoritesPlayerIDCoreDataModel class]) predicate:nil];
+    NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCUserFavoritesPlayersIDCoreDataModel class]) predicate:nil];
     if (dataEntity.count > 0) {
-        CCUserFavoritesPlayerIDCoreDataModel *userFavoritesPlayerIDCoreDataModel = [dataEntity firstObject];
+        CCUserFavoritesPlayersIDCoreDataModel *userFavoritesPlayerIDCoreDataModel = [dataEntity firstObject];
         NSArray *userFavoritePlayersID = [NSKeyedUnarchiver unarchiveObjectWithData:userFavoritesPlayerIDCoreDataModel.playersIDDataArray];
         return userFavoritePlayersID;
     } else {
         return @[];
     }
+}
+
+- (NSArray <CCPlayerPreviewCoreDataModel *> *)getFavoritePlayersPreviewWithIDs:(NSArray *)playersID {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(playerID IN %@) AND (imageSize != nil)",playersID];
+    return [self getEntityWithName:NSStringFromClass([CCPlayerPreviewCoreDataModel class]) predicate:predicate];
 }
 
 
@@ -234,7 +221,7 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
 #pragma mark - PlayersPreview
 
 - (NSArray <CCPlayerPreviewCoreDataModel *> *)getPlayersPreviewWithContainsID:(NSArray *)arrayOfID {
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"(playerID IN %@) AND (imageSize != nil)",arrayOfID];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(playerID IN %@) AND (imageSize != nil)",arrayOfID];
     return [self getEntityWithName:NSStringFromClass([CCPlayerPreviewCoreDataModel class]) predicate:predicate];
 }
 
@@ -261,7 +248,7 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
 }
 
 - (NSArray <CCPlayerPreviewCoreDataModel *> *)getPlayersPreview {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageSize != nil"]; // Players from team have imageSize nil, and players from preview have size
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageSize != nil"]; // Players from team have imageSize nil
     return [self getEntityWithName:NSStringFromClass([CCPlayerPreviewCoreDataModel class]) predicate:predicate];
 }
 
@@ -378,8 +365,15 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
 }
 
 - (NSArray *)getEntityWithName:(NSString *)entityName predicate:(NSPredicate *)predicate {
-    NSEntityDescription * entityDescription = [NSEntityDescription entityForName:entityName
-                                                          inManagedObjectContext:self.persistentContainer.viewContext];
+    
+    if (self.persistentContainer) {
+        
+        
+        
+    }
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:entityName
+                                                         inManagedObjectContext:self.persistentContainer.viewContext];
     NSFetchRequest * request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
     if (predicate)
@@ -401,7 +395,7 @@ NSString * const kPersistentContainerName = @"CSGOConfigs";
     [request setEntity:entityDescription];
     
     NSError *error = nil;
-    NSArray * matchingData = [self.persistentContainer.viewContext executeFetchRequest:request error:&error];
+    NSArray *matchingData = [self.persistentContainer.viewContext executeFetchRequest:request error:&error];
     
     if (matchingData.count > 0) {
         [matchingData enumerateObjectsUsingBlock:^(NSManagedObject * _Nonnull managedObject, NSUInteger idx, BOOL * _Nonnull stop) {

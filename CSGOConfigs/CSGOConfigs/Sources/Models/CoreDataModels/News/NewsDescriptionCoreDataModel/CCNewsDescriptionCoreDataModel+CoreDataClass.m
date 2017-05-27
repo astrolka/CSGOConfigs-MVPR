@@ -2,21 +2,22 @@
 //  CCNewsDescriptionCoreDataModel+CoreDataClass.m
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
 #import "CCNewsDescriptionCoreDataModel+CoreDataClass.h"
+#import "CCNewDescriptionContentCoreDataModel+CoreDataClass.h"
 #import "CCNewsDescriptionServerModel.h"
 
 @implementation CCNewsDescriptionCoreDataModel
 
-- (void)updateWithServerModel:(CCNewsDescriptionServerModel *)newsDescriptionServerModel {
-    self.subtitle = newsDescriptionServerModel.subtitle;
-    self.date = newsDescriptionServerModel.date;
-    self.author = newsDescriptionServerModel.author;
-    self.moreInfoURL = newsDescriptionServerModel.moreInfoURL.absoluteString;
-    self.newsID = @(newsDescriptionServerModel.newsID);
+- (void)updateWithServerModel:(CCNewsDescriptionServerModel *)serverModel {
+    self.subtitle = serverModel.subtitle;
+    self.date = serverModel.date;
+    self.author = serverModel.author;
+    self.descriptionURL = serverModel.descriptionURL.absoluteString;
+    self.newsID = serverModel.newsID;
 }
 
 @end

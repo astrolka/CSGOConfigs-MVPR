@@ -2,7 +2,7 @@
 //  CCNewDescriptionContentCoreDataModel+CoreDataProperties.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -13,10 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CCNewDescriptionContentCoreDataModel (CoreDataProperties)
 
-+ (NSFetchRequest<CCNewDescriptionContentCoreDataModel *> *)fetchRequest;
-
 @property (nullable, nonatomic, copy) NSString *coverImageURL;
-@property (nullable, nonatomic, copy) NSNumber *isImage;
+@property (nonatomic) int64_t isImage;
 @property (nullable, nonatomic, copy) NSString *text;
 @property (nullable, nonatomic, retain) CCNewsDescriptionCoreDataModel *descriptionNewsRelationship;
 

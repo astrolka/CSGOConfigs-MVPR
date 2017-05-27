@@ -2,7 +2,7 @@
 //  CCPlayerDescriptionCoreDataModel+CoreDataProperties.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -12,8 +12,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CCPlayerDescriptionCoreDataModel (CoreDataProperties)
-
-+ (NSFetchRequest<CCPlayerDescriptionCoreDataModel *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSString *country;
 @property (nullable, nonatomic, copy) NSString *downloadURL;
@@ -27,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *mouse;
 @property (nullable, nonatomic, copy) NSString *mousepad;
 @property (nullable, nonatomic, copy) NSString *name;
-@property (nullable, nonatomic, copy) NSNumber *playerID;
+@property (nonatomic) int64_t playerID;
 @property (nullable, nonatomic, copy) NSString *pollingRate;
 @property (nullable, nonatomic, copy) NSString *surname;
 @property (nullable, nonatomic, copy) NSString *teamImageURL;

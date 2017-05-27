@@ -2,7 +2,7 @@
 //  CCBannerCoreDataModel+CoreDataProperties.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
 //
 //
 
@@ -15,10 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<CCBannerCoreDataModel *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSDate *updateDate;
 @property (nullable, nonatomic, copy) NSString *imageSize;
 @property (nullable, nonatomic, copy) NSString *imageURL;
-@property (nullable, nonatomic, copy) NSNumber *playerID;
+@property (nonatomic) int64_t playerID;
+@property (nullable, nonatomic, copy) NSDate *updateData;
 
 @end
 
