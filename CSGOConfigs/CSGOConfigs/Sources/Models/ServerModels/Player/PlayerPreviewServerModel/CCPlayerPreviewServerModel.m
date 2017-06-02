@@ -10,9 +10,9 @@
 
 @interface CCPlayerPreviewServerModel ()
 
-@property (nonatomic, assign, readwrite) NSString *nickName;
-@property (nonatomic, assign, readwrite) NSString *imageSize;
-@property (nonatomic, assign, readwrite) NSURL *imageURL;
+@property (nonatomic, strong, readwrite) NSString *nickName;
+@property (nonatomic, strong, readwrite) NSString *imageSize;
+@property (nonatomic, strong, readwrite) NSURL *imageURL;
 @property (nonatomic, assign, readwrite) NSInteger playerID;
 
 @end

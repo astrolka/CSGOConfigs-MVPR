@@ -15,7 +15,7 @@
 #import "CCRestServiceProtocol.h"
 #import "CCRestService.h"
 
-#import "CCCoreDataServiceProtocol.h"
+#import "CCLocalStorageServiceProtocol.h"
 #import "CCCoreDataService.h"
 
 @implementation CCDIManager
@@ -32,7 +32,7 @@
 + (void)setupImplementations {
     [AppleGuice setImplementation:[CCPlayersService class] withProtocol:@protocol(CCPlayersServiceProtocol)];
     [AppleGuice setImplementation:[CCRestService class] withProtocol:@protocol(CCRestServiceProtocol)];
-    [AppleGuice setImplementation:[CCCoreDataService class] withProtocol:@protocol(CCCoreDataServiceProtocol)];
+    [AppleGuice setImplementation:[CCCoreDataService class] withProtocol:@protocol(CCLocalStorageServiceProtocol)];
 }
 
 @end

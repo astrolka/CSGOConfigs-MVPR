@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCCoreDataServiceProtocol.h"
+#import "CCLocalStorageServiceProtocol.h"
 
-@interface CCCoreDataService : NSObject <CCCoreDataServiceProtocol>
+@interface CCCoreDataService : NSObject <CCLocalStorageServiceProtocol>
 
 @end

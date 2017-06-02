@@ -44,7 +44,7 @@
 
 - (void)lol {
     
-    [self.ioc_playersService getPlayersPreviewWithOffset:30 containerWidth:320 data:^(NSArray<CCPlayerPreviewViewModel *> *players, BOOL fromServer, NSInteger countOfPlayersOnServer) {
+    [self.ioc_playersService getPlayersPreviewWithOffset:0 containerWidth:320 data:^(NSArray<CCPlayerPreviewViewModel *> *players, BOOL fromServer, NSInteger countOfPlayersOnServer) {
         
     }];
 }

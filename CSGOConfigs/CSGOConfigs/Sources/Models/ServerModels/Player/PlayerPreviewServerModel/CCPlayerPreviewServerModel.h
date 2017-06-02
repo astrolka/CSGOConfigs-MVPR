@@ -11,9 +11,9 @@
 
 @interface CCPlayerPreviewServerModel : NSObject <CCServerModelProtocol>
 
-@property (nonatomic, assign, readonly) NSString *nickName;
-@property (nonatomic, assign, readonly) NSString *imageSize;
-@property (nonatomic, assign, readonly) NSURL *imageURL;
+@property (nonatomic, strong, readonly) NSString *nickName;
+@property (nonatomic, strong, readonly) NSString *imageSize;
+@property (nonatomic, strong, readonly) NSURL *imageURL;
 @property (nonatomic, assign, readonly) NSInteger playerID;
 
 @end

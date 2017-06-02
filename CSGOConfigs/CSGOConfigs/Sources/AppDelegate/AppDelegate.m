@@ -9,12 +9,12 @@
 #import "AppDelegate.h"
 #import "CCSideMenuRouter.h"
 #import "CCDIManager.h"
-#import "CCCoreDataServiceProtocol.h"
+#import "CCLocalStorageServiceProtocol.h"
 #import "CCCoreDataService.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) id <CCCoreDataServiceProtocol> ioc_coreDataService;
+@property (nonatomic, strong) id <CCLocalStorageServiceProtocol> ioc_coreDataService;
 
 @end
 

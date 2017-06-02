@@ -8,7 +8,7 @@
 
 #import "CCPlayersService.h"
 #import "CCRestServiceProtocol.h"
-#import "CCCoreDataServiceProtocol.h"
+#import "CCLocalStorageServiceProtocol.h"
 #import "CCPlayerPreviewServerModel.h"
 #import "CCPlayerPreviewViewModel.h"
 #import "CCPlayerDescriptionServerModel.h"
@@ -17,7 +17,7 @@
 @interface CCPlayersService ()
 
 @property (strong, nonatomic) id <CCRestServiceProtocol> ioc_restService;
-@property (strong, nonatomic) id <CCCoreDataServiceProtocol> ioc_coreDataService;
+@property (strong, nonatomic) id <CCLocalStorageServiceProtocol> ioc_localStorageService;
 
 @end
 
@@ -31,13 +31,13 @@
         NSArray <CCPlayerPreviewServerModel *> *serverModels  = [self parsePlayersPreviewWithResponce:responce[@"players"]];
         NSInteger countOfPlayersOnServer = [responce[@"countOfPlayers"] integerValue];
         
-        [self.ioc_coreDataService updatePlayersPreview:serverModels];
+        [self.ioc_localStorageService updatePlayersPreview:serverModels];
         
         [CCPlayerPreviewViewModelBuilder buildWithServerModels:serverModels containerWidth:containerWidth viewModels:^(NSArray<CCPlayerPreviewViewModel *> *viewModels) {
             players(viewModels, YES, countOfPlayersOnServer);
         }];
     } onFailure:^(NSError *error) {
-        NSArray <CCPlayerPreviewCoreDataModel *> *coreDataModels = [self.ioc_coreDataService getPlayersPreview];
+        NSArray <CCPlayerPreviewCoreDataModel *> *coreDataModels = [self.ioc_localStorageService getPlayersPreview];
         
         [CCPlayerPreviewViewModelBuilder buildWithCoreDataModels:coreDataModels containerWidth:containerWidth viewModels:^(NSArray<CCPlayerPreviewViewModel *> *viewModels) {
             players(viewModels, NO, 0); // 0 - we got all data
@@ -46,8 +46,8 @@
 }
 
 - (void)getFavoritePlayersPreviewWithContainerWidth:(CGFloat)containerWidth data:(favoritePlayersPreviewDataBlock)players {
-    NSArray *favoritePlayersIDs = [self.ioc_coreDataService getUserFavoritePlayersID];
-    NSArray *favoritePlayers = [self.ioc_coreDataService getFavoritePlayersPreviewWithIDs:favoritePlayersIDs];
+    NSArray *favoritePlayersIDs = [self.ioc_localStorageService getUserFavoritePlayersID];
+    NSArray *favoritePlayers = [self.ioc_localStorageService getFavoritePlayersPreviewWithIDs:favoritePlayersIDs];
     
     [CCPlayerPreviewViewModelBuilder buildWithCoreDataModels:favoritePlayers containerWidth:containerWidth viewModels:^(NSArray<CCPlayerPreviewViewModel *> *favoritePlayers) {
         players(favoritePlayers);
@@ -59,13 +59,13 @@
     [self.ioc_restService makeGETRequestWithURL:[NSURL URLWithString:paramsURL] onSucess:^(id responce) {
         CCPlayerDescriptionServerModel *serverModel = [[CCPlayerDescriptionServerModel alloc] initWithServerResponce:responce];
         
-        [self.ioc_coreDataService updatePlayerDescription:serverModel];
+        [self.ioc_localStorageService updatePlayerDescription:serverModel];
         
         [CCPlayerDescriptionViewModelBuilder buildWithServerModel:serverModel viewModel:^(CCPlayerDescriptionViewModel *viewModel) {
             player(viewModel, YES);
         }];
     } onFailure:^(NSError *error) {
-        CCPlayerDescriptionCoreDataModel *coreDataModel = [self.ioc_coreDataService getPlayerDescriptionWithPlayerID:playerID];
+        CCPlayerDescriptionCoreDataModel *coreDataModel = [self.ioc_localStorageService getPlayerDescriptionWithPlayerID:playerID];
         
         [CCPlayerDescriptionViewModelBuilder buildWithCoreDataModel:coreDataModel viewModel:^(CCPlayerDescriptionViewModel *viewModel) {
             player(viewModel, NO);
@@ -74,15 +74,15 @@
 }
 
 - (BOOL)playerIsFavorite:(NSInteger)playerID {
-    return [self.ioc_coreDataService playerIsFavorite:playerID];
+    return [self.ioc_localStorageService playerIsFavorite:playerID];
 }
 
 - (void)addPlayerToFavoritesWithPlayerID:(NSInteger)playerID {
-    [self.ioc_coreDataService addPlayerToFavoritesWithPlayerID:playerID];
+    [self.ioc_localStorageService addPlayerToFavoritesWithPlayerID:playerID];
 }
 
 - (void)removePlayerFromFavoritesWithPlayerID:(NSInteger)playerID {
-    [self.ioc_coreDataService removePlayerFromFavoritesWithID:playerID];
+    [self.ioc_localStorageService removePlayerFromFavoritesWithID:playerID];
 }
 
 #pragma mark - Private

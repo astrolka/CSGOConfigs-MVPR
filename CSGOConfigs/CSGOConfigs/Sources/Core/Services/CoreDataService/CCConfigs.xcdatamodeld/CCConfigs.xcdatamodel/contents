@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="CCBannerCoreDataModel" representedClassName=".CCBannerCoreDataModel" syncable="YES">
         <attribute name="imageSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -61,7 +61,7 @@
         <relationship name="previewRelationship" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CCPlayerPreviewCoreDataModel" inverseName="descriptionRelationship" inverseEntity="CCPlayerPreviewCoreDataModel" syncable="YES"/>
     </entity>
     <entity name="CCPlayerFullInfoCoreDataModel" representedClassName=".CCPlayerFullInfoCoreDataModel" isAbstract="YES" syncable="YES"/>
-    <entity name="CCPlayerPreviewCoreDataModel" representedClassName=".CCPlayerPreviewCoreDataModel" parentEntity="CCPlayerFullInfoCoreDataModel" syncable="YES">
+    <entity name="CCPlayerPreviewCoreDataModel" representedClassName="CCPlayerPreviewCoreDataModel" parentEntity="CCPlayerFullInfoCoreDataModel" syncable="YES">
         <attribute name="imageSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nickName" optional="YES" attributeType="String" syncable="YES"/>

@@ -1,8 +1,8 @@
 //
-//  CCCoreDataServiceProtocol.h
+//  CCLocalStorageServiceProtocol.h
 //  CSGOConfigs
 //
-//  Created by Петрічук Олег Аркадійовіч on 14.05.17.
+//  Created by Петрічук Олег Аркадійовіч on 02.06.17.
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
@@ -43,9 +43,9 @@
 #import "CCNewDescriptionContentCoreDataModel+CoreDataClass.h"
 #import "CCUserFavoritesPlayersIDCoreDataModel+CoreDataClass.h"
 
-@protocol CCCoreDataServiceProtocol <AppleGuiceInjectable>
+@protocol CCLocalStorageServiceProtocol <AppleGuiceInjectable>
 
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
+#pragma mark - Base
 
 - (void)saveContext;
 
