@@ -61,7 +61,7 @@ NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format
             CCPlayerPreviewViewModel *viewModel = [[CCPlayerPreviewViewModel alloc]init];
             viewModel.nickName = coreDataModel.nickName;
             viewModel.imageURL = [NSURL URLWithString:coreDataModel.imageURL];
-            viewModel.playerID = coreDataModel.playerID;
+            viewModel.playerID = (NSInteger)coreDataModel.playerID;
             viewModel.imageHeight = [self calculateImageHeightForImageSize:coreDataModel.imageSize containerWidth:containerWidth];
             [viewModelsData addObject:viewModel];
         }

@@ -79,6 +79,12 @@
 		A6D73C301ED0FA0C006DD3FA /* CCCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D73C241ED0FA0C006DD3FA /* CCCoreDataService.m */; };
 		A6D73C321ED0FA0C006DD3FA /* CCDIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D73C2A1ED0FA0C006DD3FA /* CCDIManager.m */; };
 		A6D73C331ED0FA0C006DD3FA /* CCPlayersService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D73C2D1ED0FA0C006DD3FA /* CCPlayersService.m */; };
+		A6ED431B1EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED431A1EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.m */; };
+		A6ED43251EE19C5A005D79F0 /* JFRSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED431F1EE19C5A005D79F0 /* JFRSecurity.m */; };
+		A6ED43261EE19C5A005D79F0 /* JFRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED43211EE19C5A005D79F0 /* JFRWebSocket.m */; };
+		A6ED43271EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED43241EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.m */; };
+		A6ED432A1EE1C2E5005D79F0 /* CCPlayersListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED43291EE1C2E5005D79F0 /* CCPlayersListView.m */; };
+		A6ED432F1EE1DFE4005D79F0 /* CCSideMenuFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED432E1EE1DFE4005D79F0 /* CCSideMenuFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +262,19 @@
 		A6D73C2C1ED0FA0C006DD3FA /* CCPlayersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersService.h; sourceTree = "<group>"; };
 		A6D73C2D1ED0FA0C006DD3FA /* CCPlayersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersService.m; sourceTree = "<group>"; };
 		A6D73C2E1ED0FA0C006DD3FA /* CCPlayersServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersServiceProtocol.h; sourceTree = "<group>"; };
+		A6ED43191EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPlayerPreviewCollectionViewCell.h; path = PlayersViewProtocol/CCPlayerPreviewCollectionViewCell.h; sourceTree = "<group>"; };
+		A6ED431A1EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPlayerPreviewCollectionViewCell.m; path = PlayersViewProtocol/CCPlayerPreviewCollectionViewCell.m; sourceTree = "<group>"; };
+		A6ED431E1EE19C5A005D79F0 /* JFRSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFRSecurity.h; sourceTree = "<group>"; };
+		A6ED431F1EE19C5A005D79F0 /* JFRSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFRSecurity.m; sourceTree = "<group>"; };
+		A6ED43201EE19C5A005D79F0 /* JFRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFRWebSocket.h; sourceTree = "<group>"; };
+		A6ED43211EE19C5A005D79F0 /* JFRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFRWebSocket.m; sourceTree = "<group>"; };
+		A6ED43231EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		A6ED43241EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		A6ED43281EE1C2E5005D79F0 /* CCPlayersListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPlayersListView.h; path = PlayersListView/CCPlayersListView.h; sourceTree = "<group>"; };
+		A6ED43291EE1C2E5005D79F0 /* CCPlayersListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPlayersListView.m; path = PlayersListView/CCPlayersListView.m; sourceTree = "<group>"; };
+		A6ED432D1EE1DFE4005D79F0 /* CCSideMenuFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSideMenuFactory.h; path = Factory/SideMenuFactory/CCSideMenuFactory.h; sourceTree = "<group>"; };
+		A6ED432E1EE1DFE4005D79F0 /* CCSideMenuFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSideMenuFactory.m; path = Factory/SideMenuFactory/CCSideMenuFactory.m; sourceTree = "<group>"; };
+		A6ED43321EE1E4CB005D79F0 /* CCOpenSideMenuRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCOpenSideMenuRouterProtocol.h; path = OpenSideMenuRouterProtocol/CCOpenSideMenuRouterProtocol.h; sourceTree = "<group>"; };
 		CB5EC4207C582A5EB77824E1 /* libPods-CSGOConfigs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSGOConfigs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -290,6 +309,8 @@
 		A64104041EBE0F310057E2E3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A6ED43311EE1E41D005D79F0 /* OpenSideMenuRouterProtocol */,
+				A6ED432B1EE1DF7D005D79F0 /* Factorys */,
 				A641040F1EBE0F310057E2E3 /* Core */,
 				A64104051EBE0F310057E2E3 /* AppDelegate */,
 				A64104081EBE0F310057E2E3 /* Categories */,
@@ -351,6 +372,7 @@
 		A64104171EBE0F310057E2E3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				A6940FDD1EE193D00051008B /* PlayersListView */,
 				A641041C1EBE0F310057E2E3 /* LaunchScreen.storyboard */,
 				A641041D1EBE0F310057E2E3 /* TableViewCells */,
 			);
@@ -371,6 +393,7 @@
 		A641041D1EBE0F310057E2E3 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				A6ED431C1EE1993E005D79F0 /* PlayersViewProtocol */,
 				A641041E1EBE0F310057E2E3 /* SideMenuTableViewCell */,
 			);
 			path = TableViewCells;
@@ -388,6 +411,8 @@
 		A64104211EBE0F310057E2E3 /* Libaries */ = {
 			isa = PBXGroup;
 			children = (
+				A6ED431D1EE19C5A005D79F0 /* JFRWebSocket */,
+				A6ED43221EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout */,
 			);
 			path = Libaries;
 			sourceTree = "<group>";
@@ -593,9 +618,9 @@
 		A641044F1EBE0F320057E2E3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A64104521EBE0F320057E2E3 /* CCSideMenuViewProtocol.h */,
 				A64104501EBE0F320057E2E3 /* CCSideMenuViewController.h */,
 				A64104511EBE0F320057E2E3 /* CCSideMenuViewController.m */,
-				A64104521EBE0F320057E2E3 /* CCSideMenuViewProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1102,6 +1127,15 @@
 			name = PlayerDescriptionViewModel;
 			sourceTree = "<group>";
 		};
+		A6940FDD1EE193D00051008B /* PlayersListView */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED43281EE1C2E5005D79F0 /* CCPlayersListView.h */,
+				A6ED43291EE1C2E5005D79F0 /* CCPlayersListView.m */,
+			);
+			name = PlayersListView;
+			sourceTree = "<group>";
+		};
 		A6D73C1D1ED0FA0C006DD3FA /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -1146,11 +1180,67 @@
 		A6D73C2B1ED0FA0C006DD3FA /* PlayersService */ = {
 			isa = PBXGroup;
 			children = (
+				A6D73C2E1ED0FA0C006DD3FA /* CCPlayersServiceProtocol.h */,
 				A6D73C2C1ED0FA0C006DD3FA /* CCPlayersService.h */,
 				A6D73C2D1ED0FA0C006DD3FA /* CCPlayersService.m */,
-				A6D73C2E1ED0FA0C006DD3FA /* CCPlayersServiceProtocol.h */,
 			);
 			path = PlayersService;
+			sourceTree = "<group>";
+		};
+		A6ED431C1EE1993E005D79F0 /* PlayersViewProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED43191EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.h */,
+				A6ED431A1EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.m */,
+			);
+			name = PlayersViewProtocol;
+			sourceTree = "<group>";
+		};
+		A6ED431D1EE19C5A005D79F0 /* JFRWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED431E1EE19C5A005D79F0 /* JFRSecurity.h */,
+				A6ED431F1EE19C5A005D79F0 /* JFRSecurity.m */,
+				A6ED43201EE19C5A005D79F0 /* JFRWebSocket.h */,
+				A6ED43211EE19C5A005D79F0 /* JFRWebSocket.m */,
+			);
+			name = JFRWebSocket;
+			path = "../../../../../CSGOConfigs-master 2/CSGOConfigsProject/Sources/Libraries/JFRWebSocket";
+			sourceTree = "<group>";
+		};
+		A6ED43221EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED43231EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.h */,
+				A6ED43241EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.m */,
+			);
+			name = PDKTCollectionViewWaterfallLayout;
+			path = "../../../../../CSGOConfigs-master 2/CSGOConfigsProject/Sources/Libraries/PDKTCollectionViewWaterfallLayout";
+			sourceTree = "<group>";
+		};
+		A6ED432B1EE1DF7D005D79F0 /* Factorys */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED432C1EE1DF8C005D79F0 /* SideMenuFactory */,
+			);
+			name = Factorys;
+			sourceTree = "<group>";
+		};
+		A6ED432C1EE1DF8C005D79F0 /* SideMenuFactory */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED432D1EE1DFE4005D79F0 /* CCSideMenuFactory.h */,
+				A6ED432E1EE1DFE4005D79F0 /* CCSideMenuFactory.m */,
+			);
+			name = SideMenuFactory;
+			sourceTree = "<group>";
+		};
+		A6ED43311EE1E41D005D79F0 /* OpenSideMenuRouterProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED43321EE1E4CB005D79F0 /* CCOpenSideMenuRouterProtocol.h */,
+			);
+			name = OpenSideMenuRouterProtocol;
 			sourceTree = "<group>";
 		};
 		ACEA3C65C96204B66BE1FB59 /* Frameworks */ = {
@@ -1317,6 +1407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6ED431B1EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.m in Sources */,
 				A6296F8B1EDAE2510088F180 /* CCPlayerPreviewCoreDataModel+CoreDataClass.m in Sources */,
 				A6296F8C1EDAE2510088F180 /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m in Sources */,
 				A6296F8A1EDAE2160088F180 /* CCConfigs.xcdatamodeld in Sources */,
@@ -1332,6 +1423,7 @@
 				A65B145B1ED9F05600E5FC10 /* CCBannerCoreDataModel+CoreDataProperties.m in Sources */,
 				A650F7B71EC8B699004BECC1 /* CCTeamServerModel.m in Sources */,
 				A64104931EBE10AD0057E2E3 /* CCSkinsPriceRouter.m in Sources */,
+				A6ED43271EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.m in Sources */,
 				A65B14611ED9F05600E5FC10 /* CCNewsDescriptionCoreDataModel+CoreDataProperties.m in Sources */,
 				A65B14691ED9F05600E5FC10 /* CCTeamCoreDataModel+CoreDataProperties.m in Sources */,
 				A65B145A1ED9F05600E5FC10 /* CCBannerCoreDataModel+CoreDataClass.m in Sources */,
@@ -1342,6 +1434,7 @@
 				A650F6841EC872AB004BECC1 /* CCPlayersPreviewRouter.m in Sources */,
 				A64104B61EBE2A640057E2E3 /* CCRouter.m in Sources */,
 				A650F6801EC87271004BECC1 /* CCPlayersPreviewPresenter.m in Sources */,
+				A6ED43251EE19C5A005D79F0 /* JFRSecurity.m in Sources */,
 				A65B145D1ED9F05600E5FC10 /* CCEventCoreDataModel+CoreDataProperties.m in Sources */,
 				A641049C1EBE10D60057E2E3 /* CCTeamsRouter.m in Sources */,
 				A650F7AF1EC8B699004BECC1 /* CCBannerServerModel.m in Sources */,
@@ -1367,6 +1460,7 @@
 				A650F6931EC873A2004BECC1 /* CCNewsPreviewRouter.m in Sources */,
 				A642CB441EBA4C5100BFD470 /* main.m in Sources */,
 				A65B14651ED9F05600E5FC10 /* CCPlayerDescriptionCoreDataModel+CoreDataProperties.m in Sources */,
+				A6ED432F1EE1DFE4005D79F0 /* CCSideMenuFactory.m in Sources */,
 				A65B14631ED9F05600E5FC10 /* CCNewsPreviewCoreDataModel+CoreDataProperties.m in Sources */,
 				A641049F1EBE10E40057E2E3 /* CCTeamsViewController.m in Sources */,
 				A64104901EBE109F0057E2E3 /* CCSkinsPricePresenter.m in Sources */,
@@ -1377,10 +1471,12 @@
 				A6D73C321ED0FA0C006DD3FA /* CCDIManager.m in Sources */,
 				A64104621EBE0F320057E2E3 /* CCSideMenuTableViewCell.m in Sources */,
 				A650F7B01EC8B699004BECC1 /* CCEventServerModel.m in Sources */,
+				A6ED43261EE19C5A005D79F0 /* JFRWebSocket.m in Sources */,
 				A65B14681ED9F05600E5FC10 /* CCTeamCoreDataModel+CoreDataClass.m in Sources */,
 				A641047B1EBE10330057E2E3 /* CCFavoritePlayersViewController.m in Sources */,
 				A650F68F1EC8736C004BECC1 /* CCNewsPreviewPresenter.m in Sources */,
 				A65B146A1ED9F05600E5FC10 /* CCUserFavoritesPlayersIDCoreDataModel+CoreDataClass.m in Sources */,
+				A6ED432A1EE1C2E5005D79F0 /* CCPlayersListView.m in Sources */,
 				A650F6A61EC891C1004BECC1 /* CCPlayerPreviewViewModel.m in Sources */,
 				A65B146B1ED9F05600E5FC10 /* CCUserFavoritesPlayersIDCoreDataModel+CoreDataProperties.m in Sources */,
 				A650F6961EC873C5004BECC1 /* CCNewsPreviewViewController.m in Sources */,
@@ -1514,7 +1610,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80CC47E941882B41B55784CE /* Pods-CSGOConfigs.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4F885Z8V5T;
 				INFOPLIST_FILE = "$(SRCROOT)/CSGOConfigs/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1529,7 +1624,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DECB3A2F0C8EE77851075B8 /* Pods-CSGOConfigs.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4F885Z8V5T;
 				INFOPLIST_FILE = "$(SRCROOT)/CSGOConfigs/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -7,10 +7,18 @@
 //
 
 #import "CCPlayersPreviewViewController.h"
+#import "CCPlayersListView.h"
+#import "Masonry.h"
+#import "CCSideMenuFactory.h"
 
-@interface CCPlayersPreviewViewController () <UITextViewDelegate>
+@interface CCPlayersPreviewViewController () <CCPlayersListViewActionProtocol>
+
+@property (strong, nonatomic) CCPlayersListView *playersListView;
 
 @end
+
+CGFloat const kCellSpaces = 6.f;
+NSUInteger const kColumnsInSection = 3;
 
 @implementation CCPlayersPreviewViewController
 
@@ -19,26 +27,54 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    double delayInSeconds = 5.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [self.viewAction playersPreviewView:self didSelectPlayerAtIndex:3];
-    });
+    self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self playersViewSetup];
+    [self menuButtonSetup];
+    [self.viewAction playersPreviewViewDidSet:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)playersViewSetup {
+    self.playersListView = [[CCPlayersListView alloc] initWithColumnsInSection:kColumnsInSection cellSpaces:kCellSpaces];
+    [self bindNavigationBarToScrollView:self.playersListView.collectionView];
+    self.playersListView.viewAction = self;
+    
+    [self.view addSubview:self.playersListView];
+    [self.playersListView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(kCellSpaces, 0, kCellSpaces, 0));
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)menuButtonSetup {
+    self.navigationItem.leftBarButtonItem = [CCSideMenuFactory menuBarButtonWithSelector:@selector(actionOpenSideMenu:) forObject:self];
 }
-*/
+
+#pragma mark - CCPlayersPreviewViewProtocol
+
+- (void)showPlayers:(NSArray <CCPlayerPreviewViewModel *> *)players {
+    [self.playersListView showPlayers:players];
+}
+
+- (CGFloat)cellContainerWidth {
+    CGFloat allSpaces = kColumnsInSection * kCellSpaces;
+    CGFloat containerWidth = (self.view.bounds.size.width - allSpaces) / kColumnsInSection;
+    return containerWidth;
+}
+
+#pragma mark - CCPlayersListViewActionProtocol
+
+- (void)playersListView:(CCPlayersListView *)view didSelectPlayerAtIndex:(NSUInteger)index {
+    [self.viewAction playersPreviewView:self didSelectPlayerAtIndex:index];
+}
+
+- (void)playersListView:(CCPlayersListView *)view didScrollPlayerAtIndex:(NSUInteger)index {
+    [self.viewAction playersPreviewView:self didScrollPlayerAtIndex:index];
+}
+
+#pragma mark - Action
+
+- (void)actionOpenSideMenu:(UIButton *)button {
+    [self.viewAction playersPreviewViewDidOpenMenu:self];
+}
 
 @end

@@ -10,7 +10,15 @@
 
 @implementation UIFont (CC)
 
-+ (UIFont *)cc_regualtFontWithSize:(CGFloat)size {
++ (UIFont *)cc_regualarFontWithSize:(CGFloat)size {
+    return [UIFont systemFontOfSize:size];
+}
+
++ (UIFont *)cc_mediumFontWithSize:(CGFloat)size {
+    return [UIFont systemFontOfSize:size];
+}
+
++ (UIFont *)cc_boldFontWithSize:(CGFloat)size {
     return [UIFont systemFontOfSize:size];
 }
 

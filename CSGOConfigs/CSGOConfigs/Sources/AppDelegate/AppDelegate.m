@@ -38,7 +38,7 @@
 #pragma mark - Private
 
 - (void)navigationSetup {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     CCSideMenuRouter *sideMenuRouter = [[CCSideMenuRouter alloc] init];
     [sideMenuRouter goToAppFromWindow:self.window];
 }

@@ -12,6 +12,7 @@
 #import "CCSideMenuViewController.h"
 #import "CCSideMenuPresenter.h"
 #import "RESideMenu.h"
+#import "UIColor+CC.h"
 
 #import "CCPlayersPreviewRouter.h"
 #import "CCAppToolsRouter.h"
@@ -45,6 +46,7 @@
                                                       leftMenuViewController:(UIViewController *)self.sideMenuView
                                                      rightMenuViewController:nil];
     window.rootViewController = sideMenu;
+    [self navigationBarSetup];
     [window makeKeyAndVisible];
 }
 
@@ -106,6 +108,12 @@
     CCSideMenuPresenter *presenter = [[CCSideMenuPresenter alloc] initWithView:viewController router:self];
     #pragma unused(presenter)
     return viewController;
+}
+
+- (void)navigationBarSetup {
+    // Router can setup his "navigation" components
+    [[UINavigationBar appearance] setBarTintColor:[UIColor cc_themeColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
 @end

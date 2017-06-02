@@ -27,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor cc_themeColor];
     [self dataSourceSetup];
     [self sideMenuTableViewSetup];
 }
@@ -54,7 +55,7 @@
     CGFloat tableViewHeight = self.sideMenuItems.count * [CCSideMenuTableViewCell defaultCellHeight];
     [self.view addSubview:self.sideMenuTableView];
     [self.sideMenuTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
+        make.left.right.equalTo(self.view).offset(4);
         make.height.mas_equalTo(tableViewHeight);
         make.centerY.equalTo(self.view);
     }];

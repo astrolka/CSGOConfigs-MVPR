@@ -9,44 +9,69 @@
 #import "CCPlayersPreviewPresenter.h"
 #import "CCPlayersPreviewViewProtocol.h"
 #import "CCPlayersPreviewRouterProtocol.h"
+#import "CCOpenSideMenuRouterProtocol.h"
 #import "CCPlayersServiceProtocol.h"
 #import "CCRestServiceProtocol.h"
+#import "CCPlayerPreviewViewModel.h"
 
 @interface CCPlayersPreviewPresenter () <CCPlayersPreviewViewActionProtocol>
 
 @property (nonatomic, weak) id <CCPlayersPreviewViewProtocol> view;
-@property (nonatomic, strong) id <CCPlayersPreviewRouterProtocol> router;
+@property (nonatomic, strong) id <CCPlayersPreviewRouterProtocol, CCOpenSideMenuRouterProtocol> router;
 @property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
+
+@property (nonatomic, strong) NSMutableArray <CCPlayerPreviewViewModel *> *players;
+@property (nonatomic, assign) NSUInteger countOfPlayersOnServer; // pagination logic
 
 @end
 
+CGFloat const kLoadingLimit = 6.f;
+
 @implementation CCPlayersPreviewPresenter
 
-- (instancetype)initWithView:(id <CCPlayersPreviewViewProtocol>)view router:(id <CCPlayersPreviewRouterProtocol>)router {
+- (instancetype)initWithView:(id <CCPlayersPreviewViewProtocol>)view router:(id <CCPlayersPreviewRouterProtocol, CCOpenSideMenuRouterProtocol>)router {
     self = [super init];
     if (self) {
         self.view = view;
         self.view.viewAction = self;
         self.router = router;
-        [self lol];
+        
+        self.countOfPlayersOnServer = 0;
+        self.players = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 #pragma mark - CCPlayersPreviewViewActionProtocol
 
-- (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectPlayerAtIndex:(NSInteger)index {
+- (void)playersPreviewViewDidSet:(id <CCPlayersPreviewViewProtocol>)view {
+    [self getPlayers];
+}
+
+- (void)playersPreviewViewDidOpenMenu:(id <CCPlayersPreviewViewProtocol>)view {
+    [self.router openSideMenu];
+}
+
+- (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectPlayerAtIndex:(NSUInteger)index {
     
-    
+}
+
+- (void)playersPreviewView:(id<CCPlayersPreviewViewProtocol>)view didScrollPlayerAtIndex:(NSUInteger)index {
+    if (index == self.players.count - kLoadingLimit) {
+        [self getPlayers];
+    }
 }
 
 #pragma mark - Private
 
-- (void)lol {
-    
-    [self.ioc_playersService getPlayersPreviewWithOffset:0 containerWidth:320 data:^(NSArray<CCPlayerPreviewViewModel *> *players, BOOL fromServer, NSInteger countOfPlayersOnServer) {
-        
-    }];
+- (void)getPlayers {
+    if (self.players.count == 0 || self.players.count < self.countOfPlayersOnServer) {
+        [self.ioc_playersService getPlayersPreviewWithOffset:self.players.count containerWidth:[self.view cellContainerWidth] data:^(NSArray<CCPlayerPreviewViewModel *> *players, BOOL fromServer, NSInteger countOfPlayersOnServer) {
+            self.countOfPlayersOnServer = countOfPlayersOnServer;
+            [self.players addObjectsFromArray:players];
+            [self.view showPlayers:players];
+        }];
+    }
 }
 
 @end

@@ -46,7 +46,7 @@
 - (void)setupTitleLabel {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.titleLabel.textColor = [UIColor whiteColor];
-    self.titleLabel.font = [UIFont cc_regualtFontWithSize:17];
+    self.titleLabel.font = [UIFont cc_regualarFontWithSize:16];
     
     [self.contentView addSubview:self.titleLabel];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -59,6 +59,7 @@
 
 - (void)setupIconImageView {
     self.iconImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    self.iconImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     [self.contentView addSubview:self.iconImageView];
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {

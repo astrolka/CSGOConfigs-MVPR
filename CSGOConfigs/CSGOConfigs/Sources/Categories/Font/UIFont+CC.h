@@ -10,6 +10,10 @@
 
 @interface UIFont (CC)
 
-+ (UIFont *)cc_regualtFontWithSize:(CGFloat)size;
++ (UIFont *)cc_regualarFontWithSize:(CGFloat)size;
+
++ (UIFont *)cc_mediumFontWithSize:(CGFloat)size;
+
++ (UIFont *)cc_boldFontWithSize:(CGFloat)size;
 
 @end

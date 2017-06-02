@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 @protocol CCPlayersPreviewViewProtocol;
 @protocol CCPlayersPreviewRouterProtocol;
+@protocol CCOpenSideMenuRouterProtocol;
 
 @interface CCPlayersPreviewPresenter : NSObject
 
-- (instancetype)initWithView:(id <CCPlayersPreviewViewProtocol>)view router:(id <CCPlayersPreviewRouterProtocol>)router;
+- (instancetype)initWithView:(id <CCPlayersPreviewViewProtocol>)view router:(id <CCPlayersPreviewRouterProtocol, CCOpenSideMenuRouterProtocol>)router;
 
 @end

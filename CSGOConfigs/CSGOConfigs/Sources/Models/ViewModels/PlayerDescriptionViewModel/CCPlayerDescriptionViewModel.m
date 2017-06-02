@@ -29,7 +29,7 @@ NSString * const kEmptyDataDisplay = @"";  // server can send empty string, so n
     const char * classNameChar = [NSStringFromClass([CCPlayerDescriptionViewModelBuilder class]) UTF8String];
     dispatch_queue_t queue = dispatch_queue_create(classNameChar, DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
-        viewModel.playerID = coreDataModel.playerID;
+        viewModel.playerID = (NSInteger)coreDataModel.playerID;
         viewModel.name = [NSString stringWithFormat:@"%@ \"%@\" %@",coreDataModel.name, coreDataModel.previewRelationship.nickName, coreDataModel.surname];
         viewModel.profileImageURL = [NSURL URLWithString:coreDataModel.previewRelationship.imageURL];
         viewModel.moreInfoLink = [NSURL URLWithString:coreDataModel.moreInfoURL];
