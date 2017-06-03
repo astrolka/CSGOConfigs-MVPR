@@ -38,7 +38,6 @@
         }];
     } onFailure:^(NSError *error) {
         NSArray <CCPlayerPreviewCoreDataModel *> *coreDataModels = [self.ioc_localStorageService getPlayersPreview];
-        
         [CCPlayerPreviewViewModelBuilder buildWithCoreDataModels:coreDataModels containerWidth:containerWidth viewModels:^(NSArray<CCPlayerPreviewViewModel *> *viewModels) {
             players(viewModels, NO, 0); // 0 - we got all data
         }];
@@ -66,7 +65,6 @@
         }];
     } onFailure:^(NSError *error) {
         CCPlayerDescriptionCoreDataModel *coreDataModel = [self.ioc_localStorageService getPlayerDescriptionWithPlayerID:playerID];
-        
         [CCPlayerDescriptionViewModelBuilder buildWithCoreDataModel:coreDataModel viewModel:^(CCPlayerDescriptionViewModel *viewModel) {
             player(viewModel, NO);
         }];

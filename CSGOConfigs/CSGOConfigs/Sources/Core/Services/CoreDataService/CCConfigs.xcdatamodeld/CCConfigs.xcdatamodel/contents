@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="CCBannerCoreDataModel" representedClassName=".CCBannerCoreDataModel" syncable="YES">
+    <entity name="CCBannerCoreDataModel" representedClassName="CCBannerCoreDataModel" syncable="YES">
         <attribute name="imageSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="playerID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="updateData" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
-    <entity name="CCEventCoreDataModel" representedClassName=".CCEventCoreDataModel" syncable="YES">
+    <entity name="CCEventCoreDataModel" representedClassName="CCEventCoreDataModel" syncable="YES">
         <attribute name="beginDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="countOfTeams" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -19,13 +19,13 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prizePool" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="CCNewDescriptionContentCoreDataModel" representedClassName=".CCNewDescriptionContentCoreDataModel" parentEntity="CCNewsDescriptionFullInfoCoreDataModel" syncable="YES">
+    <entity name="CCNewDescriptionContentCoreDataModel" representedClassName="CCNewDescriptionContentCoreDataModel" parentEntity="CCNewsDescriptionFullInfoCoreDataModel" syncable="YES">
         <attribute name="coverImageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isImage" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="descriptionNewsRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CCNewsDescriptionCoreDataModel" inverseName="contentNewsRelationship" inverseEntity="CCNewsDescriptionCoreDataModel" syncable="YES"/>
     </entity>
-    <entity name="CCNewsDescriptionCoreDataModel" representedClassName=".CCNewsDescriptionCoreDataModel" parentEntity="CCNewsDescriptionFullInfoCoreDataModel" syncable="YES">
+    <entity name="CCNewsDescriptionCoreDataModel" representedClassName="CCNewsDescriptionCoreDataModel" parentEntity="CCNewsDescriptionFullInfoCoreDataModel" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descriptionURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -33,13 +33,13 @@
         <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="contentNewsRelationship" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CCNewDescriptionContentCoreDataModel" inverseName="descriptionNewsRelationship" inverseEntity="CCNewDescriptionContentCoreDataModel" syncable="YES"/>
     </entity>
-    <entity name="CCNewsDescriptionFullInfoCoreDataModel" representedClassName=".CCNewsDescriptionFullInfoCoreDataModel" isAbstract="YES" syncable="YES"/>
-    <entity name="CCNewsPreviewCoreDataModel" representedClassName=".CCNewsPreviewCoreDataModel" syncable="YES">
+    <entity name="CCNewsDescriptionFullInfoCoreDataModel" representedClassName="CCNewsDescriptionFullInfoCoreDataModel" isAbstract="YES" syncable="YES"/>
+    <entity name="CCNewsPreviewCoreDataModel" representedClassName="CCNewsPreviewCoreDataModel" syncable="YES">
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="newsID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="CCPlayerDescriptionCoreDataModel" representedClassName=".CCPlayerDescriptionCoreDataModel" parentEntity="CCPlayerFullInfoCoreDataModel" syncable="YES">
+    <entity name="CCPlayerDescriptionCoreDataModel" representedClassName="CCPlayerDescriptionCoreDataModel" parentEntity="CCPlayerFullInfoCoreDataModel" syncable="YES">
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="downloadURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="effectiveDPI" optional="YES" attributeType="String" syncable="YES"/>
@@ -60,7 +60,7 @@
         <attribute name="windowsSensitivity" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="previewRelationship" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CCPlayerPreviewCoreDataModel" inverseName="descriptionRelationship" inverseEntity="CCPlayerPreviewCoreDataModel" syncable="YES"/>
     </entity>
-    <entity name="CCPlayerFullInfoCoreDataModel" representedClassName=".CCPlayerFullInfoCoreDataModel" isAbstract="YES" syncable="YES"/>
+    <entity name="CCPlayerFullInfoCoreDataModel" representedClassName="CCPlayerFullInfoCoreDataModel" isAbstract="YES" syncable="YES"/>
     <entity name="CCPlayerPreviewCoreDataModel" representedClassName="CCPlayerPreviewCoreDataModel" parentEntity="CCPlayerFullInfoCoreDataModel" syncable="YES">
         <attribute name="imageSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -69,13 +69,13 @@
         <relationship name="descriptionRelationship" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CCPlayerDescriptionCoreDataModel" inverseName="previewRelationship" inverseEntity="CCPlayerDescriptionCoreDataModel" syncable="YES"/>
         <relationship name="teamRelationshep" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CCTeamCoreDataModel" inverseName="playerRelationship" inverseEntity="CCTeamCoreDataModel" syncable="YES"/>
     </entity>
-    <entity name="CCTeamCoreDataModel" representedClassName=".CCTeamCoreDataModel" parentEntity="CCPlayerFullInfoCoreDataModel" syncable="YES">
+    <entity name="CCTeamCoreDataModel" representedClassName="CCTeamCoreDataModel" parentEntity="CCPlayerFullInfoCoreDataModel" syncable="YES">
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="teamID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="playerRelationship" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CCPlayerPreviewCoreDataModel" inverseName="teamRelationshep" inverseEntity="CCPlayerPreviewCoreDataModel" syncable="YES"/>
     </entity>
-    <entity name="CCUserFavoritesPlayersIDCoreDataModel" representedClassName=".CCUserFavoritesPlayersIDCoreDataModel" syncable="YES">
+    <entity name="CCUserFavoritesPlayersIDCoreDataModel" representedClassName="CCUserFavoritesPlayersIDCoreDataModel" syncable="YES">
         <attribute name="playersIDDataArray" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
     <elements>

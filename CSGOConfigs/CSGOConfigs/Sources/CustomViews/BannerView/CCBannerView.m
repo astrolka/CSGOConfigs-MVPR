@@ -86,7 +86,6 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CCBannerCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CCBannerCollectionViewCell class])
                                                                                  forIndexPath:indexPath];
-    cell.contentView.backgroundColor = [UIColor yellowColor];
     cell.banner = self.banners[indexPath.row];
     return cell;
 }

@@ -79,6 +79,7 @@
 		A6D73C301ED0FA0C006DD3FA /* CCCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D73C241ED0FA0C006DD3FA /* CCCoreDataService.m */; };
 		A6D73C321ED0FA0C006DD3FA /* CCDIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D73C2A1ED0FA0C006DD3FA /* CCDIManager.m */; };
 		A6D73C331ED0FA0C006DD3FA /* CCPlayersService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D73C2D1ED0FA0C006DD3FA /* CCPlayersService.m */; };
+		A6DF8D861EE2C14000D93751 /* CCBannerService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF8D851EE2C14000D93751 /* CCBannerService.m */; };
 		A6ED431B1EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED431A1EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.m */; };
 		A6ED43251EE19C5A005D79F0 /* JFRSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED431F1EE19C5A005D79F0 /* JFRSecurity.m */; };
 		A6ED43261EE19C5A005D79F0 /* JFRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED43211EE19C5A005D79F0 /* JFRWebSocket.m */; };
@@ -265,6 +266,9 @@
 		A6D73C2C1ED0FA0C006DD3FA /* CCPlayersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersService.h; sourceTree = "<group>"; };
 		A6D73C2D1ED0FA0C006DD3FA /* CCPlayersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersService.m; sourceTree = "<group>"; };
 		A6D73C2E1ED0FA0C006DD3FA /* CCPlayersServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersServiceProtocol.h; sourceTree = "<group>"; };
+		A6DF8D831EE2C12F00D93751 /* CCBannerServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerServiceProtocol.h; path = BannerService/CCBannerServiceProtocol.h; sourceTree = "<group>"; };
+		A6DF8D841EE2C14000D93751 /* CCBannerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerService.h; path = BannerService/CCBannerService.h; sourceTree = "<group>"; };
+		A6DF8D851EE2C14000D93751 /* CCBannerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBannerService.m; path = BannerService/CCBannerService.m; sourceTree = "<group>"; };
 		A6ED43191EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPlayerPreviewCollectionViewCell.h; path = PlayersViewProtocol/CCPlayerPreviewCollectionViewCell.h; sourceTree = "<group>"; };
 		A6ED431A1EE19936005D79F0 /* CCPlayerPreviewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPlayerPreviewCollectionViewCell.m; path = PlayersViewProtocol/CCPlayerPreviewCollectionViewCell.m; sourceTree = "<group>"; };
 		A6ED431E1EE19C5A005D79F0 /* JFRSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFRSecurity.h; sourceTree = "<group>"; };
@@ -1151,7 +1155,8 @@
 		A6D73C1D1ED0FA0C006DD3FA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A6D73C1E1ED0FA0C006DD3FA /* CCRestService */,
+				A6DF8D821EE2C10200D93751 /* BannerService */,
+				A6D73C1E1ED0FA0C006DD3FA /* RestService */,
 				A6D73C221ED0FA0C006DD3FA /* CoreDataService */,
 				A6D73C281ED0FA0C006DD3FA /* DIManager */,
 				A6D73C2B1ED0FA0C006DD3FA /* PlayersService */,
@@ -1159,13 +1164,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		A6D73C1E1ED0FA0C006DD3FA /* CCRestService */ = {
+		A6D73C1E1ED0FA0C006DD3FA /* RestService */ = {
 			isa = PBXGroup;
 			children = (
+				A6D73C211ED0FA0C006DD3FA /* CCRestServiceProtocol.h */,
 				A6D73C1F1ED0FA0C006DD3FA /* CCRestService.h */,
 				A6D73C201ED0FA0C006DD3FA /* CCRestService.m */,
-				A6D73C211ED0FA0C006DD3FA /* CCRestServiceProtocol.h */,
 			);
+			name = RestService;
 			path = CCRestService;
 			sourceTree = "<group>";
 		};
@@ -1197,6 +1203,16 @@
 				A6D73C2D1ED0FA0C006DD3FA /* CCPlayersService.m */,
 			);
 			path = PlayersService;
+			sourceTree = "<group>";
+		};
+		A6DF8D821EE2C10200D93751 /* BannerService */ = {
+			isa = PBXGroup;
+			children = (
+				A6DF8D831EE2C12F00D93751 /* CCBannerServiceProtocol.h */,
+				A6DF8D841EE2C14000D93751 /* CCBannerService.h */,
+				A6DF8D851EE2C14000D93751 /* CCBannerService.m */,
+			);
+			name = BannerService;
 			sourceTree = "<group>";
 		};
 		A6ED431C1EE1993E005D79F0 /* PlayersViewProtocol */ = {
@@ -1504,6 +1520,7 @@
 				A65B14651ED9F05600E5FC10 /* CCPlayerDescriptionCoreDataModel+CoreDataProperties.m in Sources */,
 				A6ED432F1EE1DFE4005D79F0 /* CCSideMenuFactory.m in Sources */,
 				A65B14631ED9F05600E5FC10 /* CCNewsPreviewCoreDataModel+CoreDataProperties.m in Sources */,
+				A6DF8D861EE2C14000D93751 /* CCBannerService.m in Sources */,
 				A641049F1EBE10E40057E2E3 /* CCTeamsViewController.m in Sources */,
 				A64104901EBE109F0057E2E3 /* CCSkinsPricePresenter.m in Sources */,
 				A64104691EBE0F320057E2E3 /* CCSideMenuViewController.m in Sources */,

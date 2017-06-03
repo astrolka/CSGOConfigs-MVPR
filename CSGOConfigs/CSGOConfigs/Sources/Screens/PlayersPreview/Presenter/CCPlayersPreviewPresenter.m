@@ -11,6 +11,7 @@
 #import "CCPlayersPreviewRouterProtocol.h"
 #import "CCOpenSideMenuRouterProtocol.h"
 #import "CCPlayersServiceProtocol.h"
+#import "CCBannerServiceProtocol.h"
 #import "CCRestServiceProtocol.h"
 #import "CCPlayerPreviewViewModel.h"
 #import "CCBannerViewModel.h"
@@ -20,6 +21,7 @@
 @property (nonatomic, weak) id <CCPlayersPreviewViewProtocol> view;
 @property (nonatomic, strong) id <CCPlayersPreviewRouterProtocol, CCOpenSideMenuRouterProtocol> router;
 @property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
+@property (nonatomic, strong) id <CCBannerServiceProtocol> ioc_bannersService;
 
 @property (nonatomic, strong) NSMutableArray <CCPlayerPreviewViewModel *> *players;
 @property (nonatomic, assign) NSUInteger countOfPlayersOnServer; // pagination logic
@@ -79,12 +81,10 @@ CGFloat const kLoadingLimit = 6.f;
 }
 
 - (void)loadBanners {
-    CCBannerViewModel *vi = [[CCBannerViewModel alloc] init];
-    vi.title = @"dsfsdfsdfsdf";
-    vi.imageURL = [NSURL URLWithString:@"https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg"];
-    vi.playerID = 3;
-    [self.view showBanners:@[vi, vi]];
-    
+    [self.ioc_bannersService getBanners:^(NSArray<CCBannerViewModel *> *banners, CGFloat bannerHeight) {
+        [self.view updateBannerHeight:bannerHeight];
+        [self.view showBanners:banners];
+    }];
 }
 
 @end

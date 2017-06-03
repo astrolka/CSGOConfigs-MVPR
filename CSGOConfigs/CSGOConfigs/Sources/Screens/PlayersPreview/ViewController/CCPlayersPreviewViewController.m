@@ -53,11 +53,12 @@ NSUInteger const kColumnsInSection = 3;
 
 - (void)bannerViewSetup {
     self.bannerView = [[CCBannerView alloc] initWithPageControl:YES];
+    self.bannerView.alpha = 0.f;
     
     [self.view addSubview:self.bannerView];
     [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@140);
+        make.height.equalTo(@0);
     }];
 }
 
@@ -66,7 +67,9 @@ NSUInteger const kColumnsInSection = 3;
         make.left.right.top.equalTo(self.view);
         make.height.equalTo(@(height));
     }];
-    [UIView animateWithDuration:0.2 animations:^{
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        self.bannerView.alpha = 1.f;
         [self.view layoutIfNeeded];
     }];
 }
