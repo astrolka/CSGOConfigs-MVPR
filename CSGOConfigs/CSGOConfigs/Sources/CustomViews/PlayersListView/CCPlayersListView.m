@@ -41,6 +41,7 @@
 - (void)collectionViewSetup {
     PDKTCollectionViewWaterfallLayout *layout = [[PDKTCollectionViewWaterfallLayout alloc] init];
     layout.delegate = self;
+    
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.showsVerticalScrollIndicator = NO;
@@ -68,8 +69,8 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CCPlayerPreviewCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CCPlayerPreviewCollectionViewCell class])
-                                                                                         forIndexPath:indexPath];
+    CCPlayerPreviewCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CCPlayerPreviewCollectionViewCell class])
+                                                                                        forIndexPath:indexPath];
     cell.player = self.players[indexPath.row];
     return cell;
 }

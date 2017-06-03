@@ -7,6 +7,7 @@
 //
 
 #import "CCPlayersPreviewViewController.h"
+#import "CCBannerView.h"
 #import "CCPlayersListView.h"
 #import "Masonry.h"
 #import "CCSideMenuFactory.h"
@@ -14,6 +15,7 @@
 @interface CCPlayersPreviewViewController () <CCPlayersListViewActionProtocol>
 
 @property (strong, nonatomic) CCPlayersListView *playersListView;
+@property (strong, nonatomic) CCBannerView *bannerView;
 
 @end
 
@@ -29,6 +31,8 @@ NSUInteger const kColumnsInSection = 3;
     
     self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
     self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self bannerViewSetup];
     [self playersViewSetup];
     [self menuButtonSetup];
     [self.viewAction playersPreviewViewDidSet:self];
@@ -36,12 +40,34 @@ NSUInteger const kColumnsInSection = 3;
 
 - (void)playersViewSetup {
     self.playersListView = [[CCPlayersListView alloc] initWithColumnsInSection:kColumnsInSection cellSpaces:kCellSpaces];
-    [self bindNavigationBarToScrollView:self.playersListView.collectionView];
+    //[self bindNavigationBarToScrollView:self.playersListView.collectionView];
     self.playersListView.viewAction = self;
     
     [self.view addSubview:self.playersListView];
     [self.playersListView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(kCellSpaces, 0, kCellSpaces, 0));
+        make.top.equalTo(self.bannerView.mas_bottom);
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.view).offset(kCellSpaces);
+    }];
+}
+
+- (void)bannerViewSetup {
+    self.bannerView = [[CCBannerView alloc] initWithPageControl:YES];
+    
+    [self.view addSubview:self.bannerView];
+    [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.equalTo(self.view);
+        make.height.equalTo(@140);
+    }];
+}
+
+- (void)updateBannerHeight:(CGFloat)height {
+    [self.bannerView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.equalTo(self.view);
+        make.height.equalTo(@(height));
+    }];
+    [UIView animateWithDuration:0.2 animations:^{
+        [self.view layoutIfNeeded];
     }];
 }
 
@@ -53,6 +79,10 @@ NSUInteger const kColumnsInSection = 3;
 
 - (void)showPlayers:(NSArray <CCPlayerPreviewViewModel *> *)players {
     [self.playersListView showPlayers:players];
+}
+
+- (void)showBanners:(NSArray <CCBannerViewModel *> *)banners {
+    [self.bannerView showBanners:banners];
 }
 
 - (CGFloat)cellContainerWidth {

@@ -23,21 +23,19 @@ NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format
 + (void)buildWithServerModels:(NSArray <CCPlayerPreviewServerModel *> *)serverModels
                containerWidth:(CGFloat)containerWidth
                    viewModels:(playersDataBlock)viewModels {
-    
-    __block NSMutableArray <CCPlayerPreviewViewModel *> *viewModelsData = [NSMutableArray new];
+    __block NSMutableArray <CCPlayerPreviewViewModel *> *viewModelsData = [[NSMutableArray alloc] init];
     
     const char *classNameChar = [NSStringFromClass([CCPlayerPreviewViewModelBuilder class]) UTF8String];
     dispatch_queue_t queue = dispatch_queue_create(classNameChar, DISPATCH_QUEUE_SERIAL);
-    
     dispatch_async(queue, ^{
-        for (CCPlayerPreviewServerModel *serverModel in serverModels) {
+        [serverModels enumerateObjectsUsingBlock:^(CCPlayerPreviewServerModel *serverModel, NSUInteger idx, BOOL * _Nonnull stop) {
             CCPlayerPreviewViewModel *viewModel = [[CCPlayerPreviewViewModel alloc]init];
             viewModel.nickName = serverModel.nickName;
             viewModel.imageURL = serverModel.imageURL;
             viewModel.playerID = serverModel.playerID;
             viewModel.imageHeight = [self calculateImageHeightForImageSize:serverModel.imageSize containerWidth:containerWidth];
             [viewModelsData addObject:viewModel];
-        }
+        }];
     });
     
     dispatch_async(queue, ^{
@@ -50,21 +48,19 @@ NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format
 + (void)buildWithCoreDataModels:(NSArray <CCPlayerPreviewCoreDataModel *> *)coreDataModels
                  containerWidth:(CGFloat)containerWidth
                      viewModels:(playersDataBlock)viewModels {
-    
-    __block NSMutableArray <CCPlayerPreviewViewModel *> *viewModelsData = [NSMutableArray new];
+    __block NSMutableArray <CCPlayerPreviewViewModel *> *viewModelsData = [[NSMutableArray alloc] init];
     
     const char *classNameChar = [NSStringFromClass([CCPlayerPreviewViewModelBuilder class]) UTF8String];
     dispatch_queue_t queue = dispatch_queue_create(classNameChar, DISPATCH_QUEUE_SERIAL);
-    
     dispatch_async(queue, ^{
-        for (CCPlayerPreviewCoreDataModel *coreDataModel in coreDataModels) {
+        [coreDataModels enumerateObjectsUsingBlock:^(CCPlayerPreviewCoreDataModel *coreDataModel, NSUInteger idx, BOOL * _Nonnull stop) {
             CCPlayerPreviewViewModel *viewModel = [[CCPlayerPreviewViewModel alloc]init];
             viewModel.nickName = coreDataModel.nickName;
             viewModel.imageURL = [NSURL URLWithString:coreDataModel.imageURL];
             viewModel.playerID = (NSInteger)coreDataModel.playerID;
             viewModel.imageHeight = [self calculateImageHeightForImageSize:coreDataModel.imageSize containerWidth:containerWidth];
             [viewModelsData addObject:viewModel];
-        }
+        }];
     });
     
     dispatch_async(queue, ^{

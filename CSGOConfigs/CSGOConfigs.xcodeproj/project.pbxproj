@@ -85,6 +85,9 @@
 		A6ED43271EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED43241EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.m */; };
 		A6ED432A1EE1C2E5005D79F0 /* CCPlayersListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED43291EE1C2E5005D79F0 /* CCPlayersListView.m */; };
 		A6ED432F1EE1DFE4005D79F0 /* CCSideMenuFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED432E1EE1DFE4005D79F0 /* CCSideMenuFactory.m */; };
+		A6ED43361EE204EE005D79F0 /* CCBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED43351EE204EE005D79F0 /* CCBannerView.m */; };
+		A6ED433A1EE20574005D79F0 /* CCBannerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED43391EE20574005D79F0 /* CCBannerViewModel.m */; };
+		A6ED433D1EE20D86005D79F0 /* CCBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED433C1EE20D86005D79F0 /* CCBannerCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,6 +278,12 @@
 		A6ED432D1EE1DFE4005D79F0 /* CCSideMenuFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSideMenuFactory.h; path = Factory/SideMenuFactory/CCSideMenuFactory.h; sourceTree = "<group>"; };
 		A6ED432E1EE1DFE4005D79F0 /* CCSideMenuFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSideMenuFactory.m; path = Factory/SideMenuFactory/CCSideMenuFactory.m; sourceTree = "<group>"; };
 		A6ED43321EE1E4CB005D79F0 /* CCOpenSideMenuRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCOpenSideMenuRouterProtocol.h; path = OpenSideMenuRouterProtocol/CCOpenSideMenuRouterProtocol.h; sourceTree = "<group>"; };
+		A6ED43341EE204EE005D79F0 /* CCBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerView.h; path = BannerView/CCBannerView.h; sourceTree = "<group>"; };
+		A6ED43351EE204EE005D79F0 /* CCBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBannerView.m; path = BannerView/CCBannerView.m; sourceTree = "<group>"; };
+		A6ED43381EE20574005D79F0 /* CCBannerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerViewModel.h; path = BannerViewModel/CCBannerViewModel.h; sourceTree = "<group>"; };
+		A6ED43391EE20574005D79F0 /* CCBannerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBannerViewModel.m; path = BannerViewModel/CCBannerViewModel.m; sourceTree = "<group>"; };
+		A6ED433B1EE20D86005D79F0 /* CCBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerCollectionViewCell.h; path = CCBannerCollectionViewCell/CCBannerCollectionViewCell.h; sourceTree = "<group>"; };
+		A6ED433C1EE20D86005D79F0 /* CCBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBannerCollectionViewCell.m; path = CCBannerCollectionViewCell/CCBannerCollectionViewCell.m; sourceTree = "<group>"; };
 		CB5EC4207C582A5EB77824E1 /* libPods-CSGOConfigs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSGOConfigs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -372,6 +381,7 @@
 		A64104171EBE0F310057E2E3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				A6ED43331EE204D3005D79F0 /* BannerView */,
 				A6940FDD1EE193D00051008B /* PlayersListView */,
 				A641041C1EBE0F310057E2E3 /* LaunchScreen.storyboard */,
 				A641041D1EBE0F310057E2E3 /* TableViewCells */,
@@ -393,6 +403,7 @@
 		A641041D1EBE0F310057E2E3 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				A6ED433E1EE20D89005D79F0 /* BannerCollectionViewCell */,
 				A6ED431C1EE1993E005D79F0 /* PlayersViewProtocol */,
 				A641041E1EBE0F310057E2E3 /* SideMenuTableViewCell */,
 			);
@@ -448,6 +459,7 @@
 		A64104291EBE0F310057E2E3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A6ED43371EE20559005D79F0 /* BannerViewModel */,
 				A68136991ED0726A00B7E073 /* PlayerDescriptionViewModel */,
 				A650F6A31EC891A1004BECC1 /* PlayerPreviewViewModel */,
 			);
@@ -1243,6 +1255,33 @@
 			name = OpenSideMenuRouterProtocol;
 			sourceTree = "<group>";
 		};
+		A6ED43331EE204D3005D79F0 /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED43341EE204EE005D79F0 /* CCBannerView.h */,
+				A6ED43351EE204EE005D79F0 /* CCBannerView.m */,
+			);
+			name = BannerView;
+			sourceTree = "<group>";
+		};
+		A6ED43371EE20559005D79F0 /* BannerViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED43381EE20574005D79F0 /* CCBannerViewModel.h */,
+				A6ED43391EE20574005D79F0 /* CCBannerViewModel.m */,
+			);
+			name = BannerViewModel;
+			sourceTree = "<group>";
+		};
+		A6ED433E1EE20D89005D79F0 /* BannerCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED433B1EE20D86005D79F0 /* CCBannerCollectionViewCell.h */,
+				A6ED433C1EE20D86005D79F0 /* CCBannerCollectionViewCell.m */,
+			);
+			name = BannerCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		ACEA3C65C96204B66BE1FB59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1421,6 +1460,7 @@
 				A641045D1EBE0F320057E2E3 /* UIFont+CC.m in Sources */,
 				A64104811EBE10500057E2E3 /* CCMapEventsRouter.m in Sources */,
 				A65B145B1ED9F05600E5FC10 /* CCBannerCoreDataModel+CoreDataProperties.m in Sources */,
+				A6ED433A1EE20574005D79F0 /* CCBannerViewModel.m in Sources */,
 				A650F7B71EC8B699004BECC1 /* CCTeamServerModel.m in Sources */,
 				A64104931EBE10AD0057E2E3 /* CCSkinsPriceRouter.m in Sources */,
 				A6ED43271EE19C5A005D79F0 /* PDKTCollectionViewWaterfallLayout.m in Sources */,
@@ -1439,6 +1479,7 @@
 				A641049C1EBE10D60057E2E3 /* CCTeamsRouter.m in Sources */,
 				A650F7AF1EC8B699004BECC1 /* CCBannerServerModel.m in Sources */,
 				A65B145F1ED9F05600E5FC10 /* CCNewDescriptionContentCoreDataModel+CoreDataProperties.m in Sources */,
+				A6ED43361EE204EE005D79F0 /* CCBannerView.m in Sources */,
 				A650F7B41EC8B699004BECC1 /* CCPlayerDescriptionServerModel.m in Sources */,
 				A65B14601ED9F05600E5FC10 /* CCNewsDescriptionCoreDataModel+CoreDataClass.m in Sources */,
 				A641045C1EBE0F320057E2E3 /* UIColor+CC.m in Sources */,
@@ -1447,6 +1488,7 @@
 				A64104751EBE100D0057E2E3 /* CCFavoritePlayersPresenter.m in Sources */,
 				A641047E1EBE10450057E2E3 /* CCMapEventsPresenter.m in Sources */,
 				A64104721EBE0FE90057E2E3 /* CCAppToolsViewController.m in Sources */,
+				A6ED433D1EE20D86005D79F0 /* CCBannerCollectionViewCell.m in Sources */,
 				A650F6881EC872FB004BECC1 /* CCPlayersPreviewViewController.m in Sources */,
 				A650F7B11EC8B699004BECC1 /* CCNewsDescriptionContentServerModel.m in Sources */,
 				A650F7B31EC8B699004BECC1 /* CCNewsPreviewServerModel.m in Sources */,

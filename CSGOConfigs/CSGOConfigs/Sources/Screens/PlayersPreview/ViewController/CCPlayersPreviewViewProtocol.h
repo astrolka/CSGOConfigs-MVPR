@@ -10,6 +10,7 @@
 #import <CoreGraphics/CGBase.h>
 @protocol CCPlayersPreviewViewProtocol;
 @class CCPlayerPreviewViewModel;
+@class CCBannerViewModel;
 
 @protocol CCPlayersPreviewViewActionProtocol <NSObject>
 
@@ -30,5 +31,9 @@
 - (CGFloat)cellContainerWidth;
 
 - (void)showPlayers:(NSArray <CCPlayerPreviewViewModel *> *)players;
+
+- (void)showBanners:(NSArray <CCBannerViewModel *> *)banners;
+
+- (void)updateBannerHeight:(CGFloat)height;
 
 @end

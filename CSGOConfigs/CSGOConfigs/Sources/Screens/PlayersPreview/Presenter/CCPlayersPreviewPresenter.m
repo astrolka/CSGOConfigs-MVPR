@@ -13,6 +13,7 @@
 #import "CCPlayersServiceProtocol.h"
 #import "CCRestServiceProtocol.h"
 #import "CCPlayerPreviewViewModel.h"
+#import "CCBannerViewModel.h"
 
 @interface CCPlayersPreviewPresenter () <CCPlayersPreviewViewActionProtocol>
 
@@ -22,6 +23,8 @@
 
 @property (nonatomic, strong) NSMutableArray <CCPlayerPreviewViewModel *> *players;
 @property (nonatomic, assign) NSUInteger countOfPlayersOnServer; // pagination logic
+
+@property (nonatomic, strong) NSArray <CCBannerViewModel *> *banners;
 
 @end
 
@@ -45,7 +48,8 @@ CGFloat const kLoadingLimit = 6.f;
 #pragma mark - CCPlayersPreviewViewActionProtocol
 
 - (void)playersPreviewViewDidSet:(id <CCPlayersPreviewViewProtocol>)view {
-    [self getPlayers];
+    [self loadPlayers];
+    [self loadBanners];
 }
 
 - (void)playersPreviewViewDidOpenMenu:(id <CCPlayersPreviewViewProtocol>)view {
@@ -58,13 +62,13 @@ CGFloat const kLoadingLimit = 6.f;
 
 - (void)playersPreviewView:(id<CCPlayersPreviewViewProtocol>)view didScrollPlayerAtIndex:(NSUInteger)index {
     if (index == self.players.count - kLoadingLimit) {
-        [self getPlayers];
+        [self loadPlayers];
     }
 }
 
 #pragma mark - Private
 
-- (void)getPlayers {
+- (void)loadPlayers {
     if (self.players.count == 0 || self.players.count < self.countOfPlayersOnServer) {
         [self.ioc_playersService getPlayersPreviewWithOffset:self.players.count containerWidth:[self.view cellContainerWidth] data:^(NSArray<CCPlayerPreviewViewModel *> *players, BOOL fromServer, NSInteger countOfPlayersOnServer) {
             self.countOfPlayersOnServer = countOfPlayersOnServer;
@@ -72,6 +76,15 @@ CGFloat const kLoadingLimit = 6.f;
             [self.view showPlayers:players];
         }];
     }
+}
+
+- (void)loadBanners {
+    CCBannerViewModel *vi = [[CCBannerViewModel alloc] init];
+    vi.title = @"dsfsdfsdfsdf";
+    vi.imageURL = [NSURL URLWithString:@"https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg"];
+    vi.playerID = 3;
+    [self.view showBanners:@[vi, vi]];
+    
 }
 
 @end

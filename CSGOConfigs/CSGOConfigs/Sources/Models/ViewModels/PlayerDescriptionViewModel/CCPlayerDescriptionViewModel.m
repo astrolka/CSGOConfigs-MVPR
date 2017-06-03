@@ -21,12 +21,11 @@ NSString * const kEmptyDataDisplay = @"";  // server can send empty string, so n
 
 + (void)buildWithCoreDataModel:(CCPlayerDescriptionCoreDataModel *)coreDataModel
                      viewModel:(playerDataBlock)viewModelData {
-    
     CCPlayerDescriptionViewModel *viewModel = [[CCPlayerDescriptionViewModel alloc] init];
     NSMutableArray *hardwareCharacterictics = [[NSMutableArray alloc] init];
     NSMutableArray *gameSettingCharacterictics = [[NSMutableArray alloc] init];
     
-    const char * classNameChar = [NSStringFromClass([CCPlayerDescriptionViewModelBuilder class]) UTF8String];
+    const char *classNameChar = [NSStringFromClass([CCPlayerDescriptionViewModelBuilder class]) UTF8String];
     dispatch_queue_t queue = dispatch_queue_create(classNameChar, DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
         viewModel.playerID = (NSInteger)coreDataModel.playerID;
@@ -89,12 +88,11 @@ NSString * const kEmptyDataDisplay = @"";  // server can send empty string, so n
 
 + (void)buildWithServerModel:(CCPlayerDescriptionServerModel *)serverModel
                    viewModel:(playerDataBlock)viewModelData {
-    
     CCPlayerDescriptionViewModel *viewModel = [[CCPlayerDescriptionViewModel alloc] init];
     NSMutableArray *hardwareCharacterictics = [[NSMutableArray alloc] init];
     NSMutableArray *gameSettingCharacterictics = [[NSMutableArray alloc] init];
     
-    const char * classNameChar = [NSStringFromClass([CCPlayerDescriptionViewModelBuilder class]) UTF8String];
+    const char *classNameChar = [NSStringFromClass([CCPlayerDescriptionViewModelBuilder class]) UTF8String];
     dispatch_queue_t queue = dispatch_queue_create(classNameChar, DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
         viewModel.playerID = serverModel.playerID;

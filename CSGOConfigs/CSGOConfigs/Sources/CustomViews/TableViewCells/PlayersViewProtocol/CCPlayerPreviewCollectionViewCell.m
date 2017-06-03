@@ -7,11 +7,11 @@
 //
 
 #import "CCPlayerPreviewCollectionViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "CCPlayerPreviewViewModel.h"
 #import "UIColor+CC.h"
 #import "UIFont+CC.h"
 #import "Masonry.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CCPlayerPreviewCollectionViewCell ()
 
@@ -64,7 +64,7 @@
 
 - (void)profileImageViewSetup {
     self.profileImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    //self.profileImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.profileImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     [self.contentView addSubview:self.profileImageView];
     [self.profileImageView mas_makeConstraints:^(MASConstraintMaker *make) {
