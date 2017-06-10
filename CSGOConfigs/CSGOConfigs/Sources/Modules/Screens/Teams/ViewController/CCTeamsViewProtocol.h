@@ -7,15 +7,30 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCTeamViewModel.h"
+#import "CCSpinerViewProtocol.h"
+#import "CCMessageViewProtocol.h"
+#import "CCBannerViewProtocol.h"
+@protocol CCTeamsViewProtocol;
 
 @protocol CCTeamsViewActionProtocol <NSObject>
 
+- (void)teamsViewDidSet:(id <CCTeamsViewProtocol>)view;
 
+- (void)teamsViewDidOpenMenu:(id <CCTeamsViewProtocol>)view;
+
+- (void)teamsView:(id <CCTeamsViewProtocol>)view didSelectBannerAtIndex:(NSUInteger)index;
+
+- (void)teamsView:(id <CCTeamsViewProtocol>)view didSelectTeamAtIndex:(NSUInteger)teamIndex playerIndex:(NSUInteger)playerIndex;
+
+- (void)teamsView:(id <CCTeamsViewProtocol>)view didScrollPlayerAtIndex:(NSUInteger)index;
 
 @end
 
-@protocol CCTeamsViewProtocol <NSObject>
+@protocol CCTeamsViewProtocol <CCSpinerViewProtocol, CCMessageViewProtocol, CCBannerViewProtocol>
 
 @property (nonatomic, strong) id <CCTeamsViewActionProtocol> viewAction;
+
+- (void)showTeams:(NSArray <CCTeamViewModel *> *)teams;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "CCBannerCollectionViewCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImageView+URL.h"
 #import "CCBannerViewModel.h"
 #import "UIColor+CC.h"
 #import "UIFont+CC.h"
@@ -36,7 +36,7 @@
     _banner = banner;
     
     self.titleLabel.text = banner.title;
-    [self.imageView sd_setImageWithURL:banner.imageURL];
+    [self.imageView cc_setImageWithURL:banner.imageURL];
 }
 
 - (void)titleLabelSetup {

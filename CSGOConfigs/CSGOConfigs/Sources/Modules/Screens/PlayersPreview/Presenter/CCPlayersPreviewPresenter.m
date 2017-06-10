@@ -20,6 +20,7 @@
 
 @property (nonatomic, weak) id <CCPlayersPreviewViewProtocol> view;
 @property (nonatomic, strong) id <CCPlayersPreviewRouterProtocol> router;
+
 @property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
 @property (nonatomic, strong) id <CCBannerServiceProtocol> ioc_bannersService;
 
@@ -58,6 +59,10 @@ CGFloat const kLoadingLimit = 6.f;
     [self.router openSideMenu];
 }
 
+- (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectBannerAtIndex:(NSUInteger)index {
+    
+}
+
 - (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectPlayerAtIndex:(NSUInteger)index {
     
 }
@@ -85,6 +90,7 @@ CGFloat const kLoadingLimit = 6.f;
 
 - (void)loadBanners {
     [self.ioc_bannersService getBanners:^(NSArray<CCBannerViewModel *> *banners, CGFloat bannerHeight) {
+        self.banners = banners;
         [self.view updateBannerHeight:bannerHeight];
         [self.view showBanners:banners];
     }];

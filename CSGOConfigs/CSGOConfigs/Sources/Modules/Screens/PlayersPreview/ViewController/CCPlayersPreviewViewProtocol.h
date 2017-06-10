@@ -10,6 +10,7 @@
 #import <CoreGraphics/CGBase.h>
 #import "CCSpinerViewProtocol.h"
 #import "CCMessageViewProtocol.h"
+#import "CCBannerViewProtocol.h"
 
 @protocol CCPlayersPreviewViewProtocol;
 @class CCPlayerPreviewViewModel;
@@ -21,22 +22,20 @@
 
 - (void)playersPreviewViewDidOpenMenu:(id <CCPlayersPreviewViewProtocol>)view;
 
+- (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectBannerAtIndex:(NSUInteger)index;
+
 - (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectPlayerAtIndex:(NSUInteger)index;
 
 - (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didScrollPlayerAtIndex:(NSUInteger)index;
 
 @end
 
-@protocol CCPlayersPreviewViewProtocol <CCSpinerViewProtocol, CCMessageViewProtocol>
+@protocol CCPlayersPreviewViewProtocol <CCSpinerViewProtocol, CCMessageViewProtocol, CCBannerViewProtocol>
 
 @property (nonatomic, strong) id <CCPlayersPreviewViewActionProtocol> viewAction;
 
-- (CGFloat)cellContainerWidth;
-
 - (void)showPlayers:(NSArray <CCPlayerPreviewViewModel *> *)players;
 
-- (void)showBanners:(NSArray <CCBannerViewModel *> *)banners;
-
-- (void)updateBannerHeight:(CGFloat)height;
+- (CGFloat)cellContainerWidth;
 
 @end

@@ -56,23 +56,15 @@ NSUInteger const kColumnsInSection = 3;
 - (void)bannerViewSetup {
     self.bannerView = [[CCBannerView alloc] initWithPageControl:YES];
     self.bannerView.alpha = 0.f;
+    __weak typeof(self) weakSelf = self;
+    self.bannerView.viewAction = ^(CCBannerView *bannerView, NSUInteger index) {
+        [weakSelf.viewAction playersPreviewView:weakSelf didSelectBannerAtIndex:index];
+    };
     
     [self.view addSubview:self.bannerView];
     [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
         make.height.equalTo(@0);
-    }];
-}
-
-- (void)updateBannerHeight:(CGFloat)height {
-    [self.bannerView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@(height));
-    }];
-    
-    [UIView animateWithDuration:0.4 animations:^{
-        self.bannerView.alpha = 1.f;
-        [self.view layoutIfNeeded];
     }];
 }
 
@@ -86,14 +78,28 @@ NSUInteger const kColumnsInSection = 3;
     [self.playersListView showPlayers:players];
 }
 
-- (void)showBanners:(NSArray <CCBannerViewModel *> *)banners {
-    [self.bannerView showBanners:banners];
-}
-
 - (CGFloat)cellContainerWidth {
     CGFloat allSpaces = kColumnsInSection * kCellSpaces;
     CGFloat containerWidth = (self.view.bounds.size.width - allSpaces) / kColumnsInSection;
     return containerWidth;
+}
+
+#pragma mark - CCBannerViewProtocol
+
+- (void)showBanners:(NSArray <CCBannerViewModel *> *)banners {
+    [self.bannerView showBanners:banners];
+}
+
+- (void)updateBannerHeight:(CGFloat)height {
+    [self.bannerView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.equalTo(self.view);
+        make.height.equalTo(@(height));
+    }];
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        self.bannerView.alpha = 1.f;
+        [self.view layoutIfNeeded];
+    }];
 }
 
 #pragma mark - CCPlayersListViewActionProtocol

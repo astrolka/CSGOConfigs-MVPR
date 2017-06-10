@@ -21,6 +21,9 @@
 #import "CCBannerServiceProtocol.h"
 #import "CCBannerService.h"
 
+#import "CCTeamsServiceProtocol.h"
+#import "CCTeamsService.h"
+
 @implementation CCDIManager
 
 #pragma mark - Public
@@ -37,6 +40,7 @@
     [AppleGuice setImplementation:[CCRestService class] withProtocol:@protocol(CCRestServiceProtocol)];
     [AppleGuice setImplementation:[CCCoreDataService class] withProtocol:@protocol(CCLocalStorageServiceProtocol)];
     [AppleGuice setImplementation:[CCBannerService class] withProtocol:@protocol(CCBannerServiceProtocol)];
+    [AppleGuice setImplementation:[CCTeamsService class] withProtocol:@protocol(CCTeamsServiceProtocol)];
 }
 
 @end

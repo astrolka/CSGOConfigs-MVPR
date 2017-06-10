@@ -20,9 +20,9 @@
 
 @implementation CCSkinServerModel
 
-NSString * const kCase = @"Case";
-NSString * const kSticker = @"Sticker";
-NSString * const kImageBaseURL = @"https://cdn.csgo.com/item_%@_%@.png";
+NSString *const kCase = @"Case";
+NSString *const kSticker = @"Sticker";
+NSString *const kImageBaseURL = @"https://cdn.csgo.com/item_%@_%@.png";
 
 - (instancetype)initWithServerResponce:(NSString *)serverResponce {
     self = [super init];

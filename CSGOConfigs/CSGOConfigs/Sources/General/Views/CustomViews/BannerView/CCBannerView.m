@@ -7,7 +7,6 @@
 //
 
 #import "CCBannerView.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "CCBannerViewModel.h"
 #import "CCBannerCollectionViewCell.h"
 #import "UIColor+CC.h"
@@ -90,23 +89,21 @@
     return cell;
 }
 
+#pragma mark -UICollectionViewDelegate
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (self.viewAction) {
         self.viewAction(self, indexPath.row);
     }
 }
 
-#pragma mark -UICollectionViewDelegate
-
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
     return self.collectionView.bounds.size;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
-
 
 #pragma mark - UIScrollViewDelegate
 

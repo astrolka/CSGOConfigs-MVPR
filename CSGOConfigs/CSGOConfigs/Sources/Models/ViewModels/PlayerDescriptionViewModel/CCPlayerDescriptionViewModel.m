@@ -17,7 +17,7 @@
 
 @implementation CCPlayerDescriptionViewModelBuilder
 
-NSString * const kEmptyDataDisplay = @"";  // server can send empty string, so no need show texts like this: "Player name:" (no name)
+NSString *const kEmptyDataDisplay = @"";  // server can send empty string, so no need show texts like this: "Player name:" (no name)
 
 + (void)buildWithCoreDataModel:(CCPlayerDescriptionCoreDataModel *)coreDataModel
                      viewModel:(playerDataBlock)viewModelData {

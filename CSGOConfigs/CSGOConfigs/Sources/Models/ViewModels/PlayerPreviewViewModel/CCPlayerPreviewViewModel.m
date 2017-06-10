@@ -14,7 +14,7 @@
 
 @end
 
-NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format: "320x640"
+NSString *const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format: "320x640"
 
 @implementation CCPlayerPreviewViewModelBuilder
 
@@ -29,7 +29,7 @@ NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format
     dispatch_queue_t queue = dispatch_queue_create(classNameChar, DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
         [serverModels enumerateObjectsUsingBlock:^(CCPlayerPreviewServerModel *serverModel, NSUInteger idx, BOOL * _Nonnull stop) {
-            CCPlayerPreviewViewModel *viewModel = [[CCPlayerPreviewViewModel alloc]init];
+            CCPlayerPreviewViewModel *viewModel = [[CCPlayerPreviewViewModel alloc] init];
             viewModel.nickName = serverModel.nickName;
             viewModel.imageURL = serverModel.imageURL;
             viewModel.playerID = serverModel.playerID;
@@ -54,7 +54,7 @@ NSString * const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format
     dispatch_queue_t queue = dispatch_queue_create(classNameChar, DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
         [coreDataModels enumerateObjectsUsingBlock:^(CCPlayerPreviewCoreDataModel *coreDataModel, NSUInteger idx, BOOL * _Nonnull stop) {
-            CCPlayerPreviewViewModel *viewModel = [[CCPlayerPreviewViewModel alloc]init];
+            CCPlayerPreviewViewModel *viewModel = [[CCPlayerPreviewViewModel alloc] init];
             viewModel.nickName = coreDataModel.nickName;
             viewModel.imageURL = [NSURL URLWithString:coreDataModel.imageURL];
             viewModel.playerID = (NSInteger)coreDataModel.playerID;

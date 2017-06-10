@@ -7,7 +7,7 @@
 //
 
 #import "CCPlayerPreviewCollectionViewCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImageView+URL.h"
 #import "CCPlayerPreviewViewModel.h"
 #import "UIColor+CC.h"
 #import "UIFont+CC.h"
@@ -44,7 +44,7 @@
     _player = player;
     
     self.nickNameLabel.text = player.nickName;
-    [self.profileImageView sd_setImageWithURL:player.imageURL];
+    [self.profileImageView cc_setImageWithURL:player.imageURL];
 }
 
 #pragma mark - Private

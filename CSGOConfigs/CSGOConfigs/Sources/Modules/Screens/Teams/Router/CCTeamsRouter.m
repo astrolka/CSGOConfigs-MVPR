@@ -9,14 +9,28 @@
 #import "CCTeamsRouter.h"
 #import "CCTeamsViewController.h"
 #import "CCTeamsPresenter.h"
+#import <RESideMenu/RESideMenu.h>
+
+@interface CCTeamsRouter ()
+
+@property (nonatomic, strong) CCTeamsViewController *viewController;
+
+@end
 
 @implementation CCTeamsRouter
 
 - (id <CCTeamsViewProtocol>)buildTeamsModule {
-    CCTeamsViewController *viewController = [[CCTeamsViewController alloc] init];
-    CCTeamsPresenter *presenter = [[CCTeamsPresenter alloc] initWithView:viewController router:self];
+    self.viewController = [[CCTeamsViewController alloc] init];
+    CCTeamsPresenter *presenter = [[CCTeamsPresenter alloc] initWithView:self.viewController router:self];
     #pragma unused(presenter)
-    return viewController;
+    return self.viewController;
 }
+
+#pragma mark - CCOpenSideMenuRouterProtocol
+
+- (void)openSideMenu {
+    [self.viewController.sideMenuViewController presentLeftMenuViewController];
+}
+
 
 @end

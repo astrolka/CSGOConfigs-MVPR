@@ -19,7 +19,7 @@
 
 @implementation CCCoreDataService
 
-NSString * const kPersistentContainerName = @"CCConfigs";
+NSString *const kPersistentContainerName = @"CCConfigs";
 
 #pragma mark - CCCoreDataServiceProtocol
 

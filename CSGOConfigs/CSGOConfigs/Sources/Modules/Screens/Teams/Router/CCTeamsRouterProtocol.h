@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCOpenSideMenuRouterProtocol.h"
 
-@protocol CCTeamsRouterProtocol <NSObject>
+@protocol CCTeamsRouterProtocol <CCOpenSideMenuRouterProtocol>
 
 @end

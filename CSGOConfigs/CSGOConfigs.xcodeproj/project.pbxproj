@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		404948A75EF559A68F9349F0 /* libPods-CSGOConfigs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5EC4207C582A5EB77824E1 /* libPods-CSGOConfigs.a */; };
+		A6196BC61EEB4BDE00FA4067 /* UIImageView+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = A6196BC51EEB4BDE00FA4067 /* UIImageView+URL.m */; };
+		A6196BCE1EEB4C5100FA4067 /* CCTeamsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6196BCC1EEB4C5100FA4067 /* CCTeamsService.m */; };
+		A6196BD21EEB4CE900FA4067 /* CCTeamViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6196BD11EEB4CE900FA4067 /* CCTeamViewModel.m */; };
+		A629FF9F1EEC1451001C0373 /* CCTeamsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FF9E1EEC1451001C0373 /* CCTeamsListView.m */; };
+		A629FFA31EEC153E001C0373 /* CCTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFA21EEC153E001C0373 /* CCTeamTableViewCell.m */; };
+		A629FFA81EEC646D001C0373 /* UIImageView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFA71EEC646D001C0373 /* UIImageView+Animation.m */; };
 		A64103DF1EBDB9880057E2E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A64103E11EBDB9880057E2E3 /* Localizable.strings */; };
 		A64103EF1EBDDB550057E2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64103EE1EBDDB550057E2E3 /* Assets.xcassets */; };
 		A642CB1D1EBA491B00BFD470 /* CSGOConfigsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */; };
@@ -106,6 +112,20 @@
 /* Begin PBXFileReference section */
 		2DECB3A2F0C8EE77851075B8 /* Pods-CSGOConfigs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOConfigs.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSGOConfigs/Pods-CSGOConfigs.release.xcconfig"; sourceTree = "<group>"; };
 		80CC47E941882B41B55784CE /* Pods-CSGOConfigs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOConfigs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSGOConfigs/Pods-CSGOConfigs.debug.xcconfig"; sourceTree = "<group>"; };
+		A6196BC41EEB4BDE00FA4067 /* UIImageView+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URL.h"; sourceTree = "<group>"; };
+		A6196BC51EEB4BDE00FA4067 /* UIImageView+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+URL.m"; sourceTree = "<group>"; };
+		A6196BCB1EEB4C5100FA4067 /* CCTeamsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTeamsService.h; sourceTree = "<group>"; };
+		A6196BCC1EEB4C5100FA4067 /* CCTeamsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTeamsService.m; sourceTree = "<group>"; };
+		A6196BCD1EEB4C5100FA4067 /* CCTeamsServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTeamsServiceProtocol.h; sourceTree = "<group>"; };
+		A6196BD01EEB4CE900FA4067 /* CCTeamViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTeamViewModel.h; path = TeamViewModel/CCTeamViewModel.h; sourceTree = "<group>"; };
+		A6196BD11EEB4CE900FA4067 /* CCTeamViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTeamViewModel.m; path = TeamViewModel/CCTeamViewModel.m; sourceTree = "<group>"; };
+		A6196BD31EEB566200FA4067 /* CCBannerViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBannerViewProtocol.h; sourceTree = "<group>"; };
+		A629FF9D1EEC1451001C0373 /* CCTeamsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTeamsListView.h; path = TeamsView/CCTeamsListView.h; sourceTree = "<group>"; };
+		A629FF9E1EEC1451001C0373 /* CCTeamsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTeamsListView.m; path = TeamsView/CCTeamsListView.m; sourceTree = "<group>"; };
+		A629FFA11EEC153E001C0373 /* CCTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTeamTableViewCell.h; path = TeamTableViewCell/CCTeamTableViewCell.h; sourceTree = "<group>"; };
+		A629FFA21EEC153E001C0373 /* CCTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTeamTableViewCell.m; path = TeamTableViewCell/CCTeamTableViewCell.m; sourceTree = "<group>"; };
+		A629FFA61EEC646D001C0373 /* UIImageView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Animation.h"; path = "TableView/TableView+Animation/UIImageView+Animation.h"; sourceTree = "<group>"; };
+		A629FFA71EEC646D001C0373 /* UIImageView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Animation.m"; path = "TableView/TableView+Animation/UIImageView+Animation.m"; sourceTree = "<group>"; };
 		A64103E01EBDB9880057E2E3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A64103E21EBDB98E0057E2E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A64103EE1EBDDB550057E2E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,7 +170,7 @@
 		A6DF93501EE2F37700D93751 /* CCSideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSideMenuTableViewCell.m; sourceTree = "<group>"; };
 		A6DF93531EE2F37700D93751 /* CCBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBannerView.h; sourceTree = "<group>"; };
 		A6DF93541EE2F37700D93751 /* CCBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBannerView.m; sourceTree = "<group>"; };
-		A6DF93551EE2F37700D93751 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A6DF93551EE2F37700D93751 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CustomViews/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6DF93571EE2F37700D93751 /* CCMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMessageView.h; sourceTree = "<group>"; };
 		A6DF93581EE2F37700D93751 /* CCMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMessageView.m; sourceTree = "<group>"; };
 		A6DF935A1EE2F37700D93751 /* CCPlayersListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayersListView.h; sourceTree = "<group>"; };
@@ -326,6 +346,78 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A6196BBD1EEB49E100FA4067 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				A6196BC31EEB4BDE00FA4067 /* UIImageView+URL */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		A6196BC21EEB4BB000FA4067 /* TeamsService */ = {
+			isa = PBXGroup;
+			children = (
+				A6196BCD1EEB4C5100FA4067 /* CCTeamsServiceProtocol.h */,
+				A6196BCB1EEB4C5100FA4067 /* CCTeamsService.h */,
+				A6196BCC1EEB4C5100FA4067 /* CCTeamsService.m */,
+			);
+			path = TeamsService;
+			sourceTree = "<group>";
+		};
+		A6196BC31EEB4BDE00FA4067 /* UIImageView+URL */ = {
+			isa = PBXGroup;
+			children = (
+				A6196BC41EEB4BDE00FA4067 /* UIImageView+URL.h */,
+				A6196BC51EEB4BDE00FA4067 /* UIImageView+URL.m */,
+			);
+			name = "UIImageView+URL";
+			path = URL;
+			sourceTree = "<group>";
+		};
+		A6196BCF1EEB4CCC00FA4067 /* TeamViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A6196BD01EEB4CE900FA4067 /* CCTeamViewModel.h */,
+				A6196BD11EEB4CE900FA4067 /* CCTeamViewModel.m */,
+			);
+			name = TeamViewModel;
+			sourceTree = "<group>";
+		};
+		A629FF9C1EEC1428001C0373 /* TeamsView */ = {
+			isa = PBXGroup;
+			children = (
+				A629FF9D1EEC1451001C0373 /* CCTeamsListView.h */,
+				A629FF9E1EEC1451001C0373 /* CCTeamsListView.m */,
+			);
+			name = TeamsView;
+			sourceTree = "<group>";
+		};
+		A629FFA01EEC1519001C0373 /* TeamTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A629FFA11EEC153E001C0373 /* CCTeamTableViewCell.h */,
+				A629FFA21EEC153E001C0373 /* CCTeamTableViewCell.m */,
+			);
+			name = TeamTableViewCell;
+			sourceTree = "<group>";
+		};
+		A629FFA41EEC643E001C0373 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A629FFA51EEC6444001C0373 /* TableView+Animation */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		A629FFA51EEC6444001C0373 /* TableView+Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A629FFA61EEC646D001C0373 /* UIImageView+Animation.h */,
+				A629FFA71EEC646D001C0373 /* UIImageView+Animation.m */,
+			);
+			name = "TableView+Animation";
+			sourceTree = "<group>";
+		};
 		A642CAF31EBA491A00BFD470 = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +536,7 @@
 		A6DF93241EE2F37700D93751 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A6196BC21EEB4BB000FA4067 /* TeamsService */,
 				A6DF93251EE2F37700D93751 /* BannerService */,
 				A6DF93291EE2F37700D93751 /* LocalStorageService */,
 				A6DF932F1EE2F37700D93751 /* PlayersService */,
@@ -476,9 +569,9 @@
 		A6DF932F1EE2F37700D93751 /* PlayersService */ = {
 			isa = PBXGroup;
 			children = (
+				A6DF93321EE2F37700D93751 /* CCPlayersServiceProtocol.h */,
 				A6DF93301EE2F37700D93751 /* CCPlayersService.h */,
 				A6DF93311EE2F37700D93751 /* CCPlayersService.m */,
-				A6DF93321EE2F37700D93751 /* CCPlayersServiceProtocol.h */,
 			);
 			path = PlayersService;
 			sourceTree = "<group>";
@@ -505,6 +598,8 @@
 		A6DF93381EE2F37700D93751 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				A629FFA41EEC643E001C0373 /* TableView */,
+				A6196BBD1EEB49E100FA4067 /* ImageView */,
 				A6DF93391EE2F37700D93751 /* Colors */,
 				A6DF933C1EE2F37700D93751 /* Fonts */,
 				A6DF933F1EE2F37700D93751 /* ViewControllers */,
@@ -560,6 +655,7 @@
 		A6DF93461EE2F37700D93751 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A6DF93551EE2F37700D93751 /* LaunchScreen.storyboard */,
 				A6DF93471EE2F37700D93751 /* CellViews */,
 				A6DF93511EE2F37700D93751 /* CustomViews */,
 				A6DF935C1EE2F37700D93751 /* ViewFactories */,
@@ -570,6 +666,7 @@
 		A6DF93471EE2F37700D93751 /* CellViews */ = {
 			isa = PBXGroup;
 			children = (
+				A629FFA01EEC1519001C0373 /* TeamTableViewCell */,
 				A6DF93481EE2F37700D93751 /* BannerCollectionViewCell */,
 				A6DF934B1EE2F37700D93751 /* PlayerPreviewCollectionViewCell */,
 				A6DF934E1EE2F37700D93751 /* SideMenuTableViewCell */,
@@ -607,8 +704,8 @@
 		A6DF93511EE2F37700D93751 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				A629FF9C1EEC1428001C0373 /* TeamsView */,
 				A6DF93521EE2F37700D93751 /* BannerView */,
-				A6DF93551EE2F37700D93751 /* LaunchScreen.storyboard */,
 				A6DF93561EE2F37700D93751 /* MessageView */,
 				A6DF93591EE2F37700D93751 /* PlayersListView */,
 			);
@@ -850,8 +947,8 @@
 		A6DF939E1EE2F37700D93751 /* ServerModels */ = {
 			isa = PBXGroup;
 			children = (
-				A6DF939F1EE2F37700D93751 /* BannerServerModel */,
 				A6DF93A21EE2F37700D93751 /* CCServerModelProtocol.h */,
+				A6DF939F1EE2F37700D93751 /* BannerServerModel */,
 				A6DF93A31EE2F37700D93751 /* EventServerModel */,
 				A6DF93A61EE2F37700D93751 /* News */,
 				A6DF93B01EE2F37700D93751 /* Player */,
@@ -964,6 +1061,7 @@
 		A6DF93BD1EE2F37700D93751 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A6196BCF1EEB4CCC00FA4067 /* TeamViewModel */,
 				A6DF93BE1EE2F37700D93751 /* BannerViewModel */,
 				A6DF93C11EE2F37700D93751 /* PlayerDescriptionViewModel */,
 				A6DF93C41EE2F37700D93751 /* PlayerPreviewViewModel */,
@@ -1022,6 +1120,7 @@
 				A6DF93CA1EE2F37700D93751 /* CCMessageViewProtocol.h */,
 				A6DF93CB1EE2F37700D93751 /* CCOpenSideMenuRouterProtocol.h */,
 				A6DF93CC1EE2F37700D93751 /* CCSpinerViewProtocol.h */,
+				A6196BD31EEB566200FA4067 /* CCBannerViewProtocol.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1236,9 +1335,9 @@
 		A6DF94061EE2F37700D93751 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6DF94091EE2F37700D93751 /* CCPlayersPreviewRouterProtocol.h */,
 				A6DF94071EE2F37700D93751 /* CCPlayersPreviewRouter.h */,
 				A6DF94081EE2F37700D93751 /* CCPlayersPreviewRouter.m */,
-				A6DF94091EE2F37700D93751 /* CCPlayersPreviewRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1246,9 +1345,9 @@
 		A6DF940A1EE2F37700D93751 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A6DF940D1EE2F37700D93751 /* CCPlayersPreviewViewProtocol.h */,
 				A6DF940B1EE2F37700D93751 /* CCPlayersPreviewViewController.h */,
 				A6DF940C1EE2F37700D93751 /* CCPlayersPreviewViewController.m */,
-				A6DF940D1EE2F37700D93751 /* CCPlayersPreviewViewProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1353,9 +1452,9 @@
 		A6DF942A1EE2F37700D93751 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6DF942D1EE2F37700D93751 /* CCTeamsRouterProtocol.h */,
 				A6DF942B1EE2F37700D93751 /* CCTeamsRouter.h */,
 				A6DF942C1EE2F37700D93751 /* CCTeamsRouter.m */,
-				A6DF942D1EE2F37700D93751 /* CCTeamsRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1363,9 +1462,9 @@
 		A6DF942E1EE2F37700D93751 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A6DF94311EE2F37700D93751 /* CCTeamsViewProtocol.h */,
 				A6DF942F1EE2F37700D93751 /* CCTeamsViewController.h */,
 				A6DF94301EE2F37700D93751 /* CCTeamsViewController.m */,
-				A6DF94311EE2F37700D93751 /* CCTeamsViewProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1541,6 +1640,7 @@
 				A6DF944F1EE2F37700D93751 /* CCNewDescriptionContentCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF945C1EE2F37700D93751 /* CCBannerServerModel.m in Sources */,
 				A6DF944E1EE2F37700D93751 /* CCNewDescriptionContentCoreDataModel+CoreDataClass.m in Sources */,
+				A629FFA81EEC646D001C0373 /* UIImageView+Animation.m in Sources */,
 				A6DF946C1EE2F37700D93751 /* CCFavoritePlayersPresenter.m in Sources */,
 				A6DF94511EE2F37700D93751 /* CCNewsDescriptionCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF94701EE2F37700D93751 /* CCMapEventsRouter.m in Sources */,
@@ -1566,12 +1666,14 @@
 				A6DF94741EE2F37700D93751 /* CCNewsPreviewViewController.m in Sources */,
 				A6DF94521EE2F37700D93751 /* CCNewsPreviewCoreDataModel+CoreDataClass.m in Sources */,
 				A6DF946D1EE2F37700D93751 /* CCFavoritePlayersRouter.m in Sources */,
+				A629FFA31EEC153E001C0373 /* CCTeamTableViewCell.m in Sources */,
 				A6DF94341EE2F37700D93751 /* CCLog.m in Sources */,
 				A6DF94531EE2F37700D93751 /* CCNewsPreviewCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF94771EE2F37700D93751 /* CCPlayersPreviewViewController.m in Sources */,
 				A6DF945A1EE2F37700D93751 /* CCUserFavoritesPlayersIDCoreDataModel+CoreDataClass.m in Sources */,
 				A6DF94611EE2F37700D93751 /* CCPlayerDescriptionServerModel.m in Sources */,
 				A6DF94781EE2F37700D93751 /* CCSideMenuPresenter.m in Sources */,
+				A6196BC61EEB4BDE00FA4067 /* UIImageView+URL.m in Sources */,
 				A6DF94431EE2F37700D93751 /* CCMessageView.m in Sources */,
 				A6DF947E1EE2F37700D93751 /* CCTeamsPresenter.m in Sources */,
 				A6DF94441EE2F37700D93751 /* CCPlayersListView.m in Sources */,
@@ -1587,6 +1689,7 @@
 				A6DF94451EE2F37700D93751 /* CCSideMenuFactory.m in Sources */,
 				A6DF944B1EE2F37700D93751 /* CCBannerCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF947F1EE2F37700D93751 /* CCTeamsRouter.m in Sources */,
+				A6196BCE1EEB4C5100FA4067 /* CCTeamsService.m in Sources */,
 				A6DF94571EE2F37700D93751 /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF94761EE2F37700D93751 /* CCPlayersPreviewRouter.m in Sources */,
 				A6DF946F1EE2F37700D93751 /* CCMapEventsPresenter.m in Sources */,
@@ -1596,9 +1699,11 @@
 				A6DF943D1EE2F37700D93751 /* UIViewController+CCSpinerView.m in Sources */,
 				A6DF94641EE2F37700D93751 /* CCTeamServerModel.m in Sources */,
 				A6DF947B1EE2F37700D93751 /* CCSkinsPricePresenter.m in Sources */,
+				A629FF9F1EEC1451001C0373 /* CCTeamsListView.m in Sources */,
 				A6DF943A1EE2F37700D93751 /* UIColor+CC.m in Sources */,
 				A6DF94391EE2F37700D93751 /* CCRestService.m in Sources */,
 				A6DF945E1EE2F37700D93751 /* CCNewsDescriptionContentServerModel.m in Sources */,
+				A6196BD21EEB4CE900FA4067 /* CCTeamViewModel.m in Sources */,
 				A6DF94361EE2F37700D93751 /* CCConfigs.xcdatamodeld in Sources */,
 				A6DF94351EE2F37700D93751 /* CCBannerService.m in Sources */,
 				A6DF943C1EE2F37700D93751 /* UIViewController+CCMessageView.m in Sources */,
