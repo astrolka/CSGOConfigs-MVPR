@@ -12,4 +12,6 @@
 
 @protocol CCPlayersPreviewRouterProtocol <CCOpenSideMenuRouterProtocol>
 
+- (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID;
+
 @end

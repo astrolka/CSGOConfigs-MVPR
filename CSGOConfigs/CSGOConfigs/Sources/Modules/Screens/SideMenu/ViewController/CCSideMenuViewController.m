@@ -80,6 +80,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.viewAction didSelectAppSection:self.sideMenuItems[indexPath.row].appSection];
 }
 

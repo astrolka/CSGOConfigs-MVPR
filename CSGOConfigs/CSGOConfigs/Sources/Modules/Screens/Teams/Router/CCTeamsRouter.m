@@ -9,28 +9,36 @@
 #import "CCTeamsRouter.h"
 #import "CCTeamsViewController.h"
 #import "CCTeamsPresenter.h"
+#import "CCPlayerDescriptionRouter.h"
 #import <RESideMenu/RESideMenu.h>
 
 @interface CCTeamsRouter ()
 
-@property (nonatomic, strong) CCTeamsViewController *viewController;
+@property (nonatomic, strong) id <CCTeamsViewProtocol> view;
 
 @end
 
 @implementation CCTeamsRouter
 
 - (id <CCTeamsViewProtocol>)buildTeamsModule {
-    self.viewController = [[CCTeamsViewController alloc] init];
-    CCTeamsPresenter *presenter = [[CCTeamsPresenter alloc] initWithView:self.viewController router:self];
+    self.view = [[CCTeamsViewController alloc] init];
+    CCTeamsPresenter *presenter = [[CCTeamsPresenter alloc] initWithView:self.view router:self];
     #pragma unused(presenter)
-    return self.viewController;
+    return self.view;
 }
 
 #pragma mark - CCOpenSideMenuRouterProtocol
 
 - (void)openSideMenu {
-    [self.viewController.sideMenuViewController presentLeftMenuViewController];
+    UIViewController *viewController = (UIViewController *)self.view;
+    [viewController.sideMenuViewController presentLeftMenuViewController];
 }
 
+#pragma mark - CCTeamsRouterProtocol
+
+- (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
+    CCPlayerDescriptionRouter *router = [[CCPlayerDescriptionRouter alloc] initWithNavigationController:self.navigationController];
+    [router goToPlayerDescriptionScreenWithPlayerID:playerID];
+}
 
 @end

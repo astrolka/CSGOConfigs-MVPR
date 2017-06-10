@@ -29,7 +29,7 @@
 
 @implementation CCTeamsPresenter
 
-NSInteger const kLoadingLimitd = 6;
+static const NSInteger kLoadingLimitd = 6;
 
 - (instancetype)initWithView:(id <CCTeamsViewProtocol>)view router:(id <CCTeamsRouterProtocol>)router {
     self = [super init];
@@ -55,11 +55,14 @@ NSInteger const kLoadingLimitd = 6;
 }
 
 - (void)teamsView:(id <CCTeamsViewProtocol>)view didSelectBannerAtIndex:(NSUInteger)index {
-    
+    CCBannerViewModel *banner = self.banners[index];
+    [self.router goToPlayerDescriptionScreenWithPlayerID:banner.playerID];
 }
 
 - (void)teamsView:(id <CCTeamsViewProtocol>)view didSelectTeamAtIndex:(NSUInteger)teamIndex playerIndex:(NSUInteger)playerIndex {
-    NSLog(@"didSelectTeamAtIndex: (%d %d)",teamIndex,playerIndex);
+    CCTeamViewModel *team = self.teams[teamIndex];
+    CCPlayerPreviewViewModel *player = team.players[playerIndex];
+    [self.router goToPlayerDescriptionScreenWithPlayerID:player.playerID];
 }
 
 - (void)teamsView:(id <CCTeamsViewProtocol>)view didScrollPlayerAtIndex:(NSUInteger)index {

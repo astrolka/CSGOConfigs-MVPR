@@ -31,7 +31,7 @@
 
 @end
 
-CGFloat const kLoadingLimit = 6.f;
+static const CGFloat kLoadingLimit = 6.f;
 
 @implementation CCPlayersPreviewPresenter
 
@@ -60,11 +60,13 @@ CGFloat const kLoadingLimit = 6.f;
 }
 
 - (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectBannerAtIndex:(NSUInteger)index {
-    
+    CCBannerViewModel *banner = self.banners[index];
+    [self.router goToPlayerDescriptionScreenWithPlayerID:banner.playerID];
 }
 
 - (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectPlayerAtIndex:(NSUInteger)index {
-    
+    CCPlayerPreviewViewModel *player = self.players[index];
+    [self.router goToPlayerDescriptionScreenWithPlayerID:player.playerID];
 }
 
 - (void)playersPreviewView:(id<CCPlayersPreviewViewProtocol>)view didScrollPlayerAtIndex:(NSUInteger)index {

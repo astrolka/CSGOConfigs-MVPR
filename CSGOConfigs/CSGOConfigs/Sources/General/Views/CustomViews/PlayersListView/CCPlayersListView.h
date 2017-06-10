@@ -14,6 +14,8 @@
 
 - (void)playersListView:(CCPlayersListView *)view didSelectPlayerAtIndex:(NSUInteger)index;
 
+@optional
+
 - (void)playersListView:(CCPlayersListView *)view didScrollPlayerAtIndex:(NSUInteger)index;
 
 @end

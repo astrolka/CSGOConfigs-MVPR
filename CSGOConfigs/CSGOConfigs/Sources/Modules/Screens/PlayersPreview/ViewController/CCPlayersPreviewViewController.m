@@ -21,8 +21,8 @@
 
 @end
 
-CGFloat const kCellSpaces = 6.f;
-NSUInteger const kColumnsInSection = 3;
+static const CGFloat kCellSpaces = 6.f;
+static const NSUInteger kColumnsInSection = 3;
 
 @implementation CCPlayersPreviewViewController
 

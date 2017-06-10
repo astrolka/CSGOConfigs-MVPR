@@ -35,12 +35,12 @@
 
 - (void)goToAppFromWindow:(UIWindow *)window {
     NSParameterAssert(window);
-    
-    CCPlayersPreviewRouter *playersRouter = [[CCPlayersPreviewRouter alloc] init];
-    id <CCPlayersPreviewViewProtocol> playersView = [playersRouter buildPlayersPreviewModule];
+
     self.sideMenuView = [self buildSideMenuModule];
     
     self.navigationController = [[UINavigationController alloc] initWithNavigationBarClass:[BMYScrollableNavigationBar class] toolbarClass:nil];
+    CCPlayersPreviewRouter *playersRouter = [[CCPlayersPreviewRouter alloc] initWithNavigationController:self.navigationController];
+    id <CCPlayersPreviewViewProtocol> playersView = [playersRouter buildPlayersPreviewModule];
     [self.navigationController setViewControllers:@[playersView] animated:NO];
     RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:self.navigationController
                                                       leftMenuViewController:(UIViewController *)self.sideMenuView

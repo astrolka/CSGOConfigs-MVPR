@@ -11,4 +11,6 @@
 
 @protocol CCTeamsRouterProtocol <CCOpenSideMenuRouterProtocol>
 
+- (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID;
+
 @end
