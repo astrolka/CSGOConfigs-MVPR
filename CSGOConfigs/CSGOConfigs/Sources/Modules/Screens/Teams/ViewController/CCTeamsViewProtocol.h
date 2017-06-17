@@ -11,6 +11,7 @@
 #import "CCSpinerViewProtocol.h"
 #import "CCMessageViewProtocol.h"
 #import "CCBannerViewProtocol.h"
+@class UIView;
 @protocol CCTeamsViewProtocol;
 
 @protocol CCTeamsViewActionProtocol <NSObject>
@@ -19,17 +20,17 @@
 
 - (void)teamsViewDidOpenMenu:(id <CCTeamsViewProtocol>)view;
 
-- (void)teamsView:(id <CCTeamsViewProtocol>)view didSelectBannerAtIndex:(NSUInteger)index;
-
 - (void)teamsView:(id <CCTeamsViewProtocol>)view didSelectTeamAtIndex:(NSUInteger)teamIndex playerIndex:(NSUInteger)playerIndex;
 
 - (void)teamsView:(id <CCTeamsViewProtocol>)view didScrollPlayerAtIndex:(NSUInteger)index;
 
 @end
 
-@protocol CCTeamsViewProtocol <CCSpinerViewProtocol, CCMessageViewProtocol, CCBannerViewProtocol>
+@protocol CCTeamsViewProtocol <CCSpinerViewProtocol, CCMessageViewProtocol>
 
 @property (nonatomic, strong) id <CCTeamsViewActionProtocol> viewAction;
+
+- (id)initWithBannerView:(UIView <CCBannerViewProtocol> *)bannerView;
 
 - (void)showTeams:(NSArray <CCTeamViewModel *> *)teams;
 

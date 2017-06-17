@@ -12,6 +12,8 @@
 #import "UIColor+CC.h"
 #import "UIFont+CC.h"
 #import "Masonry.h"
+#import "UIView+CCSpiner.h"
+#import "UIView+CCMessageView.h"
 
 @interface CCBannerView () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -24,24 +26,22 @@
 
 @implementation CCBannerView
 
-#pragma mark - Public
+@synthesize viewAction;
 
-- (instancetype)initWithPageControl:(BOOL)pageControl {
-    self = [self initWithFrame:CGRectZero];
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
     if (self) {
         [self collectionViewSetup];
-        (!pageControl) ?: [self pageControlSetup];
+        [self pageControlSetup];
     }
     return self;
 }
 
-- (void)showBanners:(NSArray <CCBannerViewModel *> *)banners {
-    self.banners = banners;
-    self.pageControl.numberOfPages = banners.count;
-    [self.collectionView reloadData];
+- (void)didMoveToSuperview {
+    [self.viewAction bannerViewDidSet:self];
 }
 
-#pragma mark - Private
+#pragma mark - View
 
 - (void)collectionViewSetup {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -49,7 +49,7 @@
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-    self.collectionView.backgroundColor = [UIColor cc_themeColor];
+    self.collectionView.backgroundColor = [[UIColor cc_themeColor] colorWithAlphaComponent:0.5];
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.pagingEnabled = YES;
     self.collectionView.layer.cornerRadius = 6.f;
@@ -92,9 +92,7 @@
 #pragma mark -UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.viewAction) {
-        self.viewAction(self, indexPath.row);
-    }
+    [self.viewAction bannerView:self didSelectBannerAtIndex:indexPath.row];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,6 +107,34 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     self.pageControl.currentPage = self.collectionView.contentOffset.x / self.collectionView.bounds.size.width;
+}
+
+#pragma mark - CCBannerViewProtocol
+
+- (void)showBanners:(NSArray <CCBannerViewModel *> *)banners {
+    self.banners = banners;
+    self.pageControl.numberOfPages = banners.count;
+    [self.collectionView reloadData];
+}
+
+- (void)updateBannerHeight:(CGFloat)height {
+    [self mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@(height));
+    }];
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        [self layoutIfNeeded];
+    }];
+}
+
+#pragma mark - CCSpinerViewProtocol
+
+- (void)showSpiner {
+    [self cc_showSpiner];
+}
+
+- (void)hideSpiner {
+    [self cc_hideSpiner];
 }
 
 @end

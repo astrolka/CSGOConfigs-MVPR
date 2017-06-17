@@ -11,13 +11,13 @@
 #import "CCPlayersListView.h"
 #import "Masonry.h"
 #import "CCSideMenuFactory.h"
-#import "UIViewController+CCSpinerView.h"
-#import "UIViewController+CCMessageView.h"
+#import "UIView+CCSpiner.h"
+#import "UIView+CCMessageView.h"
 
 @interface CCPlayersPreviewViewController () <CCPlayersListViewActionProtocol>
 
 @property (strong, nonatomic) CCPlayersListView *playersListView;
-@property (strong, nonatomic) CCBannerView *bannerView;
+@property (strong, nonatomic) UIView <CCBannerViewProtocol> *bannerView;
 
 @end
 
@@ -27,6 +27,14 @@ static const NSUInteger kColumnsInSection = 3;
 @implementation CCPlayersPreviewViewController
 
 @synthesize viewAction;
+
+- (id)initWithBannerView:(UIView <CCBannerViewProtocol> *)bannerView {
+    self = [super init];
+    if (self) {
+        self.bannerView = bannerView;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,17 +62,10 @@ static const NSUInteger kColumnsInSection = 3;
 }
 
 - (void)bannerViewSetup {
-    self.bannerView = [[CCBannerView alloc] initWithPageControl:YES];
-    self.bannerView.alpha = 0.f;
-    __weak typeof(self) weakSelf = self;
-    self.bannerView.viewAction = ^(CCBannerView *bannerView, NSUInteger index) {
-        [weakSelf.viewAction playersPreviewView:weakSelf didSelectBannerAtIndex:index];
-    };
-    
     [self.view addSubview:self.bannerView];
     [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@0);
+        make.height.equalTo(@100);
     }];
 }
 
@@ -85,10 +86,6 @@ static const NSUInteger kColumnsInSection = 3;
 }
 
 #pragma mark - CCBannerViewProtocol
-
-- (void)showBanners:(NSArray <CCBannerViewModel *> *)banners {
-    [self.bannerView showBanners:banners];
-}
 
 - (void)updateBannerHeight:(CGFloat)height {
     [self.bannerView mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -115,17 +112,17 @@ static const NSUInteger kColumnsInSection = 3;
 #pragma mark - CCSpinerViewProtocol
 
 - (void)showSpiner {
-    [self cc_showSpiner];
+    [self.view cc_showSpiner];
 }
 
 - (void)hideSpiner {
-    [self cc_hideSpiner];
+    [self.view cc_hideSpiner];
 }
 
 #pragma mark - CCMessageViewProtocol
 
 - (void)showMessageWithText:(NSString *)text {
-    [self cc_showMessageWithText:text];
+    [self.view cc_showMessageWithText:text];
 }
 
 #pragma mark - Action

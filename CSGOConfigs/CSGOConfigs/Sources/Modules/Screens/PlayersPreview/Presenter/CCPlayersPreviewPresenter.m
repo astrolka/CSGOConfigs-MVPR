@@ -11,10 +11,8 @@
 #import "CCPlayersPreviewRouterProtocol.h"
 #import "CCOpenSideMenuRouterProtocol.h"
 #import "CCPlayersServiceProtocol.h"
-#import "CCBannerServiceProtocol.h"
 #import "CCRestServiceProtocol.h"
 #import "CCPlayerPreviewViewModel.h"
-#import "CCBannerViewModel.h"
 
 @interface CCPlayersPreviewPresenter () <CCPlayersPreviewViewActionProtocol>
 
@@ -22,12 +20,9 @@
 @property (nonatomic, strong) id <CCPlayersPreviewRouterProtocol> router;
 
 @property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
-@property (nonatomic, strong) id <CCBannerServiceProtocol> ioc_bannersService;
 
 @property (nonatomic, strong) NSMutableArray <CCPlayerPreviewViewModel *> *players;
 @property (nonatomic, assign) NSUInteger countOfPlayersOnServer; // pagination logic
-
-@property (nonatomic, strong) NSArray <CCBannerViewModel *> *banners;
 
 @end
 
@@ -52,16 +47,10 @@ static const CGFloat kLoadingLimit = 6.f;
 
 - (void)playersPreviewViewDidSet:(id <CCPlayersPreviewViewProtocol>)view {
     [self loadPlayersWithSpiner:YES];
-    [self loadBanners];
 }
 
 - (void)playersPreviewViewDidOpenMenu:(id <CCPlayersPreviewViewProtocol>)view {
     [self.router openSideMenu];
-}
-
-- (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectBannerAtIndex:(NSUInteger)index {
-    CCBannerViewModel *banner = self.banners[index];
-    [self.router goToPlayerDescriptionScreenWithPlayerID:banner.playerID];
 }
 
 - (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectPlayerAtIndex:(NSUInteger)index {
@@ -88,14 +77,6 @@ static const CGFloat kLoadingLimit = 6.f;
             (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"", nil)];
         }];
     }
-}
-
-- (void)loadBanners {
-    [self.ioc_bannersService getBanners:^(NSArray<CCBannerViewModel *> *banners, CGFloat bannerHeight) {
-        self.banners = banners;
-        [self.view updateBannerHeight:bannerHeight];
-        [self.view showBanners:banners];
-    }];
 }
 
 @end

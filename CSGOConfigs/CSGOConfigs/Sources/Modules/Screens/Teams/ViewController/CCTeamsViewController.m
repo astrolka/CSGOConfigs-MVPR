@@ -8,8 +8,8 @@
 
 #import "CCTeamsViewController.h"
 #import "Masonry.h"
-#import "UIViewController+CCSpinerView.h"
-#import "UIViewController+CCMessageView.h"
+#import "UIView+CCSpiner.h"
+#import "UIView+CCMessageView.h"
 #import "CCTeamsListView.h"
 #import "CCBannerView.h"
 #import "CCSideMenuFactory.h"
@@ -17,13 +17,21 @@
 @interface CCTeamsViewController () <CCTeamsListViewActionProtocol>
 
 @property (nonatomic, strong) CCTeamsListView *teamsView;
-@property (nonatomic, strong) CCBannerView *bannerView;
+@property (strong, nonatomic) UIView <CCBannerViewProtocol> *bannerView;
 
 @end
 
 @implementation CCTeamsViewController
 
 @synthesize viewAction;
+
+- (id)initWithBannerView:(UIView <CCBannerViewProtocol> *)bannerView {
+    self = [super init];
+    if (self) {
+        self.bannerView = bannerView;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,17 +57,10 @@
 }
 
 - (void)bannerViewSetup {
-    self.bannerView = [[CCBannerView alloc] initWithPageControl:YES];
-    self.bannerView.alpha = 0.f;
-    __weak typeof(self) weakSelf = self;
-    self.bannerView.viewAction = ^(CCBannerView *bannerView, NSUInteger index) {
-        [weakSelf.viewAction teamsView:weakSelf didSelectBannerAtIndex:index];
-    };
-    
     [self.view addSubview:self.bannerView];
     [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@0);
+        make.height.equalTo(@100);
     }];
 }
 
@@ -71,24 +72,6 @@
 
 - (void)showTeams:(NSArray <CCTeamViewModel *> *)teams {
     [self.teamsView showTeams:teams];
-}
-
-#pragma mark - CCBannerViewProtocol
-
-- (void)showBanners:(NSArray <CCBannerViewModel *> *)banners {
-    [self.bannerView showBanners:banners];
-}
-
-- (void)updateBannerHeight:(CGFloat)height {
-    [self.bannerView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@(height));
-    }];
-    
-    [UIView animateWithDuration:0.4 animations:^{
-        self.bannerView.alpha = 1.f;
-        [self.view layoutIfNeeded];
-    }];
 }
 
 #pragma mark - CCTeamsListViewActionProtocol
@@ -104,17 +87,17 @@
 #pragma mark - CCSpinerViewProtocol
 
 - (void)showSpiner {
-    [self cc_showSpiner];
+    [self.view cc_showSpiner];
 }
 
 - (void)hideSpiner {
-    [self cc_hideSpiner];
+    [self.view cc_hideSpiner];
 }
 
 #pragma mark - CCMessageViewProtocol
 
 - (void)showMessageWithText:(NSString *)text {
-    [self cc_showMessageWithText:text];
+    [self.view cc_showMessageWithText:text];
 }
 
 #pragma mark - Action

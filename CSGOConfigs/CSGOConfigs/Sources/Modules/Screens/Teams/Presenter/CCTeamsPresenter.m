@@ -10,20 +10,16 @@
 #import "CCTeamsViewProtocol.h"
 #import "CCTeamsRouterProtocol.h"
 #import "CCTeamsServiceProtocol.h"
-#import "CCBannerServiceProtocol.h"
 
 @interface CCTeamsPresenter () <CCTeamsViewActionProtocol>
 
 @property (nonatomic, strong) id <CCTeamsServiceProtocol> ioc_teamsService;
-@property (nonatomic, strong) id <CCBannerServiceProtocol> ioc_bannersService;
 
 @property (nonatomic, weak) id <CCTeamsViewProtocol> view;
 @property (nonatomic, strong) id <CCTeamsRouterProtocol> router;
 
 @property (nonatomic, strong) NSMutableArray <CCTeamViewModel *> *teams;
 @property (nonatomic, assign) NSUInteger countOfTeamsOnServer; // pagination logic
-
-@property (nonatomic, strong) NSArray <CCBannerViewModel *> *banners;
 
 @end
 
@@ -46,17 +42,11 @@ static const NSInteger kLoadingLimitd = 6;
 #pragma mark - CCTeamsViewActionProtocol
 
 - (void)teamsViewDidSet:(id <CCTeamsViewProtocol>)view {
-    [self loadBanners];
     [self loadTeamsWithSpiner:YES];
 }
 
 - (void)teamsViewDidOpenMenu:(id <CCTeamsViewProtocol>)view {
     [self.router openSideMenu];
-}
-
-- (void)teamsView:(id <CCTeamsViewProtocol>)view didSelectBannerAtIndex:(NSUInteger)index {
-    CCBannerViewModel *banner = self.banners[index];
-    [self.router goToPlayerDescriptionScreenWithPlayerID:banner.playerID];
 }
 
 - (void)teamsView:(id <CCTeamsViewProtocol>)view didSelectTeamAtIndex:(NSUInteger)teamIndex playerIndex:(NSUInteger)playerIndex {
@@ -83,14 +73,6 @@ static const NSInteger kLoadingLimitd = 6;
             (fromServer) ?: [self.view showMessageWithText:@"hello"];
         }];
     }
-}
-
-- (void)loadBanners {
-    [self.ioc_bannersService getBanners:^(NSArray<CCBannerViewModel *> *banners, CGFloat bannerHeight) {
-        self.banners = banners;
-        [self.view updateBannerHeight:bannerHeight];
-        [self.view showBanners:banners];
-    }];
 }
 
 @end

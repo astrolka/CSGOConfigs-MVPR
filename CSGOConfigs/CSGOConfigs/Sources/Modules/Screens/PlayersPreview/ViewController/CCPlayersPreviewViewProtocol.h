@@ -11,10 +11,11 @@
 #import "CCSpinerViewProtocol.h"
 #import "CCMessageViewProtocol.h"
 #import "CCBannerViewProtocol.h"
-
-@protocol CCPlayersPreviewViewProtocol;
+#import "CCBannerViewProtocol.h"
+@class UIView;
 @class CCPlayerPreviewViewModel;
 @class CCBannerViewModel;
+@protocol CCPlayersPreviewViewProtocol;
 
 @protocol CCPlayersPreviewViewActionProtocol <NSObject>
 
@@ -22,17 +23,17 @@
 
 - (void)playersPreviewViewDidOpenMenu:(id <CCPlayersPreviewViewProtocol>)view;
 
-- (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectBannerAtIndex:(NSUInteger)index;
-
 - (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didSelectPlayerAtIndex:(NSUInteger)index;
 
 - (void)playersPreviewView:(id <CCPlayersPreviewViewProtocol>)view didScrollPlayerAtIndex:(NSUInteger)index;
 
 @end
 
-@protocol CCPlayersPreviewViewProtocol <CCSpinerViewProtocol, CCMessageViewProtocol, CCBannerViewProtocol>
+@protocol CCPlayersPreviewViewProtocol <CCSpinerViewProtocol, CCMessageViewProtocol>
 
 @property (nonatomic, strong) id <CCPlayersPreviewViewActionProtocol> viewAction;
+
+- (id)initWithBannerView:(UIView <CCBannerViewProtocol> *)bannerView;
 
 - (void)showPlayers:(NSArray <CCPlayerPreviewViewModel *> *)players;
 

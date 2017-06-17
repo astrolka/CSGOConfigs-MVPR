@@ -7,16 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCBannerViewProtocol.h"
 @class CCBannerView;
 @class CCBannerViewModel;
 
-typedef void(^didSelectBannerAtIndex)(CCBannerView *bannerView, NSUInteger index);
-
-@interface CCBannerView : UIView
-
-@property (nonatomic, copy) didSelectBannerAtIndex viewAction;
-
-- (instancetype)initWithPageControl:(BOOL)pageControl;
+@interface CCBannerView : UIView <CCBannerViewProtocol>
 
 - (void)showBanners:(NSArray <CCBannerViewModel *> *)banners;
 

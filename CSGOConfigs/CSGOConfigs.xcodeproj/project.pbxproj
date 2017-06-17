@@ -11,6 +11,10 @@
 		A6196BC61EEB4BDE00FA4067 /* UIImageView+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = A6196BC51EEB4BDE00FA4067 /* UIImageView+URL.m */; };
 		A6196BCE1EEB4C5100FA4067 /* CCTeamsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6196BCC1EEB4C5100FA4067 /* CCTeamsService.m */; };
 		A6196BD21EEB4CE900FA4067 /* CCTeamViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6196BD11EEB4CE900FA4067 /* CCTeamViewModel.m */; };
+		A62859461EF5DC9B00BA935D /* CCBannerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A62859451EF5DC9B00BA935D /* CCBannerPresenter.m */; };
+		A628594B1EF5DE8B00BA935D /* CCBannerRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A628594A1EF5DE8B00BA935D /* CCBannerRouter.m */; };
+		A62859521EF5EB8C00BA935D /* UIView+CCMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A62859511EF5EB8C00BA935D /* UIView+CCMessageView.m */; };
+		A62859551EF5EBCE00BA935D /* UIView+CCSpiner.m in Sources */ = {isa = PBXBuildFile; fileRef = A62859541EF5EBCE00BA935D /* UIView+CCSpiner.m */; };
 		A629FF9F1EEC1451001C0373 /* CCTeamsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FF9E1EEC1451001C0373 /* CCTeamsListView.m */; };
 		A629FFA31EEC153E001C0373 /* CCTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFA21EEC153E001C0373 /* CCTeamTableViewCell.m */; };
 		A629FFA81EEC646D001C0373 /* UIImageView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFA71EEC646D001C0373 /* UIImageView+Animation.m */; };
@@ -35,8 +39,6 @@
 		A6DF94391EE2F37700D93751 /* CCRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF93351EE2F37700D93751 /* CCRestService.m */; };
 		A6DF943A1EE2F37700D93751 /* UIColor+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF933B1EE2F37700D93751 /* UIColor+CC.m */; };
 		A6DF943B1EE2F37700D93751 /* UIFont+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF933E1EE2F37700D93751 /* UIFont+CC.m */; };
-		A6DF943C1EE2F37700D93751 /* UIViewController+CCMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF93421EE2F37700D93751 /* UIViewController+CCMessageView.m */; };
-		A6DF943D1EE2F37700D93751 /* UIViewController+CCSpinerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF93451EE2F37700D93751 /* UIViewController+CCSpinerView.m */; };
 		A6DF943E1EE2F37700D93751 /* CCBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF934A1EE2F37700D93751 /* CCBannerCollectionViewCell.m */; };
 		A6DF943F1EE2F37700D93751 /* CCPlayerPreviewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF934D1EE2F37700D93751 /* CCPlayerPreviewCollectionViewCell.m */; };
 		A6DF94401EE2F37700D93751 /* CCSideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF93501EE2F37700D93751 /* CCSideMenuTableViewCell.m */; };
@@ -126,7 +128,16 @@
 		A6196BCD1EEB4C5100FA4067 /* CCTeamsServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTeamsServiceProtocol.h; sourceTree = "<group>"; };
 		A6196BD01EEB4CE900FA4067 /* CCTeamViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTeamViewModel.h; path = TeamViewModel/CCTeamViewModel.h; sourceTree = "<group>"; };
 		A6196BD11EEB4CE900FA4067 /* CCTeamViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTeamViewModel.m; path = TeamViewModel/CCTeamViewModel.m; sourceTree = "<group>"; };
-		A6196BD31EEB566200FA4067 /* CCBannerViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBannerViewProtocol.h; sourceTree = "<group>"; };
+		A62859441EF5DC9B00BA935D /* CCBannerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerPresenter.h; path = Banner/Presenter/CCBannerPresenter.h; sourceTree = "<group>"; };
+		A62859451EF5DC9B00BA935D /* CCBannerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBannerPresenter.m; path = Banner/Presenter/CCBannerPresenter.m; sourceTree = "<group>"; };
+		A62859471EF5DD1500BA935D /* CCBannerViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerViewProtocol.h; path = Banner/View/CCBannerViewProtocol.h; sourceTree = "<group>"; };
+		A62859491EF5DE8B00BA935D /* CCBannerRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerRouter.h; path = Banner/Router/CCBannerRouter.h; sourceTree = "<group>"; };
+		A628594A1EF5DE8B00BA935D /* CCBannerRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBannerRouter.m; path = Banner/Router/CCBannerRouter.m; sourceTree = "<group>"; };
+		A628594C1EF5DEA100BA935D /* CCBannerRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerRouterProtocol.h; path = Banner/Router/CCBannerRouterProtocol.h; sourceTree = "<group>"; };
+		A62859501EF5EB8C00BA935D /* UIView+CCMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+CCMessageView.h"; path = "View/MessageView/UIView+CCMessageView.h"; sourceTree = "<group>"; };
+		A62859511EF5EB8C00BA935D /* UIView+CCMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+CCMessageView.m"; path = "View/MessageView/UIView+CCMessageView.m"; sourceTree = "<group>"; };
+		A62859531EF5EBCE00BA935D /* UIView+CCSpiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+CCSpiner.h"; path = "View/Spiner/UIView+CCSpiner.h"; sourceTree = "<group>"; };
+		A62859541EF5EBCE00BA935D /* UIView+CCSpiner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+CCSpiner.m"; path = "View/Spiner/UIView+CCSpiner.m"; sourceTree = "<group>"; };
 		A629FF9D1EEC1451001C0373 /* CCTeamsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTeamsListView.h; path = TeamsView/CCTeamsListView.h; sourceTree = "<group>"; };
 		A629FF9E1EEC1451001C0373 /* CCTeamsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTeamsListView.m; path = TeamsView/CCTeamsListView.m; sourceTree = "<group>"; };
 		A629FFA11EEC153E001C0373 /* CCTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTeamTableViewCell.h; path = TeamTableViewCell/CCTeamTableViewCell.h; sourceTree = "<group>"; };
@@ -181,18 +192,14 @@
 		A6DF933B1EE2F37700D93751 /* UIColor+CC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CC.m"; sourceTree = "<group>"; };
 		A6DF933D1EE2F37700D93751 /* UIFont+CC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CC.h"; sourceTree = "<group>"; };
 		A6DF933E1EE2F37700D93751 /* UIFont+CC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CC.m"; sourceTree = "<group>"; };
-		A6DF93411EE2F37700D93751 /* UIViewController+CCMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CCMessageView.h"; sourceTree = "<group>"; };
-		A6DF93421EE2F37700D93751 /* UIViewController+CCMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CCMessageView.m"; sourceTree = "<group>"; };
-		A6DF93441EE2F37700D93751 /* UIViewController+CCSpinerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CCSpinerView.h"; sourceTree = "<group>"; };
-		A6DF93451EE2F37700D93751 /* UIViewController+CCSpinerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CCSpinerView.m"; sourceTree = "<group>"; };
 		A6DF93491EE2F37700D93751 /* CCBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBannerCollectionViewCell.h; sourceTree = "<group>"; };
 		A6DF934A1EE2F37700D93751 /* CCBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBannerCollectionViewCell.m; sourceTree = "<group>"; };
 		A6DF934C1EE2F37700D93751 /* CCPlayerPreviewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayerPreviewCollectionViewCell.h; sourceTree = "<group>"; };
 		A6DF934D1EE2F37700D93751 /* CCPlayerPreviewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayerPreviewCollectionViewCell.m; sourceTree = "<group>"; };
 		A6DF934F1EE2F37700D93751 /* CCSideMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSideMenuTableViewCell.h; sourceTree = "<group>"; };
 		A6DF93501EE2F37700D93751 /* CCSideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSideMenuTableViewCell.m; sourceTree = "<group>"; };
-		A6DF93531EE2F37700D93751 /* CCBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBannerView.h; sourceTree = "<group>"; };
-		A6DF93541EE2F37700D93751 /* CCBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBannerView.m; sourceTree = "<group>"; };
+		A6DF93531EE2F37700D93751 /* CCBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBannerView.h; path = ../../General/Views/CustomViews/BannerView/CCBannerView.h; sourceTree = "<group>"; };
+		A6DF93541EE2F37700D93751 /* CCBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBannerView.m; path = ../../General/Views/CustomViews/BannerView/CCBannerView.m; sourceTree = "<group>"; };
 		A6DF93551EE2F37700D93751 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CustomViews/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6DF93571EE2F37700D93751 /* CCMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMessageView.h; sourceTree = "<group>"; };
 		A6DF93581EE2F37700D93751 /* CCMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMessageView.m; sourceTree = "<group>"; };
@@ -404,6 +411,72 @@
 				A6196BD11EEB4CE900FA4067 /* CCTeamViewModel.m */,
 			);
 			name = TeamViewModel;
+			sourceTree = "<group>";
+		};
+		A62859411EF5DC3500BA935D /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				A62859481EF5DE6400BA935D /* Router */,
+				A62859431EF5DC6400BA935D /* Presenter */,
+				A62859421EF5DC5E00BA935D /* View */,
+			);
+			name = Banner;
+			sourceTree = "<group>";
+		};
+		A62859421EF5DC5E00BA935D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A62859471EF5DD1500BA935D /* CCBannerViewProtocol.h */,
+				A6DF93531EE2F37700D93751 /* CCBannerView.h */,
+				A6DF93541EE2F37700D93751 /* CCBannerView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A62859431EF5DC6400BA935D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A62859441EF5DC9B00BA935D /* CCBannerPresenter.h */,
+				A62859451EF5DC9B00BA935D /* CCBannerPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		A62859481EF5DE6400BA935D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A628594C1EF5DEA100BA935D /* CCBannerRouterProtocol.h */,
+				A62859491EF5DE8B00BA935D /* CCBannerRouter.h */,
+				A628594A1EF5DE8B00BA935D /* CCBannerRouter.m */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		A628594D1EF5EB4400BA935D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A628594F1EF5EB6500BA935D /* Spiner */,
+				A628594E1EF5EB5E00BA935D /* MessageView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A628594E1EF5EB5E00BA935D /* MessageView */ = {
+			isa = PBXGroup;
+			children = (
+				A62859501EF5EB8C00BA935D /* UIView+CCMessageView.h */,
+				A62859511EF5EB8C00BA935D /* UIView+CCMessageView.m */,
+			);
+			name = MessageView;
+			sourceTree = "<group>";
+		};
+		A628594F1EF5EB6500BA935D /* Spiner */ = {
+			isa = PBXGroup;
+			children = (
+				A62859531EF5EBCE00BA935D /* UIView+CCSpiner.h */,
+				A62859541EF5EBCE00BA935D /* UIView+CCSpiner.m */,
+			);
+			name = Spiner;
 			sourceTree = "<group>";
 		};
 		A629FF9C1EEC1428001C0373 /* TeamsView */ = {
@@ -716,11 +789,11 @@
 		A6DF93381EE2F37700D93751 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				A628594D1EF5EB4400BA935D /* View */,
 				A629FFA41EEC643E001C0373 /* TableView */,
 				A6196BBD1EEB49E100FA4067 /* ImageView */,
 				A6DF93391EE2F37700D93751 /* Colors */,
 				A6DF933C1EE2F37700D93751 /* Fonts */,
-				A6DF933F1EE2F37700D93751 /* ViewControllers */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -741,33 +814,6 @@
 				A6DF933E1EE2F37700D93751 /* UIFont+CC.m */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		A6DF933F1EE2F37700D93751 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				A6DF93401EE2F37700D93751 /* MessageView */,
-				A6DF93431EE2F37700D93751 /* Spiner */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		A6DF93401EE2F37700D93751 /* MessageView */ = {
-			isa = PBXGroup;
-			children = (
-				A6DF93411EE2F37700D93751 /* UIViewController+CCMessageView.h */,
-				A6DF93421EE2F37700D93751 /* UIViewController+CCMessageView.m */,
-			);
-			path = MessageView;
-			sourceTree = "<group>";
-		};
-		A6DF93431EE2F37700D93751 /* Spiner */ = {
-			isa = PBXGroup;
-			children = (
-				A6DF93441EE2F37700D93751 /* UIViewController+CCSpinerView.h */,
-				A6DF93451EE2F37700D93751 /* UIViewController+CCSpinerView.m */,
-			);
-			path = Spiner;
 			sourceTree = "<group>";
 		};
 		A6DF93461EE2F37700D93751 /* Views */ = {
@@ -827,20 +873,10 @@
 			isa = PBXGroup;
 			children = (
 				A629FF9C1EEC1428001C0373 /* TeamsView */,
-				A6DF93521EE2F37700D93751 /* BannerView */,
 				A6DF93561EE2F37700D93751 /* MessageView */,
 				A6DF93591EE2F37700D93751 /* PlayersListView */,
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		A6DF93521EE2F37700D93751 /* BannerView */ = {
-			isa = PBXGroup;
-			children = (
-				A6DF93531EE2F37700D93751 /* CCBannerView.h */,
-				A6DF93541EE2F37700D93751 /* CCBannerView.m */,
-			);
-			path = BannerView;
 			sourceTree = "<group>";
 		};
 		A6DF93561EE2F37700D93751 /* MessageView */ = {
@@ -1230,6 +1266,7 @@
 		A6DF93C81EE2F37700D93751 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				A62859411EF5DC3500BA935D /* Banner */,
 				A6DF93C91EE2F37700D93751 /* Protocols */,
 				A6DF93CD1EE2F37700D93751 /* Routers */,
 			);
@@ -1242,7 +1279,6 @@
 				A6DF93CA1EE2F37700D93751 /* CCMessageViewProtocol.h */,
 				A6DF93CB1EE2F37700D93751 /* CCOpenSideMenuRouterProtocol.h */,
 				A6DF93CC1EE2F37700D93751 /* CCSpinerViewProtocol.h */,
-				A6196BD31EEB566200FA4067 /* CCBannerViewProtocol.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1780,6 +1816,7 @@
 				A6DF94561EE2F37700D93751 /* CCPlayerPreviewCoreDataModel+CoreDataClass.m in Sources */,
 				A6DF94321EE2F37700D93751 /* AppDelegate.m in Sources */,
 				A6DF945F1EE2F37700D93751 /* CCNewsDescriptionServerModel.m in Sources */,
+				A62859461EF5DC9B00BA935D /* CCBannerPresenter.m in Sources */,
 				A6B51E181EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m in Sources */,
 				A6DF947A1EE2F37700D93751 /* CCSideMenuViewController.m in Sources */,
 				A6DF94501EE2F37700D93751 /* CCNewsDescriptionCoreDataModel+CoreDataClass.m in Sources */,
@@ -1794,6 +1831,7 @@
 				A6DF946D1EE2F37700D93751 /* CCFavoritePlayersRouter.m in Sources */,
 				A629FFA31EEC153E001C0373 /* CCTeamTableViewCell.m in Sources */,
 				A6DF94341EE2F37700D93751 /* CCLog.m in Sources */,
+				A62859551EF5EBCE00BA935D /* UIView+CCSpiner.m in Sources */,
 				A6DF94531EE2F37700D93751 /* CCNewsPreviewCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF94771EE2F37700D93751 /* CCPlayersPreviewViewController.m in Sources */,
 				A6DF945A1EE2F37700D93751 /* CCUserFavoritesPlayersIDCoreDataModel+CoreDataClass.m in Sources */,
@@ -1824,8 +1862,8 @@
 				A6DF94621EE2F37700D93751 /* CCPlayerPreviewServerModel.m in Sources */,
 				A6DF943E1EE2F37700D93751 /* CCBannerCollectionViewCell.m in Sources */,
 				A6DF94551EE2F37700D93751 /* CCPlayerDescriptionCoreDataModel+CoreDataProperties.m in Sources */,
-				A6DF943D1EE2F37700D93751 /* UIViewController+CCSpinerView.m in Sources */,
 				A6DF94641EE2F37700D93751 /* CCTeamServerModel.m in Sources */,
+				A62859521EF5EB8C00BA935D /* UIView+CCMessageView.m in Sources */,
 				A6DF947B1EE2F37700D93751 /* CCSkinsPricePresenter.m in Sources */,
 				A629FF9F1EEC1451001C0373 /* CCTeamsListView.m in Sources */,
 				A6DF943A1EE2F37700D93751 /* UIColor+CC.m in Sources */,
@@ -1834,11 +1872,11 @@
 				A6196BD21EEB4CE900FA4067 /* CCTeamViewModel.m in Sources */,
 				A6DF94361EE2F37700D93751 /* CCConfigs.xcdatamodeld in Sources */,
 				A6DF94351EE2F37700D93751 /* CCBannerService.m in Sources */,
-				A6DF943C1EE2F37700D93751 /* UIViewController+CCMessageView.m in Sources */,
 				A6DF94541EE2F37700D93751 /* CCPlayerDescriptionCoreDataModel+CoreDataClass.m in Sources */,
 				A6DF94731EE2F37700D93751 /* CCNewsPreviewRouter.m in Sources */,
 				A6DF947C1EE2F37700D93751 /* CCSkinsPriceRouter.m in Sources */,
 				A629FFB71EEC96E8001C0373 /* CCPlayerDescriptionRouter.m in Sources */,
+				A628594B1EF5DE8B00BA935D /* CCBannerRouter.m in Sources */,
 				A6DF94411EE2F37700D93751 /* CCBannerView.m in Sources */,
 				A6DF945D1EE2F37700D93751 /* CCEventServerModel.m in Sources */,
 				A642CB441EBA4C5100BFD470 /* main.m in Sources */,

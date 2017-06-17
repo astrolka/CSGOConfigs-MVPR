@@ -8,8 +8,8 @@
 
 #import "CCPlayerDescriptionViewController.h"
 #import "Masonry.h"
-#import "UIViewController+CCSpinerView.h"
-#import "UIViewController+CCMessageView.h"
+#import "UIView+CCSpiner.h"
+#import "UIView+CCMessageView.h"
 #import "CCPlayerDescriptionViewModel.h"
 #import "UIImageView+Animation.h"
 #import "CCPlayerInfoTableViewCell.h"
@@ -201,17 +201,17 @@
 #pragma mark - CCSpinerViewProtocol
 
 - (void)showSpiner {
-    [self cc_showSpiner];
+    [self.view cc_showSpiner];
 }
 
 - (void)hideSpiner {
-    [self cc_hideSpiner];
+    [self.view cc_hideSpiner];
 }
 
 #pragma mark - CCMessageViewProtocol
 
 - (void)showMessageWithText:(NSString *)text {
-    [self cc_showMessageWithText:text];
+    [self.view cc_showMessageWithText:text];
 }
 
 #pragma mark - Action 

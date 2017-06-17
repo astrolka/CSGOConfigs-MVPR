@@ -10,6 +10,7 @@
 #import "CCPlayersPreviewViewController.h"
 #import "CCPlayersPreviewPresenter.h"
 #import "CCPlayerDescriptionRouter.h"
+#import "CCBannerRouter.h"
 #import <RESideMenu/RESideMenu.h>
 
 @interface CCPlayersPreviewRouter ()
@@ -21,7 +22,9 @@
 @implementation CCPlayersPreviewRouter
 
 - (id <CCPlayersPreviewViewProtocol>)buildPlayersPreviewModule {
-    self.view = [[CCPlayersPreviewViewController alloc] init];
+    CCBannerRouter *bannerRouter = [[CCBannerRouter alloc] initWithNavigationController:self.navigationController];
+    
+    self.view = [[CCPlayersPreviewViewController alloc] initWithBannerView:[bannerRouter buildBannerModule]];
     CCPlayersPreviewPresenter *presenter = [[CCPlayersPreviewPresenter alloc] initWithView:self.view router:self];
     #pragma unused(presenter)
     return self.view;
