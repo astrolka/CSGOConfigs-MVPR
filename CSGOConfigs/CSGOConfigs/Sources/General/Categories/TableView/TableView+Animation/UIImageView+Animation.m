@@ -10,18 +10,7 @@
 
 @implementation UITableView (Animation)
 
-- (void)reloadDataWithAnimation:(CCAnimationType)animation {
-    switch (animation) {
-        case CCAnimationTypeFluentlyUp:
-            [self cc_fluentlyUpReload];
-            break;
-        default:
-            [self reloadData];
-            break;
-    }
-}
-
-- (void)cc_fluentlyUpReload {
+- (void)cc_fluentReloadData {
     [self reloadData];
     
     [self.visibleCells enumerateObjectsUsingBlock:^(UITableViewCell *cell, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -40,6 +29,12 @@
         
         delayCounter += 1.f;
     }];
+}
+
+- (void)cc_dropDownReloadDataInSection:(NSUInteger)section {
+    NSRange range = NSMakeRange(section, 1);
+    NSIndexSet *sections = [NSIndexSet indexSetWithIndexesInRange:range];
+    [self reloadSections:sections withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end

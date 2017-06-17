@@ -132,11 +132,7 @@ NSString *const kPersistentContainerName = @"CCConfigs";
     if (dataEntity.count > 0) {
         CCUserFavoritesPlayersIDCoreDataModel *userFavoritesPlayerIDCoreDataModel = [dataEntity firstObject];
         NSArray *favoritePlayersID = [NSKeyedUnarchiver unarchiveObjectWithData:userFavoritesPlayerIDCoreDataModel.playersIDDataArray];
-        if ([favoritePlayersID containsObject:@(playerID)]) {
-            return YES;
-        } else {
-            return NO;
-        }
+        return [favoritePlayersID containsObject:@(playerID)];
     } else {
         return NO;
     }

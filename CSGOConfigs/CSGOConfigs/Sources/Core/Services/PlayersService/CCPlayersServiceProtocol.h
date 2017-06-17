@@ -24,7 +24,7 @@ typedef void(^playerDescriptionDataBlock)(CCPlayerDescriptionViewModel *player, 
 
 - (void)getFavoritePlayersPreviewWithContainerWidth:(CGFloat)containerWidth data:(favoritePlayersPreviewDataBlock)players;
 
-- (void)getDescriptionAboutPlayerWithPlayerID:(NSInteger)playerID data:(playerDescriptionDataBlock)player;
+- (void)getPlayerDescriptionWithPlayerID:(NSInteger)playerID data:(playerDescriptionDataBlock)player;
 
 - (void)addPlayerToFavoritesWithPlayerID:(NSInteger)playerID;
 

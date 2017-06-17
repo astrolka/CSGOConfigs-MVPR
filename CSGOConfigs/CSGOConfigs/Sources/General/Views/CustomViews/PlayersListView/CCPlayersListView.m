@@ -76,7 +76,9 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self.viewAction playersListView:self didScrollPlayerAtIndex:indexPath.row];
+    if ([self.viewAction respondsToSelector:@selector(playersListView:didScrollPlayerAtIndex:)]) {
+        [self.viewAction playersListView:self didScrollPlayerAtIndex:indexPath.row];
+    }
 }
 
 #pragma mark - UICollectionViewDelegate

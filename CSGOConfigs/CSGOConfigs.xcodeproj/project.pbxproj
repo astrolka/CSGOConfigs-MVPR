@@ -17,10 +17,14 @@
 		A629FFAF1EEC9679001C0373 /* CCPlayerDescriptionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFAE1EEC9679001C0373 /* CCPlayerDescriptionPresenter.m */; };
 		A629FFB21EEC9692001C0373 /* CCPlayerDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFB11EEC9692001C0373 /* CCPlayerDescriptionViewController.m */; };
 		A629FFB71EEC96E8001C0373 /* CCPlayerDescriptionRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFB61EEC96E8001C0373 /* CCPlayerDescriptionRouter.m */; };
+		A629FFBA1EECA69B001C0373 /* CCSelectableSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFB91EECA69B001C0373 /* CCSelectableSectionView.m */; };
+		A629FFBE1EECA6D3001C0373 /* CCCenterButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFBD1EECA6D3001C0373 /* CCCenterButtonView.m */; };
+		A629FFC31EECA709001C0373 /* CCPlayerPersonalInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A629FFC21EECA709001C0373 /* CCPlayerPersonalInfoView.m */; };
 		A64103DF1EBDB9880057E2E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A64103E11EBDB9880057E2E3 /* Localizable.strings */; };
 		A64103EF1EBDDB550057E2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64103EE1EBDDB550057E2E3 /* Assets.xcassets */; };
 		A642CB1D1EBA491B00BFD470 /* CSGOConfigsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */; };
 		A642CB441EBA4C5100BFD470 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB3C1EBA4C5100BFD470 /* main.m */; };
+		A6B51E181EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B51E171EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m */; };
 		A6DF94321EE2F37700D93751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF931C1EE2F37700D93751 /* AppDelegate.m */; };
 		A6DF94331EE2F37700D93751 /* CCDIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF93201EE2F37700D93751 /* CCDIManager.m */; };
 		A6DF94341EE2F37700D93751 /* CCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF93231EE2F37700D93751 /* CCLog.m */; };
@@ -137,6 +141,12 @@
 		A629FFB41EEC96C4001C0373 /* CCPlayerDescriptionRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPlayerDescriptionRouterProtocol.h; path = PlayerDescription/Router/CCPlayerDescriptionRouterProtocol.h; sourceTree = "<group>"; };
 		A629FFB51EEC96E8001C0373 /* CCPlayerDescriptionRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPlayerDescriptionRouter.h; path = PlayerDescription/Router/CCPlayerDescriptionRouter.h; sourceTree = "<group>"; };
 		A629FFB61EEC96E8001C0373 /* CCPlayerDescriptionRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPlayerDescriptionRouter.m; path = PlayerDescription/Router/CCPlayerDescriptionRouter.m; sourceTree = "<group>"; };
+		A629FFB81EECA69B001C0373 /* CCSelectableSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSelectableSectionView.h; path = SelectableSectionView/CCSelectableSectionView.h; sourceTree = "<group>"; };
+		A629FFB91EECA69B001C0373 /* CCSelectableSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSelectableSectionView.m; path = SelectableSectionView/CCSelectableSectionView.m; sourceTree = "<group>"; };
+		A629FFBC1EECA6D3001C0373 /* CCCenterButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCenterButtonView.h; path = CenterButtonView/CCCenterButtonView.h; sourceTree = "<group>"; };
+		A629FFBD1EECA6D3001C0373 /* CCCenterButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCenterButtonView.m; path = CenterButtonView/CCCenterButtonView.m; sourceTree = "<group>"; };
+		A629FFC11EECA709001C0373 /* CCPlayerPersonalInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPlayerPersonalInfoView.h; path = PlayerPersonalInfoView/CCPlayerPersonalInfoView.h; sourceTree = "<group>"; };
+		A629FFC21EECA709001C0373 /* CCPlayerPersonalInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPlayerPersonalInfoView.m; path = PlayerPersonalInfoView/CCPlayerPersonalInfoView.m; sourceTree = "<group>"; };
 		A64103E01EBDB9880057E2E3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A64103E21EBDB98E0057E2E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A64103EE1EBDDB550057E2E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +156,8 @@
 		A642CB1E1EBA491B00BFD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A642CB3B1EBA4C5100BFD470 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A642CB3C1EBA4C5100BFD470 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6B51E161EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPlayerInfoTableViewCell.h; path = PlayerDescription/View/PlayerInfoTableViewCell/CCPlayerInfoTableViewCell.h; sourceTree = "<group>"; };
+		A6B51E171EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPlayerInfoTableViewCell.m; path = PlayerDescription/View/PlayerInfoTableViewCell/CCPlayerInfoTableViewCell.m; sourceTree = "<group>"; };
 		A6DF931B1EE2F37700D93751 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6DF931C1EE2F37700D93751 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6DF931F1EE2F37700D93751 /* CCDIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDIManager.h; sourceTree = "<group>"; };
@@ -451,9 +463,8 @@
 		A629FFAB1EEC963C001C0373 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A629FFB31EEC96AD001C0373 /* CCPlayerDescriptionViewProtocol.h */,
-				A629FFB01EEC9692001C0373 /* CCPlayerDescriptionViewController.h */,
-				A629FFB11EEC9692001C0373 /* CCPlayerDescriptionViewController.m */,
+				A629FFC61EECA72A001C0373 /* CustomViews */,
+				A629FFC51EECA71B001C0373 /* PlayerDescriptionViewController */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -466,6 +477,53 @@
 				A629FFB61EEC96E8001C0373 /* CCPlayerDescriptionRouter.m */,
 			);
 			name = Router;
+			sourceTree = "<group>";
+		};
+		A629FFBB1EECA69F001C0373 /* SelectableSectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A629FFB81EECA69B001C0373 /* CCSelectableSectionView.h */,
+				A629FFB91EECA69B001C0373 /* CCSelectableSectionView.m */,
+			);
+			name = SelectableSectionView;
+			path = ../CustomViews;
+			sourceTree = "<group>";
+		};
+		A629FFBF1EECA6D7001C0373 /* CenterButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				A629FFBC1EECA6D3001C0373 /* CCCenterButtonView.h */,
+				A629FFBD1EECA6D3001C0373 /* CCCenterButtonView.m */,
+			);
+			name = CenterButtonView;
+			path = ../CustomViews;
+			sourceTree = "<group>";
+		};
+		A629FFC41EECA70C001C0373 /* PlayerPersonalInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				A629FFC11EECA709001C0373 /* CCPlayerPersonalInfoView.h */,
+				A629FFC21EECA709001C0373 /* CCPlayerPersonalInfoView.m */,
+			);
+			name = PlayerPersonalInfoView;
+			path = ../CustomViews;
+			sourceTree = "<group>";
+		};
+		A629FFC51EECA71B001C0373 /* PlayerDescriptionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A629FFB31EEC96AD001C0373 /* CCPlayerDescriptionViewProtocol.h */,
+				A629FFB01EEC9692001C0373 /* CCPlayerDescriptionViewController.h */,
+				A629FFB11EEC9692001C0373 /* CCPlayerDescriptionViewController.m */,
+			);
+			name = PlayerDescriptionViewController;
+			sourceTree = "<group>";
+		};
+		A629FFC61EECA72A001C0373 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		A642CAF31EBA491A00BFD470 = {
@@ -531,6 +589,16 @@
 				A64103EE1EBDDB550057E2E3 /* Assets.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		A6B51E151EF48CEB00316AD2 /* PlayerInfoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A6B51E161EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.h */,
+				A6B51E171EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m */,
+			);
+			name = PlayerInfoTableViewCell;
+			path = ../../../Modules/Screens;
 			sourceTree = "<group>";
 		};
 		A6DF93191EE2F37700D93751 /* Sources */ = {
@@ -716,6 +784,10 @@
 		A6DF93471EE2F37700D93751 /* CellViews */ = {
 			isa = PBXGroup;
 			children = (
+				A629FFC41EECA70C001C0373 /* PlayerPersonalInfoView */,
+				A6B51E151EF48CEB00316AD2 /* PlayerInfoTableViewCell */,
+				A629FFBF1EECA6D7001C0373 /* CenterButtonView */,
+				A629FFBB1EECA69F001C0373 /* SelectableSectionView */,
 				A629FFA01EEC1519001C0373 /* TeamTableViewCell */,
 				A6DF93481EE2F37700D93751 /* BannerCollectionViewCell */,
 				A6DF934B1EE2F37700D93751 /* PlayerPreviewCollectionViewCell */,
@@ -1708,6 +1780,7 @@
 				A6DF94561EE2F37700D93751 /* CCPlayerPreviewCoreDataModel+CoreDataClass.m in Sources */,
 				A6DF94321EE2F37700D93751 /* AppDelegate.m in Sources */,
 				A6DF945F1EE2F37700D93751 /* CCNewsDescriptionServerModel.m in Sources */,
+				A6B51E181EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m in Sources */,
 				A6DF947A1EE2F37700D93751 /* CCSideMenuViewController.m in Sources */,
 				A6DF94501EE2F37700D93751 /* CCNewsDescriptionCoreDataModel+CoreDataClass.m in Sources */,
 				A6DF946E1EE2F37700D93751 /* CCFavoritePlayersViewController.m in Sources */,
@@ -1717,6 +1790,7 @@
 				A6DF947D1EE2F37700D93751 /* CCSkinsPriceViewController.m in Sources */,
 				A6DF94741EE2F37700D93751 /* CCNewsPreviewViewController.m in Sources */,
 				A6DF94521EE2F37700D93751 /* CCNewsPreviewCoreDataModel+CoreDataClass.m in Sources */,
+				A629FFBE1EECA6D3001C0373 /* CCCenterButtonView.m in Sources */,
 				A6DF946D1EE2F37700D93751 /* CCFavoritePlayersRouter.m in Sources */,
 				A629FFA31EEC153E001C0373 /* CCTeamTableViewCell.m in Sources */,
 				A6DF94341EE2F37700D93751 /* CCLog.m in Sources */,
@@ -1729,6 +1803,7 @@
 				A6DF94431EE2F37700D93751 /* CCMessageView.m in Sources */,
 				A6DF947E1EE2F37700D93751 /* CCTeamsPresenter.m in Sources */,
 				A6DF94441EE2F37700D93751 /* CCPlayersListView.m in Sources */,
+				A629FFC31EECA709001C0373 /* CCPlayerPersonalInfoView.m in Sources */,
 				A6DF944A1EE2F37700D93751 /* CCBannerCoreDataModel+CoreDataClass.m in Sources */,
 				A6DF94381EE2F37700D93751 /* CCPlayersService.m in Sources */,
 				A6DF946B1EE2F37700D93751 /* CCAppToolsViewController.m in Sources */,
@@ -1738,6 +1813,7 @@
 				A6DF94721EE2F37700D93751 /* CCNewsPreviewPresenter.m in Sources */,
 				A6DF944D1EE2F37700D93751 /* CCEventCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF94401EE2F37700D93751 /* CCSideMenuTableViewCell.m in Sources */,
+				A629FFBA1EECA69B001C0373 /* CCSelectableSectionView.m in Sources */,
 				A6DF94451EE2F37700D93751 /* CCSideMenuFactory.m in Sources */,
 				A6DF944B1EE2F37700D93751 /* CCBannerCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF947F1EE2F37700D93751 /* CCTeamsRouter.m in Sources */,

@@ -34,7 +34,7 @@ static const NSUInteger kColumnsInSection = 3;
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self noFavoritePlayersLabelSetup];
-    //[self playersViewSetup];
+    [self playersViewSetup];
     [self menuButtonSetup];
     [self.viewAction favoritePlayersViewDidSet:self];
 }

@@ -10,10 +10,8 @@
 
 @interface UITableView (Animation)
 
-typedef enum {
-    CCAnimationTypeFluentlyUp
-} CCAnimationType;
+- (void)cc_fluentReloadData;
 
-- (void)reloadDataWithAnimation:(CCAnimationType)animation;
+- (void)cc_dropDownReloadDataInSection:(NSUInteger)section;
 
 @end

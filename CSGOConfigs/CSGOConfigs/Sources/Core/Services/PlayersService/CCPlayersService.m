@@ -54,7 +54,7 @@
     }];
 }
 
-- (void)getDescriptionAboutPlayerWithPlayerID:(NSInteger)playerID data:(playerDescriptionDataBlock)player {
+- (void)getPlayerDescriptionWithPlayerID:(NSInteger)playerID data:(playerDescriptionDataBlock)player {
     NSString *paramsURL = [NSString stringWithFormat:@"playerDescriptionData/playerID%ld.json",(long)playerID];
     [self.ioc_restService makeGETRequestWithURL:[NSURL URLWithString:paramsURL] onSucess:^(id responce) {
         CCPlayerDescriptionServerModel *serverModel = [[CCPlayerDescriptionServerModel alloc] initWithServerResponce:responce];

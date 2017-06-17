@@ -17,24 +17,18 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSURL *profileImageURL;
 
-@property (nonatomic, strong) NSString *teamTitle;
 @property (nonatomic, strong) NSString *teamName;
-@property (nonatomic, strong) NSURL *temaImageLink;
+@property (nonatomic, strong) NSURL *temaImageURL;
 
-@property (nonatomic, strong) NSString *countryTitle;
 @property (nonatomic, strong) NSString *country;
-@property (nonatomic, strong) NSURL *flagImageURL;
+@property (nonatomic, strong) NSURL *countryImageURL;
 
-@property (nonatomic, strong) NSString *moreInfoTitle;
 @property (nonatomic, strong) NSURL *moreInfoLink;
 
-@property (nonatomic, strong) NSString *hardwareTitle;
 @property (nonatomic, strong) NSArray <NSString *> *hardwareCharacterictics;
 
-@property (nonatomic, strong) NSString *gameSettingsTitle;
 @property (nonatomic, strong) NSArray <NSString *> *gameSettingCharacterictics;
 
-@property (nonatomic, strong) NSString *downloadTitle;
 @property (nonatomic, strong) NSURL *downloadURL;
 
 @end

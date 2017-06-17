@@ -18,7 +18,7 @@
         [button addTarget:object action:selector forControlEvents:UIControlEventTouchUpInside];
     }
     [button sizeToFit];
-    UIBarButtonItem * barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     return barButtonItem;
 }
 

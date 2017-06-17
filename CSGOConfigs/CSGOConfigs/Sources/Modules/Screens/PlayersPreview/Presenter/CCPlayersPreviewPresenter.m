@@ -85,7 +85,7 @@ static const CGFloat kLoadingLimit = 6.f;
             [self.players addObjectsFromArray:players];
             [self.view showPlayers:players];
             [self.view hideSpiner];
-            (fromServer) ?: [self.view showMessageWithText:@"hello"];
+            (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"", nil)];
         }];
     }
 }

@@ -114,6 +114,7 @@
     // Router can setup his "navigation" components
     [[UINavigationBar appearance] setBarTintColor:[UIColor cc_themeColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 @end

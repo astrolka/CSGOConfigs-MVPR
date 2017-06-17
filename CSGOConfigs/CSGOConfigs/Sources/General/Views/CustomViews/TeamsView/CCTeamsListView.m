@@ -50,7 +50,7 @@
 
 - (void)showTeams:(NSArray <CCTeamViewModel *> *)teams {
     self.teams = teams;
-    [self.tableView reloadDataWithAnimation:CCAnimationTypeFluentlyUp];
+    [self.tableView cc_fluentReloadData];
 }
 
 #pragma mark - UITableViewDataSource
