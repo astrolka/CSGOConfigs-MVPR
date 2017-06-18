@@ -22,14 +22,14 @@
 
 
 
-typedef void(^viewModelDataBlock)(NSArray <CCTeamViewModel *> *teams);
+typedef void(^teamsDataBlock)(NSArray <CCTeamViewModel *> *teams);
 
 @interface CCTeamViewModelBuilder : NSObject
 
 + (void)buildWithServerModels:(NSArray <CCTeamServerModel *> *)serverModels
-                   viewModels:(viewModelDataBlock)viewModels;
+                   viewModels:(teamsDataBlock)viewModels;
 
 + (void)buildWithCoreDataModels:(NSArray <CCTeamCoreDataModel *> *)coreDataModels
-                     viewModels:(viewModelDataBlock)viewModels;
+                     viewModels:(teamsDataBlock)viewModels;
 
 @end

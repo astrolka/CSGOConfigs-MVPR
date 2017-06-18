@@ -28,7 +28,7 @@ NSString *const kBannerSizeSpechialChar = @"x"; // server responce: "320x640"
 
 - (void)getBanners:(bannerDataBlock)banners {
     [self.ioc_restService makeGETRequestWithURL:[NSURL URLWithString:@"bannersData.json"] onSucess:^(NSArray *responce) {
-        NSMutableArray <CCBannerServerModel *> *serverModels  = [[NSMutableArray alloc]init];
+        NSMutableArray <CCBannerServerModel *> *serverModels  = [[NSMutableArray alloc] init];
         [responce enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             CCBannerServerModel *bannerServerModel = [[CCBannerServerModel alloc] initWithServerResponce:obj];
             [serverModels addObject:bannerServerModel];

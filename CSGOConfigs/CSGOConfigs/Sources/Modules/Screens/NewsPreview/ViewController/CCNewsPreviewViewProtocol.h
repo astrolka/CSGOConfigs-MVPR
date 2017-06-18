@@ -7,14 +7,32 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCNewsPreviewViewModel.h"
+#import "CCSpinerViewProtocol.h"
+#import "CCMessageViewProtocol.h"
+
+@protocol CCNewsPreviewViewProtocol;
 
 @protocol CCNewsPreviewViewActionProtocol <NSObject>
 
+- (void)newsPreviewViewDidSet:(id <CCNewsPreviewViewProtocol>)view;
+
+- (void)newsPreviewViewDidOpenMenu:(id <CCNewsPreviewViewProtocol>)view;
+
+- (void)newsPreviewViewDidRefreshNews:(id <CCNewsPreviewViewProtocol>)view;
+
+- (void)newsPreviewView:(id <CCNewsPreviewViewProtocol>)view didSelectNewsAtIndex:(NSUInteger)index;
+
+- (void)newsPreviewView:(id <CCNewsPreviewViewProtocol>)view didScrollNewsAtIndex:(NSUInteger)index;
 
 @end
 
-@protocol CCNewsPreviewViewProtocol <NSObject>
+@protocol CCNewsPreviewViewProtocol <CCSpinerViewProtocol, CCMessageViewProtocol>
 
 @property (nonatomic, strong) id <CCNewsPreviewViewActionProtocol> viewAction;
+
+- (void)showNewNews:(NSArray <CCNewsPreviewViewModel*> *)news;
+
+- (void)showMoreNews:(NSArray <CCNewsPreviewViewModel*> *)news;
 
 @end

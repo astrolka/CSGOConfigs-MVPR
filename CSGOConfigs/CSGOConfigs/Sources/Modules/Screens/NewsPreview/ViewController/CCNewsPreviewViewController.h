@@ -6,9 +6,9 @@
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BMYScrollableNavigationBarViewController.h"
 #import "CCNewsPreviewViewProtocol.h"
 
-@interface CCNewsPreviewViewController : UIViewController <CCNewsPreviewViewProtocol>
+@interface CCNewsPreviewViewController : BMYScrollableNavigationBarViewController <CCNewsPreviewViewProtocol>
 
 @end

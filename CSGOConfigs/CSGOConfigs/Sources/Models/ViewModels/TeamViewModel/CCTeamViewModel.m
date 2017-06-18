@@ -20,7 +20,7 @@ static const CGFloat kNoNeedSize = 0.f;
 @implementation CCTeamViewModelBuilder
 
 + (void)buildWithServerModels:(NSArray <CCTeamServerModel *> *)serverModels
-                   viewModels:(viewModelDataBlock)viewModels {
+                   viewModels:(teamsDataBlock)viewModels {
     __block NSMutableArray <CCTeamViewModel *> *viewModelsData = [[NSMutableArray alloc] init];
     
     const char *classNameChar = [NSStringFromClass([CCTeamViewModelBuilder class]) UTF8String];
@@ -48,7 +48,7 @@ static const CGFloat kNoNeedSize = 0.f;
 }
 
 + (void)buildWithCoreDataModels:(NSArray <CCTeamCoreDataModel *> *)coreDataModels
-                     viewModels:(viewModelDataBlock)viewModels {
+                     viewModels:(teamsDataBlock)viewModels {
     __block NSMutableArray <CCTeamViewModel *> *viewModelsData = [[NSMutableArray alloc] init];
     
     const char *classNameChar = [NSStringFromClass([CCTeamViewModelBuilder class]) UTF8String];

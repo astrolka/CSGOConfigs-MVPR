@@ -28,6 +28,9 @@
 		A64103EF1EBDDB550057E2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64103EE1EBDDB550057E2E3 /* Assets.xcassets */; };
 		A642CB1D1EBA491B00BFD470 /* CSGOConfigsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */; };
 		A642CB441EBA4C5100BFD470 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB3C1EBA4C5100BFD470 /* main.m */; };
+		A6931F241EF6E4E70087E99F /* CCNewsPreviewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F231EF6E4E70087E99F /* CCNewsPreviewViewModel.m */; };
+		A6931F281EF6EC9F0087E99F /* CCNewsPreviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F271EF6EC9F0087E99F /* CCNewsPreviewTableViewCell.m */; };
+		A6931F2D1EF6F4080087E99F /* CCNewsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F2C1EF6F4080087E99F /* CCNewsService.m */; };
 		A6B51E181EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B51E171EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m */; };
 		A6DF94321EE2F37700D93751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF931C1EE2F37700D93751 /* AppDelegate.m */; };
 		A6DF94331EE2F37700D93751 /* CCDIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF93201EE2F37700D93751 /* CCDIManager.m */; };
@@ -167,6 +170,13 @@
 		A642CB1E1EBA491B00BFD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A642CB3B1EBA4C5100BFD470 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A642CB3C1EBA4C5100BFD470 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6931F221EF6E4E70087E99F /* CCNewsPreviewViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsPreviewViewModel.h; path = NewsPreviewViewModel/CCNewsPreviewViewModel.h; sourceTree = "<group>"; };
+		A6931F231EF6E4E70087E99F /* CCNewsPreviewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNewsPreviewViewModel.m; path = NewsPreviewViewModel/CCNewsPreviewViewModel.m; sourceTree = "<group>"; };
+		A6931F261EF6EC9F0087E99F /* CCNewsPreviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsPreviewTableViewCell.h; path = NewsPreviewTableViewCell/CCNewsPreviewTableViewCell.h; sourceTree = "<group>"; };
+		A6931F271EF6EC9F0087E99F /* CCNewsPreviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNewsPreviewTableViewCell.m; path = NewsPreviewTableViewCell/CCNewsPreviewTableViewCell.m; sourceTree = "<group>"; };
+		A6931F2A1EF6F3F50087E99F /* CCNewsServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsServiceProtocol.h; path = NewsService/CCNewsServiceProtocol.h; sourceTree = "<group>"; };
+		A6931F2B1EF6F4080087E99F /* CCNewsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsService.h; path = NewsService/CCNewsService.h; sourceTree = "<group>"; };
+		A6931F2C1EF6F4080087E99F /* CCNewsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNewsService.m; path = NewsService/CCNewsService.m; sourceTree = "<group>"; };
 		A6B51E161EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPlayerInfoTableViewCell.h; path = PlayerDescription/View/PlayerInfoTableViewCell/CCPlayerInfoTableViewCell.h; sourceTree = "<group>"; };
 		A6B51E171EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPlayerInfoTableViewCell.m; path = PlayerDescription/View/PlayerInfoTableViewCell/CCPlayerInfoTableViewCell.m; sourceTree = "<group>"; };
 		A6DF931B1EE2F37700D93751 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -664,6 +674,34 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		A6931F211EF6E4CA0087E99F /* NewsPreviewViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F221EF6E4E70087E99F /* CCNewsPreviewViewModel.h */,
+				A6931F231EF6E4E70087E99F /* CCNewsPreviewViewModel.m */,
+			);
+			name = NewsPreviewViewModel;
+			sourceTree = "<group>";
+		};
+		A6931F251EF6EC7D0087E99F /* NewsPreviewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F261EF6EC9F0087E99F /* CCNewsPreviewTableViewCell.h */,
+				A6931F271EF6EC9F0087E99F /* CCNewsPreviewTableViewCell.m */,
+			);
+			name = NewsPreviewTableViewCell;
+			sourceTree = "<group>";
+		};
+		A6931F291EF6F3D30087E99F /* NewsService */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F2A1EF6F3F50087E99F /* CCNewsServiceProtocol.h */,
+				A6931F2B1EF6F4080087E99F /* CCNewsService.h */,
+				A6931F2C1EF6F4080087E99F /* CCNewsService.m */,
+			);
+			name = NewsService;
+			sourceTree = "<group>";
+		};
 		A6B51E151EF48CEB00316AD2 /* PlayerInfoTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,6 +765,7 @@
 		A6DF93241EE2F37700D93751 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A6931F291EF6F3D30087E99F /* NewsService */,
 				A6196BC21EEB4BB000FA4067 /* TeamsService */,
 				A6DF93251EE2F37700D93751 /* BannerService */,
 				A6DF93291EE2F37700D93751 /* LocalStorageService */,
@@ -739,9 +778,9 @@
 		A6DF93251EE2F37700D93751 /* BannerService */ = {
 			isa = PBXGroup;
 			children = (
+				A6DF93281EE2F37700D93751 /* CCBannerServiceProtocol.h */,
 				A6DF93261EE2F37700D93751 /* CCBannerService.h */,
 				A6DF93271EE2F37700D93751 /* CCBannerService.m */,
-				A6DF93281EE2F37700D93751 /* CCBannerServiceProtocol.h */,
 			);
 			path = BannerService;
 			sourceTree = "<group>";
@@ -830,6 +869,7 @@
 		A6DF93471EE2F37700D93751 /* CellViews */ = {
 			isa = PBXGroup;
 			children = (
+				A6931F251EF6EC7D0087E99F /* NewsPreviewTableViewCell */,
 				A629FFC41EECA70C001C0373 /* PlayerPersonalInfoView */,
 				A6B51E151EF48CEB00316AD2 /* PlayerInfoTableViewCell */,
 				A629FFBF1EECA6D7001C0373 /* CenterButtonView */,
@@ -1219,6 +1259,7 @@
 		A6DF93BD1EE2F37700D93751 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A6931F211EF6E4CA0087E99F /* NewsPreviewViewModel */,
 				A6196BCF1EEB4CCC00FA4067 /* TeamViewModel */,
 				A6DF93BE1EE2F37700D93751 /* BannerViewModel */,
 				A6DF93C11EE2F37700D93751 /* PlayerDescriptionViewModel */,
@@ -1455,9 +1496,9 @@
 		A6DF93FA1EE2F37700D93751 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6DF93FD1EE2F37700D93751 /* CCNewsPreviewRouterProtocol.h */,
 				A6DF93FB1EE2F37700D93751 /* CCNewsPreviewRouter.h */,
 				A6DF93FC1EE2F37700D93751 /* CCNewsPreviewRouter.m */,
-				A6DF93FD1EE2F37700D93751 /* CCNewsPreviewRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1465,9 +1506,9 @@
 		A6DF93FE1EE2F37700D93751 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A6DF94011EE2F37700D93751 /* CCNewsPreviewViewProtocol.h */,
 				A6DF93FF1EE2F37700D93751 /* CCNewsPreviewViewController.h */,
 				A6DF94001EE2F37700D93751 /* CCNewsPreviewViewController.m */,
-				A6DF94011EE2F37700D93751 /* CCNewsPreviewViewProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1792,6 +1833,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6931F241EF6E4E70087E99F /* CCNewsPreviewViewModel.m in Sources */,
 				A6DF94691EE2F37700D93751 /* CCAppToolsPresenter.m in Sources */,
 				A6DF944C1EE2F37700D93751 /* CCEventCoreDataModel+CoreDataClass.m in Sources */,
 				A6DF943F1EE2F37700D93751 /* CCPlayerPreviewCollectionViewCell.m in Sources */,
@@ -1840,6 +1882,7 @@
 				A6196BC61EEB4BDE00FA4067 /* UIImageView+URL.m in Sources */,
 				A6DF94431EE2F37700D93751 /* CCMessageView.m in Sources */,
 				A6DF947E1EE2F37700D93751 /* CCTeamsPresenter.m in Sources */,
+				A6931F2D1EF6F4080087E99F /* CCNewsService.m in Sources */,
 				A6DF94441EE2F37700D93751 /* CCPlayersListView.m in Sources */,
 				A629FFC31EECA709001C0373 /* CCPlayerPersonalInfoView.m in Sources */,
 				A6DF944A1EE2F37700D93751 /* CCBannerCoreDataModel+CoreDataClass.m in Sources */,
@@ -1886,6 +1929,7 @@
 				A6DF94751EE2F37700D93751 /* CCPlayersPreviewPresenter.m in Sources */,
 				A629FFAF1EEC9679001C0373 /* CCPlayerDescriptionPresenter.m in Sources */,
 				A6DF946A1EE2F37700D93751 /* CCAppToolsRouter.m in Sources */,
+				A6931F281EF6EC9F0087E99F /* CCNewsPreviewTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

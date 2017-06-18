@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AppleGuice/AppleGuiceInjectable.h>
 #import "CCTeamViewModel.h"
 @protocol CCTeamsServiceProtocol;
 
+typedef void(^serviceTeamsDataBlock)(NSArray <CCTeamViewModel *> *teams, BOOL fromServer, NSInteger countOfPlayersOnServer);
 
-typedef void(^teamsDataBlock)(NSArray <CCTeamViewModel *> *teams, BOOL fromServer, NSInteger countOfPlayersOnServer);
+@protocol CCTeamsServiceProtocol <AppleGuiceInjectable>
 
-@protocol CCTeamsServiceProtocol <NSObject>
-
-- (void)getTeamsWithOffset:(NSInteger)offset data:(teamsDataBlock)teams;
+- (void)getTeamsWithOffset:(NSInteger)offset data:(serviceTeamsDataBlock)teams;
 
 @end

@@ -9,14 +9,36 @@
 #import "CCNewsPreviewRouter.h"
 #import "CCNewsPreviewViewController.h"
 #import "CCNewsPreviewPresenter.h"
+#import <RESideMenu/RESideMenu.h>
+
+@interface CCNewsPreviewRouter ()
+
+@property (nonatomic, strong) id <CCNewsPreviewViewProtocol> view;
+
+@end
 
 @implementation CCNewsPreviewRouter
 
+#pragma mark - CCNewsPreviewRouterProtocol
+
+- (void)goToNewsDescriptionScreenWithNewsID:(NSUInteger)newsID {
+    
+}
+
+#pragma mark - CCOpenSideMenuRouterProtocol
+
+- (void)openSideMenu {
+    UIViewController *viewController = (UIViewController *)self.view;
+    [viewController.sideMenuViewController presentLeftMenuViewController];
+}
+
+#pragma mark - BuildModule
+
 - (id <CCNewsPreviewViewProtocol>)buildNewsPreviewModule {
-    CCNewsPreviewViewController *viewController = [[CCNewsPreviewViewController alloc] init];
-    CCNewsPreviewPresenter *presenter = [[CCNewsPreviewPresenter alloc] initWithView:viewController router:self];
+    self.view = [[CCNewsPreviewViewController alloc] init];
+    CCNewsPreviewPresenter *presenter = [[CCNewsPreviewPresenter alloc] initWithView:self.view router:self];
     #pragma unused(presenter)
-    return viewController;
+    return self.view;
 }
 
 @end

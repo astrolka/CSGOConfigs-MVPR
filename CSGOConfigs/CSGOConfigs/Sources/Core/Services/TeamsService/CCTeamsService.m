@@ -24,7 +24,7 @@
 
 #pragma mark - CCTeamsServiceProtocol
 
-- (void)getTeamsWithOffset:(NSInteger)offset data:(teamsDataBlock)teams {
+- (void)getTeamsWithOffset:(NSInteger)offset data:(serviceTeamsDataBlock)teams {
     NSString *paramsURL = [NSString stringWithFormat:@"teamsData/teamsData%ld.json",(long)offset];
     
     [self.ioc_restService makeGETRequestWithURL:[NSURL URLWithString:paramsURL] onSucess:^(NSDictionary *responce) {
@@ -35,7 +35,6 @@
         [CCTeamViewModelBuilder buildWithServerModels:serverModels viewModels:^(NSArray<CCTeamViewModel *> *viewModels) {
             teams(viewModels, YES, [responce[@"countOfPlayers"] integerValue]);
         }];
-        
     } onFailure:^(NSError *error) {
         NSArray <CCTeamCoreDataModel *> *coreDataModels = [self.ioc_localStorageService getTeams];
         
