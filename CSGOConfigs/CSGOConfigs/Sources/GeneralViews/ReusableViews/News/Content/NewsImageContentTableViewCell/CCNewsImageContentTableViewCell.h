@@ -6,11 +6,10 @@
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "CCNewsContentTableViewCell.h"
 @class CCNewsContentViewModel;
 
-@interface CCNewsImageContentTableViewCell : UITableViewCell
+@interface CCNewsImageContentTableViewCell : CCNewsContentTableViewCell
 
 @property (nonatomic, strong) CCNewsContentViewModel *newsContentViewModel;
 
