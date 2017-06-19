@@ -26,7 +26,6 @@
     NSString *paramsURL = [NSString stringWithFormat:@"newsPreviewData/newsPreviewData%ld.json",(long)offset];
     
     [self.ioc_restService makeGETRequestWithURL:[NSURL URLWithString:paramsURL] onSucess:^(NSDictionary *responce) {
-        
         NSArray <CCNewsPreviewServerModel *> *serverModels = [self parseTeamsWithResponce:responce[@"news"]];
         
         [self.ioc_localStorageService updateNewsPreview:serverModels];
@@ -44,8 +43,23 @@
     }];
 }
 
-- (void)getNewsDescription:(newsDescriptionDataBlock)newsDescription {
-    
+- (void)getNewsDescriptionWithNewsID:(NSInteger)newsID data:(serviceNewsDescriptionDataBlock)newsDescription {
+    NSString *paramsURL = [NSString stringWithFormat:@"newsDescriptionData/newsID%ld.json",(long)newsID];
+    [self.ioc_restService makeGETRequestWithURL:[NSURL URLWithString:paramsURL] onSucess:^(NSDictionary *responce) {
+        CCNewsDescriptionServerModel *serverModel = [[CCNewsDescriptionServerModel alloc] initWithServerResponce:responce];
+        
+        [self.ioc_localStorageService updateNewsDescription:serverModel];
+        
+        [CCNewsDescriptionViewModelBuilder buildWithServerModels:serverModel viewModels:^(CCNewsDescriptionViewModel *viewModel) {
+            newsDescription(viewModel, YES);
+        }];
+    } onFailure:^(NSError *error) {
+        CCNewsDescriptionCoreDataModel *coreDataModel = [self.ioc_localStorageService getNewsDescriptionWithID:newsID];
+        
+        [CCNewsDescriptionViewModelBuilder buildWithCoreDataModels:coreDataModel viewModels:^(CCNewsDescriptionViewModel *viewModel) {
+            newsDescription(viewModel, NO);
+        }];
+    }];
 }
 
 #pragma mark - Private

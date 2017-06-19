@@ -35,8 +35,8 @@
         
         NSMutableArray <CCNewsDescriptionContentServerModel *> *content = [[NSMutableArray alloc] init];
         NSArray *contentResponceArray = serverResponce[@"content"];
-        [contentResponceArray enumerateObjectsUsingBlock:^(id  _Nonnull contentDict, NSUInteger idx, BOOL * _Nonnull stop) {
-            CCNewsDescriptionContentServerModel *newsDescriptionContentServerModel = [[CCNewsDescriptionContentServerModel alloc]initWithServerResponce:contentDict];
+        [contentResponceArray enumerateObjectsUsingBlock:^(NSDictionary *responce, NSUInteger idx, BOOL * _Nonnull stop) {
+            CCNewsDescriptionContentServerModel *newsDescriptionContentServerModel = [[CCNewsDescriptionContentServerModel alloc] initWithServerResponce:responce];
             [content addObject:newsDescriptionContentServerModel];
         }];
         self.content = [NSArray arrayWithArray:content];

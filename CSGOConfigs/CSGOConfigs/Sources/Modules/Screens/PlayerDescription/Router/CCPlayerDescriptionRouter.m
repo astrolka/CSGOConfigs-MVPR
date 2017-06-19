@@ -21,7 +21,6 @@
 }
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
-    NSParameterAssert(playerID);
     CCPlayerDescriptionViewController *view = [[CCPlayerDescriptionViewController alloc] init];
     CCPlayerDescriptionPresenter *presenter = [[CCPlayerDescriptionPresenter alloc] initWithView:view router:self playerID:playerID];
     #pragma unused(presenter)

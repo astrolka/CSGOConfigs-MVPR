@@ -9,15 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <AppleGuice/AppleGuiceInjectable.h>
 #import "CCNewsPreviewViewModel.h"
+#import "CCNewsDescriptionViewModel.h"
 
 typedef void(^newsPreviewDataBlock)(NSArray <CCNewsPreviewViewModel *> *news, BOOL fromServer, NSInteger countOfNewsOnServer);
 
-typedef void(^newsDescriptionDataBlock)();
+typedef void(^serviceNewsDescriptionDataBlock)(CCNewsDescriptionViewModel *viewModel, BOOL fromServer);
 
 @protocol CCNewsServiceProtocol <AppleGuiceInjectable>
 
 - (void)getNewsPreviewWithOffset:(NSUInteger) offset data:(newsPreviewDataBlock)newsPreview;
 
-- (void)getNewsDescription:(newsDescriptionDataBlock)newsDescription;
+- (void)getNewsDescriptionWithNewsID:(NSInteger)newsID data:(serviceNewsDescriptionDataBlock)newsDescription;
 
 @end

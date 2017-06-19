@@ -9,6 +9,7 @@
 #import "CCNewsPreviewRouter.h"
 #import "CCNewsPreviewViewController.h"
 #import "CCNewsPreviewPresenter.h"
+#import "CCNewsDescriptionRouter.h"
 #import <RESideMenu/RESideMenu.h>
 
 @interface CCNewsPreviewRouter ()
@@ -22,7 +23,8 @@
 #pragma mark - CCNewsPreviewRouterProtocol
 
 - (void)goToNewsDescriptionScreenWithNewsID:(NSUInteger)newsID {
-    
+    CCNewsDescriptionRouter *newsDescriptionRouter = [[CCNewsDescriptionRouter alloc] initWithNavigationController:self.navigationController];
+    [newsDescriptionRouter goToNewsDescriptionScreenWithNewsID:newsID];
 }
 
 #pragma mark - CCOpenSideMenuRouterProtocol

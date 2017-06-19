@@ -31,6 +31,16 @@
 		A6931F241EF6E4E70087E99F /* CCNewsPreviewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F231EF6E4E70087E99F /* CCNewsPreviewViewModel.m */; };
 		A6931F281EF6EC9F0087E99F /* CCNewsPreviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F271EF6EC9F0087E99F /* CCNewsPreviewTableViewCell.m */; };
 		A6931F2D1EF6F4080087E99F /* CCNewsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F2C1EF6F4080087E99F /* CCNewsService.m */; };
+		A6931F341EF717280087E99F /* CCNewsDescriptionRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F331EF717280087E99F /* CCNewsDescriptionRouter.m */; };
+		A6931F391EF717660087E99F /* CCNewsDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F381EF717660087E99F /* CCNewsDescriptionViewController.m */; };
+		A6931F3C1EF7177F0087E99F /* CCNewsDescriptionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F3B1EF7177F0087E99F /* CCNewsDescriptionPresenter.m */; };
+		A6931F401EF719550087E99F /* CCNewsDescriptionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F3F1EF719550087E99F /* CCNewsDescriptionViewModel.m */; };
+		A6931F451EF722D30087E99F /* CCNewsTextContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F441EF722D30087E99F /* CCNewsTextContentViewModel.m */; };
+		A6931F481EF722E70087E99F /* CCNewsImageContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F471EF722E70087E99F /* CCNewsImageContentViewModel.m */; };
+		A6931F4F1EF734770087E99F /* CCNewsTextContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F4E1EF734770087E99F /* CCNewsTextContentTableViewCell.m */; };
+		A6931F521EF734840087E99F /* CCNewsImageContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F511EF734840087E99F /* CCNewsImageContentTableViewCell.m */; };
+		A6931F591EF743CA0087E99F /* CCNewsDescriptionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F581EF743CA0087E99F /* CCNewsDescriptionHeaderView.m */; };
+		A6931F5C1EF74BE90087E99F /* CCNewsContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6931F5B1EF74BE90087E99F /* CCNewsContentViewModel.m */; };
 		A6B51E181EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B51E171EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m */; };
 		A6DF94321EE2F37700D93751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF931C1EE2F37700D93751 /* AppDelegate.m */; };
 		A6DF94331EE2F37700D93751 /* CCDIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF93201EE2F37700D93751 /* CCDIManager.m */; };
@@ -177,6 +187,29 @@
 		A6931F2A1EF6F3F50087E99F /* CCNewsServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsServiceProtocol.h; path = NewsService/CCNewsServiceProtocol.h; sourceTree = "<group>"; };
 		A6931F2B1EF6F4080087E99F /* CCNewsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsService.h; path = NewsService/CCNewsService.h; sourceTree = "<group>"; };
 		A6931F2C1EF6F4080087E99F /* CCNewsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNewsService.m; path = NewsService/CCNewsService.m; sourceTree = "<group>"; };
+		A6931F321EF717280087E99F /* CCNewsDescriptionRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsDescriptionRouter.h; path = NewsDescription/Router/CCNewsDescriptionRouter.h; sourceTree = "<group>"; };
+		A6931F331EF717280087E99F /* CCNewsDescriptionRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNewsDescriptionRouter.m; path = NewsDescription/Router/CCNewsDescriptionRouter.m; sourceTree = "<group>"; };
+		A6931F351EF7173D0087E99F /* CCNewsDescriptionRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsDescriptionRouterProtocol.h; path = NewsDescription/Router/CCNewsDescriptionRouterProtocol.h; sourceTree = "<group>"; };
+		A6931F361EF7174B0087E99F /* CCNewsDescriptionViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsDescriptionViewProtocol.h; sourceTree = "<group>"; };
+		A6931F371EF717660087E99F /* CCNewsDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsDescriptionViewController.h; path = NewsDescription/View/CCNewsDescriptionViewController.h; sourceTree = "<group>"; };
+		A6931F381EF717660087E99F /* CCNewsDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNewsDescriptionViewController.m; path = NewsDescription/View/CCNewsDescriptionViewController.m; sourceTree = "<group>"; };
+		A6931F3A1EF7177F0087E99F /* CCNewsDescriptionPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsDescriptionPresenter.h; path = NewsDescription/Presenter/CCNewsDescriptionPresenter.h; sourceTree = "<group>"; };
+		A6931F3B1EF7177F0087E99F /* CCNewsDescriptionPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNewsDescriptionPresenter.m; path = NewsDescription/Presenter/CCNewsDescriptionPresenter.m; sourceTree = "<group>"; };
+		A6931F3E1EF719550087E99F /* CCNewsDescriptionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsDescriptionViewModel.h; path = NewsDescriptionViewModel/CCNewsDescriptionViewModel.h; sourceTree = "<group>"; };
+		A6931F3F1EF719550087E99F /* CCNewsDescriptionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNewsDescriptionViewModel.m; path = NewsDescriptionViewModel/CCNewsDescriptionViewModel.m; sourceTree = "<group>"; };
+		A6931F431EF722D30087E99F /* CCNewsTextContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsTextContentViewModel.h; sourceTree = "<group>"; };
+		A6931F441EF722D30087E99F /* CCNewsTextContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNewsTextContentViewModel.m; sourceTree = "<group>"; };
+		A6931F461EF722E70087E99F /* CCNewsImageContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsImageContentViewModel.h; sourceTree = "<group>"; };
+		A6931F471EF722E70087E99F /* CCNewsImageContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNewsImageContentViewModel.m; sourceTree = "<group>"; };
+		A6931F4D1EF734770087E99F /* CCNewsTextContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsTextContentTableViewCell.h; sourceTree = "<group>"; };
+		A6931F4E1EF734770087E99F /* CCNewsTextContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNewsTextContentTableViewCell.m; sourceTree = "<group>"; };
+		A6931F501EF734840087E99F /* CCNewsImageContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsImageContentTableViewCell.h; sourceTree = "<group>"; };
+		A6931F511EF734840087E99F /* CCNewsImageContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNewsImageContentTableViewCell.m; sourceTree = "<group>"; };
+		A6931F531EF7393D0087E99F /* CCNewsContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsContentTableViewCell.h; sourceTree = "<group>"; };
+		A6931F571EF743CA0087E99F /* CCNewsDescriptionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsDescriptionHeaderView.h; sourceTree = "<group>"; };
+		A6931F581EF743CA0087E99F /* CCNewsDescriptionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNewsDescriptionHeaderView.m; sourceTree = "<group>"; };
+		A6931F5A1EF74BE90087E99F /* CCNewsContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsContentViewModel.h; sourceTree = "<group>"; };
+		A6931F5B1EF74BE90087E99F /* CCNewsContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNewsContentViewModel.m; sourceTree = "<group>"; };
 		A6B51E161EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPlayerInfoTableViewCell.h; path = PlayerDescription/View/PlayerInfoTableViewCell/CCPlayerInfoTableViewCell.h; sourceTree = "<group>"; };
 		A6B51E171EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPlayerInfoTableViewCell.m; path = PlayerDescription/View/PlayerInfoTableViewCell/CCPlayerInfoTableViewCell.m; sourceTree = "<group>"; };
 		A6DF931B1EE2F37700D93751 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -702,6 +735,86 @@
 			name = NewsService;
 			sourceTree = "<group>";
 		};
+		A6931F2E1EF716EA0087E99F /* NewsDescription */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F311EF717000087E99F /* Router */,
+				A6931F301EF716FC0087E99F /* View */,
+				A6931F2F1EF716F70087E99F /* Presenter */,
+			);
+			name = NewsDescription;
+			sourceTree = "<group>";
+		};
+		A6931F2F1EF716F70087E99F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F3A1EF7177F0087E99F /* CCNewsDescriptionPresenter.h */,
+				A6931F3B1EF7177F0087E99F /* CCNewsDescriptionPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		A6931F301EF716FC0087E99F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F361EF7174B0087E99F /* CCNewsDescriptionViewProtocol.h */,
+				A6931F371EF717660087E99F /* CCNewsDescriptionViewController.h */,
+				A6931F381EF717660087E99F /* CCNewsDescriptionViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A6931F311EF717000087E99F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F351EF7173D0087E99F /* CCNewsDescriptionRouterProtocol.h */,
+				A6931F321EF717280087E99F /* CCNewsDescriptionRouter.h */,
+				A6931F331EF717280087E99F /* CCNewsDescriptionRouter.m */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		A6931F3D1EF7193E0087E99F /* NewsDescriptionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F3E1EF719550087E99F /* CCNewsDescriptionViewModel.h */,
+				A6931F3F1EF719550087E99F /* CCNewsDescriptionViewModel.m */,
+			);
+			name = NewsDescriptionViewModel;
+			sourceTree = "<group>";
+		};
+		A6931F411EF7229E0087E99F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F421EF722AF0087E99F /* Content */,
+				A6931F211EF6E4CA0087E99F /* NewsPreviewViewModel */,
+				A6931F3D1EF7193E0087E99F /* NewsDescriptionViewModel */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		A6931F421EF722AF0087E99F /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F5A1EF74BE90087E99F /* CCNewsContentViewModel.h */,
+				A6931F5B1EF74BE90087E99F /* CCNewsContentViewModel.m */,
+				A6931F431EF722D30087E99F /* CCNewsTextContentViewModel.h */,
+				A6931F441EF722D30087E99F /* CCNewsTextContentViewModel.m */,
+				A6931F461EF722E70087E99F /* CCNewsImageContentViewModel.h */,
+				A6931F471EF722E70087E99F /* CCNewsImageContentViewModel.m */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
+		A6931F561EF7438C0087E99F /* NewsDescriptionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				A6931F571EF743CA0087E99F /* CCNewsDescriptionHeaderView.h */,
+				A6931F581EF743CA0087E99F /* CCNewsDescriptionHeaderView.m */,
+			);
+			name = NewsDescriptionHeaderView;
+			sourceTree = "<group>";
+		};
 		A6B51E151EF48CEB00316AD2 /* PlayerInfoTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -869,6 +982,7 @@
 		A6DF93471EE2F37700D93751 /* CellViews */ = {
 			isa = PBXGroup;
 			children = (
+				A6931F561EF7438C0087E99F /* NewsDescriptionHeaderView */,
 				A6931F251EF6EC7D0087E99F /* NewsPreviewTableViewCell */,
 				A629FFC41EECA70C001C0373 /* PlayerPersonalInfoView */,
 				A6B51E151EF48CEB00316AD2 /* PlayerInfoTableViewCell */,
@@ -878,6 +992,11 @@
 				A6DF93481EE2F37700D93751 /* BannerCollectionViewCell */,
 				A6DF934B1EE2F37700D93751 /* PlayerPreviewCollectionViewCell */,
 				A6DF934E1EE2F37700D93751 /* SideMenuTableViewCell */,
+				A6931F4D1EF734770087E99F /* CCNewsTextContentTableViewCell.h */,
+				A6931F4E1EF734770087E99F /* CCNewsTextContentTableViewCell.m */,
+				A6931F501EF734840087E99F /* CCNewsImageContentTableViewCell.h */,
+				A6931F511EF734840087E99F /* CCNewsImageContentTableViewCell.m */,
+				A6931F531EF7393D0087E99F /* CCNewsContentTableViewCell.h */,
 			);
 			path = CellViews;
 			sourceTree = "<group>";
@@ -1259,7 +1378,7 @@
 		A6DF93BD1EE2F37700D93751 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A6931F211EF6E4CA0087E99F /* NewsPreviewViewModel */,
+				A6931F411EF7229E0087E99F /* News */,
 				A6196BCF1EEB4CCC00FA4067 /* TeamViewModel */,
 				A6DF93BE1EE2F37700D93751 /* BannerViewModel */,
 				A6DF93C11EE2F37700D93751 /* PlayerDescriptionViewModel */,
@@ -1344,6 +1463,7 @@
 		A6DF93D11EE2F37700D93751 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A6931F2E1EF716EA0087E99F /* NewsDescription */,
 				A629FFA91EEC94ED001C0373 /* PlayerDescription */,
 				A6DF93D21EE2F37700D93751 /* AppTools */,
 				A6DF93DE1EE2F37700D93751 /* FavoritePlayers */,
@@ -1843,6 +1963,8 @@
 				A6DF944E1EE2F37700D93751 /* CCNewDescriptionContentCoreDataModel+CoreDataClass.m in Sources */,
 				A629FFA81EEC646D001C0373 /* UIImageView+Animation.m in Sources */,
 				A6DF946C1EE2F37700D93751 /* CCFavoritePlayersPresenter.m in Sources */,
+				A6931F4F1EF734770087E99F /* CCNewsTextContentTableViewCell.m in Sources */,
+				A6931F591EF743CA0087E99F /* CCNewsDescriptionHeaderView.m in Sources */,
 				A6DF94511EE2F37700D93751 /* CCNewsDescriptionCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF94701EE2F37700D93751 /* CCMapEventsRouter.m in Sources */,
 				A6DF94371EE2F37700D93751 /* CCCoreDataService.m in Sources */,
@@ -1859,6 +1981,7 @@
 				A6DF94321EE2F37700D93751 /* AppDelegate.m in Sources */,
 				A6DF945F1EE2F37700D93751 /* CCNewsDescriptionServerModel.m in Sources */,
 				A62859461EF5DC9B00BA935D /* CCBannerPresenter.m in Sources */,
+				A6931F481EF722E70087E99F /* CCNewsImageContentViewModel.m in Sources */,
 				A6B51E181EF48D2E00316AD2 /* CCPlayerInfoTableViewCell.m in Sources */,
 				A6DF947A1EE2F37700D93751 /* CCSideMenuViewController.m in Sources */,
 				A6DF94501EE2F37700D93751 /* CCNewsDescriptionCoreDataModel+CoreDataClass.m in Sources */,
@@ -1869,6 +1992,7 @@
 				A6DF947D1EE2F37700D93751 /* CCSkinsPriceViewController.m in Sources */,
 				A6DF94741EE2F37700D93751 /* CCNewsPreviewViewController.m in Sources */,
 				A6DF94521EE2F37700D93751 /* CCNewsPreviewCoreDataModel+CoreDataClass.m in Sources */,
+				A6931F391EF717660087E99F /* CCNewsDescriptionViewController.m in Sources */,
 				A629FFBE1EECA6D3001C0373 /* CCCenterButtonView.m in Sources */,
 				A6DF946D1EE2F37700D93751 /* CCFavoritePlayersRouter.m in Sources */,
 				A629FFA31EEC153E001C0373 /* CCTeamTableViewCell.m in Sources */,
@@ -1882,10 +2006,13 @@
 				A6196BC61EEB4BDE00FA4067 /* UIImageView+URL.m in Sources */,
 				A6DF94431EE2F37700D93751 /* CCMessageView.m in Sources */,
 				A6DF947E1EE2F37700D93751 /* CCTeamsPresenter.m in Sources */,
+				A6931F3C1EF7177F0087E99F /* CCNewsDescriptionPresenter.m in Sources */,
 				A6931F2D1EF6F4080087E99F /* CCNewsService.m in Sources */,
 				A6DF94441EE2F37700D93751 /* CCPlayersListView.m in Sources */,
 				A629FFC31EECA709001C0373 /* CCPlayerPersonalInfoView.m in Sources */,
+				A6931F341EF717280087E99F /* CCNewsDescriptionRouter.m in Sources */,
 				A6DF944A1EE2F37700D93751 /* CCBannerCoreDataModel+CoreDataClass.m in Sources */,
+				A6931F451EF722D30087E99F /* CCNewsTextContentViewModel.m in Sources */,
 				A6DF94381EE2F37700D93751 /* CCPlayersService.m in Sources */,
 				A6DF946B1EE2F37700D93751 /* CCAppToolsViewController.m in Sources */,
 				A6DF94671EE2F37700D93751 /* CCPlayerPreviewViewModel.m in Sources */,
@@ -1894,6 +2021,7 @@
 				A6DF94721EE2F37700D93751 /* CCNewsPreviewPresenter.m in Sources */,
 				A6DF944D1EE2F37700D93751 /* CCEventCoreDataModel+CoreDataProperties.m in Sources */,
 				A6DF94401EE2F37700D93751 /* CCSideMenuTableViewCell.m in Sources */,
+				A6931F5C1EF74BE90087E99F /* CCNewsContentViewModel.m in Sources */,
 				A629FFBA1EECA69B001C0373 /* CCSelectableSectionView.m in Sources */,
 				A6DF94451EE2F37700D93751 /* CCSideMenuFactory.m in Sources */,
 				A6DF944B1EE2F37700D93751 /* CCBannerCoreDataModel+CoreDataProperties.m in Sources */,
@@ -1909,6 +2037,7 @@
 				A62859521EF5EB8C00BA935D /* UIView+CCMessageView.m in Sources */,
 				A6DF947B1EE2F37700D93751 /* CCSkinsPricePresenter.m in Sources */,
 				A629FF9F1EEC1451001C0373 /* CCTeamsListView.m in Sources */,
+				A6931F521EF734840087E99F /* CCNewsImageContentTableViewCell.m in Sources */,
 				A6DF943A1EE2F37700D93751 /* UIColor+CC.m in Sources */,
 				A6DF94391EE2F37700D93751 /* CCRestService.m in Sources */,
 				A6DF945E1EE2F37700D93751 /* CCNewsDescriptionContentServerModel.m in Sources */,
@@ -1917,6 +2046,7 @@
 				A6DF94351EE2F37700D93751 /* CCBannerService.m in Sources */,
 				A6DF94541EE2F37700D93751 /* CCPlayerDescriptionCoreDataModel+CoreDataClass.m in Sources */,
 				A6DF94731EE2F37700D93751 /* CCNewsPreviewRouter.m in Sources */,
+				A6931F401EF719550087E99F /* CCNewsDescriptionViewModel.m in Sources */,
 				A6DF947C1EE2F37700D93751 /* CCSkinsPriceRouter.m in Sources */,
 				A629FFB71EEC96E8001C0373 /* CCPlayerDescriptionRouter.m in Sources */,
 				A628594B1EF5DE8B00BA935D /* CCBannerRouter.m in Sources */,
