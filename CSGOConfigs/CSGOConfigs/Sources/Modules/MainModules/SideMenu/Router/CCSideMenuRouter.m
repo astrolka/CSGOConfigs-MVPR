@@ -17,7 +17,7 @@
 #import "CCPlayersPreviewRouter.h"
 #import "CCAppToolsRouter.h"
 #import "CCFavoritePlayersRouter.h"
-#import "CCMapEventsRouter.h"
+#import "CCEventsRouter.h"
 #import "CCNewsPreviewRouter.h"
 #import "CCSkinsPriceRouter.h"
 #import "CCTeamsRouter.h"
@@ -77,8 +77,8 @@
 }
 
 - (void)goToMapEventsScreen {
-    CCMapEventsRouter *router = [[CCMapEventsRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCMapEventsViewProtocol> view = [router buildMapEventsModule];
+    CCEventsRouter *router = [[CCEventsRouter alloc] initWithNavigationController:self.navigationController];
+    id <CCEventsViewProtocol> view = [router buildEventsModule];
     [self goToViewController:(UIViewController *)view];
 }
 

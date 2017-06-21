@@ -11,7 +11,7 @@
 #import "CCBannerViewModel.h"
 #import <CoreGraphics/CGBase.h>
 
-typedef void(^bannerDataBlock)(NSArray <CCBannerViewModel *> * banners, CGFloat bannerHeight);
+typedef void(^bannerDataBlock)(NSArray <CCBannerViewModel *> *banners, CGFloat bannerHeight);
 
 @protocol CCBannerServiceProtocol <AppleGuiceInjectable>
 

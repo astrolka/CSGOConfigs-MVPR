@@ -27,6 +27,9 @@
 #import "CCNewsServiceProtocol.h"
 #import "CCNewsService.h"
 
+#import "CCEventsServiceProtocol.h"
+#import "CCEventsService.h"
+
 @implementation CCDIManager
 
 #pragma mark - Public
@@ -45,6 +48,7 @@
     [AppleGuice setImplementation:[CCBannerService class] withProtocol:@protocol(CCBannerServiceProtocol)];
     [AppleGuice setImplementation:[CCTeamsService class] withProtocol:@protocol(CCTeamsServiceProtocol)];
     [AppleGuice setImplementation:[CCNewsService class] withProtocol:@protocol(CCNewsServiceProtocol)];
+    [AppleGuice setImplementation:[CCEventsService class] withProtocol:@protocol(CCEventsServiceProtocol)];
 }
 
 @end

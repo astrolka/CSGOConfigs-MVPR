@@ -27,10 +27,10 @@ NSString *const kBannerSizeSpechialChar = @"x"; // server responce: "320x640"
 #pragma mark - CCBannerServiceProtocol
 
 - (void)getBanners:(bannerDataBlock)banners {
-    [self.ioc_restService makeGETRequestWithURL:[NSURL URLWithString:@"bannersData.json"] onSucess:^(NSArray *responce) {
+    [self.ioc_restService makeGETRequestWithURL:[NSURL URLWithString:@"bannersData.json"] onSucess:^(NSArray *bannersResponce) {
         NSMutableArray <CCBannerServerModel *> *serverModels  = [[NSMutableArray alloc] init];
-        [responce enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            CCBannerServerModel *bannerServerModel = [[CCBannerServerModel alloc] initWithServerResponce:obj];
+        [bannersResponce enumerateObjectsUsingBlock:^(NSDictionary *bannerResponce, NSUInteger idx, BOOL * _Nonnull stop) {
+            CCBannerServerModel *bannerServerModel = [[CCBannerServerModel alloc] initWithServerResponce:bannerResponce];
             [serverModels addObject:bannerServerModel];
         }];
         

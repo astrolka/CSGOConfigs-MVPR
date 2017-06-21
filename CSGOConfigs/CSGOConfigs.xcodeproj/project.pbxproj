@@ -12,6 +12,7 @@
 		A64103EF1EBDDB550057E2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64103EE1EBDDB550057E2E3 /* Assets.xcassets */; };
 		A642CB1D1EBA491B00BFD470 /* CSGOConfigsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */; };
 		A642CB441EBA4C5100BFD470 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB3C1EBA4C5100BFD470 /* main.m */; };
+		A66305571EFA735000C2CC2D /* CCEventPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305561EFA735000C2CC2D /* CCEventPinAnnotationView.m */; };
 		A6FD2F501EF9D2F000211F9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */; };
 		A6FD2F511EF9D2F000211F9A /* UIColor+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC81EF9D2EF00211F9A /* UIColor+CC.m */; };
 		A6FD2F521EF9D2F000211F9A /* UIFont+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DCB1EF9D2EF00211F9A /* UIFont+CC.m */; };
@@ -121,10 +122,11 @@
 		A6FD2FBA1EF9D2F000211F9A /* CCBannerRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2F3D1EF9D2F000211F9A /* CCBannerRouter.m */; };
 		A6FD2FBB1EF9D2F000211F9A /* CCBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2F411EF9D2F000211F9A /* CCBannerView.m */; };
 		A6FD2FD41EF9D77100211F9A /* CCEventsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2FD31EF9D77100211F9A /* CCEventsListView.m */; };
-		A6FD2FD81EF9D79100211F9A /* CCEventsMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2FD71EF9D79100211F9A /* CCEventsMapView.m */; };
 		A6FD2FDC1EF9DA0F00211F9A /* CCEventViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2FDB1EF9DA0F00211F9A /* CCEventViewModel.m */; };
 		A6FD2FE21EF9DEE200211F9A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD2FE11EF9DEE200211F9A /* MapKit.framework */; };
 		A6FD2FE51EF9DF7B00211F9A /* CCAnnotationEventViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2FE41EF9DF7B00211F9A /* CCAnnotationEventViewModel.m */; };
+		A6FD2FEA1EF9EC1000211F9A /* CCEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2FE91EF9EC1000211F9A /* CCEventTableViewCell.m */; };
+		A6FD2FF41EFA4DAC00211F9A /* CCEventsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2FF31EFA4DAC00211F9A /* CCEventsService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +151,8 @@
 		A642CB1E1EBA491B00BFD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A642CB3B1EBA4C5100BFD470 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A642CB3C1EBA4C5100BFD470 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A66305551EFA735000C2CC2D /* CCEventPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEventPinAnnotationView.h; path = EventPinAnnotationView/CCEventPinAnnotationView.h; sourceTree = "<group>"; };
+		A66305561EFA735000C2CC2D /* CCEventPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEventPinAnnotationView.m; path = EventPinAnnotationView/CCEventPinAnnotationView.m; sourceTree = "<group>"; };
 		A6FD2DC31EF9D2EF00211F9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6FD2DC71EF9D2EF00211F9A /* UIColor+CC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CC.h"; sourceTree = "<group>"; };
@@ -398,13 +402,16 @@
 		A6FD2F421EF9D2F000211F9A /* CCBannerViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBannerViewProtocol.h; sourceTree = "<group>"; };
 		A6FD2FD21EF9D77100211F9A /* CCEventsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEventsListView.h; path = EventsListView/CCEventsListView.h; sourceTree = "<group>"; };
 		A6FD2FD31EF9D77100211F9A /* CCEventsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEventsListView.m; path = EventsListView/CCEventsListView.m; sourceTree = "<group>"; };
-		A6FD2FD61EF9D79100211F9A /* CCEventsMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEventsMapView.h; path = EventsMapView/CCEventsMapView.h; sourceTree = "<group>"; };
-		A6FD2FD71EF9D79100211F9A /* CCEventsMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEventsMapView.m; path = EventsMapView/CCEventsMapView.m; sourceTree = "<group>"; };
 		A6FD2FDA1EF9DA0F00211F9A /* CCEventViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEventViewModel.h; path = EventViewModel/CCEventViewModel.h; sourceTree = "<group>"; };
 		A6FD2FDB1EF9DA0F00211F9A /* CCEventViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEventViewModel.m; path = EventViewModel/CCEventViewModel.m; sourceTree = "<group>"; };
 		A6FD2FE11EF9DEE200211F9A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A6FD2FE31EF9DF7B00211F9A /* CCAnnotationEventViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCAnnotationEventViewModel.h; path = AnnotationEventModel/CCAnnotationEventViewModel.h; sourceTree = "<group>"; };
 		A6FD2FE41EF9DF7B00211F9A /* CCAnnotationEventViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCAnnotationEventViewModel.m; path = AnnotationEventModel/CCAnnotationEventViewModel.m; sourceTree = "<group>"; };
+		A6FD2FE81EF9EC1000211F9A /* CCEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEventTableViewCell.h; path = EventTableViewCell/CCEventTableViewCell.h; sourceTree = "<group>"; };
+		A6FD2FE91EF9EC1000211F9A /* CCEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEventTableViewCell.m; path = EventTableViewCell/CCEventTableViewCell.m; sourceTree = "<group>"; };
+		A6FD2FF11EFA4D9E00211F9A /* CCEventsServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEventsServiceProtocol.h; path = EventsService/CCEventsServiceProtocol.h; sourceTree = "<group>"; };
+		A6FD2FF21EFA4DAC00211F9A /* CCEventsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEventsService.h; path = EventsService/CCEventsService.h; sourceTree = "<group>"; };
+		A6FD2FF31EFA4DAC00211F9A /* CCEventsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEventsService.m; path = EventsService/CCEventsService.m; sourceTree = "<group>"; };
 		CB5EC4207C582A5EB77824E1 /* libPods-CSGOConfigs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSGOConfigs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -500,6 +507,15 @@
 				A64103EE1EBDDB550057E2E3 /* Assets.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		A66305541EFA732E00C2CC2D /* EventPinAnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+				A66305551EFA735000C2CC2D /* CCEventPinAnnotationView.h */,
+				A66305561EFA735000C2CC2D /* CCEventPinAnnotationView.m */,
+			);
+			name = EventPinAnnotationView;
 			sourceTree = "<group>";
 		};
 		A6FD2DC11EF9D2EF00211F9A /* Sources */ = {
@@ -647,6 +663,7 @@
 		A6FD2DE21EF9D2EF00211F9A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD2FEF1EFA4D5F00211F9A /* EventsService */,
 				A6FD2DE31EF9D2EF00211F9A /* BannerService */,
 				A6FD2DE71EF9D2EF00211F9A /* LocalStorageService */,
 				A6FD2DED1EF9D2EF00211F9A /* NewsService */,
@@ -732,7 +749,6 @@
 		A6FD2DFE1EF9D2EF00211F9A /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				A6FD2FD51EF9D77A00211F9A /* EventsMapView */,
 				A6FD2FD11EF9D73D00211F9A /* EventsListView */,
 				A6FD2DFF1EF9D2EF00211F9A /* CenterButtonView */,
 				A6FD2E021EF9D2EF00211F9A /* LaunchScreen.storyboard */,
@@ -802,6 +818,8 @@
 		A6FD2E121EF9D2EF00211F9A /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				A66305541EFA732E00C2CC2D /* EventPinAnnotationView */,
+				A6FD2FE71EF9EBEC00211F9A /* EventTableViewCell */,
 				A6FD2E131EF9D2EF00211F9A /* BannerCollectionViewCell */,
 				A6FD2E161EF9D2EF00211F9A /* News */,
 				A6FD2E271EF9D2EF00211F9A /* PlayerPreviewCollectionViewCell */,
@@ -1509,9 +1527,9 @@
 		A6FD2ED71EF9D2F000211F9A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD2EDA1EF9D2F000211F9A /* CCFavoritePlayersRouterProtocol.h */,
 				A6FD2ED81EF9D2F000211F9A /* CCFavoritePlayersRouter.h */,
 				A6FD2ED91EF9D2F000211F9A /* CCFavoritePlayersRouter.m */,
-				A6FD2EDA1EF9D2F000211F9A /* CCFavoritePlayersRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1865,15 +1883,6 @@
 			name = EventsListView;
 			sourceTree = "<group>";
 		};
-		A6FD2FD51EF9D77A00211F9A /* EventsMapView */ = {
-			isa = PBXGroup;
-			children = (
-				A6FD2FD61EF9D79100211F9A /* CCEventsMapView.h */,
-				A6FD2FD71EF9D79100211F9A /* CCEventsMapView.m */,
-			);
-			name = EventsMapView;
-			sourceTree = "<group>";
-		};
 		A6FD2FD91EF9D9F800211F9A /* EventViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1900,6 +1909,25 @@
 				A6FD2FDD1EF9DEA800211F9A /* AnnotationEventViewModel */,
 			);
 			name = Events;
+			sourceTree = "<group>";
+		};
+		A6FD2FE71EF9EBEC00211F9A /* EventTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD2FE81EF9EC1000211F9A /* CCEventTableViewCell.h */,
+				A6FD2FE91EF9EC1000211F9A /* CCEventTableViewCell.m */,
+			);
+			name = EventTableViewCell;
+			sourceTree = "<group>";
+		};
+		A6FD2FEF1EFA4D5F00211F9A /* EventsService */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD2FF11EFA4D9E00211F9A /* CCEventsServiceProtocol.h */,
+				A6FD2FF21EFA4DAC00211F9A /* CCEventsService.h */,
+				A6FD2FF31EFA4DAC00211F9A /* CCEventsService.m */,
+			);
+			name = EventsService;
 			sourceTree = "<group>";
 		};
 		ACEA3C65C96204B66BE1FB59 /* Frameworks */ = {
@@ -2071,7 +2099,9 @@
 				A6FD2F7A1EF9D2F000211F9A /* CCNewDescriptionContentCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2F8B1EF9D2F000211F9A /* CCNewsPreviewServerModel.m in Sources */,
 				A6FD2F7E1EF9D2F000211F9A /* CCNewsPreviewCoreDataModel+CoreDataProperties.m in Sources */,
+				A66305571EFA735000C2CC2D /* CCEventPinAnnotationView.m in Sources */,
 				A6FD2FAC1EF9D2F000211F9A /* CCPlayerInfoTableViewCell.m in Sources */,
+				A6FD2FEA1EF9EC1000211F9A /* CCEventTableViewCell.m in Sources */,
 				A6FD2FDC1EF9DA0F00211F9A /* CCEventViewModel.m in Sources */,
 				A6FD2F721EF9D2F000211F9A /* JFRWebSocket.m in Sources */,
 				A6FD2F871EF9D2F000211F9A /* CCBannerServerModel.m in Sources */,
@@ -2139,6 +2169,7 @@
 				A6FD2F531EF9D2F000211F9A /* UIImageView+URL.m in Sources */,
 				A6FD2F9C1EF9D2F000211F9A /* CCAppToolsViewController.m in Sources */,
 				A6FD2F6E1EF9D2F000211F9A /* CCSideMenuTableViewCell.m in Sources */,
+				A6FD2FF41EFA4DAC00211F9A /* CCEventsService.m in Sources */,
 				A6FD2F9D1EF9D2F000211F9A /* CCEventsPresenter.m in Sources */,
 				A6FD2F971EF9D2F000211F9A /* CCPlayerPreviewViewModel.m in Sources */,
 				A6FD2F8C1EF9D2F000211F9A /* CCPlayerDescriptionServerModel.m in Sources */,
@@ -2150,7 +2181,6 @@
 				A6FD2F861EF9D2F000211F9A /* CCUserFavoritesPlayersIDCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2F821EF9D2F000211F9A /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2FB41EF9D2F000211F9A /* CCSkinsPriceRouter.m in Sources */,
-				A6FD2FD81EF9D79100211F9A /* CCEventsMapView.m in Sources */,
 				A6FD2F761EF9D2F000211F9A /* CCBannerCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2FA61EF9D2F000211F9A /* CCNewsPreviewPresenter.m in Sources */,
 				A6FD2FE51EF9DF7B00211F9A /* CCAnnotationEventViewModel.m in Sources */,
