@@ -71,7 +71,7 @@
     [self.favoritePlayerButton addTarget:self action:@selector(actionFavoritePlayerButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.favoritePlayerButton sizeToFit];
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.favoritePlayerButton];
-    self.navigationItem.rightBarButtonItem = barButtonItem;;
+    self.navigationItem.rightBarButtonItem = barButtonItem;
 }
 
 #pragma mark - UITableViewDataSource

@@ -30,6 +30,12 @@
 #import "CCEventsServiceProtocol.h"
 #import "CCEventsService.h"
 
+#import "CCWebSocketServiceProtocol.h"
+#import "CCWebSocketService.h"
+
+#import "CCSkinsServiceProtocol.h"
+#import "CCSkinsService.h"
+
 @implementation CCDIManager
 
 #pragma mark - Public
@@ -49,6 +55,8 @@
     [AppleGuice setImplementation:[CCTeamsService class] withProtocol:@protocol(CCTeamsServiceProtocol)];
     [AppleGuice setImplementation:[CCNewsService class] withProtocol:@protocol(CCNewsServiceProtocol)];
     [AppleGuice setImplementation:[CCEventsService class] withProtocol:@protocol(CCEventsServiceProtocol)];
+    [AppleGuice setImplementation:[CCWebSocketService class] withProtocol:@protocol(CCWebSocketServiceProtocol)];
+    [AppleGuice setImplementation:[CCSkinsService class] withProtocol:@protocol(CCSkinsServiceProtocol)];
 }
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCOpenSideMenuRouterProtocol.h"
 
-@protocol CCSkinsPriceRouterProtocol <NSObject>
+@protocol CCSkinsPriceRouterProtocol <CCOpenSideMenuRouterProtocol>
 
 @end

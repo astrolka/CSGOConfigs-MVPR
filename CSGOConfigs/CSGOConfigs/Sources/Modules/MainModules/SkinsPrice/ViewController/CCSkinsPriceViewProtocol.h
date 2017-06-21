@@ -7,14 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCSkinViewModel.h"
+#import "CCSpinerViewProtocol.h"
+#import "CCMessageViewProtocol.h"
+@protocol CCSkinsPriceViewProtocol;
 
 @protocol CCSkinsPriceViewActionProtocol <NSObject>
 
+- (void)skinsPriceViewDidSet:(id <CCSkinsPriceViewProtocol>)view;
+
+- (void)skinsPriceViewDidOpenMenu:(id <CCSkinsPriceViewProtocol>)view;
+
+- (void)skinsPriceViewDidPressConnect:(id <CCSkinsPriceViewProtocol>)view;
 
 @end
 
-@protocol CCSkinsPriceViewProtocol <NSObject>
+@protocol CCSkinsPriceViewProtocol <CCSpinerViewProtocol, CCMessageViewProtocol>
 
 @property (nonatomic, strong) id <CCSkinsPriceViewActionProtocol> viewAction;
+
+- (void)showNewSkin:(CCSkinViewModel *)skin;
+
+- (void)connectionButtonEnabled:(BOOL)enabled;
 
 @end

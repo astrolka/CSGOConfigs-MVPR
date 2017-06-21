@@ -9,10 +9,13 @@
 #import "CCSkinsPricePresenter.h"
 #import "CCSkinsPriceViewProtocol.h"
 #import "CCSkinsPriceRouterProtocol.h"
+#import "CCSkinsServiceProtocol.h"
 
 @interface CCSkinsPricePresenter () <CCSkinsPriceViewActionProtocol>
 
-@property (nonatomic, weak) id <CCSkinsPriceViewProtocol> view;
+@property (nonatomic, strong) id <CCSkinsServiceProtocol> ioc_skinsService;
+
+@property (nonatomic, strong) id <CCSkinsPriceViewProtocol> view;
 @property (nonatomic, strong) id <CCSkinsPriceRouterProtocol> router;
 
 @end
@@ -30,5 +33,37 @@
 }
 
 #pragma mark - CCSkinsPriceViewActionProtocol
+
+- (void)skinsPriceViewDidSet:(id <CCSkinsPriceViewProtocol>)view {
+    
+    [self subscribeForSkinPrices];
+}
+
+- (void)skinsPriceViewDidOpenMenu:(id <CCSkinsPriceViewProtocol>)view {
+    [self.router openSideMenu];
+}
+
+- (void)skinsPriceViewDidPressConnect:(id <CCSkinsPriceViewProtocol>)view {
+    [self subscribeForSkinPrices];
+}
+
+#pragma mark - Private
+
+- (void)subscribeForSkinPrices {
+    [self.view showSpiner];
+    [self.view connectionButtonEnabled:NO];
+    
+    [self.ioc_skinsService subscribeForSkinPrices:^{
+        [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+        [self.view hideSpiner];
+        
+    } receiveNewSkinPrice:^(CCSkinViewModel *skin) {
+        [self.view showNewSkin:skin];
+        
+    } disconnect:^(NSError *error) {
+        [self.view connectionButtonEnabled:YES];
+        [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+    }];
+}
 
 @end

@@ -16,6 +16,10 @@
 		A663055B1EFA820000C2CC2D /* CCRouter+OpenSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A663055A1EFA820000C2CC2D /* CCRouter+OpenSideMenu.m */; };
 		A66305611EFA83F700C2CC2D /* CCRouter+WebScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305601EFA83F700C2CC2D /* CCRouter+WebScreen.m */; };
 		A663056B1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A663056A1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m */; };
+		A663056F1EFA8A8200C2CC2D /* CCSkinViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A663056E1EFA8A8200C2CC2D /* CCSkinViewModel.m */; };
+		A66305731EFA906600C2CC2D /* CCSkinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305721EFA906600C2CC2D /* CCSkinTableViewCell.m */; };
+		A66305781EFAA8E000C2CC2D /* CCSkinsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305771EFAA8DF00C2CC2D /* CCSkinsService.m */; };
+		A663057D1EFAACC700C2CC2D /* CCWebSocketService.m in Sources */ = {isa = PBXBuildFile; fileRef = A663057C1EFAACC700C2CC2D /* CCWebSocketService.m */; };
 		A6FD2F501EF9D2F000211F9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */; };
 		A6FD2F511EF9D2F000211F9A /* UIColor+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC81EF9D2EF00211F9A /* UIColor+CC.m */; };
 		A6FD2F521EF9D2F000211F9A /* UIFont+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DCB1EF9D2EF00211F9A /* UIFont+CC.m */; };
@@ -163,6 +167,16 @@
 		A66305641EFA857800C2CC2D /* CCPlayerDescriptionRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayerDescriptionRouterProtocol.h; sourceTree = "<group>"; };
 		A66305691EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCRouter+CCPlayerDescriptionScreen.h"; path = "CCRouter/CCRouter+CCPlayerDescriptionScreen.h"; sourceTree = "<group>"; };
 		A663056A1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+CCPlayerDescriptionScreen.m"; path = "CCRouter/CCRouter+CCPlayerDescriptionScreen.m"; sourceTree = "<group>"; };
+		A663056D1EFA8A8200C2CC2D /* CCSkinViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSkinViewModel.h; path = SkinViewModel/CCSkinViewModel.h; sourceTree = "<group>"; };
+		A663056E1EFA8A8200C2CC2D /* CCSkinViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSkinViewModel.m; path = SkinViewModel/CCSkinViewModel.m; sourceTree = "<group>"; };
+		A66305711EFA906600C2CC2D /* CCSkinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSkinTableViewCell.h; path = SkinTableViewCell/CCSkinTableViewCell.h; sourceTree = "<group>"; };
+		A66305721EFA906600C2CC2D /* CCSkinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSkinTableViewCell.m; path = SkinTableViewCell/CCSkinTableViewCell.m; sourceTree = "<group>"; };
+		A66305751EFAA8BB00C2CC2D /* CCSkinsServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSkinsServiceProtocol.h; path = SkinsService/CCSkinsServiceProtocol.h; sourceTree = "<group>"; };
+		A66305761EFAA8DF00C2CC2D /* CCSkinsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSkinsService.h; path = SkinsService/CCSkinsService.h; sourceTree = "<group>"; };
+		A66305771EFAA8DF00C2CC2D /* CCSkinsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSkinsService.m; path = SkinsService/CCSkinsService.m; sourceTree = "<group>"; };
+		A663057A1EFAACB700C2CC2D /* CCWebSocketServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebSocketServiceProtocol.h; path = WebSocketService/CCWebSocketServiceProtocol.h; sourceTree = "<group>"; };
+		A663057B1EFAACC700C2CC2D /* CCWebSocketService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebSocketService.h; path = WebSocketService/CCWebSocketService.h; sourceTree = "<group>"; };
+		A663057C1EFAACC700C2CC2D /* CCWebSocketService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebSocketService.m; path = WebSocketService/CCWebSocketService.m; sourceTree = "<group>"; };
 		A6FD2DC31EF9D2EF00211F9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6FD2DC71EF9D2EF00211F9A /* UIColor+CC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CC.h"; sourceTree = "<group>"; };
@@ -584,6 +598,44 @@
 			name = PlayerDescriptionScreen;
 			sourceTree = "<group>";
 		};
+		A663056C1EFA8A5700C2CC2D /* Skin */ = {
+			isa = PBXGroup;
+			children = (
+				A663056D1EFA8A8200C2CC2D /* CCSkinViewModel.h */,
+				A663056E1EFA8A8200C2CC2D /* CCSkinViewModel.m */,
+			);
+			name = Skin;
+			sourceTree = "<group>";
+		};
+		A66305701EFA904600C2CC2D /* SkinTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A66305711EFA906600C2CC2D /* CCSkinTableViewCell.h */,
+				A66305721EFA906600C2CC2D /* CCSkinTableViewCell.m */,
+			);
+			name = SkinTableViewCell;
+			sourceTree = "<group>";
+		};
+		A66305741EFAA87B00C2CC2D /* SkinsService */ = {
+			isa = PBXGroup;
+			children = (
+				A66305751EFAA8BB00C2CC2D /* CCSkinsServiceProtocol.h */,
+				A66305761EFAA8DF00C2CC2D /* CCSkinsService.h */,
+				A66305771EFAA8DF00C2CC2D /* CCSkinsService.m */,
+			);
+			name = SkinsService;
+			sourceTree = "<group>";
+		};
+		A66305791EFAAC9100C2CC2D /* WebSocketService */ = {
+			isa = PBXGroup;
+			children = (
+				A663057A1EFAACB700C2CC2D /* CCWebSocketServiceProtocol.h */,
+				A663057B1EFAACC700C2CC2D /* CCWebSocketService.h */,
+				A663057C1EFAACC700C2CC2D /* CCWebSocketService.m */,
+			);
+			name = WebSocketService;
+			sourceTree = "<group>";
+		};
 		A6FD2DC11EF9D2EF00211F9A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,6 +782,8 @@
 		A6FD2DE21EF9D2EF00211F9A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A66305791EFAAC9100C2CC2D /* WebSocketService */,
+				A66305741EFAA87B00C2CC2D /* SkinsService */,
 				A6FD2FEF1EFA4D5F00211F9A /* EventsService */,
 				A6FD2DE31EF9D2EF00211F9A /* BannerService */,
 				A6FD2DE71EF9D2EF00211F9A /* LocalStorageService */,
@@ -885,6 +939,7 @@
 		A6FD2E121EF9D2EF00211F9A /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				A66305701EFA904600C2CC2D /* SkinTableViewCell */,
 				A66305541EFA732E00C2CC2D /* EventPinAnnotationView */,
 				A6FD2FE71EF9EBEC00211F9A /* EventTableViewCell */,
 				A6FD2E131EF9D2EF00211F9A /* BannerCollectionViewCell */,
@@ -1319,6 +1374,7 @@
 		A6FD2E911EF9D2EF00211F9A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A663056C1EFA8A5700C2CC2D /* Skin */,
 				A6FD2FE61EF9DFE200211F9A /* Events */,
 				A6FD2E921EF9D2EF00211F9A /* BannerViewModel */,
 				A6FD2E951EF9D2EF00211F9A /* News */,
@@ -1769,9 +1825,9 @@
 		A6FD2F0E1EF9D2F000211F9A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD2F111EF9D2F000211F9A /* CCPlayersPreviewViewProtocol.h */,
 				A6FD2F0F1EF9D2F000211F9A /* CCPlayersPreviewViewController.h */,
 				A6FD2F101EF9D2F000211F9A /* CCPlayersPreviewViewController.m */,
-				A6FD2F111EF9D2F000211F9A /* CCPlayersPreviewViewProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1837,9 +1893,9 @@
 		A6FD2F221EF9D2F000211F9A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD2F251EF9D2F000211F9A /* CCSkinsPriceRouterProtocol.h */,
 				A6FD2F231EF9D2F000211F9A /* CCSkinsPriceRouter.h */,
 				A6FD2F241EF9D2F000211F9A /* CCSkinsPriceRouter.m */,
-				A6FD2F251EF9D2F000211F9A /* CCSkinsPriceRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1847,9 +1903,9 @@
 		A6FD2F261EF9D2F000211F9A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD2F291EF9D2F000211F9A /* CCSkinsPriceViewProtocol.h */,
 				A6FD2F271EF9D2F000211F9A /* CCSkinsPriceViewController.h */,
 				A6FD2F281EF9D2F000211F9A /* CCSkinsPriceViewController.m */,
-				A6FD2F291EF9D2F000211F9A /* CCSkinsPriceViewProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2206,6 +2262,7 @@
 				A6FD2FAD1EF9D2F000211F9A /* CCPlayersPreviewPresenter.m in Sources */,
 				A6FD2FBA1EF9D2F000211F9A /* CCBannerRouter.m in Sources */,
 				A6FD2F9E1EF9D2F000211F9A /* CCEventsRouter.m in Sources */,
+				A663056F1EFA8A8200C2CC2D /* CCSkinViewModel.m in Sources */,
 				A6FD2F741EF9D2F000211F9A /* CCSideMenuModel.m in Sources */,
 				A6FD2FAF1EF9D2F000211F9A /* CCPlayersPreviewViewController.m in Sources */,
 				A6FD2FD41EF9D77100211F9A /* CCEventsListView.m in Sources */,
@@ -2220,6 +2277,7 @@
 				A6FD2F791EF9D2F000211F9A /* CCNewDescriptionContentCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F7B1EF9D2F000211F9A /* CCNewsDescriptionCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F571EF9D2F000211F9A /* CCDIManager.m in Sources */,
+				A66305731EFA906600C2CC2D /* CCSkinTableViewCell.m in Sources */,
 				A6FD2F851EF9D2F000211F9A /* CCUserFavoritesPlayersIDCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2FB71EF9D2F000211F9A /* CCTeamsRouter.m in Sources */,
 				A6FD2FAA1EF9D2F000211F9A /* CCPlayerDescriptionRouter.m in Sources */,
@@ -2230,6 +2288,7 @@
 				A6FD2F751EF9D2F000211F9A /* CCBannerCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F691EF9D2F000211F9A /* CCNewsImageContentTableViewCell.m in Sources */,
 				A6FD2F501EF9D2F000211F9A /* AppDelegate.m in Sources */,
+				A663057D1EFAACC700C2CC2D /* CCWebSocketService.m in Sources */,
 				A6FD2F581EF9D2F000211F9A /* CCLog.m in Sources */,
 				A6FD2F661EF9D2F000211F9A /* CCTeamsListView.m in Sources */,
 				A6FD2F9A1EF9D2F000211F9A /* CCAppToolsPresenter.m in Sources */,
@@ -2265,6 +2324,7 @@
 				A6FD2F841EF9D2F000211F9A /* CCTeamCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2FA41EF9D2F000211F9A /* CCNewsDescriptionRouter.m in Sources */,
 				A6FD2F951EF9D2F000211F9A /* CCNewsPreviewViewModel.m in Sources */,
+				A66305781EFAA8E000C2CC2D /* CCSkinsService.m in Sources */,
 				A6FD2FA91EF9D2F000211F9A /* CCPlayerDescriptionPresenter.m in Sources */,
 				A6FD2F7F1EF9D2F000211F9A /* CCPlayerDescriptionCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F911EF9D2F000211F9A /* CCNewsContentViewModel.m in Sources */,
