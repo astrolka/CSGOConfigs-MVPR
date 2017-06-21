@@ -13,6 +13,9 @@
 		A642CB1D1EBA491B00BFD470 /* CSGOConfigsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */; };
 		A642CB441EBA4C5100BFD470 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB3C1EBA4C5100BFD470 /* main.m */; };
 		A66305571EFA735000C2CC2D /* CCEventPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305561EFA735000C2CC2D /* CCEventPinAnnotationView.m */; };
+		A663055B1EFA820000C2CC2D /* CCRouter+OpenSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A663055A1EFA820000C2CC2D /* CCRouter+OpenSideMenu.m */; };
+		A66305611EFA83F700C2CC2D /* CCRouter+WebScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305601EFA83F700C2CC2D /* CCRouter+WebScreen.m */; };
+		A663056B1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A663056A1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m */; };
 		A6FD2F501EF9D2F000211F9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */; };
 		A6FD2F511EF9D2F000211F9A /* UIColor+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC81EF9D2EF00211F9A /* UIColor+CC.m */; };
 		A6FD2F521EF9D2F000211F9A /* UIFont+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DCB1EF9D2EF00211F9A /* UIFont+CC.m */; };
@@ -153,6 +156,13 @@
 		A642CB3C1EBA4C5100BFD470 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A66305551EFA735000C2CC2D /* CCEventPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEventPinAnnotationView.h; path = EventPinAnnotationView/CCEventPinAnnotationView.h; sourceTree = "<group>"; };
 		A66305561EFA735000C2CC2D /* CCEventPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEventPinAnnotationView.m; path = EventPinAnnotationView/CCEventPinAnnotationView.m; sourceTree = "<group>"; };
+		A66305591EFA820000C2CC2D /* CCRouter+OpenSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCRouter+OpenSideMenu.h"; path = "CCRouter/CCRouter+OpenSideMenu.h"; sourceTree = "<group>"; };
+		A663055A1EFA820000C2CC2D /* CCRouter+OpenSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+OpenSideMenu.m"; path = "CCRouter/CCRouter+OpenSideMenu.m"; sourceTree = "<group>"; };
+		A663055F1EFA83F700C2CC2D /* CCRouter+WebScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCRouter+WebScreen.h"; path = "CCRouter/WebScreen/CCRouter+WebScreen.h"; sourceTree = "<group>"; };
+		A66305601EFA83F700C2CC2D /* CCRouter+WebScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+WebScreen.m"; path = "CCRouter/WebScreen/CCRouter+WebScreen.m"; sourceTree = "<group>"; };
+		A66305641EFA857800C2CC2D /* CCPlayerDescriptionRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayerDescriptionRouterProtocol.h; sourceTree = "<group>"; };
+		A66305691EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCRouter+CCPlayerDescriptionScreen.h"; path = "CCRouter/CCRouter+CCPlayerDescriptionScreen.h"; sourceTree = "<group>"; };
+		A663056A1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+CCPlayerDescriptionScreen.m"; path = "CCRouter/CCRouter+CCPlayerDescriptionScreen.m"; sourceTree = "<group>"; };
 		A6FD2DC31EF9D2EF00211F9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6FD2DC71EF9D2EF00211F9A /* UIColor+CC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CC.h"; sourceTree = "<group>"; };
@@ -334,7 +344,7 @@
 		A6FD2EDC1EF9D2F000211F9A /* CCFavoritePlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFavoritePlayersViewController.h; sourceTree = "<group>"; };
 		A6FD2EDD1EF9D2F000211F9A /* CCFavoritePlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFavoritePlayersViewController.m; sourceTree = "<group>"; };
 		A6FD2EDE1EF9D2F000211F9A /* CCFavoritePlayersViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFavoritePlayersViewProtocol.h; sourceTree = "<group>"; };
-		A6FD2EE01EF9D2F000211F9A /* CCNewsDescriptionViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsDescriptionViewProtocol.h; sourceTree = "<group>"; };
+		A6FD2EE01EF9D2F000211F9A /* CCNewsDescriptionViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNewsDescriptionViewProtocol.h; path = ../CCNewsDescriptionViewProtocol.h; sourceTree = "<group>"; };
 		A6FD2EE21EF9D2F000211F9A /* CCNewsDescriptionPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsDescriptionPresenter.h; sourceTree = "<group>"; };
 		A6FD2EE31EF9D2F000211F9A /* CCNewsDescriptionPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNewsDescriptionPresenter.m; sourceTree = "<group>"; };
 		A6FD2EE51EF9D2F000211F9A /* CCNewsDescriptionRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsDescriptionRouter.h; sourceTree = "<group>"; };
@@ -518,6 +528,62 @@
 			name = EventPinAnnotationView;
 			sourceTree = "<group>";
 		};
+		A66305581EFA81DA00C2CC2D /* CCRouter */ = {
+			isa = PBXGroup;
+			children = (
+				A66305651EFA864000C2CC2D /* PlayerDescriptionScreen */,
+				A663055E1EFA83D800C2CC2D /* WebScreen */,
+				A663055C1EFA820500C2CC2D /* OpenSideMenu */,
+			);
+			name = CCRouter;
+			sourceTree = "<group>";
+		};
+		A663055C1EFA820500C2CC2D /* OpenSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A66305591EFA820000C2CC2D /* CCRouter+OpenSideMenu.h */,
+				A663055A1EFA820000C2CC2D /* CCRouter+OpenSideMenu.m */,
+			);
+			name = OpenSideMenu;
+			sourceTree = "<group>";
+		};
+		A663055E1EFA83D800C2CC2D /* WebScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A663055F1EFA83F700C2CC2D /* CCRouter+WebScreen.h */,
+				A66305601EFA83F700C2CC2D /* CCRouter+WebScreen.m */,
+			);
+			name = WebScreen;
+			sourceTree = "<group>";
+		};
+		A66305621EFA852F00C2CC2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD2EB21EF9D2F000211F9A /* CCMessageViewProtocol.h */,
+				A6FD2EB41EF9D2F000211F9A /* CCSpinerViewProtocol.h */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A66305631EFA853A00C2CC2D /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD2EB31EF9D2F000211F9A /* CCOpenSideMenuRouterProtocol.h */,
+				A6FD2EB51EF9D2F000211F9A /* CCWebRouterProtocol.h */,
+				A66305641EFA857800C2CC2D /* CCPlayerDescriptionRouterProtocol.h */,
+			);
+			name = Routers;
+			sourceTree = "<group>";
+		};
+		A66305651EFA864000C2CC2D /* PlayerDescriptionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A66305691EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.h */,
+				A663056A1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m */,
+			);
+			name = PlayerDescriptionScreen;
+			sourceTree = "<group>";
+		};
 		A6FD2DC11EF9D2EF00211F9A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +610,7 @@
 		A6FD2DC51EF9D2EF00211F9A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				A66305581EFA81DA00C2CC2D /* CCRouter */,
 				A6FD2DC61EF9D2EF00211F9A /* Colors */,
 				A6FD2DC91EF9D2EF00211F9A /* Fonts */,
 				A6FD2DCC1EF9D2EF00211F9A /* ImageView */,
@@ -1366,29 +1433,28 @@
 		A6FD2EAF1EF9D2F000211F9A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				A6FD2EB01EF9D2F000211F9A /* General */,
+				A6FD2EB01EF9D2F000211F9A /* Shared */,
 				A6FD2EBA1EF9D2F000211F9A /* MainModules */,
 				A6FD2F361EF9D2F000211F9A /* SubModules */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		A6FD2EB01EF9D2F000211F9A /* General */ = {
+		A6FD2EB01EF9D2F000211F9A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				A6FD2EB11EF9D2F000211F9A /* Protocols */,
 				A6FD2EB61EF9D2F000211F9A /* Routers */,
 			);
+			name = Shared;
 			path = General;
 			sourceTree = "<group>";
 		};
 		A6FD2EB11EF9D2F000211F9A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A6FD2EB21EF9D2F000211F9A /* CCMessageViewProtocol.h */,
-				A6FD2EB31EF9D2F000211F9A /* CCOpenSideMenuRouterProtocol.h */,
-				A6FD2EB41EF9D2F000211F9A /* CCSpinerViewProtocol.h */,
-				A6FD2EB51EF9D2F000211F9A /* CCWebRouterProtocol.h */,
+				A66305631EFA853A00C2CC2D /* Routers */,
+				A66305621EFA852F00C2CC2D /* Views */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1547,7 +1613,6 @@
 		A6FD2EDF1EF9D2F000211F9A /* NewsDescription */ = {
 			isa = PBXGroup;
 			children = (
-				A6FD2EE01EF9D2F000211F9A /* CCNewsDescriptionViewProtocol.h */,
 				A6FD2EE11EF9D2F000211F9A /* Presenter */,
 				A6FD2EE41EF9D2F000211F9A /* Router */,
 				A6FD2EE81EF9D2F000211F9A /* View */,
@@ -1577,6 +1642,7 @@
 		A6FD2EE81EF9D2F000211F9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD2EE01EF9D2F000211F9A /* CCNewsDescriptionViewProtocol.h */,
 				A6FD2EE91EF9D2F000211F9A /* CCNewsDescriptionViewController.h */,
 				A6FD2EEA1EF9D2F000211F9A /* CCNewsDescriptionViewController.m */,
 			);
@@ -2103,6 +2169,7 @@
 				A6FD2FAC1EF9D2F000211F9A /* CCPlayerInfoTableViewCell.m in Sources */,
 				A6FD2FEA1EF9EC1000211F9A /* CCEventTableViewCell.m in Sources */,
 				A6FD2FDC1EF9DA0F00211F9A /* CCEventViewModel.m in Sources */,
+				A663056B1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m in Sources */,
 				A6FD2F721EF9D2F000211F9A /* JFRWebSocket.m in Sources */,
 				A6FD2F871EF9D2F000211F9A /* CCBannerServerModel.m in Sources */,
 				A6FD2F701EF9D2F000211F9A /* CCSideMenuFactory.m in Sources */,
@@ -2142,6 +2209,7 @@
 				A6FD2F741EF9D2F000211F9A /* CCSideMenuModel.m in Sources */,
 				A6FD2FAF1EF9D2F000211F9A /* CCPlayersPreviewViewController.m in Sources */,
 				A6FD2FD41EF9D77100211F9A /* CCEventsListView.m in Sources */,
+				A66305611EFA83F700C2CC2D /* CCRouter+WebScreen.m in Sources */,
 				A6FD2F6B1EF9D2F000211F9A /* CCNewsDescriptionHeaderView.m in Sources */,
 				A6FD2F511EF9D2F000211F9A /* UIColor+CC.m in Sources */,
 				A6FD2FA01EF9D2F000211F9A /* CCFavoritePlayersPresenter.m in Sources */,
@@ -2181,6 +2249,7 @@
 				A6FD2F861EF9D2F000211F9A /* CCUserFavoritesPlayersIDCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2F821EF9D2F000211F9A /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2FB41EF9D2F000211F9A /* CCSkinsPriceRouter.m in Sources */,
+				A663055B1EFA820000C2CC2D /* CCRouter+OpenSideMenu.m in Sources */,
 				A6FD2F761EF9D2F000211F9A /* CCBannerCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2FA61EF9D2F000211F9A /* CCNewsPreviewPresenter.m in Sources */,
 				A6FD2FE51EF9DF7B00211F9A /* CCAnnotationEventViewModel.m in Sources */,

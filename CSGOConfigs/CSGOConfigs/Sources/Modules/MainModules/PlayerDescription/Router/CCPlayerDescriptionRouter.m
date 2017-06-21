@@ -9,16 +9,16 @@
 #import "CCPlayerDescriptionRouter.h"
 #import "CCPlayerDescriptionViewController.h"
 #import "CCPlayerDescriptionPresenter.h"
+#import "CCRouter+WebScreen.h"
 
 @implementation CCPlayerDescriptionRouter
 
-- (instancetype)initWithNavigationController:(UINavigationController *)navigationController {
-    self = [super init];
-    if (self) {
-        self.navigationController = navigationController;
-    }
-    return self;
+#pragma mark - CCWebRouterProtocol
+
+- (void)goToWebScreenWithURL:(NSURL *)url {
+    [self cc_goToWebScreenWithURL:url];
 }
+
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
     CCPlayerDescriptionViewController *view = [[CCPlayerDescriptionViewController alloc] init];

@@ -7,9 +7,8 @@
 //
 
 #import "CCOpenSideMenuRouterProtocol.h"
+#import "CCPlayerDescriptionRouterProtocol.h"
 
-@protocol CCFavoritePlayersRouterProtocol <CCOpenSideMenuRouterProtocol>
-
-- (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID;
+@protocol CCFavoritePlayersRouterProtocol <CCOpenSideMenuRouterProtocol, CCPlayerDescriptionRouterProtocol>
 
 @end

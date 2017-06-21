@@ -10,8 +10,15 @@
 #import "CCNewsDescriptionViewProtocol.h"
 #import "CCNewsDescriptionViewController.h"
 #import "CCNewsDescriptionPresenter.h"
+#import "CCRouter+WebScreen.h"
 
 @implementation CCNewsDescriptionRouter
+
+#pragma mark - CCWebRouterProtocol
+
+- (void)goToWebScreenWithURL:(NSURL *)url {
+    [self cc_goToWebScreenWithURL:url];
+}
 
 #pragma mark - Public
 

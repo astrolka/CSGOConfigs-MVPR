@@ -9,36 +9,28 @@
 #import "CCFavoritePlayersRouter.h"
 #import "CCFavoritePlayersPresenter.h"
 #import "CCFavoritePlayersViewController.h"
-#import "CCPlayerDescriptionRouter.h"
-#import <RESideMenu/RESideMenu.h>
-
-@interface CCFavoritePlayersRouter ()
-
-@property (nonatomic, strong) id <CCFavoritePlayersViewProtocol> view;
-
-@end
+#import "CCRouter+CCPlayerDescriptionScreen.h"
+#import "CCRouter+OpenSideMenu.h"
 
 @implementation CCFavoritePlayersRouter
 
 - (id <CCFavoritePlayersViewProtocol>)buildFavoritePlayersModule {
-    self.view = [[CCFavoritePlayersViewController alloc] init];
-    CCFavoritePlayersPresenter *presenter = [[CCFavoritePlayersPresenter alloc] initWithView:self.view router:self];
+    CCFavoritePlayersViewController *view = [[CCFavoritePlayersViewController alloc] init];
+    CCFavoritePlayersPresenter *presenter = [[CCFavoritePlayersPresenter alloc] initWithView:view router:self];
     #pragma unused(presenter)
-    return self.view;
+    return view;
 }
 
 #pragma mark - CCOpenSideMenuRouterProtocol
 
 - (void)openSideMenu {
-    UIViewController *viewController = (UIViewController*)self.view;
-    [viewController.sideMenuViewController presentLeftMenuViewController];
+    [self cc_openSideMenu];
 }
 
-#pragma mark - CCFavoritePlayersRouterProtocol
+#pragma mark - CCPlayerDescriptionRouterProtocol
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
-    CCPlayerDescriptionRouter *router = [[CCPlayerDescriptionRouter alloc] initWithNavigationController:self.navigationController];
-    [router goToPlayerDescriptionScreenWithPlayerID:playerID];
+    [self cc_goToPlayerDescriptionScreenWithPlayerID:playerID];
 }
 
 @end

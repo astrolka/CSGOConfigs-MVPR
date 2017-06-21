@@ -7,7 +7,7 @@
 //
 
 #import "CCBannerRouter.h"
-#import "CCPlayerDescriptionRouter.h"
+#import "CCRouter+CCPlayerDescriptionScreen.h"
 #import "CCBannerView.h"
 #import "CCBannerPresenter.h"
 
@@ -20,11 +20,10 @@
     return view;
 }
 
-#pragma mark - CCBannerRouterProtocol
+#pragma mark - CCPlayerDescriptionRouterProtocol
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
-    CCPlayerDescriptionRouter *router = [[CCPlayerDescriptionRouter alloc] initWithNavigationController:self.navigationController];
-    [router goToPlayerDescriptionScreenWithPlayerID:playerID];
+    [self cc_goToPlayerDescriptionScreenWithPlayerID:playerID];
 }
 
 @end

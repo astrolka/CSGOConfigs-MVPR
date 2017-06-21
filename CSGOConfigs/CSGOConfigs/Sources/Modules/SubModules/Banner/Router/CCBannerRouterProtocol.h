@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCPlayerDescriptionRouterProtocol.h"
 
-@protocol CCBannerRouterProtocol <NSObject>
-
-- (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID;
+@protocol CCBannerRouterProtocol <CCPlayerDescriptionRouterProtocol>
 
 @end

@@ -9,9 +9,8 @@
 
 #import <Foundation/Foundation.h>
 #import "CCOpenSideMenuRouterProtocol.h"
+#import "CCPlayerDescriptionRouterProtocol.h"
 
-@protocol CCPlayersPreviewRouterProtocol <CCOpenSideMenuRouterProtocol>
-
-- (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID;
+@protocol CCPlayersPreviewRouterProtocol <CCOpenSideMenuRouterProtocol, CCPlayerDescriptionRouterProtocol>
 
 @end

@@ -10,34 +10,28 @@
 #import "CCEventsRouter.h"
 #import "CCEventsViewController.h"
 #import "CCEventsPresenter.h"
-#import <RESideMenu/RESideMenu.h>
-
-@interface CCEventsRouter ()
-
-@property (nonatomic, strong) id <CCEventsViewProtocol> view;
-
-@end
+#import "CCRouter+OpenSideMenu.h"
+#import "CCRouter+WebScreen.h"
 
 @implementation CCEventsRouter
 
 - (id <CCEventsViewProtocol>)buildEventsModule {
-    self.view = [[CCEventsViewController alloc] init];
-    CCEventsPresenter *presenter = [[CCEventsPresenter alloc] initWithView:self.view router:self];
+    CCEventsViewController *view = [[CCEventsViewController alloc] init];
+    CCEventsPresenter *presenter = [[CCEventsPresenter alloc] initWithView:view router:self];
     #pragma unused(presenter)
-    return self.view;
+    return view;
 }
 
 #pragma mark - CCOpenSideMenuRouterProtocol
 
 - (void)openSideMenu {
-    UIViewController *viewController = (UIViewController*)self.view;
-    [viewController.sideMenuViewController presentLeftMenuViewController];
+    [self cc_openSideMenu];
 }
 
 #pragma mark - CCWebRouterProtocol
 
 - (void)goToWebScreenWithURL:(NSURL *)url {
-    
+    [self cc_goToWebScreenWithURL:url];
 }
 
 @end
