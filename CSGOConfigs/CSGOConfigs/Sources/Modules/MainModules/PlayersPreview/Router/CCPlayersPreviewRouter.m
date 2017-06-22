@@ -24,13 +24,13 @@
     return view;
 }
 
-#pragma mark - CCOpenSideMenuRouterProtocol
+#pragma mark - CCOpenSideMenuRoutingProtocol
 
 - (void)openSideMenu {
     [self cc_openSideMenu];
 }
 
-#pragma mark - CCPlayerDescriptionRouterProtocol
+#pragma mark - CCPlayerDescriptionRoutingProtocol
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
     [self cc_goToPlayerDescriptionScreenWithPlayerID:playerID];

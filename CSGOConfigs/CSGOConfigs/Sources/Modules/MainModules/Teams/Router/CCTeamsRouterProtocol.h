@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCOpenSideMenuRouterProtocol.h"
+#import "CCOpenSideMenuRoutingProtocol.h"
 
-@protocol CCTeamsRouterProtocol <CCOpenSideMenuRouterProtocol>
+@protocol CCTeamsRouterProtocol <CCOpenSideMenuRoutingProtocol>
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID;
 

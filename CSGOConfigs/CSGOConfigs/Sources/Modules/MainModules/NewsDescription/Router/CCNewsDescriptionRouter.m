@@ -14,7 +14,7 @@
 
 @implementation CCNewsDescriptionRouter
 
-#pragma mark - CCWebRouterProtocol
+#pragma mark - CCWebRoutingProtocol
 
 - (void)goToWebScreenWithURL:(NSURL *)url {
     [self cc_goToWebScreenWithURL:url];

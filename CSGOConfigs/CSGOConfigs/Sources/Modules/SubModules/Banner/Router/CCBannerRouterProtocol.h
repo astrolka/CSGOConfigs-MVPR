@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCPlayerDescriptionRouterProtocol.h"
+#import "CCPlayerDescriptionRoutingProtocol.h"
 
-@protocol CCBannerRouterProtocol <CCPlayerDescriptionRouterProtocol>
+@protocol CCBannerRouterProtocol <CCPlayerDescriptionRoutingProtocol>
 
 @end

@@ -22,13 +22,13 @@
     return view;
 }
 
-#pragma mark - CCOpenSideMenuRouterProtocol
+#pragma mark - CCOpenSideMenuRoutingProtocol
 
 - (void)openSideMenu {
     [self cc_openSideMenu];
 }
 
-#pragma mark - CCWebRouterProtocol
+#pragma mark - CCWebRoutingProtocol
 
 - (void)goToWebScreenWithURL:(NSURL *)url {
     [self cc_goToWebScreenWithURL:url];

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCWebRouterProtocol.h"
+#import "CCWebRoutingProtocol.h"
 
-@protocol CCNewsDescriptionRouterProtocol <CCWebRouterProtocol>
+@protocol CCNewsDescriptionRouterProtocol <CCWebRoutingProtocol>
 
 @end

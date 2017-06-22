@@ -13,12 +13,11 @@
 
 @implementation CCPlayerDescriptionRouter
 
-#pragma mark - CCWebRouterProtocol
+#pragma mark - CCWebRoutingProtocol
 
 - (void)goToWebScreenWithURL:(NSURL *)url {
     [self cc_goToWebScreenWithURL:url];
 }
-
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
     CCPlayerDescriptionViewController *view = [[CCPlayerDescriptionViewController alloc] init];

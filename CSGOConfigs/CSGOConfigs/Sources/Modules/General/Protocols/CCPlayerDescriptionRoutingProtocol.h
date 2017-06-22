@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CCPlayerDescriptionRouterProtocol <NSObject>
+@protocol CCPlayerDescriptionRoutingProtocol <NSObject>
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID;
 

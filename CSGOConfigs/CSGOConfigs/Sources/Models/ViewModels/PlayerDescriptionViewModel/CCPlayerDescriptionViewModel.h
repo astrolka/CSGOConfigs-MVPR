@@ -23,7 +23,7 @@
 @property (nonatomic, strong) NSString *country;
 @property (nonatomic, strong) NSURL *countryImageURL;
 
-@property (nonatomic, strong) NSURL *moreInfoLink;
+@property (nonatomic, strong) NSURL *descriptionURL;
 
 @property (nonatomic, strong) NSArray <NSString *> *hardwareCharacterictics;
 

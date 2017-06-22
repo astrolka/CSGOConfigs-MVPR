@@ -44,7 +44,7 @@
 }
 
 - (void)newsDescriptionViewDidPressMoreInfoButton:(id <CCNewsDescriptionViewProtocol>)view {
-    
+    [self.router goToWebScreenWithURL:self.newsDescriptionViewModel.descriptionURL];
 }
 
 #pragma mark - Private

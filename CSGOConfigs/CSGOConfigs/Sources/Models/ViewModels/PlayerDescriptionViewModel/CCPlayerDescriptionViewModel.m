@@ -31,7 +31,7 @@ NSString *const kEmptyDataDisplay = @"";  // server can send empty string, so no
         viewModel.playerID = (NSInteger)coreDataModel.playerID;
         viewModel.name = [NSString stringWithFormat:@"%@ \"%@\" %@",coreDataModel.name, coreDataModel.previewRelationship.nickName, coreDataModel.surname];
         viewModel.profileImageURL = [NSURL URLWithString:coreDataModel.previewRelationship.imageURL];
-        viewModel.moreInfoLink = [NSURL URLWithString:coreDataModel.moreInfoURL];
+        viewModel.descriptionURL = [NSURL URLWithString:coreDataModel.moreInfoURL];
         
         viewModel.teamName = coreDataModel.teamName;
         viewModel.temaImageURL = [NSURL URLWithString:coreDataModel.teamImageURL];
@@ -92,7 +92,7 @@ NSString *const kEmptyDataDisplay = @"";  // server can send empty string, so no
         viewModel.playerID = serverModel.playerID;
         viewModel.name = [NSString stringWithFormat:@"%@ \"%@\" %@",serverModel.name, serverModel.nickName, serverModel.surname];
         viewModel.profileImageURL = serverModel.profileImageURL;
-        viewModel.moreInfoLink = serverModel.moreInfoURL;
+        viewModel.descriptionURL = serverModel.moreInfoURL;
         
         viewModel.teamName = serverModel.teamName;
         viewModel.temaImageURL = serverModel.teamImageURL;

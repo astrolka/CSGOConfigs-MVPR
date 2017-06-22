@@ -13,7 +13,7 @@
 
 @implementation CCSkinsPriceRouter
 
-#pragma mark - CCOpenSideMenuRouterProtocol
+#pragma mark - CCOpenSideMenuRoutingProtocol
 
 - (void)openSideMenu {
     [self cc_openSideMenu];

@@ -23,14 +23,20 @@
 
 - (void)subscribeForSkinPrices:(skinPriceConnectedBlock)connected receiveNewSkinPrice:(skinPriceDataBlock)skinPrice disconnect:(skinPriceErrorBlock)disconnect {
     [self.ioc_webSocketService connectToURL:[NSURL URLWithString:@"wss://wsn.dota2.net/wsn/"] connect:^{
-        connected();
+        if (connected) {
+            connected();
+        }
     } receiveNewMessage:^(NSString *responce) {
         CCSkinServerModel *serverModel = [[CCSkinServerModel alloc] initWithServerResponce:responce];
         [CCSkinViewModelBuilder buildWithServerModels:serverModel viewModel:^(CCSkinViewModel *viewModel) {
-            skinPrice(viewModel);
+            if (skinPrice) {
+                skinPrice(viewModel);
+            }
         }];
     } disconnect:^(NSError *error) {
-        disconnect(error);
+        if (disconnect) {
+            disconnect(error);
+        }
     }];
 }
 

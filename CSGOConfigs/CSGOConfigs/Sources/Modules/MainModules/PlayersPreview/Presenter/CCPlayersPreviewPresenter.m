@@ -9,7 +9,6 @@
 #import "CCPlayersPreviewPresenter.h"
 #import "CCPlayersPreviewViewProtocol.h"
 #import "CCPlayersPreviewRouterProtocol.h"
-#import "CCOpenSideMenuRouterProtocol.h"
 #import "CCPlayersServiceProtocol.h"
 #import "CCRestServiceProtocol.h"
 #import "CCPlayerPreviewViewModel.h"
@@ -30,7 +29,7 @@ static const CGFloat kLoadingLimit = 6.f;
 
 @implementation CCPlayersPreviewPresenter
 
-- (instancetype)initWithView:(id <CCPlayersPreviewViewProtocol>)view router:(id <CCPlayersPreviewRouterProtocol, CCOpenSideMenuRouterProtocol>)router {
+- (instancetype)initWithView:(id <CCPlayersPreviewViewProtocol>)view router:(id <CCPlayersPreviewRouterProtocol>)router {
     self = [super init];
     if (self) {
         self.view = view;

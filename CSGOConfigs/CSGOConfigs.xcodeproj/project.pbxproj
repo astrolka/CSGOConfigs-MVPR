@@ -20,6 +20,10 @@
 		A66305731EFA906600C2CC2D /* CCSkinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305721EFA906600C2CC2D /* CCSkinTableViewCell.m */; };
 		A66305781EFAA8E000C2CC2D /* CCSkinsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305771EFAA8DF00C2CC2D /* CCSkinsService.m */; };
 		A663057D1EFAACC700C2CC2D /* CCWebSocketService.m in Sources */ = {isa = PBXBuildFile; fileRef = A663057C1EFAACC700C2CC2D /* CCWebSocketService.m */; };
+		A6B8C4401EFB561600DED020 /* CCWebPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C43F1EFB561600DED020 /* CCWebPresenter.m */; };
+		A6B8C4431EFB563200DED020 /* CCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C4421EFB563200DED020 /* CCWebViewController.m */; };
+		A6B8C4461EFB564B00DED020 /* CCWebRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C4451EFB564B00DED020 /* CCWebRouter.m */; };
+		A6B8C4511EFB5A9B00DED020 /* CCWebPresentationService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C4501EFB5A9B00DED020 /* CCWebPresentationService.m */; };
 		A6FD2F501EF9D2F000211F9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */; };
 		A6FD2F511EF9D2F000211F9A /* UIColor+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC81EF9D2EF00211F9A /* UIColor+CC.m */; };
 		A6FD2F521EF9D2F000211F9A /* UIFont+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DCB1EF9D2EF00211F9A /* UIFont+CC.m */; };
@@ -164,7 +168,7 @@
 		A663055A1EFA820000C2CC2D /* CCRouter+OpenSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+OpenSideMenu.m"; path = "CCRouter/CCRouter+OpenSideMenu.m"; sourceTree = "<group>"; };
 		A663055F1EFA83F700C2CC2D /* CCRouter+WebScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCRouter+WebScreen.h"; path = "CCRouter/WebScreen/CCRouter+WebScreen.h"; sourceTree = "<group>"; };
 		A66305601EFA83F700C2CC2D /* CCRouter+WebScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+WebScreen.m"; path = "CCRouter/WebScreen/CCRouter+WebScreen.m"; sourceTree = "<group>"; };
-		A66305641EFA857800C2CC2D /* CCPlayerDescriptionRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayerDescriptionRouterProtocol.h; sourceTree = "<group>"; };
+		A66305641EFA857800C2CC2D /* CCPlayerDescriptionRoutingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlayerDescriptionRoutingProtocol.h; sourceTree = "<group>"; };
 		A66305691EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCRouter+CCPlayerDescriptionScreen.h"; path = "CCRouter/CCRouter+CCPlayerDescriptionScreen.h"; sourceTree = "<group>"; };
 		A663056A1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+CCPlayerDescriptionScreen.m"; path = "CCRouter/CCRouter+CCPlayerDescriptionScreen.m"; sourceTree = "<group>"; };
 		A663056D1EFA8A8200C2CC2D /* CCSkinViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSkinViewModel.h; path = SkinViewModel/CCSkinViewModel.h; sourceTree = "<group>"; };
@@ -177,6 +181,17 @@
 		A663057A1EFAACB700C2CC2D /* CCWebSocketServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebSocketServiceProtocol.h; path = WebSocketService/CCWebSocketServiceProtocol.h; sourceTree = "<group>"; };
 		A663057B1EFAACC700C2CC2D /* CCWebSocketService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebSocketService.h; path = WebSocketService/CCWebSocketService.h; sourceTree = "<group>"; };
 		A663057C1EFAACC700C2CC2D /* CCWebSocketService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebSocketService.m; path = WebSocketService/CCWebSocketService.m; sourceTree = "<group>"; };
+		A6B8C43E1EFB561600DED020 /* CCWebPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebPresenter.h; path = Web/Presenter/CCWebPresenter.h; sourceTree = "<group>"; };
+		A6B8C43F1EFB561600DED020 /* CCWebPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebPresenter.m; path = Web/Presenter/CCWebPresenter.m; sourceTree = "<group>"; };
+		A6B8C4411EFB563200DED020 /* CCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebViewController.h; path = Web/View/CCWebViewController.h; sourceTree = "<group>"; };
+		A6B8C4421EFB563200DED020 /* CCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebViewController.m; path = Web/View/CCWebViewController.m; sourceTree = "<group>"; };
+		A6B8C4441EFB564B00DED020 /* CCWebRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebRouter.h; path = Web/Router/CCWebRouter.h; sourceTree = "<group>"; };
+		A6B8C4451EFB564B00DED020 /* CCWebRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebRouter.m; path = Web/Router/CCWebRouter.m; sourceTree = "<group>"; };
+		A6B8C4471EFB566100DED020 /* CCWebRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebRouterProtocol.h; path = Web/Router/CCWebRouterProtocol.h; sourceTree = "<group>"; };
+		A6B8C4481EFB567400DED020 /* CCWebViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebViewProtocol.h; path = Web/View/CCWebViewProtocol.h; sourceTree = "<group>"; };
+		A6B8C44E1EFB5A8900DED020 /* CCWebPresentationServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebPresentationServiceProtocol.h; path = WebPresentationServiceProtocol/CCWebPresentationServiceProtocol.h; sourceTree = "<group>"; };
+		A6B8C44F1EFB5A9B00DED020 /* CCWebPresentationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebPresentationService.h; path = WebPresentationServiceProtocol/CCWebPresentationService.h; sourceTree = "<group>"; };
+		A6B8C4501EFB5A9B00DED020 /* CCWebPresentationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebPresentationService.m; path = WebPresentationServiceProtocol/CCWebPresentationService.m; sourceTree = "<group>"; };
 		A6FD2DC31EF9D2EF00211F9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6FD2DC71EF9D2EF00211F9A /* UIColor+CC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CC.h"; sourceTree = "<group>"; };
@@ -329,9 +344,9 @@
 		A6FD2EAD1EF9D2F000211F9A /* CCTeamViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTeamViewModel.h; sourceTree = "<group>"; };
 		A6FD2EAE1EF9D2F000211F9A /* CCTeamViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTeamViewModel.m; sourceTree = "<group>"; };
 		A6FD2EB21EF9D2F000211F9A /* CCMessageViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMessageViewProtocol.h; sourceTree = "<group>"; };
-		A6FD2EB31EF9D2F000211F9A /* CCOpenSideMenuRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCOpenSideMenuRouterProtocol.h; sourceTree = "<group>"; };
+		A6FD2EB31EF9D2F000211F9A /* CCOpenSideMenuRoutingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCOpenSideMenuRoutingProtocol.h; sourceTree = "<group>"; };
 		A6FD2EB41EF9D2F000211F9A /* CCSpinerViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpinerViewProtocol.h; sourceTree = "<group>"; };
-		A6FD2EB51EF9D2F000211F9A /* CCWebRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCWebRouterProtocol.h; sourceTree = "<group>"; };
+		A6FD2EB51EF9D2F000211F9A /* CCWebRoutingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCWebRoutingProtocol.h; sourceTree = "<group>"; };
 		A6FD2EB81EF9D2F000211F9A /* CCRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRouter.h; sourceTree = "<group>"; };
 		A6FD2EB91EF9D2F000211F9A /* CCRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRouter.m; sourceTree = "<group>"; };
 		A6FD2EBD1EF9D2F000211F9A /* CCAppToolsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAppToolsPresenter.h; sourceTree = "<group>"; };
@@ -582,9 +597,9 @@
 		A66305631EFA853A00C2CC2D /* Routers */ = {
 			isa = PBXGroup;
 			children = (
-				A6FD2EB31EF9D2F000211F9A /* CCOpenSideMenuRouterProtocol.h */,
-				A6FD2EB51EF9D2F000211F9A /* CCWebRouterProtocol.h */,
-				A66305641EFA857800C2CC2D /* CCPlayerDescriptionRouterProtocol.h */,
+				A6FD2EB31EF9D2F000211F9A /* CCOpenSideMenuRoutingProtocol.h */,
+				A6FD2EB51EF9D2F000211F9A /* CCWebRoutingProtocol.h */,
+				A66305641EFA857800C2CC2D /* CCPlayerDescriptionRoutingProtocol.h */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -634,6 +649,55 @@
 				A663057C1EFAACC700C2CC2D /* CCWebSocketService.m */,
 			);
 			name = WebSocketService;
+			sourceTree = "<group>";
+		};
+		A6B8C43A1EFB55E600DED020 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8C43D1EFB55FB00DED020 /* Router */,
+				A6B8C43C1EFB55F700DED020 /* View */,
+				A6B8C43B1EFB55EF00DED020 /* Presenter */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		A6B8C43B1EFB55EF00DED020 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8C43E1EFB561600DED020 /* CCWebPresenter.h */,
+				A6B8C43F1EFB561600DED020 /* CCWebPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		A6B8C43C1EFB55F700DED020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8C4481EFB567400DED020 /* CCWebViewProtocol.h */,
+				A6B8C4411EFB563200DED020 /* CCWebViewController.h */,
+				A6B8C4421EFB563200DED020 /* CCWebViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A6B8C43D1EFB55FB00DED020 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8C4471EFB566100DED020 /* CCWebRouterProtocol.h */,
+				A6B8C4441EFB564B00DED020 /* CCWebRouter.h */,
+				A6B8C4451EFB564B00DED020 /* CCWebRouter.m */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		A6B8C44D1EFB5A5E00DED020 /* WebPresentationService */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8C44E1EFB5A8900DED020 /* CCWebPresentationServiceProtocol.h */,
+				A6B8C44F1EFB5A9B00DED020 /* CCWebPresentationService.h */,
+				A6B8C4501EFB5A9B00DED020 /* CCWebPresentationService.m */,
+			);
+			name = WebPresentationService;
 			sourceTree = "<group>";
 		};
 		A6FD2DC11EF9D2EF00211F9A /* Sources */ = {
@@ -782,6 +846,7 @@
 		A6FD2DE21EF9D2EF00211F9A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A6B8C44D1EFB5A5E00DED020 /* WebPresentationService */,
 				A66305791EFAAC9100C2CC2D /* WebSocketService */,
 				A66305741EFAA87B00C2CC2D /* SkinsService */,
 				A6FD2FEF1EFA4D5F00211F9A /* EventsService */,
@@ -1535,6 +1600,7 @@
 		A6FD2EBA1EF9D2F000211F9A /* MainModules */ = {
 			isa = PBXGroup;
 			children = (
+				A6B8C43A1EFB55E600DED020 /* Web */,
 				A6FD2EBB1EF9D2F000211F9A /* AppTools */,
 				A6FD2EC71EF9D2F000211F9A /* Events */,
 				A6FD2ED31EF9D2F000211F9A /* FavoritePlayers */,
@@ -1766,9 +1832,9 @@
 		A6FD2EFB1EF9D2F000211F9A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD2EFE1EF9D2F000211F9A /* CCPlayerDescriptionRouterProtocol.h */,
 				A6FD2EFC1EF9D2F000211F9A /* CCPlayerDescriptionRouter.h */,
 				A6FD2EFD1EF9D2F000211F9A /* CCPlayerDescriptionRouter.m */,
-				A6FD2EFE1EF9D2F000211F9A /* CCPlayerDescriptionRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2262,6 +2328,7 @@
 				A6FD2FAD1EF9D2F000211F9A /* CCPlayersPreviewPresenter.m in Sources */,
 				A6FD2FBA1EF9D2F000211F9A /* CCBannerRouter.m in Sources */,
 				A6FD2F9E1EF9D2F000211F9A /* CCEventsRouter.m in Sources */,
+				A6B8C4511EFB5A9B00DED020 /* CCWebPresentationService.m in Sources */,
 				A663056F1EFA8A8200C2CC2D /* CCSkinViewModel.m in Sources */,
 				A6FD2F741EF9D2F000211F9A /* CCSideMenuModel.m in Sources */,
 				A6FD2FAF1EF9D2F000211F9A /* CCPlayersPreviewViewController.m in Sources */,
@@ -2314,6 +2381,7 @@
 				A6FD2FE51EF9DF7B00211F9A /* CCAnnotationEventViewModel.m in Sources */,
 				A6FD2F5F1EF9D2F000211F9A /* CCTeamsService.m in Sources */,
 				A6FD2F5D1EF9D2F000211F9A /* CCPlayersService.m in Sources */,
+				A6B8C4431EFB563200DED020 /* CCWebViewController.m in Sources */,
 				A6FD2FB51EF9D2F000211F9A /* CCSkinsPriceViewController.m in Sources */,
 				A6FD2F901EF9D2F000211F9A /* CCBannerViewModel.m in Sources */,
 				A6FD2F671EF9D2F000211F9A /* CCBannerCollectionViewCell.m in Sources */,
@@ -2325,6 +2393,7 @@
 				A6FD2FA41EF9D2F000211F9A /* CCNewsDescriptionRouter.m in Sources */,
 				A6FD2F951EF9D2F000211F9A /* CCNewsPreviewViewModel.m in Sources */,
 				A66305781EFAA8E000C2CC2D /* CCSkinsService.m in Sources */,
+				A6B8C4461EFB564B00DED020 /* CCWebRouter.m in Sources */,
 				A6FD2FA91EF9D2F000211F9A /* CCPlayerDescriptionPresenter.m in Sources */,
 				A6FD2F7F1EF9D2F000211F9A /* CCPlayerDescriptionCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F911EF9D2F000211F9A /* CCNewsContentViewModel.m in Sources */,
@@ -2338,6 +2407,7 @@
 				A6FD2F9F1EF9D2F000211F9A /* CCEventsViewController.m in Sources */,
 				A6FD2F681EF9D2F000211F9A /* CCNewsContentTableViewCell.m in Sources */,
 				A6FD2F831EF9D2F000211F9A /* CCTeamCoreDataModel+CoreDataClass.m in Sources */,
+				A6B8C4401EFB561600DED020 /* CCWebPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

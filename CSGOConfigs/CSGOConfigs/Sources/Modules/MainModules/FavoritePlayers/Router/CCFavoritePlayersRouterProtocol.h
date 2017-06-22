@@ -6,9 +6,9 @@
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
-#import "CCOpenSideMenuRouterProtocol.h"
-#import "CCPlayerDescriptionRouterProtocol.h"
+#import "CCOpenSideMenuRoutingProtocol.h"
+#import "CCPlayerDescriptionRoutingProtocol.h"
 
-@protocol CCFavoritePlayersRouterProtocol <CCOpenSideMenuRouterProtocol, CCPlayerDescriptionRouterProtocol>
+@protocol CCFavoritePlayersRouterProtocol <CCOpenSideMenuRoutingProtocol, CCPlayerDescriptionRoutingProtocol>
 
 @end

@@ -9,7 +9,6 @@
 #import "CCRouter.h"
 #import "CCPlayersPreviewRouterProtocol.h"
 #import "CCPlayersPreviewViewProtocol.h"
-#import "CCOpenSideMenuRouterProtocol.h"
 
 @interface CCPlayersPreviewRouter : CCRouter <CCPlayersPreviewRouterProtocol>
 

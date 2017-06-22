@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCOpenSideMenuRouterProtocol.h"
-#import "CCWebRouterProtocol.h"
+#import "CCOpenSideMenuRoutingProtocol.h"
+#import "CCWebRoutingProtocol.h"
 
-@protocol CCEventsRouterProtocol <CCOpenSideMenuRouterProtocol, CCWebRouterProtocol>
+@protocol CCEventsRouterProtocol <CCOpenSideMenuRoutingProtocol, CCWebRoutingProtocol>
 
 @end

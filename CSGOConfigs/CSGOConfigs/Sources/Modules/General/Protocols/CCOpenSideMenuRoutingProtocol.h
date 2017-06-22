@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CCOpenSideMenuRouterProtocol <NSObject>
+@protocol CCOpenSideMenuRoutingProtocol <NSObject>
 
 - (void)openSideMenu;
 

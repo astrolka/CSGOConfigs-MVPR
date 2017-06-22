@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CCWebRouterProtocol <NSObject>
+@protocol CCWebRoutingProtocol <NSObject>
 
 - (void)goToWebScreenWithURL:(NSURL *)url;
 

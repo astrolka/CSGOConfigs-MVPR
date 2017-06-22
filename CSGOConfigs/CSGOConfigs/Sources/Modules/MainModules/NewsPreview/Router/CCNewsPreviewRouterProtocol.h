@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCOpenSideMenuRouterProtocol.h"
+#import "CCOpenSideMenuRoutingProtocol.h"
 
-@protocol CCNewsPreviewRouterProtocol <CCOpenSideMenuRouterProtocol>
+@protocol CCNewsPreviewRouterProtocol <CCOpenSideMenuRoutingProtocol>
 
 - (void)goToNewsDescriptionScreenWithNewsID:(NSUInteger)newsID;
 

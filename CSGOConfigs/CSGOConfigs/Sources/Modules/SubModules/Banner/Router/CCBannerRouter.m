@@ -20,7 +20,7 @@
     return view;
 }
 
-#pragma mark - CCPlayerDescriptionRouterProtocol
+#pragma mark - CCPlayerDescriptionRoutingProtocol
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
     [self cc_goToPlayerDescriptionScreenWithPlayerID:playerID];

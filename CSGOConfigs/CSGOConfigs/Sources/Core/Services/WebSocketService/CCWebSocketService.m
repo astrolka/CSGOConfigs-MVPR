@@ -18,7 +18,6 @@
 @property (nonatomic, copy) webSocketReceiveNewMessageBlock receiveNewMessageBlock;
 @property (nonatomic, copy) webSocketDisconnecBlock disconnectBlock;
 
-
 @end
 
 @implementation CCWebSocketService
@@ -39,12 +38,16 @@
 
 - (void)websocketDidConnect:(JFRWebSocket*)socket {
     [self.webSocket writeString:@"history_go"];
-    self.connectBlock();
+    if (self.connectBlock) {
+        self.connectBlock();
+    }
 }
 
 - (void)websocketDidDisconnect:(JFRWebSocket*)socket error:(NSError*)error {
     CCLog(@"Websocket did disconnect: %@",error);
-    self.disconnectBlock(error);
+    if (self.disconnectBlock) {
+        self.disconnectBlock(error);
+    }
 }
 
 - (void)websocket:(JFRWebSocket*)socket didReceiveMessage:(NSString*)string {
@@ -53,7 +56,9 @@
     transformString = [transformString stringByReplacingOccurrencesOfString:@"\\" withString:@""];
     
     CCLog([NSString stringWithFormat:@"WebSocket did receive message: %@", transformString]);
-    self.receiveNewMessageBlock(transformString);
+    if (self.receiveNewMessageBlock) {
+        self.receiveNewMessageBlock(transformString);
+    }
 }
 
 @end

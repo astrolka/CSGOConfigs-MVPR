@@ -11,6 +11,7 @@
 #import "CCPlayerDescriptionRouterProtocol.h"
 #import "CCPlayersServiceProtocol.h"
 #import "CCLocalStorageServiceProtocol.h"
+#import "CCPlayerDescriptionViewModel.h"
 
 @interface CCPlayerDescriptionPresenter () <CCPlayerDescriptionViewActionProtocol>
 
@@ -19,6 +20,8 @@
 
 @property (nonatomic, strong) id <CCPlayerDescriptionViewProtocol> view;
 @property (nonatomic, strong) id <CCPlayerDescriptionRouterProtocol> router;
+
+@property (nonatomic, strong) CCPlayerDescriptionViewModel *playerDescriptionViewModel;
 
 @property (nonatomic, assign) BOOL playerIsFavorite;
 @property (nonatomic, assign) NSUInteger playerID;
@@ -46,7 +49,7 @@
 }
 
 - (void)playersPreviewViewDidPressLoadCFGButton:(id <CCPlayerDescriptionViewProtocol>)view {
-    
+
 }
 
 - (void)playersPreviewViewDidPressFavoritePlayerButton:(id <CCPlayerDescriptionViewProtocol>)view {
@@ -54,7 +57,9 @@
 }
 
 - (void)playersPreviewViewDidPressMoreInfoButton:(id <CCPlayerDescriptionViewProtocol>)view {
-    
+    if (self.playerDescriptionViewModel) {
+        [self.router goToWebScreenWithURL:self.playerDescriptionViewModel.descriptionURL];
+    }
 }
 
 - (void)playersPreviewView:(id <CCPlayerDescriptionViewProtocol>)view didSelectSection:(PlayerInfoSectionType)playerInfoSectionType {
@@ -78,6 +83,7 @@
     [self.ioc_playersService getPlayerDescriptionWithPlayerID:self.playerID data:^(CCPlayerDescriptionViewModel *playerInfoViewModel, BOOL fromServer) {
         [self.view hideSpiner];
         if (playerInfoViewModel) {
+            self.playerDescriptionViewModel = playerInfoViewModel;
             [self.view showPlayerInfo:playerInfoViewModel];
             (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"", nil)];
         } else {
