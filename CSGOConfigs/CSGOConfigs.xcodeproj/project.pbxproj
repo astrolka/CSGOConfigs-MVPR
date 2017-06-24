@@ -20,6 +20,10 @@
 		A66305731EFA906600C2CC2D /* CCSkinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305721EFA906600C2CC2D /* CCSkinTableViewCell.m */; };
 		A66305781EFAA8E000C2CC2D /* CCSkinsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A66305771EFAA8DF00C2CC2D /* CCSkinsService.m */; };
 		A663057D1EFAACC700C2CC2D /* CCWebSocketService.m in Sources */ = {isa = PBXBuildFile; fileRef = A663057C1EFAACC700C2CC2D /* CCWebSocketService.m */; };
+		A69F12D71EFE68D600AF6421 /* CCSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F12D61EFE68D600AF6421 /* CCSettingsView.m */; };
+		A69F12E01EFE746600AF6421 /* CCSettingsSectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F12DF1EFE746600AF6421 /* CCSettingsSectionDataSource.m */; };
+		A69F12E61EFE749300AF6421 /* CCSettingsRowDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F12E51EFE749300AF6421 /* CCSettingsRowDataSource.m */; };
+		A69F12EB1EFE945300AF6421 /* CCSettingsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F12EA1EFE945300AF6421 /* CCSettingsDataSource.m */; };
 		A6B8C4401EFB561600DED020 /* CCWebPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C43F1EFB561600DED020 /* CCWebPresenter.m */; };
 		A6B8C4431EFB563200DED020 /* CCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C4421EFB563200DED020 /* CCWebViewController.m */; };
 		A6B8C4461EFB564B00DED020 /* CCWebRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C4451EFB564B00DED020 /* CCWebRouter.m */; };
@@ -180,6 +184,14 @@
 		A663057A1EFAACB700C2CC2D /* CCWebSocketServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebSocketServiceProtocol.h; path = WebSocketService/CCWebSocketServiceProtocol.h; sourceTree = "<group>"; };
 		A663057B1EFAACC700C2CC2D /* CCWebSocketService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebSocketService.h; path = WebSocketService/CCWebSocketService.h; sourceTree = "<group>"; };
 		A663057C1EFAACC700C2CC2D /* CCWebSocketService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebSocketService.m; path = WebSocketService/CCWebSocketService.m; sourceTree = "<group>"; };
+		A69F12D51EFE68D600AF6421 /* CCSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSettingsView.h; path = SettingsView/CCSettingsView.h; sourceTree = "<group>"; };
+		A69F12D61EFE68D600AF6421 /* CCSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSettingsView.m; path = SettingsView/CCSettingsView.m; sourceTree = "<group>"; };
+		A69F12DE1EFE746600AF6421 /* CCSettingsSectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSettingsSectionDataSource.h; path = SettingsView/DataSource/SettingsSectionDataSource/CCSettingsSectionDataSource.h; sourceTree = "<group>"; };
+		A69F12DF1EFE746600AF6421 /* CCSettingsSectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSettingsSectionDataSource.m; path = SettingsView/DataSource/SettingsSectionDataSource/CCSettingsSectionDataSource.m; sourceTree = "<group>"; };
+		A69F12E41EFE749300AF6421 /* CCSettingsRowDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSettingsRowDataSource.h; path = SettingsView/DataSource/SettingsRowDataSource/CCSettingsRowDataSource.h; sourceTree = "<group>"; };
+		A69F12E51EFE749300AF6421 /* CCSettingsRowDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSettingsRowDataSource.m; path = SettingsView/DataSource/SettingsRowDataSource/CCSettingsRowDataSource.m; sourceTree = "<group>"; };
+		A69F12E91EFE945300AF6421 /* CCSettingsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSettingsDataSource.h; path = SettingsView/DataSource/SettingsDataSource/CCSettingsDataSource.h; sourceTree = "<group>"; };
+		A69F12EA1EFE945300AF6421 /* CCSettingsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSettingsDataSource.m; path = SettingsView/DataSource/SettingsDataSource/CCSettingsDataSource.m; sourceTree = "<group>"; };
 		A6B8C43E1EFB561600DED020 /* CCWebPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebPresenter.h; path = Web/Presenter/CCWebPresenter.h; sourceTree = "<group>"; };
 		A6B8C43F1EFB561600DED020 /* CCWebPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebPresenter.m; path = Web/Presenter/CCWebPresenter.m; sourceTree = "<group>"; };
 		A6B8C4411EFB563200DED020 /* CCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebViewController.h; path = Web/View/CCWebViewController.h; sourceTree = "<group>"; };
@@ -648,6 +660,53 @@
 			name = WebSocketService;
 			sourceTree = "<group>";
 		};
+		A69F12D41EFE688A00AF6421 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				A69F12E11EFE746900AF6421 /* DataSource */,
+				A69F12D51EFE68D600AF6421 /* CCSettingsView.h */,
+				A69F12D61EFE68D600AF6421 /* CCSettingsView.m */,
+			);
+			name = SettingsView;
+			sourceTree = "<group>";
+		};
+		A69F12E11EFE746900AF6421 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A69F12E71EFE942300AF6421 /* CCSettingsDataSource */,
+				A69F12E31EFE747D00AF6421 /* SettingsRowDataSource */,
+				A69F12E21EFE747100AF6421 /* SettingsSectionDataSource */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		A69F12E21EFE747100AF6421 /* SettingsSectionDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A69F12DE1EFE746600AF6421 /* CCSettingsSectionDataSource.h */,
+				A69F12DF1EFE746600AF6421 /* CCSettingsSectionDataSource.m */,
+			);
+			name = SettingsSectionDataSource;
+			sourceTree = "<group>";
+		};
+		A69F12E31EFE747D00AF6421 /* SettingsRowDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A69F12E41EFE749300AF6421 /* CCSettingsRowDataSource.h */,
+				A69F12E51EFE749300AF6421 /* CCSettingsRowDataSource.m */,
+			);
+			name = SettingsRowDataSource;
+			sourceTree = "<group>";
+		};
+		A69F12E71EFE942300AF6421 /* CCSettingsDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A69F12E91EFE945300AF6421 /* CCSettingsDataSource.h */,
+				A69F12EA1EFE945300AF6421 /* CCSettingsDataSource.m */,
+			);
+			name = CCSettingsDataSource;
+			sourceTree = "<group>";
+		};
 		A6B8C43A1EFB55E600DED020 /* Web */ = {
 			isa = PBXGroup;
 			children = (
@@ -932,6 +991,7 @@
 		A6FD2DFE1EF9D2EF00211F9A /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				A69F12D41EFE688A00AF6421 /* SettingsView */,
 				A6FD2FD11EF9D73D00211F9A /* EventsListView */,
 				A6FD2DFF1EF9D2EF00211F9A /* CenterButtonView */,
 				A6FD2E021EF9D2EF00211F9A /* LaunchScreen.storyboard */,
@@ -1624,9 +1684,9 @@
 		A6FD2EBF1EF9D2F000211F9A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD2EC21EF9D2F000211F9A /* CCAppToolsRouterProtocol.h */,
 				A6FD2EC01EF9D2F000211F9A /* CCAppToolsRouter.h */,
 				A6FD2EC11EF9D2F000211F9A /* CCAppToolsRouter.m */,
-				A6FD2EC21EF9D2F000211F9A /* CCAppToolsRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1634,9 +1694,9 @@
 		A6FD2EC31EF9D2F000211F9A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD2EC61EF9D2F000211F9A /* CCAppToolsViewProtocol.h */,
 				A6FD2EC41EF9D2F000211F9A /* CCAppToolsViewController.h */,
 				A6FD2EC51EF9D2F000211F9A /* CCAppToolsViewController.m */,
-				A6FD2EC61EF9D2F000211F9A /* CCAppToolsViewProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2308,6 +2368,7 @@
 				A6FD2F931EF9D2F000211F9A /* CCNewsTextContentViewModel.m in Sources */,
 				A6FD2FB31EF9D2F000211F9A /* CCSkinsPricePresenter.m in Sources */,
 				A6FD2F8E1EF9D2F000211F9A /* CCSkinServerModel.m in Sources */,
+				A69F12E61EFE749300AF6421 /* CCSettingsRowDataSource.m in Sources */,
 				A6FD2F591EF9D2F000211F9A /* CCBannerService.m in Sources */,
 				A6FD2FB81EF9D2F000211F9A /* CCTeamsViewController.m in Sources */,
 				A6FD2F6C1EF9D2F000211F9A /* CCNewsPreviewTableViewCell.m in Sources */,
@@ -2351,6 +2412,7 @@
 				A6FD2F6E1EF9D2F000211F9A /* CCSideMenuTableViewCell.m in Sources */,
 				A6FD2FF41EFA4DAC00211F9A /* CCEventsService.m in Sources */,
 				A6FD2F9D1EF9D2F000211F9A /* CCEventsPresenter.m in Sources */,
+				A69F12E01EFE746600AF6421 /* CCSettingsSectionDataSource.m in Sources */,
 				A6FD2F971EF9D2F000211F9A /* CCPlayerPreviewViewModel.m in Sources */,
 				A6FD2F8C1EF9D2F000211F9A /* CCPlayerDescriptionServerModel.m in Sources */,
 				A6FD2F641EF9D2F000211F9A /* CCPlayersListView.m in Sources */,
@@ -2383,6 +2445,8 @@
 				A6FD2FA91EF9D2F000211F9A /* CCPlayerDescriptionPresenter.m in Sources */,
 				A6FD2F7F1EF9D2F000211F9A /* CCPlayerDescriptionCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F911EF9D2F000211F9A /* CCNewsContentViewModel.m in Sources */,
+				A69F12EB1EFE945300AF6421 /* CCSettingsDataSource.m in Sources */,
+				A69F12D71EFE68D600AF6421 /* CCSettingsView.m in Sources */,
 				A6FD2F961EF9D2F000211F9A /* CCPlayerDescriptionViewModel.m in Sources */,
 				A6FD2F941EF9D2F000211F9A /* CCNewsDescriptionViewModel.m in Sources */,
 				A6FD2F651EF9D2F000211F9A /* CCSelectableSectionView.m in Sources */,

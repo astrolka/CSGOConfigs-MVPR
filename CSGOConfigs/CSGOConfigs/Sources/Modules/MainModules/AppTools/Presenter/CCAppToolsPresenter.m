@@ -31,6 +31,28 @@
 
 #pragma mark - CCAppToolsViewActionProtocol
 
+- (void)appToolsViewDidOpenMenu:(id <CCAppToolsViewProtocol>)view {
+    [self.router openSideMenu];
+}
 
+- (void)appToolsViewDidSelectClearCache:(id <CCAppToolsViewProtocol>)view {
+    [self.view updateAppCache:@"xyq"];
+}
+
+- (void)appToolsViewDidSelectDonate:(id <CCAppToolsViewProtocol>)view {
+    
+}
+
+- (void)appToolsViewDidSelectContactWithDeveloper:(id <CCAppToolsViewProtocol>)view {
+    
+}
+
+- (void)appToolsViewDidSelectShareApp:(id <CCAppToolsViewProtocol>)view {
+    
+}
+
+- (void)appToolsViewDidSelectRateApp:(id <CCAppToolsViewProtocol>)view {
+    
+}
 
 @end
