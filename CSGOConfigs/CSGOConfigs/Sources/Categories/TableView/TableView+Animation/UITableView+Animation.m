@@ -6,7 +6,7 @@
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
-#import "UIImageView+Animation.h"
+#import "UITableView+Animation.h"
 
 @implementation UITableView (Animation)
 

@@ -28,7 +28,7 @@
 		A6FD2F511EF9D2F000211F9A /* UIColor+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC81EF9D2EF00211F9A /* UIColor+CC.m */; };
 		A6FD2F521EF9D2F000211F9A /* UIFont+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DCB1EF9D2EF00211F9A /* UIFont+CC.m */; };
 		A6FD2F531EF9D2F000211F9A /* UIImageView+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DCF1EF9D2EF00211F9A /* UIImageView+URL.m */; };
-		A6FD2F541EF9D2F000211F9A /* UIImageView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DD31EF9D2EF00211F9A /* UIImageView+Animation.m */; };
+		A6FD2F541EF9D2F000211F9A /* UITableView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DD31EF9D2EF00211F9A /* UITableView+Animation.m */; };
 		A6FD2F551EF9D2F000211F9A /* UIView+CCMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DD71EF9D2EF00211F9A /* UIView+CCMessageView.m */; };
 		A6FD2F561EF9D2F000211F9A /* UIView+CCSpiner.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DDA1EF9D2EF00211F9A /* UIView+CCSpiner.m */; };
 		A6FD2F571EF9D2F000211F9A /* CCDIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DDE1EF9D2EF00211F9A /* CCDIManager.m */; };
@@ -46,7 +46,6 @@
 		A6FD2F631EF9D2F000211F9A /* CCPlayerPersonalInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2E081EF9D2EF00211F9A /* CCPlayerPersonalInfoView.m */; };
 		A6FD2F641EF9D2F000211F9A /* CCPlayersListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2E0B1EF9D2EF00211F9A /* CCPlayersListView.m */; };
 		A6FD2F651EF9D2F000211F9A /* CCSelectableSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2E0E1EF9D2EF00211F9A /* CCSelectableSectionView.m */; };
-		A6FD2F661EF9D2F000211F9A /* CCTeamsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2E111EF9D2EF00211F9A /* CCTeamsListView.m */; };
 		A6FD2F671EF9D2F000211F9A /* CCBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2E151EF9D2EF00211F9A /* CCBannerCollectionViewCell.m */; };
 		A6FD2F681EF9D2F000211F9A /* CCNewsContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2E1A1EF9D2EF00211F9A /* CCNewsContentTableViewCell.m */; };
 		A6FD2F691EF9D2F000211F9A /* CCNewsImageContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2E1D1EF9D2EF00211F9A /* CCNewsImageContentTableViewCell.m */; };
@@ -200,8 +199,8 @@
 		A6FD2DCB1EF9D2EF00211F9A /* UIFont+CC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CC.m"; sourceTree = "<group>"; };
 		A6FD2DCE1EF9D2EF00211F9A /* UIImageView+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URL.h"; sourceTree = "<group>"; };
 		A6FD2DCF1EF9D2EF00211F9A /* UIImageView+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+URL.m"; sourceTree = "<group>"; };
-		A6FD2DD21EF9D2EF00211F9A /* UIImageView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Animation.h"; sourceTree = "<group>"; };
-		A6FD2DD31EF9D2EF00211F9A /* UIImageView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Animation.m"; sourceTree = "<group>"; };
+		A6FD2DD21EF9D2EF00211F9A /* UITableView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Animation.h"; sourceTree = "<group>"; };
+		A6FD2DD31EF9D2EF00211F9A /* UITableView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Animation.m"; sourceTree = "<group>"; };
 		A6FD2DD61EF9D2EF00211F9A /* UIView+CCMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CCMessageView.h"; sourceTree = "<group>"; };
 		A6FD2DD71EF9D2EF00211F9A /* UIView+CCMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CCMessageView.m"; sourceTree = "<group>"; };
 		A6FD2DD91EF9D2EF00211F9A /* UIView+CCSpiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CCSpiner.h"; sourceTree = "<group>"; };
@@ -240,8 +239,6 @@
 		A6FD2E0B1EF9D2EF00211F9A /* CCPlayersListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersListView.m; sourceTree = "<group>"; };
 		A6FD2E0D1EF9D2EF00211F9A /* CCSelectableSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSelectableSectionView.h; sourceTree = "<group>"; };
 		A6FD2E0E1EF9D2EF00211F9A /* CCSelectableSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSelectableSectionView.m; sourceTree = "<group>"; };
-		A6FD2E101EF9D2EF00211F9A /* CCTeamsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTeamsListView.h; sourceTree = "<group>"; };
-		A6FD2E111EF9D2EF00211F9A /* CCTeamsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTeamsListView.m; sourceTree = "<group>"; };
 		A6FD2E141EF9D2EF00211F9A /* CCBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBannerCollectionViewCell.h; sourceTree = "<group>"; };
 		A6FD2E151EF9D2EF00211F9A /* CCBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBannerCollectionViewCell.m; sourceTree = "<group>"; };
 		A6FD2E191EF9D2EF00211F9A /* CCNewsContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewsContentTableViewCell.h; sourceTree = "<group>"; };
@@ -782,8 +779,8 @@
 		A6FD2DD11EF9D2EF00211F9A /* TableView+Animation */ = {
 			isa = PBXGroup;
 			children = (
-				A6FD2DD21EF9D2EF00211F9A /* UIImageView+Animation.h */,
-				A6FD2DD31EF9D2EF00211F9A /* UIImageView+Animation.m */,
+				A6FD2DD21EF9D2EF00211F9A /* UITableView+Animation.h */,
+				A6FD2DD31EF9D2EF00211F9A /* UITableView+Animation.m */,
 			);
 			path = "TableView+Animation";
 			sourceTree = "<group>";
@@ -942,7 +939,6 @@
 				A6FD2E061EF9D2EF00211F9A /* PlayerPersonalInfoView */,
 				A6FD2E091EF9D2EF00211F9A /* PlayersListView */,
 				A6FD2E0C1EF9D2EF00211F9A /* SelectableSectionView */,
-				A6FD2E0F1EF9D2EF00211F9A /* TeamsView */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -990,15 +986,6 @@
 				A6FD2E0E1EF9D2EF00211F9A /* CCSelectableSectionView.m */,
 			);
 			path = SelectableSectionView;
-			sourceTree = "<group>";
-		};
-		A6FD2E0F1EF9D2EF00211F9A /* TeamsView */ = {
-			isa = PBXGroup;
-			children = (
-				A6FD2E101EF9D2EF00211F9A /* CCTeamsListView.h */,
-				A6FD2E111EF9D2EF00211F9A /* CCTeamsListView.m */,
-			);
-			path = TeamsView;
 			sourceTree = "<group>";
 		};
 		A6FD2E121EF9D2EF00211F9A /* ReusableViews */ = {
@@ -2310,7 +2297,7 @@
 				A6FD2F771EF9D2F000211F9A /* CCEventCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F781EF9D2F000211F9A /* CCEventCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2F711EF9D2F000211F9A /* JFRSecurity.m in Sources */,
-				A6FD2F541EF9D2F000211F9A /* UIImageView+Animation.m in Sources */,
+				A6FD2F541EF9D2F000211F9A /* UITableView+Animation.m in Sources */,
 				A6FD2F9B1EF9D2F000211F9A /* CCAppToolsRouter.m in Sources */,
 				A6FD2F811EF9D2F000211F9A /* CCPlayerPreviewCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F551EF9D2F000211F9A /* UIView+CCMessageView.m in Sources */,
@@ -2357,7 +2344,6 @@
 				A6FD2F501EF9D2F000211F9A /* AppDelegate.m in Sources */,
 				A663057D1EFAACC700C2CC2D /* CCWebSocketService.m in Sources */,
 				A6FD2F581EF9D2F000211F9A /* CCLog.m in Sources */,
-				A6FD2F661EF9D2F000211F9A /* CCTeamsListView.m in Sources */,
 				A6FD2F9A1EF9D2F000211F9A /* CCAppToolsPresenter.m in Sources */,
 				A6FD2F891EF9D2F000211F9A /* CCNewsDescriptionContentServerModel.m in Sources */,
 				A6FD2F531EF9D2F000211F9A /* UIImageView+URL.m in Sources */,

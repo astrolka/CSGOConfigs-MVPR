@@ -10,13 +10,16 @@
 #import "Masonry.h"
 #import "UIView+CCSpiner.h"
 #import "UIView+CCMessageView.h"
-#import "CCTeamsListView.h"
 #import "CCBannerView.h"
 #import "CCSideMenuFactory.h"
+#import "CCTeamTableViewCell.h"
+#import "UITableView+Animation.h"
 
-@interface CCTeamsViewController () <CCTeamsListViewActionProtocol>
+@interface CCTeamsViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) CCTeamsListView *teamsView;
+@property (nonatomic, strong) UITableView *teamsTableView;
+@property (nonatomic, strong) NSArray <CCTeamViewModel *> *teams;
+
 @property (strong, nonatomic) UIView <CCBannerViewProtocol> *bannerView;
 
 @end
@@ -41,16 +44,20 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self menuButtonSetup];
     [self bannerViewSetup];
-    [self teamsViewSetup];
+    [self teamsTableViewSetup];
     [self.viewAction teamsViewDidSet:self];
 }
 
-- (void)teamsViewSetup {
-    self.teamsView = [[CCTeamsListView alloc] initWithFrame:CGRectZero];
-    self.teamsView.viewAction = self;
+- (void)teamsTableViewSetup {
+    self.teamsTableView = [[UITableView alloc] initWithFrame:CGRectZero];
+    self.teamsTableView.allowsSelection = NO;
+    self.teamsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.teamsTableView registerClass:[CCTeamTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CCTeamTableViewCell class])];
+    self.teamsTableView.dataSource = self;
+    self.teamsTableView.delegate = self;
     
-    [self.view addSubview:self.teamsView];
-    [self.teamsView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.teamsTableView];
+    [self.teamsTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.left.right.equalTo(self.view);
         make.top.equalTo(self.bannerView.mas_bottom);
     }];
@@ -71,17 +78,33 @@
 #pragma mark - CCTeamsViewProtocol
 
 - (void)showTeams:(NSArray <CCTeamViewModel *> *)teams {
-    [self.teamsView showTeams:teams];
+    self.teams = teams;
+    [self.teamsTableView cc_fluentReloadData];
 }
 
-#pragma mark - CCTeamsListViewActionProtocol
+#pragma mark - UITableViewDataSource
 
-- (void)teamsListView:(CCTeamsListView *)view didSelectTeamAtIndex:(NSUInteger)teamIndex playerAtIndex:(NSUInteger)playerIndex {
-    [self.viewAction teamsView:self didSelectTeamAtIndex:teamIndex playerIndex:playerIndex];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.teams.count;
 }
 
-- (void)teamsListView:(CCTeamsListView *)view didScrollTeamAtIndex:(NSUInteger)index {
-    [self.viewAction teamsView:self didScrollPlayerAtIndex:index];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CCTeamTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CCTeamTableViewCell class])];
+    cell.team = self.teams[indexPath.row];
+    cell.viewAction = ^(CCTeamTableViewCell *cell, NSUInteger playerIndex) {
+        [self.viewAction teamsView:self didSelectTeamAtIndex:indexPath.row playerIndex:playerIndex];
+    };
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 140.f;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self.viewAction teamsView:self didScrollPlayerAtIndex:indexPath.row];
 }
 
 #pragma mark - CCSpinerViewProtocol

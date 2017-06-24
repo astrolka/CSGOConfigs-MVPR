@@ -11,7 +11,7 @@
 #import "UIView+CCSpiner.h"
 #import "UIView+CCMessageView.h"
 #import "CCPlayerDescriptionViewModel.h"
-#import "UIImageView+Animation.h"
+#import "UITableView+Animation.h"
 #import "CCPlayerInfoTableViewCell.h"
 #import "CCPlayerPersonalInfoView.h"
 #import "CCCenterButtonView.h"
