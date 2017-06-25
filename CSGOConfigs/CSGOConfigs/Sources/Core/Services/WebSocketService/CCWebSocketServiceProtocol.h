@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <AppleGuice/AppleGuiceInjectable.h>
 
+/*
+ 
+ The service allow you work with websockets via blocks
+ 
+*/
+
 typedef void(^webSocketConnectBlock)();
 typedef void(^webSocketReceiveNewMessageBlock)(NSString *message);
 typedef void(^webSocketDisconnecBlock)(NSError *error);

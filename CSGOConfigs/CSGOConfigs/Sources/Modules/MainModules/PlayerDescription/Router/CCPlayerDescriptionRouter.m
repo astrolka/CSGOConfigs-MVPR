@@ -10,8 +10,25 @@
 #import "CCPlayerDescriptionViewController.h"
 #import "CCPlayerDescriptionPresenter.h"
 #import "CCRouter+WebScreen.h"
+#import "CCMailScreenRouting.h"
+#import "CCRouter+ViewModelAlertPresenter.h"
 
 @implementation CCPlayerDescriptionRouter
+
+#pragma mark - CCViewModelAlertRoutingProtocol
+
+- (void)showViewModelAlert:(CCViewModelAlert *)viewModelAlert {
+    [self cc_presentViewModelAlert:viewModelAlert];
+}
+
+#pragma mark - CCMailScreenRoutingProtocol
+
+- (void)openEmailScreenWithEmailInfo:(CCEmailInfo *)emailInfo withResult:(mailResultBlock)result {
+    CCMailScreenRouting *mailRouter = [[CCMailScreenRouting alloc] initWithNavigationController:self.navigationController];
+    [mailRouter openEmailScreenWithEmailInfo:emailInfo withResult:^(CCMailResult mailRouterResult) {
+        result(mailRouterResult);
+    }];
+}
 
 #pragma mark - CCWebRoutingProtocol
 

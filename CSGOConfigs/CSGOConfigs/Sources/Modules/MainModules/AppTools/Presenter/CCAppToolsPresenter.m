@@ -13,6 +13,7 @@
 #import "CCOpenURLServiceProtocol.h"
 #import "CCEmailInfoFactory.h"
 #import "CCViewModelAlert.h"
+#import "CCShareInfoFactory.h"
 
 @interface CCAppToolsPresenter () <CCAppToolsViewActionProtocol>
 
@@ -43,14 +44,13 @@
 }
 
 - (void)appToolsViewDidSelectClearCache:(id <CCAppToolsViewProtocol>)view {
-    [self showNoEmailAccountAlert];
-//    NSUInteger cacheSizeInt = [self.ioc_localStorageService getImageCacheSize];
-//    if (cacheSizeInt == 0) {
-//        [self.view updateAppCache:NSLocalizedString(@"", nil)];
-//    } else {
-//        CGFloat cacheSizeFloat = (CGFloat)cacheSizeInt / 1000000;
-//        [self.view updateAppCache:[NSString stringWithFormat:@"%.02f M", cacheSizeFloat]];
-//    }
+    NSUInteger cacheSizeInt = [self.ioc_localStorageService getImageCacheSize];
+    if (cacheSizeInt == 0) {
+        [self.view updateAppCache:NSLocalizedString(@"", nil)];
+    } else {
+        CGFloat cacheSizeFloat = (CGFloat)cacheSizeInt / 1000000;
+        [self.view updateAppCache:[NSString stringWithFormat:@"%.02f M", cacheSizeFloat]];
+    }
 }
 
 - (void)appToolsViewDidSelectDonate:(id <CCAppToolsViewProtocol>)view {
@@ -66,7 +66,7 @@
 }
 
 - (void)appToolsViewDidSelectShareApp:(id <CCAppToolsViewProtocol>)view {
-
+    [self.router openShareScreenWithShareInfo:[CCShareInfoFactory appShareInfo]];
 }
 
 - (void)appToolsViewDidSelectRateApp:(id <CCAppToolsViewProtocol>)view {

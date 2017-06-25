@@ -58,7 +58,7 @@
 }
 
 - (CCSettingsSectionDataSource *)storageSectionSetup {
-    self.cacheRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"kek"] title:NSLocalizedString(@"hello", nil) detail:nil];
+    self.cacheRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolCache"] title:NSLocalizedString(@"hello", nil) detail:nil];
     __weak __typeof(self)wself = self;
     self.cacheRow.selectAction = ^() {
         [wself.viewAction appToolsViewDidSelectClearCache:wself];
@@ -70,22 +70,22 @@
 }
 
 - (CCSettingsSectionDataSource *)socailSectionSetup {
-    CCSettingsRowDataSource *donateRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"kek"] title:NSLocalizedString(@"hello", nil) detail:nil];
+    CCSettingsRowDataSource *donateRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolDonate"] title:NSLocalizedString(@"hello", nil) detail:nil];
     donateRow.selectAction = ^() {
         [self.viewAction appToolsViewDidSelectDonate:self];
     };
     
-    CCSettingsRowDataSource *shareRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"kek"] title:NSLocalizedString(@"hello", nil) detail:nil];
+    CCSettingsRowDataSource *shareRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolShare"] title:NSLocalizedString(@"hello", nil) detail:nil];
     shareRow.selectAction = ^() {
         [self.viewAction appToolsViewDidSelectShareApp:self];
     };
     
-    CCSettingsRowDataSource *rateAppRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"kek"] title:NSLocalizedString(@"hello", nil) detail:nil];
+    CCSettingsRowDataSource *rateAppRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolRateApp"] title:NSLocalizedString(@"hello", nil) detail:nil];
     rateAppRow.selectAction = ^() {
         [self.viewAction appToolsViewDidSelectRateApp:self];
     };
     
-    CCSettingsRowDataSource *contactWithDevRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"kek"] title:NSLocalizedString(@"hello", nil) detail:nil];
+    CCSettingsRowDataSource *contactWithDevRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolContact"] title:NSLocalizedString(@"", nil) detail:nil];
     contactWithDevRow.selectAction = ^() {
         [self.viewAction appToolsViewDidSelectContactWithDeveloper:self];
     };

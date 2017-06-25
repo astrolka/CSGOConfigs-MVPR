@@ -12,8 +12,15 @@
 #import "CCRouter+OpenSideMenu.h"
 #import "CCMailScreenRouting.h"
 #import "CCRouter+ViewModelAlertPresenter.h"
+#import "CCRouter+CCShareActivityPresenter.h"
 
 @implementation CCAppToolsRouter
+
+#pragma mark - CCShareRoutingProtocol
+
+- (void)openShareScreenWithShareInfo:(CCShareInfo *)shareInfo {
+    [self cc_presentShareActivityViewControllerWithShareInfo:shareInfo];
+}
 
 #pragma mark - CCViewModelAlertRoutingProtocol
 

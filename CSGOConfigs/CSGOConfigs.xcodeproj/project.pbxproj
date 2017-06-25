@@ -39,6 +39,9 @@
 		A6E01C901EFF786A00F7B82A /* CCAlertButtonsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01C8F1EFF786A00F7B82A /* CCAlertButtonsContainerView.m */; };
 		A6E01C941EFF793800F7B82A /* CCAlertControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01C931EFF793800F7B82A /* CCAlertControllerAnimator.m */; };
 		A6E01CA11EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CA01EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.m */; };
+		A6E01CA81EFFAA6700F7B82A /* CCRouter+CCShareActivityPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CA71EFFAA6700F7B82A /* CCRouter+CCShareActivityPresenter.m */; };
+		A6E01CB01EFFAC8D00F7B82A /* CCShareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CAF1EFFAC8D00F7B82A /* CCShareInfo.m */; };
+		A6E01CB41EFFACAB00F7B82A /* CCShareInfoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CB31EFFACAB00F7B82A /* CCShareInfoFactory.m */; };
 		A6FD2F501EF9D2F000211F9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */; };
 		A6FD2F511EF9D2F000211F9A /* UIColor+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC81EF9D2EF00211F9A /* UIColor+CC.m */; };
 		A6FD2F521EF9D2F000211F9A /* UIFont+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DCB1EF9D2EF00211F9A /* UIFont+CC.m */; };
@@ -239,6 +242,13 @@
 		A6E01C9F1EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCRouter+ViewModelAlertPresenter.h"; path = "CCRouter/ViewModelAlertPresenter/CCRouter+ViewModelAlertPresenter.h"; sourceTree = "<group>"; };
 		A6E01CA01EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+ViewModelAlertPresenter.m"; path = "CCRouter/ViewModelAlertPresenter/CCRouter+ViewModelAlertPresenter.m"; sourceTree = "<group>"; };
 		A6E01CA21EFF860800F7B82A /* CCViewModelAlertRoutingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCViewModelAlertRoutingProtocol.h; sourceTree = "<group>"; };
+		A6E01CA41EFFAA1800F7B82A /* CCShareRoutingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCShareRoutingProtocol.h; sourceTree = "<group>"; };
+		A6E01CA61EFFAA6700F7B82A /* CCRouter+CCShareActivityPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCRouter+CCShareActivityPresenter.h"; path = "CCRouter/ShareActivityPresenter/CCRouter+CCShareActivityPresenter.h"; sourceTree = "<group>"; };
+		A6E01CA71EFFAA6700F7B82A /* CCRouter+CCShareActivityPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+CCShareActivityPresenter.m"; path = "CCRouter/ShareActivityPresenter/CCRouter+CCShareActivityPresenter.m"; sourceTree = "<group>"; };
+		A6E01CAE1EFFAC8D00F7B82A /* CCShareInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCShareInfo.h; path = ShareInfo/CCShareInfo.h; sourceTree = "<group>"; };
+		A6E01CAF1EFFAC8D00F7B82A /* CCShareInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCShareInfo.m; path = ShareInfo/CCShareInfo.m; sourceTree = "<group>"; };
+		A6E01CB21EFFACAB00F7B82A /* CCShareInfoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCShareInfoFactory.h; path = ShareInfo/Factory/CCShareInfoFactory.h; sourceTree = "<group>"; };
+		A6E01CB31EFFACAB00F7B82A /* CCShareInfoFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCShareInfoFactory.m; path = ShareInfo/Factory/CCShareInfoFactory.m; sourceTree = "<group>"; };
 		A6FD2DC31EF9D2EF00211F9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6FD2DC71EF9D2EF00211F9A /* UIColor+CC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CC.h"; sourceTree = "<group>"; };
@@ -605,6 +615,7 @@
 		A66305581EFA81DA00C2CC2D /* CCRouter */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01CA51EFFAA2000F7B82A /* ShareActivityPresenter */,
 				A6E01C9E1EFF848600F7B82A /* ViewModelAlertPresenter */,
 				A66305651EFA864000C2CC2D /* PlayerDescriptionScreen */,
 				A663055E1EFA83D800C2CC2D /* WebScreen */,
@@ -647,6 +658,7 @@
 				A6FD2EB51EF9D2F000211F9A /* CCWebRoutingProtocol.h */,
 				A66305641EFA857800C2CC2D /* CCPlayerDescriptionRoutingProtocol.h */,
 				A6E01CA21EFF860800F7B82A /* CCViewModelAlertRoutingProtocol.h */,
+				A6E01CA41EFFAA1800F7B82A /* CCShareRoutingProtocol.h */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -768,6 +780,7 @@
 		A69F12FF1EFED85B00AF6421 /* EmailInfo */ = {
 			isa = PBXGroup;
 			children = (
+				A69F13031EFEDD5E00AF6421 /* Factory */,
 				A69F13001EFED87300AF6421 /* CCEmailInfo.h */,
 				A69F13011EFED87300AF6421 /* CCEmailInfo.m */,
 			);
@@ -781,6 +794,7 @@
 				A69F13051EFEDD8D00AF6421 /* CCEmailInfoFactory.m */,
 			);
 			name = Factory;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A6B8C43A1EFB55E600DED020 /* Web */ = {
@@ -922,6 +936,34 @@
 				A6E01CA01EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.m */,
 			);
 			name = ViewModelAlertPresenter;
+			sourceTree = "<group>";
+		};
+		A6E01CA51EFFAA2000F7B82A /* ShareActivityPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01CA61EFFAA6700F7B82A /* CCRouter+CCShareActivityPresenter.h */,
+				A6E01CA71EFFAA6700F7B82A /* CCRouter+CCShareActivityPresenter.m */,
+			);
+			name = ShareActivityPresenter;
+			sourceTree = "<group>";
+		};
+		A6E01CAD1EFFAC6000F7B82A /* ShareInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01CB11EFFAC9300F7B82A /* Factory */,
+				A6E01CAE1EFFAC8D00F7B82A /* CCShareInfo.h */,
+				A6E01CAF1EFFAC8D00F7B82A /* CCShareInfo.m */,
+			);
+			name = ShareInfo;
+			sourceTree = "<group>";
+		};
+		A6E01CB11EFFAC9300F7B82A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01CB21EFFACAB00F7B82A /* CCShareInfoFactory.h */,
+				A6E01CB31EFFACAB00F7B82A /* CCShareInfoFactory.m */,
+			);
+			name = Factory;
 			sourceTree = "<group>";
 		};
 		A6FD2DC11EF9D2EF00211F9A /* Sources */ = {
@@ -1383,7 +1425,6 @@
 		A6FD2E3D1EF9D2EF00211F9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A69F13031EFEDD5E00AF6421 /* Factory */,
 				A6FD2E3E1EF9D2EF00211F9A /* BaseModels */,
 				A6FD2E421EF9D2EF00211F9A /* CoreDataModels */,
 				A6FD2E721EF9D2EF00211F9A /* ServerModels */,
@@ -1395,6 +1436,7 @@
 		A6FD2E3E1EF9D2EF00211F9A /* BaseModels */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01CAD1EFFAC6000F7B82A /* ShareInfo */,
 				A69F12FF1EFED85B00AF6421 /* EmailInfo */,
 				A6FD2E3F1EF9D2EF00211F9A /* SideMenuModel */,
 			);
@@ -2505,6 +2547,7 @@
 			files = (
 				A6FD2F7D1EF9D2F000211F9A /* CCNewsPreviewCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F7A1EF9D2F000211F9A /* CCNewDescriptionContentCoreDataModel+CoreDataProperties.m in Sources */,
+				A6E01CB41EFFACAB00F7B82A /* CCShareInfoFactory.m in Sources */,
 				A6FD2F8B1EF9D2F000211F9A /* CCNewsPreviewServerModel.m in Sources */,
 				A6E01C7E1EFF70FD00F7B82A /* CCViewModelAlert.m in Sources */,
 				A6FD2F7E1EF9D2F000211F9A /* CCNewsPreviewCoreDataModel+CoreDataProperties.m in Sources */,
@@ -2515,6 +2558,7 @@
 				A6FD2FDC1EF9DA0F00211F9A /* CCEventViewModel.m in Sources */,
 				A663056B1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m in Sources */,
 				A6FD2F721EF9D2F000211F9A /* JFRWebSocket.m in Sources */,
+				A6E01CB01EFFAC8D00F7B82A /* CCShareInfo.m in Sources */,
 				A6FD2F871EF9D2F000211F9A /* CCBannerServerModel.m in Sources */,
 				A6FD2F701EF9D2F000211F9A /* CCSideMenuFactory.m in Sources */,
 				A6FD2F6F1EF9D2F000211F9A /* CCTeamTableViewCell.m in Sources */,
@@ -2577,6 +2621,7 @@
 				A6FD2F851EF9D2F000211F9A /* CCUserFavoritesPlayersIDCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2FB71EF9D2F000211F9A /* CCTeamsRouter.m in Sources */,
 				A6FD2FAA1EF9D2F000211F9A /* CCPlayerDescriptionRouter.m in Sources */,
+				A6E01CA81EFFAA6700F7B82A /* CCRouter+CCShareActivityPresenter.m in Sources */,
 				A6FD2FB21EF9D2F000211F9A /* CCSideMenuViewController.m in Sources */,
 				A6FD2F731EF9D2F000211F9A /* PDKTCollectionViewWaterfallLayout.m in Sources */,
 				A6FD2F8F1EF9D2F000211F9A /* CCTeamServerModel.m in Sources */,

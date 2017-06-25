@@ -10,21 +10,6 @@
 #import <CoreData/CoreData.h>
 #import <AppleGuice/AppleGuiceInjectable.h>
 
-@class CCEventCoreDataModel;
-@class CCPlayerPreviewCoreDataModel;
-@class CCBannerCoreDataModel;
-@class CCTeamCoreDataModel;
-@class CCEventServerModel;
-@class CCBannerServerModel;
-@class CCPlayerPreviewServerModel;
-@class CCTeamServerModel;
-@class CCPlayerDescriptionServerModel;
-@class CCPlayerDescriptionCoreDataModel;
-@class CCNewsPreviewCoreDataModel;
-@class CCNewsPreviewServerModel;
-@class CCNewsDescriptionServerModel;
-@class CCNewsDescriptionCoreDataModel;
-
 #import "CCEventCoreDataModel+CoreDataProperties.h"
 #import "CCPlayerPreviewCoreDataModel+CoreDataProperties.h"
 #import "CCBannerCoreDataModel+CoreDataProperties.h"

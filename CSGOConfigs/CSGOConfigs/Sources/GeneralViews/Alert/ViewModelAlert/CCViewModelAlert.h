@@ -9,6 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "CCViewModelAlertAction.h"
 
+/*
+    Allow you work with Alers in presenters
+    A Presenter build a ViewModelAlert with his own logic (without UI)
+    Calls router show it
+    In a Router ViewModelAlertTransformer transforms ViewModelAlert to UIViewController
+    The Router shows transformed UIViewController
+ 
+    CCViewModelAlertStyleHTML - custom view which looks like alert
+*/
+
 typedef NS_ENUM(NSInteger, CCViewModelAlertStyle) {
     CCViewModelAlertStyleAlert, // by default
     CCViewModelAlertStyleActionSheet,

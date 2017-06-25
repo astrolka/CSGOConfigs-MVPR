@@ -11,9 +11,9 @@
 
 /*
  
- I don't have params in this project, cuz i use Firebase, so "params" generating in the url
+ I don't have params in the project, cuz i use Firebase, so "params" generating from an url
  
- */
+*/
 
 typedef void(^successBlock)(id responce);
 typedef void(^errorBlock)(NSError *error);

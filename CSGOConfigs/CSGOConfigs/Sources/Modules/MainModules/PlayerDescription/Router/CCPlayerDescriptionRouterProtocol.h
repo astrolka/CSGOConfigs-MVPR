@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "CCWebRoutingProtocol.h"
+#import "CCMailScreenRoutingProtocol.h"
+#import "CCViewModelAlertRoutingProtocol.h"
 
-@protocol CCPlayerDescriptionRouterProtocol <CCWebRoutingProtocol>
+@protocol CCPlayerDescriptionRouterProtocol <CCWebRoutingProtocol, CCMailScreenRoutingProtocol, CCViewModelAlertRoutingProtocol>
 
 @end

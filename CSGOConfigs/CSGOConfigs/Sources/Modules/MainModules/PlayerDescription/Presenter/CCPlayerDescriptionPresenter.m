@@ -12,9 +12,13 @@
 #import "CCPlayersServiceProtocol.h"
 #import "CCLocalStorageServiceProtocol.h"
 #import "CCPlayerDescriptionViewModel.h"
+#import "CCEmailInfoFactory.h"
+#import "CCViewModelAlert.h"
+#import "CCOpenURLServiceProtocol.h"
 
 @interface CCPlayerDescriptionPresenter () <CCPlayerDescriptionViewActionProtocol>
 
+@property (nonatomic, strong) id <CCOpenURLServiceProtocol> ioc_openURLService;
 @property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
 @property (nonatomic, strong) id <CCLocalStorageServiceProtocol> ioc_localStorageService;
 
@@ -49,7 +53,9 @@
 }
 
 - (void)playersPreviewViewDidPressLoadCFGButton:(id <CCPlayerDescriptionViewProtocol>)view {
-
+     [self.router openEmailScreenWithEmailInfo:[CCEmailInfoFactory emailInfoWihtPlayer:self.playerDescriptionViewModel] withResult:^(CCMailResult result) {
+         
+     }];
 }
 
 - (void)playersPreviewViewDidPressFavoritePlayerButton:(id <CCPlayerDescriptionViewProtocol>)view {
@@ -108,6 +114,16 @@
         [self.view showMessageWithText:NSLocalizedString(@"", nil)];
     }
     [self.view updatePlayerFavoriteStatus:self.playerIsFavorite];
+}
+
+- (void)showNoEmailAccountAlert {
+    CCViewModelAlert *alert = [[CCViewModelAlert alloc] initWithTitle:NSLocalizedString(@"", nil) message:NSLocalizedString(@"", nil)];
+    [alert addAction:[CCViewModelAlertAction cancelActionWithAction:nil]];
+    CCViewModelAlertAction *settingsAlertAction = [[CCViewModelAlertAction alloc] initWithTitle:NSLocalizedString(@"", nil) action:^{
+        [self.ioc_openURLService openApplicationSettings];
+    }];
+    [alert addAction:settingsAlertAction];
+    [self.router showViewModelAlert:alert];
 }
 
 @end
