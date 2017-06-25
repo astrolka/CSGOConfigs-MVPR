@@ -10,8 +10,25 @@
 #import "CCAppToolsViewController.h"
 #import "CCAppToolsPresenter.h"
 #import "CCRouter+OpenSideMenu.h"
+#import "CCMailScreenRouting.h"
+#import "CCRouter+ViewModelAlertPresenter.h"
 
 @implementation CCAppToolsRouter
+
+#pragma mark - CCViewModelAlertRoutingProtocol
+
+- (void)showViewModelAlert:(CCViewModelAlert *)viewModelAlert {
+    [self cc_presentViewModelAlert:viewModelAlert];
+}
+
+#pragma mark - CCMailScreenRoutingProtocol
+
+- (void)openEmailScreenWithEmailInfo:(CCEmailInfo *)emailInfo withResult:(mailResultBlock)result {
+    CCMailScreenRouting *emailRouter = [[CCMailScreenRouting alloc] initWithNavigationController:self.navigationController];
+    [emailRouter openEmailScreenWithEmailInfo:emailInfo withResult:^(CCMailResult emailRouterResult) {
+        result(emailRouterResult);
+    }];
+}
 
 #pragma mark - CCOpenSideMenuRoutingProtocol
 

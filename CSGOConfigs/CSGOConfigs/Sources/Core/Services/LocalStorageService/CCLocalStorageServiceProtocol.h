@@ -114,4 +114,10 @@
 
 - (NSArray <CCEventCoreDataModel *> *)getEvents;
 
+#pragma mark - ImageCache
+
+- (void)clearImagesCache;
+
+- (NSUInteger)getImageCacheSize;
+
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "CCRouter.h"
-#import <UIKit/UINavigationController.h>
 
 @implementation CCRouter
 

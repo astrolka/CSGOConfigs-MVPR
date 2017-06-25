@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class UINavigationController;
+#import <UIKit/UINavigationController.h>
 
 @interface CCRouter : NSObject
 

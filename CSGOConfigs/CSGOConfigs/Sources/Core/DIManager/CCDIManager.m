@@ -36,18 +36,16 @@
 #import "CCSkinsServiceProtocol.h"
 #import "CCSkinsService.h"
 
+#import "CCOpenURLServiceProtocol.h"
+#import "CCOpenURLService.h"
+
 @implementation CCDIManager
 
 #pragma mark - Public
 
 + (void)DISetup {
     [AppleGuice startService];
-    [self setupImplementations];
-}
-
-#pragma mark - Private
-
-+ (void)setupImplementations {
+    
     [AppleGuice setImplementation:[CCPlayersService class] withProtocol:@protocol(CCPlayersServiceProtocol)];
     [AppleGuice setImplementation:[CCRestService class] withProtocol:@protocol(CCRestServiceProtocol)];
     [AppleGuice setImplementation:[CCCoreDataService class] withProtocol:@protocol(CCLocalStorageServiceProtocol)];
@@ -57,6 +55,7 @@
     [AppleGuice setImplementation:[CCEventsService class] withProtocol:@protocol(CCEventsServiceProtocol)];
     [AppleGuice setImplementation:[CCWebSocketService class] withProtocol:@protocol(CCWebSocketServiceProtocol)];
     [AppleGuice setImplementation:[CCSkinsService class] withProtocol:@protocol(CCSkinsServiceProtocol)];
+    [AppleGuice setImplementation:[CCOpenURLService class] withProtocol:@protocol(CCOpenURLServiceProtocol)];
 }
 
 @end

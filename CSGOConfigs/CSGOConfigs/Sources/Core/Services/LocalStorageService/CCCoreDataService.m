@@ -9,7 +9,7 @@
 #import "CCCoreDataService.h"
 #import "AppDelegate.h"
 #import "CCLog.h"
-
+#import "SDImageCache.h"
 
 @interface CCCoreDataService ()
 
@@ -351,6 +351,17 @@ NSString *const kPersistentContainerName = @"CCConfigs";
     return [self getEntityWithName:NSStringFromClass([CCEventCoreDataModel class]) predicate:nil];
 }
 
+#pragma mark - ImageCache
+
+- (void)clearImagesCache {
+    [[SDImageCache sharedImageCache] clearDisk];
+    [[SDImageCache sharedImageCache] cleanDisk];
+}
+
+- (NSUInteger)getImageCacheSize {
+    return [[SDImageCache sharedImageCache] getSize];
+}
+
 #pragma mark -Private
 
 - (void)save {
@@ -361,13 +372,6 @@ NSString *const kPersistentContainerName = @"CCConfigs";
 }
 
 - (NSArray *)getEntityWithName:(NSString *)entityName predicate:(NSPredicate *)predicate {
-    
-    if (self.persistentContainer) {
-        
-        
-        
-    }
-    
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:entityName
                                                          inManagedObjectContext:self.persistentContainer.viewContext];
     NSFetchRequest * request = [[NSFetchRequest alloc] init];
@@ -402,5 +406,5 @@ NSString *const kPersistentContainerName = @"CCConfigs";
             CCLog(@"CoreDataManager request deleteAllObjectsFromEntity error: %@",error);
     }
 }
-                                            
+
 @end

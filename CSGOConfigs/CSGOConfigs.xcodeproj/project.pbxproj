@@ -24,10 +24,21 @@
 		A69F12E01EFE746600AF6421 /* CCSettingsSectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F12DF1EFE746600AF6421 /* CCSettingsSectionDataSource.m */; };
 		A69F12E61EFE749300AF6421 /* CCSettingsRowDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F12E51EFE749300AF6421 /* CCSettingsRowDataSource.m */; };
 		A69F12EB1EFE945300AF6421 /* CCSettingsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F12EA1EFE945300AF6421 /* CCSettingsDataSource.m */; };
+		A69F12F01EFEC96A00AF6421 /* CCOpenURLService.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F12EF1EFEC96A00AF6421 /* CCOpenURLService.m */; };
+		A69F12FE1EFED7CE00AF6421 /* CCMailScreenRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F12FD1EFED7CE00AF6421 /* CCMailScreenRouting.m */; };
+		A69F13021EFED87300AF6421 /* CCEmailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F13011EFED87300AF6421 /* CCEmailInfo.m */; };
+		A69F13061EFEDD8D00AF6421 /* CCEmailInfoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A69F13051EFEDD8D00AF6421 /* CCEmailInfoFactory.m */; };
 		A6B8C4401EFB561600DED020 /* CCWebPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C43F1EFB561600DED020 /* CCWebPresenter.m */; };
 		A6B8C4431EFB563200DED020 /* CCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C4421EFB563200DED020 /* CCWebViewController.m */; };
 		A6B8C4461EFB564B00DED020 /* CCWebRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C4451EFB564B00DED020 /* CCWebRouter.m */; };
 		A6B8C4511EFB5A9B00DED020 /* CCWebPresentationService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B8C4501EFB5A9B00DED020 /* CCWebPresentationService.m */; };
+		A6E01C7E1EFF70FD00F7B82A /* CCViewModelAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01C7D1EFF70FD00F7B82A /* CCViewModelAlert.m */; };
+		A6E01C821EFF712800F7B82A /* CCViewModelAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01C811EFF712800F7B82A /* CCViewModelAlertAction.m */; };
+		A6E01C861EFF715300F7B82A /* CCViewModelAlertTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01C851EFF715300F7B82A /* CCViewModelAlertTransformer.m */; };
+		A6E01C8B1EFF76D900F7B82A /* CCTextViewAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01C8A1EFF76D900F7B82A /* CCTextViewAlertController.m */; };
+		A6E01C901EFF786A00F7B82A /* CCAlertButtonsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01C8F1EFF786A00F7B82A /* CCAlertButtonsContainerView.m */; };
+		A6E01C941EFF793800F7B82A /* CCAlertControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01C931EFF793800F7B82A /* CCAlertControllerAnimator.m */; };
+		A6E01CA11EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CA01EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.m */; };
 		A6FD2F501EF9D2F000211F9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */; };
 		A6FD2F511EF9D2F000211F9A /* UIColor+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DC81EF9D2EF00211F9A /* UIColor+CC.m */; };
 		A6FD2F521EF9D2F000211F9A /* UIFont+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD2DCB1EF9D2EF00211F9A /* UIFont+CC.m */; };
@@ -192,6 +203,16 @@
 		A69F12E51EFE749300AF6421 /* CCSettingsRowDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSettingsRowDataSource.m; path = SettingsView/DataSource/SettingsRowDataSource/CCSettingsRowDataSource.m; sourceTree = "<group>"; };
 		A69F12E91EFE945300AF6421 /* CCSettingsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSettingsDataSource.h; path = SettingsView/DataSource/SettingsDataSource/CCSettingsDataSource.h; sourceTree = "<group>"; };
 		A69F12EA1EFE945300AF6421 /* CCSettingsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSettingsDataSource.m; path = SettingsView/DataSource/SettingsDataSource/CCSettingsDataSource.m; sourceTree = "<group>"; };
+		A69F12EE1EFEC96A00AF6421 /* CCOpenURLService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCOpenURLService.h; path = OpenURLService/CCOpenURLService.h; sourceTree = "<group>"; };
+		A69F12EF1EFEC96A00AF6421 /* CCOpenURLService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCOpenURLService.m; path = OpenURLService/CCOpenURLService.m; sourceTree = "<group>"; };
+		A69F12F11EFEC97D00AF6421 /* CCOpenURLServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCOpenURLServiceProtocol.h; path = OpenURLService/CCOpenURLServiceProtocol.h; sourceTree = "<group>"; };
+		A69F12F61EFED71C00AF6421 /* CCMailScreenRoutingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCMailScreenRoutingProtocol.h; path = ../Protocols/CCMailScreenRoutingProtocol.h; sourceTree = "<group>"; };
+		A69F12FC1EFED7CE00AF6421 /* CCMailScreenRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCMailScreenRouting.h; path = Router/MailScreenRouter/CCMailScreenRouting.h; sourceTree = "<group>"; };
+		A69F12FD1EFED7CE00AF6421 /* CCMailScreenRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCMailScreenRouting.m; path = Router/MailScreenRouter/CCMailScreenRouting.m; sourceTree = "<group>"; };
+		A69F13001EFED87300AF6421 /* CCEmailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEmailInfo.h; path = Email/CCEmailInfo.h; sourceTree = "<group>"; };
+		A69F13011EFED87300AF6421 /* CCEmailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEmailInfo.m; path = Email/CCEmailInfo.m; sourceTree = "<group>"; };
+		A69F13041EFEDD8D00AF6421 /* CCEmailInfoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEmailInfoFactory.h; path = Factory/EmailInfoFactory/CCEmailInfoFactory.h; sourceTree = "<group>"; };
+		A69F13051EFEDD8D00AF6421 /* CCEmailInfoFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEmailInfoFactory.m; path = Factory/EmailInfoFactory/CCEmailInfoFactory.m; sourceTree = "<group>"; };
 		A6B8C43E1EFB561600DED020 /* CCWebPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebPresenter.h; path = Web/Presenter/CCWebPresenter.h; sourceTree = "<group>"; };
 		A6B8C43F1EFB561600DED020 /* CCWebPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebPresenter.m; path = Web/Presenter/CCWebPresenter.m; sourceTree = "<group>"; };
 		A6B8C4411EFB563200DED020 /* CCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebViewController.h; path = Web/View/CCWebViewController.h; sourceTree = "<group>"; };
@@ -203,6 +224,21 @@
 		A6B8C44E1EFB5A8900DED020 /* CCWebPresentationServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebPresentationServiceProtocol.h; path = WebPresentationServiceProtocol/CCWebPresentationServiceProtocol.h; sourceTree = "<group>"; };
 		A6B8C44F1EFB5A9B00DED020 /* CCWebPresentationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCWebPresentationService.h; path = WebPresentationServiceProtocol/CCWebPresentationService.h; sourceTree = "<group>"; };
 		A6B8C4501EFB5A9B00DED020 /* CCWebPresentationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCWebPresentationService.m; path = WebPresentationServiceProtocol/CCWebPresentationService.m; sourceTree = "<group>"; };
+		A6E01C7C1EFF70FD00F7B82A /* CCViewModelAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCViewModelAlert.h; path = Alert/ViewModelAlert/CCViewModelAlert.h; sourceTree = "<group>"; };
+		A6E01C7D1EFF70FD00F7B82A /* CCViewModelAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCViewModelAlert.m; path = Alert/ViewModelAlert/CCViewModelAlert.m; sourceTree = "<group>"; };
+		A6E01C801EFF712800F7B82A /* CCViewModelAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCViewModelAlertAction.h; path = Alert/ViewModelAlertAction/CCViewModelAlertAction.h; sourceTree = "<group>"; };
+		A6E01C811EFF712800F7B82A /* CCViewModelAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCViewModelAlertAction.m; path = Alert/ViewModelAlertAction/CCViewModelAlertAction.m; sourceTree = "<group>"; };
+		A6E01C841EFF715300F7B82A /* CCViewModelAlertTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCViewModelAlertTransformer.h; path = Alert/ViewModelAlertTransformer/CCViewModelAlertTransformer.h; sourceTree = "<group>"; };
+		A6E01C851EFF715300F7B82A /* CCViewModelAlertTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCViewModelAlertTransformer.m; path = Alert/ViewModelAlertTransformer/CCViewModelAlertTransformer.m; sourceTree = "<group>"; };
+		A6E01C891EFF76D900F7B82A /* CCTextViewAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTextViewAlertController.h; path = Alert/View/TextViewAlertController/CCTextViewAlertController.h; sourceTree = "<group>"; };
+		A6E01C8A1EFF76D900F7B82A /* CCTextViewAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTextViewAlertController.m; path = Alert/View/TextViewAlertController/CCTextViewAlertController.m; sourceTree = "<group>"; };
+		A6E01C8E1EFF786A00F7B82A /* CCAlertButtonsContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCAlertButtonsContainerView.h; path = Alert/View/AlertButtonsContainerView/CCAlertButtonsContainerView.h; sourceTree = "<group>"; };
+		A6E01C8F1EFF786A00F7B82A /* CCAlertButtonsContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCAlertButtonsContainerView.m; path = Alert/View/AlertButtonsContainerView/CCAlertButtonsContainerView.m; sourceTree = "<group>"; };
+		A6E01C921EFF793800F7B82A /* CCAlertControllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCAlertControllerAnimator.h; path = Alert/View/AlertControllerAnimator/CCAlertControllerAnimator.h; sourceTree = "<group>"; };
+		A6E01C931EFF793800F7B82A /* CCAlertControllerAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCAlertControllerAnimator.m; path = Alert/View/AlertControllerAnimator/CCAlertControllerAnimator.m; sourceTree = "<group>"; };
+		A6E01C9F1EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCRouter+ViewModelAlertPresenter.h"; path = "CCRouter/ViewModelAlertPresenter/CCRouter+ViewModelAlertPresenter.h"; sourceTree = "<group>"; };
+		A6E01CA01EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCRouter+ViewModelAlertPresenter.m"; path = "CCRouter/ViewModelAlertPresenter/CCRouter+ViewModelAlertPresenter.m"; sourceTree = "<group>"; };
+		A6E01CA21EFF860800F7B82A /* CCViewModelAlertRoutingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCViewModelAlertRoutingProtocol.h; sourceTree = "<group>"; };
 		A6FD2DC31EF9D2EF00211F9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6FD2DC41EF9D2EF00211F9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6FD2DC71EF9D2EF00211F9A /* UIColor+CC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CC.h"; sourceTree = "<group>"; };
@@ -569,6 +605,7 @@
 		A66305581EFA81DA00C2CC2D /* CCRouter */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01C9E1EFF848600F7B82A /* ViewModelAlertPresenter */,
 				A66305651EFA864000C2CC2D /* PlayerDescriptionScreen */,
 				A663055E1EFA83D800C2CC2D /* WebScreen */,
 				A663055C1EFA820500C2CC2D /* OpenSideMenu */,
@@ -609,6 +646,7 @@
 				A6FD2EB31EF9D2F000211F9A /* CCOpenSideMenuRoutingProtocol.h */,
 				A6FD2EB51EF9D2F000211F9A /* CCWebRoutingProtocol.h */,
 				A66305641EFA857800C2CC2D /* CCPlayerDescriptionRoutingProtocol.h */,
+				A6E01CA21EFF860800F7B82A /* CCViewModelAlertRoutingProtocol.h */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -707,6 +745,44 @@
 			name = CCSettingsDataSource;
 			sourceTree = "<group>";
 		};
+		A69F12ED1EFEC94E00AF6421 /* OpenURLService */ = {
+			isa = PBXGroup;
+			children = (
+				A69F12F11EFEC97D00AF6421 /* CCOpenURLServiceProtocol.h */,
+				A69F12EE1EFEC96A00AF6421 /* CCOpenURLService.h */,
+				A69F12EF1EFEC96A00AF6421 /* CCOpenURLService.m */,
+			);
+			name = OpenURLService;
+			sourceTree = "<group>";
+		};
+		A69F12FB1EFED7A100AF6421 /* MailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A69F12F61EFED71C00AF6421 /* CCMailScreenRoutingProtocol.h */,
+				A69F12FC1EFED7CE00AF6421 /* CCMailScreenRouting.h */,
+				A69F12FD1EFED7CE00AF6421 /* CCMailScreenRouting.m */,
+			);
+			name = MailScreen;
+			sourceTree = "<group>";
+		};
+		A69F12FF1EFED85B00AF6421 /* EmailInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A69F13001EFED87300AF6421 /* CCEmailInfo.h */,
+				A69F13011EFED87300AF6421 /* CCEmailInfo.m */,
+			);
+			name = EmailInfo;
+			sourceTree = "<group>";
+		};
+		A69F13031EFEDD5E00AF6421 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A69F13041EFEDD8D00AF6421 /* CCEmailInfoFactory.h */,
+				A69F13051EFEDD8D00AF6421 /* CCEmailInfoFactory.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
 		A6B8C43A1EFB55E600DED020 /* Web */ = {
 			isa = PBXGroup;
 			children = (
@@ -754,6 +830,98 @@
 				A6B8C4501EFB5A9B00DED020 /* CCWebPresentationService.m */,
 			);
 			name = WebPresentationService;
+			sourceTree = "<group>";
+		};
+		A6E01C7A1EFF705000F7B82A /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C881EFF76B000F7B82A /* ViewModels */,
+				A6E01C871EFF76AA00F7B82A /* View */,
+			);
+			name = Alert;
+			sourceTree = "<group>";
+		};
+		A6E01C7B1EFF709C00F7B82A /* ViewModelAlert */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C7C1EFF70FD00F7B82A /* CCViewModelAlert.h */,
+				A6E01C7D1EFF70FD00F7B82A /* CCViewModelAlert.m */,
+			);
+			name = ViewModelAlert;
+			sourceTree = "<group>";
+		};
+		A6E01C7F1EFF711100F7B82A /* ViewModelAlertAction */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C801EFF712800F7B82A /* CCViewModelAlertAction.h */,
+				A6E01C811EFF712800F7B82A /* CCViewModelAlertAction.m */,
+			);
+			name = ViewModelAlertAction;
+			sourceTree = "<group>";
+		};
+		A6E01C831EFF713100F7B82A /* ViewModelAlertTransformer */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C841EFF715300F7B82A /* CCViewModelAlertTransformer.h */,
+				A6E01C851EFF715300F7B82A /* CCViewModelAlertTransformer.m */,
+			);
+			name = ViewModelAlertTransformer;
+			sourceTree = "<group>";
+		};
+		A6E01C871EFF76AA00F7B82A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C911EFF791E00F7B82A /* AlertControllerAnimator */,
+				A6E01C8D1EFF785100F7B82A /* AlertButtonsContainerView */,
+				A6E01C8C1EFF76DE00F7B82A /* TextViewAlertController */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A6E01C881EFF76B000F7B82A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C831EFF713100F7B82A /* ViewModelAlertTransformer */,
+				A6E01C7F1EFF711100F7B82A /* ViewModelAlertAction */,
+				A6E01C7B1EFF709C00F7B82A /* ViewModelAlert */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		A6E01C8C1EFF76DE00F7B82A /* TextViewAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C891EFF76D900F7B82A /* CCTextViewAlertController.h */,
+				A6E01C8A1EFF76D900F7B82A /* CCTextViewAlertController.m */,
+			);
+			name = TextViewAlertController;
+			sourceTree = "<group>";
+		};
+		A6E01C8D1EFF785100F7B82A /* AlertButtonsContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C8E1EFF786A00F7B82A /* CCAlertButtonsContainerView.h */,
+				A6E01C8F1EFF786A00F7B82A /* CCAlertButtonsContainerView.m */,
+			);
+			name = AlertButtonsContainerView;
+			sourceTree = "<group>";
+		};
+		A6E01C911EFF791E00F7B82A /* AlertControllerAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C921EFF793800F7B82A /* CCAlertControllerAnimator.h */,
+				A6E01C931EFF793800F7B82A /* CCAlertControllerAnimator.m */,
+			);
+			name = AlertControllerAnimator;
+			sourceTree = "<group>";
+		};
+		A6E01C9E1EFF848600F7B82A /* ViewModelAlertPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				A6E01C9F1EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.h */,
+				A6E01CA01EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.m */,
+			);
+			name = ViewModelAlertPresenter;
 			sourceTree = "<group>";
 		};
 		A6FD2DC11EF9D2EF00211F9A /* Sources */ = {
@@ -902,6 +1070,7 @@
 		A6FD2DE21EF9D2EF00211F9A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A69F12ED1EFEC94E00AF6421 /* OpenURLService */,
 				A6B8C44D1EFB5A5E00DED020 /* WebPresentationService */,
 				A66305791EFAAC9100C2CC2D /* WebSocketService */,
 				A66305741EFAA87B00C2CC2D /* SkinsService */,
@@ -929,10 +1098,10 @@
 		A6FD2DE71EF9D2EF00211F9A /* LocalStorageService */ = {
 			isa = PBXGroup;
 			children = (
-				A6FD2DE81EF9D2EF00211F9A /* CCConfigs.xcdatamodeld */,
+				A6FD2DEC1EF9D2EF00211F9A /* CCLocalStorageServiceProtocol.h */,
 				A6FD2DEA1EF9D2EF00211F9A /* CCCoreDataService.h */,
 				A6FD2DEB1EF9D2EF00211F9A /* CCCoreDataService.m */,
-				A6FD2DEC1EF9D2EF00211F9A /* CCLocalStorageServiceProtocol.h */,
+				A6FD2DE81EF9D2EF00211F9A /* CCConfigs.xcdatamodeld */,
 			);
 			path = LocalStorageService;
 			sourceTree = "<group>";
@@ -980,6 +1149,7 @@
 		A6FD2DFD1EF9D2EF00211F9A /* SharedViews */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01C7A1EFF705000F7B82A /* Alert */,
 				A6FD2DFE1EF9D2EF00211F9A /* CustomViews */,
 				A6FD2E121EF9D2EF00211F9A /* ReusableViews */,
 				A6FD2E301EF9D2EF00211F9A /* ViewFactories */,
@@ -1213,6 +1383,7 @@
 		A6FD2E3D1EF9D2EF00211F9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A69F13031EFEDD5E00AF6421 /* Factory */,
 				A6FD2E3E1EF9D2EF00211F9A /* BaseModels */,
 				A6FD2E421EF9D2EF00211F9A /* CoreDataModels */,
 				A6FD2E721EF9D2EF00211F9A /* ServerModels */,
@@ -1224,6 +1395,7 @@
 		A6FD2E3E1EF9D2EF00211F9A /* BaseModels */ = {
 			isa = PBXGroup;
 			children = (
+				A69F12FF1EFED85B00AF6421 /* EmailInfo */,
 				A6FD2E3F1EF9D2EF00211F9A /* SideMenuModel */,
 			);
 			path = BaseModels;
@@ -1630,6 +1802,7 @@
 		A6FD2EB61EF9D2F000211F9A /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				A69F12FB1EFED7A100AF6421 /* MailScreen */,
 				A6FD2EB71EF9D2F000211F9A /* Router */,
 			);
 			path = Routers;
@@ -2333,10 +2506,12 @@
 				A6FD2F7D1EF9D2F000211F9A /* CCNewsPreviewCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F7A1EF9D2F000211F9A /* CCNewDescriptionContentCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2F8B1EF9D2F000211F9A /* CCNewsPreviewServerModel.m in Sources */,
+				A6E01C7E1EFF70FD00F7B82A /* CCViewModelAlert.m in Sources */,
 				A6FD2F7E1EF9D2F000211F9A /* CCNewsPreviewCoreDataModel+CoreDataProperties.m in Sources */,
 				A66305571EFA735000C2CC2D /* CCEventPinAnnotationView.m in Sources */,
 				A6FD2FAC1EF9D2F000211F9A /* CCPlayerInfoTableViewCell.m in Sources */,
 				A6FD2FEA1EF9EC1000211F9A /* CCEventTableViewCell.m in Sources */,
+				A6E01C8B1EFF76D900F7B82A /* CCTextViewAlertController.m in Sources */,
 				A6FD2FDC1EF9DA0F00211F9A /* CCEventViewModel.m in Sources */,
 				A663056B1EFA868D00C2CC2D /* CCRouter+CCPlayerDescriptionScreen.m in Sources */,
 				A6FD2F721EF9D2F000211F9A /* JFRWebSocket.m in Sources */,
@@ -2349,14 +2524,17 @@
 				A6FD2F801EF9D2F000211F9A /* CCPlayerDescriptionCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2FAB1EF9D2F000211F9A /* CCPlayerDescriptionViewController.m in Sources */,
 				A6FD2F5C1EF9D2F000211F9A /* CCNewsService.m in Sources */,
+				A69F13021EFED87300AF6421 /* CCEmailInfo.m in Sources */,
 				A6FD2FAE1EF9D2F000211F9A /* CCPlayersPreviewRouter.m in Sources */,
 				A6FD2FBB1EF9D2F000211F9A /* CCBannerView.m in Sources */,
+				A69F12F01EFEC96A00AF6421 /* CCOpenURLService.m in Sources */,
 				A6FD2FA21EF9D2F000211F9A /* CCFavoritePlayersViewController.m in Sources */,
 				A6FD2FA71EF9D2F000211F9A /* CCNewsPreviewRouter.m in Sources */,
 				A6FD2F521EF9D2F000211F9A /* UIFont+CC.m in Sources */,
 				A6FD2F771EF9D2F000211F9A /* CCEventCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F781EF9D2F000211F9A /* CCEventCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2F711EF9D2F000211F9A /* JFRSecurity.m in Sources */,
+				A6E01C861EFF715300F7B82A /* CCViewModelAlertTransformer.m in Sources */,
 				A6FD2F541EF9D2F000211F9A /* UITableView+Animation.m in Sources */,
 				A6FD2F9B1EF9D2F000211F9A /* CCAppToolsRouter.m in Sources */,
 				A6FD2F811EF9D2F000211F9A /* CCPlayerPreviewCoreDataModel+CoreDataClass.m in Sources */,
@@ -2369,6 +2547,7 @@
 				A6FD2FB31EF9D2F000211F9A /* CCSkinsPricePresenter.m in Sources */,
 				A6FD2F8E1EF9D2F000211F9A /* CCSkinServerModel.m in Sources */,
 				A69F12E61EFE749300AF6421 /* CCSettingsRowDataSource.m in Sources */,
+				A6E01C901EFF786A00F7B82A /* CCAlertButtonsContainerView.m in Sources */,
 				A6FD2F591EF9D2F000211F9A /* CCBannerService.m in Sources */,
 				A6FD2FB81EF9D2F000211F9A /* CCTeamsViewController.m in Sources */,
 				A6FD2F6C1EF9D2F000211F9A /* CCNewsPreviewTableViewCell.m in Sources */,
@@ -2382,6 +2561,7 @@
 				A6FD2FAF1EF9D2F000211F9A /* CCPlayersPreviewViewController.m in Sources */,
 				A6FD2FD41EF9D77100211F9A /* CCEventsListView.m in Sources */,
 				A66305611EFA83F700C2CC2D /* CCRouter+WebScreen.m in Sources */,
+				A6E01C821EFF712800F7B82A /* CCViewModelAlertAction.m in Sources */,
 				A6FD2F6B1EF9D2F000211F9A /* CCNewsDescriptionHeaderView.m in Sources */,
 				A6FD2F511EF9D2F000211F9A /* UIColor+CC.m in Sources */,
 				A6FD2FA01EF9D2F000211F9A /* CCFavoritePlayersPresenter.m in Sources */,
@@ -2389,6 +2569,7 @@
 				A6FD2F921EF9D2F000211F9A /* CCNewsImageContentViewModel.m in Sources */,
 				A6FD2F8A1EF9D2F000211F9A /* CCNewsDescriptionServerModel.m in Sources */,
 				A6FD2F8D1EF9D2F000211F9A /* CCPlayerPreviewServerModel.m in Sources */,
+				A6E01CA11EFF84A800F7B82A /* CCRouter+ViewModelAlertPresenter.m in Sources */,
 				A6FD2F791EF9D2F000211F9A /* CCNewDescriptionContentCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F7B1EF9D2F000211F9A /* CCNewsDescriptionCoreDataModel+CoreDataClass.m in Sources */,
 				A6FD2F571EF9D2F000211F9A /* CCDIManager.m in Sources */,
@@ -2404,6 +2585,7 @@
 				A6FD2F691EF9D2F000211F9A /* CCNewsImageContentTableViewCell.m in Sources */,
 				A6FD2F501EF9D2F000211F9A /* AppDelegate.m in Sources */,
 				A663057D1EFAACC700C2CC2D /* CCWebSocketService.m in Sources */,
+				A6E01C941EFF793800F7B82A /* CCAlertControllerAnimator.m in Sources */,
 				A6FD2F581EF9D2F000211F9A /* CCLog.m in Sources */,
 				A6FD2F9A1EF9D2F000211F9A /* CCAppToolsPresenter.m in Sources */,
 				A6FD2F891EF9D2F000211F9A /* CCNewsDescriptionContentServerModel.m in Sources */,
@@ -2421,6 +2603,7 @@
 				A6FD2F5B1EF9D2F000211F9A /* CCCoreDataService.m in Sources */,
 				A6FD2FA51EF9D2F000211F9A /* CCNewsDescriptionViewController.m in Sources */,
 				A6FD2F861EF9D2F000211F9A /* CCUserFavoritesPlayersIDCoreDataModel+CoreDataProperties.m in Sources */,
+				A69F13061EFEDD8D00AF6421 /* CCEmailInfoFactory.m in Sources */,
 				A6FD2F821EF9D2F000211F9A /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m in Sources */,
 				A6FD2FB41EF9D2F000211F9A /* CCSkinsPriceRouter.m in Sources */,
 				A663055B1EFA820000C2CC2D /* CCRouter+OpenSideMenu.m in Sources */,
@@ -2450,6 +2633,7 @@
 				A6FD2F961EF9D2F000211F9A /* CCPlayerDescriptionViewModel.m in Sources */,
 				A6FD2F941EF9D2F000211F9A /* CCNewsDescriptionViewModel.m in Sources */,
 				A6FD2F651EF9D2F000211F9A /* CCSelectableSectionView.m in Sources */,
+				A69F12FE1EFED7CE00AF6421 /* CCMailScreenRouting.m in Sources */,
 				A6FD2F601EF9D2F000211F9A /* CCCenterButtonView.m in Sources */,
 				A6FD2FB91EF9D2F000211F9A /* CCBannerPresenter.m in Sources */,
 				A6FD2F561EF9D2F000211F9A /* UIView+CCSpiner.m in Sources */,
