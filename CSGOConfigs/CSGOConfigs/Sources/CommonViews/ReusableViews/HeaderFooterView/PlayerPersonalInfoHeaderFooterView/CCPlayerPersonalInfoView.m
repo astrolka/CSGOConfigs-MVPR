@@ -122,7 +122,8 @@
     [self.teamContainerView addSubview:self.teamLabel];
     [self.teamLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.teamImageView.mas_right).offset(4);
-        make.top.bottom.right.equalTo(self.teamContainerView);
+        make.top.bottom.equalTo(self.teamContainerView);
+        make.width.equalTo(@75);
     }];
 }
 
@@ -165,7 +166,8 @@
     [self.countryContainerView addSubview:self.countryLabel];
     [self.countryLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.countryImageView.mas_right).offset(4);
-        make.top.bottom.right.equalTo(self.countryContainerView);
+        make.top.bottom.equalTo(self.countryContainerView);
+        make.width.equalTo(@75);
     }];
 }
 

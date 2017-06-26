@@ -61,6 +61,7 @@
     button.backgroundColor = [UIColor cc_themeColor];
     button.titleLabel.font = [UIFont cc_mediumFontWithSize:16];
     button.titleLabel.textColor = [UIColor whiteColor];
+    [button setTitle:NSLocalizedString(@"news_description.title", nil) forState:UIControlStateNormal];
     [button addTarget:self action:@selector(actionDescription:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.contentView addSubview:button];

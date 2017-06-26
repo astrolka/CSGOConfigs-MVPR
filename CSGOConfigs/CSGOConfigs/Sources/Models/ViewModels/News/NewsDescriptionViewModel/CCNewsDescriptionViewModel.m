@@ -97,7 +97,7 @@
 + (NSString *)dateStringFromDate:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd.MM.yyyy"];
-    return [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), [dateFormatter stringFromDate:date]];
+    return [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"news_description_header.time", nil), [dateFormatter stringFromDate:date]];
 }
 
 @end

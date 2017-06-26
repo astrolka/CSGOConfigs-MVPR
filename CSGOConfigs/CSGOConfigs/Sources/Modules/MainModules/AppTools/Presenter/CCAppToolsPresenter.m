@@ -50,6 +50,7 @@
 - (void)appToolsViewDidSelectClearCache:(id <CCAppToolsViewProtocol>)view {
     [self.ioc_localStorageService clearImagesCache];
     [self.view showMessageWithText:NSLocalizedString(@"app_tools.clean_cache.message", nil)];
+    [self updateCacheSize];
 }
 
 - (void)appToolsViewDidSelectDonate:(id <CCAppToolsViewProtocol>)view {

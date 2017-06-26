@@ -1,6 +1,6 @@
 target "CSGOConfigs" do
     # Navigation
-    pod 'RESideMenu', '~> 4.0.7'
+    pod 'RESideMenu'
     
     # Networking
     pod 'AFNetworking', '~> 3.0'

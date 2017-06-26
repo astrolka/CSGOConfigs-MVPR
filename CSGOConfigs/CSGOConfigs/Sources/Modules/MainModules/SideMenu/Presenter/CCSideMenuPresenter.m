@@ -12,7 +12,7 @@
 
 @interface CCSideMenuPresenter () <CCSideMenuViewActionProtocol>
 
-@property (nonatomic, weak) id <CCSideMenuViewProtocol> view;
+@property (nonatomic, strong) id <CCSideMenuViewProtocol> view;
 @property (nonatomic, strong) id <CCSideMenuRouterProtocol> router;
 
 @end

@@ -147,7 +147,7 @@
 }
 
 + (CGFloat)defaultCellHeight {
-    return 113.f;
+    return 118.f;
 }
 
 @end

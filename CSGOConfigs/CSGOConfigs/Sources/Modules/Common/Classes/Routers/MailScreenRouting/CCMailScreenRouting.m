@@ -23,6 +23,7 @@
     self = [super initWithNavigationController:navigationController];
     if (self) {
         self.mailComposeViewController = [[MFMailComposeViewController alloc] init];
+        self.mailComposeViewController.mailComposeDelegate = self;
     }
     return self;
 }
@@ -32,10 +33,10 @@
 - (void)openEmailScreenWithEmailInfo:(CCEmailInfo *)emailInfo withResult:(mailResultBlock)result {
     self.resultBlock = result;
     if ([MFMailComposeViewController canSendMail]) {
-        self.mailComposeViewController.mailComposeDelegate = self;
         [self.mailComposeViewController setSubject:emailInfo.subject];
         [self.mailComposeViewController setMessageBody:emailInfo.body isHTML:NO];
         [self.mailComposeViewController setToRecipients:emailInfo.recipients];
+        
         [self.navigationController presentViewController:self.mailComposeViewController animated:YES completion:nil];
     } else {
         if (self.resultBlock) {

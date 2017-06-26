@@ -9,6 +9,7 @@
 #import "CCSkinsPriceViewController.h"
 #import "UIView+CCMessageView.h"
 #import "CCSkinTableViewCell.h"
+#import "CCSideMenuFactory.h"
 #import "CCSkinViewModel.h"
 #import "UIView+CCSpiner.h"
 #import "Masonry.h"
@@ -34,6 +35,7 @@
     self.title = NSLocalizedString(@"skins.title", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self menuButtonSetup];
     [self sknisTableViewSetup];
     [self connectButtonSetup];
     
@@ -41,6 +43,10 @@
 }
 
 #pragma mark - UI Setup
+
+- (void)menuButtonSetup {
+    self.navigationItem.leftBarButtonItem = [CCSideMenuFactory menuBarButtonWithSelector:@selector(actionOpenSideMenu:) forObject:self];
+}
 
 - (void)sknisTableViewSetup {
     self.skinsTableView = [[UITableView alloc] initWithFrame:CGRectZero];
@@ -114,6 +120,10 @@
 
 - (void)actionConnect:(UIButton *)button {
     [self.viewAction skinsPriceViewDidPressConnect:self];
+}
+
+- (void)actionOpenSideMenu:(UIButton *)button {
+    [self.viewAction skinsPriceViewDidOpenMenu:self];
 }
 
 @end

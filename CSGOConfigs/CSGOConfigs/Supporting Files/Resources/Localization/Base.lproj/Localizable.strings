@@ -75,7 +75,7 @@
 
 // News Description
 "news_description.title" = "News Description";
-"news_description_header.time" = "Time";
+"news_description_header.time" = "Date";
 "news_description_header.author" = "Author";
 
 // News Preview

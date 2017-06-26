@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		404948A75EF559A68F9349F0 /* libPods-CSGOConfigs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5EC4207C582A5EB77824E1 /* libPods-CSGOConfigs.a */; };
 		A642CB1D1EBA491B00BFD470 /* CSGOConfigsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */; };
+		A68CE3051F01158700B8755E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68CE3041F01158700B8755E /* Assets.xcassets */; };
 		A6E01EC51F00E0C600F7B82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CBB1F00E0C600F7B82A /* AppDelegate.m */; };
 		A6E01EC61F00E0C600F7B82A /* CCRouter+OpenSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CC01F00E0C600F7B82A /* CCRouter+OpenSideMenu.m */; };
 		A6E01EC71F00E0C600F7B82A /* CCRouter+CCPlayerDescriptionScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CC31F00E0C600F7B82A /* CCRouter+CCPlayerDescriptionScreen.m */; };
@@ -152,7 +153,6 @@
 		A6E01F521F00E0C600F7B82A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A6E01EBB1F00E0C600F7B82A /* .gitignore */; };
 		A6E01F531F00E0C600F7B82A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6E01EBC1F00E0C600F7B82A /* Info.plist */; };
 		A6E01F541F00E0C600F7B82A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01EBD1F00E0C600F7B82A /* main.m */; };
-		A6E01F551F00E0C600F7B82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6E01EC01F00E0C600F7B82A /* Assets.xcassets */; };
 		A6E01F561F00E0C600F7B82A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6E01EC21F00E0C600F7B82A /* Localizable.strings */; };
 		A6E01F5D1F00E26A00F7B82A /* CCStaticTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01F5C1F00E26A00F7B82A /* CCStaticTableView.m */; };
 		A6FD2FE21EF9DEE200211F9A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD2FE11EF9DEE200211F9A /* MapKit.framework */; };
@@ -175,6 +175,7 @@
 		A642CB181EBA491B00BFD470 /* CSGOConfigsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOConfigsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGOConfigsTests.m; sourceTree = "<group>"; };
 		A642CB1E1EBA491B00BFD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A68CE3041F01158700B8755E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6E01CBA1F00E0C600F7B82A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		A6E01CBB1F00E0C600F7B82A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A6E01CBF1F00E0C600F7B82A /* CCRouter+OpenSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCRouter+OpenSideMenu.h"; sourceTree = "<group>"; };
@@ -500,7 +501,6 @@
 		A6E01EBB1F00E0C600F7B82A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A6E01EBC1F00E0C600F7B82A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6E01EBD1F00E0C600F7B82A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A6E01EC01F00E0C600F7B82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6E01EC31F00E0C600F7B82A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A6E01EC41F00E0C600F7B82A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A6E01F5B1F00E26A00F7B82A /* CCStaticTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStaticTableView.h; sourceTree = "<group>"; };
@@ -1208,10 +1208,10 @@
 		A6E01D531F00E0C600F7B82A /* LocalStorageService */ = {
 			isa = PBXGroup;
 			children = (
-				A6E01D541F00E0C600F7B82A /* CCConfigs.xcdatamodeld */,
+				A6E01D581F00E0C600F7B82A /* CCLocalStorageServiceProtocol.h */,
 				A6E01D561F00E0C600F7B82A /* CCCoreDataService.h */,
 				A6E01D571F00E0C600F7B82A /* CCCoreDataService.m */,
-				A6E01D581F00E0C600F7B82A /* CCLocalStorageServiceProtocol.h */,
+				A6E01D541F00E0C600F7B82A /* CCConfigs.xcdatamodeld */,
 			);
 			path = LocalStorageService;
 			sourceTree = "<group>";
@@ -1219,9 +1219,9 @@
 		A6E01D591F00E0C600F7B82A /* RestService */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D5C1F00E0C600F7B82A /* CCRestServiceProtocol.h */,
 				A6E01D5A1F00E0C600F7B82A /* CCRestService.h */,
 				A6E01D5B1F00E0C600F7B82A /* CCRestService.m */,
-				A6E01D5C1F00E0C600F7B82A /* CCRestServiceProtocol.h */,
 			);
 			path = RestService;
 			sourceTree = "<group>";
@@ -1229,9 +1229,9 @@
 		A6E01D5D1F00E0C600F7B82A /* WebPresentationServiceProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D601F00E0C600F7B82A /* CCWebPresentationServiceProtocol.h */,
 				A6E01D5E1F00E0C600F7B82A /* CCWebPresentationService.h */,
 				A6E01D5F1F00E0C600F7B82A /* CCWebPresentationService.m */,
-				A6E01D601F00E0C600F7B82A /* CCWebPresentationServiceProtocol.h */,
 			);
 			path = WebPresentationServiceProtocol;
 			sourceTree = "<group>";
@@ -1239,9 +1239,9 @@
 		A6E01D611F00E0C600F7B82A /* WebSocketService */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D641F00E0C600F7B82A /* CCWebSocketServiceProtocol.h */,
 				A6E01D621F00E0C600F7B82A /* CCWebSocketService.h */,
 				A6E01D631F00E0C600F7B82A /* CCWebSocketService.m */,
-				A6E01D641F00E0C600F7B82A /* CCWebSocketServiceProtocol.h */,
 			);
 			path = WebSocketService;
 			sourceTree = "<group>";
@@ -1263,9 +1263,9 @@
 		A6E01D661F00E0C600F7B82A /* BannerService */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D691F00E0C600F7B82A /* CCBannerServiceProtocol.h */,
 				A6E01D671F00E0C600F7B82A /* CCBannerService.h */,
 				A6E01D681F00E0C600F7B82A /* CCBannerService.m */,
-				A6E01D691F00E0C600F7B82A /* CCBannerServiceProtocol.h */,
 			);
 			path = BannerService;
 			sourceTree = "<group>";
@@ -1273,9 +1273,9 @@
 		A6E01D6A1F00E0C600F7B82A /* EventsService */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D6D1F00E0C600F7B82A /* CCEventsServiceProtocol.h */,
 				A6E01D6B1F00E0C600F7B82A /* CCEventsService.h */,
 				A6E01D6C1F00E0C600F7B82A /* CCEventsService.m */,
-				A6E01D6D1F00E0C600F7B82A /* CCEventsServiceProtocol.h */,
 			);
 			path = EventsService;
 			sourceTree = "<group>";
@@ -1283,9 +1283,9 @@
 		A6E01D6E1F00E0C600F7B82A /* NewsService */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D711F00E0C600F7B82A /* CCNewsServiceProtocol.h */,
 				A6E01D6F1F00E0C600F7B82A /* CCNewsService.h */,
 				A6E01D701F00E0C600F7B82A /* CCNewsService.m */,
-				A6E01D711F00E0C600F7B82A /* CCNewsServiceProtocol.h */,
 			);
 			path = NewsService;
 			sourceTree = "<group>";
@@ -1293,9 +1293,9 @@
 		A6E01D721F00E0C600F7B82A /* OpenURLService */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D751F00E0C600F7B82A /* CCOpenURLServiceProtocol.h */,
 				A6E01D731F00E0C600F7B82A /* CCOpenURLService.h */,
 				A6E01D741F00E0C600F7B82A /* CCOpenURLService.m */,
-				A6E01D751F00E0C600F7B82A /* CCOpenURLServiceProtocol.h */,
 			);
 			path = OpenURLService;
 			sourceTree = "<group>";
@@ -1303,9 +1303,9 @@
 		A6E01D761F00E0C600F7B82A /* PlayersService */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D791F00E0C600F7B82A /* CCPlayersServiceProtocol.h */,
 				A6E01D771F00E0C600F7B82A /* CCPlayersService.h */,
 				A6E01D781F00E0C600F7B82A /* CCPlayersService.m */,
-				A6E01D791F00E0C600F7B82A /* CCPlayersServiceProtocol.h */,
 			);
 			path = PlayersService;
 			sourceTree = "<group>";
@@ -1313,9 +1313,9 @@
 		A6E01D7A1F00E0C600F7B82A /* SkinsService */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D7D1F00E0C600F7B82A /* CCSkinsServiceProtocol.h */,
 				A6E01D7B1F00E0C600F7B82A /* CCSkinsService.h */,
 				A6E01D7C1F00E0C600F7B82A /* CCSkinsService.m */,
-				A6E01D7D1F00E0C600F7B82A /* CCSkinsServiceProtocol.h */,
 			);
 			path = SkinsService;
 			sourceTree = "<group>";
@@ -1323,9 +1323,9 @@
 		A6E01D7E1F00E0C600F7B82A /* TeamsService */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01D811F00E0C600F7B82A /* CCTeamsServiceProtocol.h */,
 				A6E01D7F1F00E0C600F7B82A /* CCTeamsService.h */,
 				A6E01D801F00E0C600F7B82A /* CCTeamsService.m */,
-				A6E01D811F00E0C600F7B82A /* CCTeamsServiceProtocol.h */,
 			);
 			path = TeamsService;
 			sourceTree = "<group>";
@@ -1929,9 +1929,9 @@
 		A6E01E2B1F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E2E1F00E0C600F7B82A /* CCAppToolsRouterProtocol.h */,
 				A6E01E2C1F00E0C600F7B82A /* CCAppToolsRouter.h */,
 				A6E01E2D1F00E0C600F7B82A /* CCAppToolsRouter.m */,
-				A6E01E2E1F00E0C600F7B82A /* CCAppToolsRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1939,9 +1939,9 @@
 		A6E01E2F1F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E321F00E0C600F7B82A /* CCAppToolsViewProtocol.h */,
 				A6E01E301F00E0C600F7B82A /* CCAppToolsViewController.h */,
 				A6E01E311F00E0C600F7B82A /* CCAppToolsViewController.m */,
-				A6E01E321F00E0C600F7B82A /* CCAppToolsViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1968,9 +1968,9 @@
 		A6E01E371F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E3A1F00E0C600F7B82A /* CCEventsRouterProtocol.h */,
 				A6E01E381F00E0C600F7B82A /* CCEventsRouter.h */,
 				A6E01E391F00E0C600F7B82A /* CCEventsRouter.m */,
-				A6E01E3A1F00E0C600F7B82A /* CCEventsRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1978,9 +1978,9 @@
 		A6E01E3B1F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E3E1F00E0C600F7B82A /* CCEventsViewProtocol.h */,
 				A6E01E3C1F00E0C600F7B82A /* CCEventsViewController.h */,
 				A6E01E3D1F00E0C600F7B82A /* CCEventsViewController.m */,
-				A6E01E3E1F00E0C600F7B82A /* CCEventsViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2016,9 +2016,9 @@
 		A6E01E441F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E471F00E0C600F7B82A /* CCNewsDescriptionRouterProtocol.h */,
 				A6E01E451F00E0C600F7B82A /* CCNewsDescriptionRouter.h */,
 				A6E01E461F00E0C600F7B82A /* CCNewsDescriptionRouter.m */,
-				A6E01E471F00E0C600F7B82A /* CCNewsDescriptionRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2026,9 +2026,9 @@
 		A6E01E481F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E4B1F00E0C600F7B82A /* CCNewsDescriptionViewProtocol.h */,
 				A6E01E491F00E0C600F7B82A /* CCNewsDescriptionViewController.h */,
 				A6E01E4A1F00E0C600F7B82A /* CCNewsDescriptionViewController.m */,
-				A6E01E4B1F00E0C600F7B82A /* CCNewsDescriptionViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2055,9 +2055,9 @@
 		A6E01E501F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E531F00E0C600F7B82A /* CCNewsPreviewRouterProtocol.h */,
 				A6E01E511F00E0C600F7B82A /* CCNewsPreviewRouter.h */,
 				A6E01E521F00E0C600F7B82A /* CCNewsPreviewRouter.m */,
-				A6E01E531F00E0C600F7B82A /* CCNewsPreviewRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2065,9 +2065,9 @@
 		A6E01E541F00E0C600F7B82A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E571F00E0C600F7B82A /* CCNewsPreviewViewProtocol.h */,
 				A6E01E551F00E0C600F7B82A /* CCNewsPreviewViewController.h */,
 				A6E01E561F00E0C600F7B82A /* CCNewsPreviewViewController.m */,
-				A6E01E571F00E0C600F7B82A /* CCNewsPreviewViewProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2104,9 +2104,9 @@
 		A6E01E5D1F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E601F00E0C600F7B82A /* CCFavoritePlayersRouterProtocol.h */,
 				A6E01E5E1F00E0C600F7B82A /* CCFavoritePlayersRouter.h */,
 				A6E01E5F1F00E0C600F7B82A /* CCFavoritePlayersRouter.m */,
-				A6E01E601F00E0C600F7B82A /* CCFavoritePlayersRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2114,9 +2114,9 @@
 		A6E01E611F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E641F00E0C600F7B82A /* CCFavoritePlayersViewProtocol.h */,
 				A6E01E621F00E0C600F7B82A /* CCFavoritePlayersViewController.h */,
 				A6E01E631F00E0C600F7B82A /* CCFavoritePlayersViewController.m */,
-				A6E01E641F00E0C600F7B82A /* CCFavoritePlayersViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2153,9 +2153,9 @@
 		A6E01E6D1F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E701F00E0C600F7B82A /* CCPlayerDescriptionViewProtocol.h */,
 				A6E01E6E1F00E0C600F7B82A /* CCPlayerDescriptionViewController.h */,
 				A6E01E6F1F00E0C600F7B82A /* CCPlayerDescriptionViewController.m */,
-				A6E01E701F00E0C600F7B82A /* CCPlayerDescriptionViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2182,9 +2182,9 @@
 		A6E01E751F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E781F00E0C600F7B82A /* CCPlayersPreviewRouterProtocol.h */,
 				A6E01E761F00E0C600F7B82A /* CCPlayersPreviewRouter.h */,
 				A6E01E771F00E0C600F7B82A /* CCPlayersPreviewRouter.m */,
-				A6E01E781F00E0C600F7B82A /* CCPlayersPreviewRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2192,9 +2192,9 @@
 		A6E01E791F00E0C600F7B82A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E7C1F00E0C600F7B82A /* CCPlayersPreviewViewProtocol.h */,
 				A6E01E7A1F00E0C600F7B82A /* CCPlayersPreviewViewController.h */,
 				A6E01E7B1F00E0C600F7B82A /* CCPlayersPreviewViewController.m */,
-				A6E01E7C1F00E0C600F7B82A /* CCPlayersPreviewViewProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2221,9 +2221,9 @@
 		A6E01E811F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E841F00E0C600F7B82A /* CCSideMenuRouterProtocol.h */,
 				A6E01E821F00E0C600F7B82A /* CCSideMenuRouter.h */,
 				A6E01E831F00E0C600F7B82A /* CCSideMenuRouter.m */,
-				A6E01E841F00E0C600F7B82A /* CCSideMenuRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2231,9 +2231,9 @@
 		A6E01E851F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E881F00E0C600F7B82A /* CCSideMenuViewProtocol.h */,
 				A6E01E861F00E0C600F7B82A /* CCSideMenuViewController.h */,
 				A6E01E871F00E0C600F7B82A /* CCSideMenuViewController.m */,
-				A6E01E881F00E0C600F7B82A /* CCSideMenuViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2260,9 +2260,9 @@
 		A6E01E8D1F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E901F00E0C600F7B82A /* CCSkinsPriceRouterProtocol.h */,
 				A6E01E8E1F00E0C600F7B82A /* CCSkinsPriceRouter.h */,
 				A6E01E8F1F00E0C600F7B82A /* CCSkinsPriceRouter.m */,
-				A6E01E901F00E0C600F7B82A /* CCSkinsPriceRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2270,9 +2270,9 @@
 		A6E01E911F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E941F00E0C600F7B82A /* CCSkinsPriceViewProtocol.h */,
 				A6E01E921F00E0C600F7B82A /* CCSkinsPriceViewController.h */,
 				A6E01E931F00E0C600F7B82A /* CCSkinsPriceViewController.m */,
-				A6E01E941F00E0C600F7B82A /* CCSkinsPriceViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2299,9 +2299,9 @@
 		A6E01E991F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01E9C1F00E0C600F7B82A /* CCTeamsRouterProtocol.h */,
 				A6E01E9A1F00E0C600F7B82A /* CCTeamsRouter.h */,
 				A6E01E9B1F00E0C600F7B82A /* CCTeamsRouter.m */,
-				A6E01E9C1F00E0C600F7B82A /* CCTeamsRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2309,9 +2309,9 @@
 		A6E01E9D1F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01EA01F00E0C600F7B82A /* CCTeamsViewProtocol.h */,
 				A6E01E9E1F00E0C600F7B82A /* CCTeamsViewController.h */,
 				A6E01E9F1F00E0C600F7B82A /* CCTeamsViewController.m */,
-				A6E01EA01F00E0C600F7B82A /* CCTeamsViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2338,9 +2338,9 @@
 		A6E01EA51F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01EA81F00E0C600F7B82A /* CCWebRouterProtocol.h */,
 				A6E01EA61F00E0C600F7B82A /* CCWebRouter.h */,
 				A6E01EA71F00E0C600F7B82A /* CCWebRouter.m */,
-				A6E01EA81F00E0C600F7B82A /* CCWebRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2348,9 +2348,9 @@
 		A6E01EA91F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01EAC1F00E0C600F7B82A /* CCWebViewProtocol.h */,
 				A6E01EAA1F00E0C600F7B82A /* CCWebViewController.h */,
 				A6E01EAB1F00E0C600F7B82A /* CCWebViewController.m */,
-				A6E01EAC1F00E0C600F7B82A /* CCWebViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2385,9 +2385,9 @@
 		A6E01EB21F00E0C600F7B82A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01EB51F00E0C600F7B82A /* CCBannerRouterProtocol.h */,
 				A6E01EB31F00E0C600F7B82A /* CCBannerRouter.h */,
 				A6E01EB41F00E0C600F7B82A /* CCBannerRouter.m */,
-				A6E01EB51F00E0C600F7B82A /* CCBannerRouterProtocol.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -2395,9 +2395,9 @@
 		A6E01EB61F00E0C600F7B82A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6E01EB91F00E0C600F7B82A /* CCBannerViewProtocol.h */,
 				A6E01EB71F00E0C600F7B82A /* CCBannerView.h */,
 				A6E01EB81F00E0C600F7B82A /* CCBannerView.m */,
-				A6E01EB91F00E0C600F7B82A /* CCBannerViewProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2425,7 +2425,7 @@
 		A6E01EBF1F00E0C600F7B82A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A6E01EC01F00E0C600F7B82A /* Assets.xcassets */,
+				A68CE3041F01158700B8755E /* Assets.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -2548,8 +2548,8 @@
 				A6E01F561F00E0C600F7B82A /* Localizable.strings in Resources */,
 				A6E01F521F00E0C600F7B82A /* .gitignore in Resources */,
 				A6E01EDD1F00E0C600F7B82A /* LaunchScreen.storyboard in Resources */,
-				A6E01F551F00E0C600F7B82A /* Assets.xcassets in Resources */,
 				A6E01F531F00E0C600F7B82A /* Info.plist in Resources */,
+				A68CE3051F01158700B8755E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2886,6 +2886,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80CC47E941882B41B55784CE /* Pods-CSGOConfigs.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4F885Z8V5T;
 				INFOPLIST_FILE = "$(SRCROOT)/CSGOConfigs/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2900,6 +2901,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DECB3A2F0C8EE77851075B8 /* Pods-CSGOConfigs.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4F885Z8V5T;
 				INFOPLIST_FILE = "$(SRCROOT)/CSGOConfigs/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

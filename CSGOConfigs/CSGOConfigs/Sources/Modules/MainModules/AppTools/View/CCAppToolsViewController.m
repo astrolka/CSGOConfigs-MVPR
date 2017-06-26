@@ -34,6 +34,8 @@
     [self menuButtonSetup];
     [self dataSourceSetup];
     [self appStaticTableViewSetup];
+    
+    [self.viewAction appToolsViewDidSet:self];
 }
 
 #pragma mark - UI Setup

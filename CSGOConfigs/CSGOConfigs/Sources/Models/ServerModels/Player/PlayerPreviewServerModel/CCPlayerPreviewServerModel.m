@@ -28,7 +28,6 @@
         self.imageSize = serverResponce[@"imageResolution"];
         self.imageURL = [NSURL URLWithString:serverResponce[@"image"]];
         self.playerID = [serverResponce[@"id"] integerValue];
-        self.imageURL = [NSURL URLWithString:@"http://i.imgur.com/UGrKHzp.png"];
     }
     return self;
 }

@@ -75,7 +75,7 @@
 
 // News Description
 "news_description.title" = "Подробнее";
-"news_description_header.time" = "Время";
+"news_description_header.time" = "Дата";
 "news_description_header.author" = "Автор";
 
 // News Preview

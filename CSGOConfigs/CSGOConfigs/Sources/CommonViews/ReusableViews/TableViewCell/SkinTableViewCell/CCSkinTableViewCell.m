@@ -43,7 +43,7 @@
     [self.coverImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(self.contentView).offset(8);
         make.bottom.equalTo(self.contentView).offset(-8);
-        make.width.equalTo(@50);
+        make.width.equalTo(@100);
     }];
 }
 
