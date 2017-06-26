@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <AppleGuice/AppleGuiceInjectable.h>
-#import "CCEventViewModel.h"
 #import "CCAnnotationEventViewModel.h"
+#import "CCEventViewModel.h"
 
 typedef void(^serviceEventsDataBlock)(NSArray <CCEventViewModel *> *events, NSArray <CCAnnotationEventViewModel *> *annotationEvents, BOOL fromServer);
 

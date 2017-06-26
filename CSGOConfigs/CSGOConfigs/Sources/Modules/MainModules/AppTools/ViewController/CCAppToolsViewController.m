@@ -7,11 +7,11 @@
 //
 
 #import "CCAppToolsViewController.h"
-#import "Masonry.h"
 #import "UIView+CCMessageView.h"
+#import "CCSettingsDataSource.h"
 #import "CCSideMenuFactory.h"
 #import "CCSettingsView.h"
-#import "CCSettingsDataSource.h"
+#import "Masonry.h"
 
 @interface CCAppToolsViewController ()
 
@@ -36,7 +36,7 @@
     [self appSettingsViewSetup];
 }
 
-#pragma mark - View
+#pragma mark - UI Setup
 
 - (void)menuButtonSetup {
     self.navigationItem.leftBarButtonItem = [CCSideMenuFactory menuBarButtonWithSelector:@selector(actionOpenSideMenu:) forObject:self];
@@ -65,7 +65,7 @@
     };
     
     CCSettingsSectionDataSource *storageSection = [[CCSettingsSectionDataSource alloc] initWithRows:@[self.cacheRow]];
-    storageSection.headerTitle = NSLocalizedString(@"q", nil);
+    storageSection.headerTitle = NSLocalizedString(@"", nil);
     return storageSection;
 }
 

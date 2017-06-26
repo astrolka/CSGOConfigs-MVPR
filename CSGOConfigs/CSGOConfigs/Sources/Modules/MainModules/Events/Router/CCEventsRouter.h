@@ -12,6 +12,6 @@
 
 @interface CCEventsRouter : CCRouter <CCEventsRouterProtocol>
 
-- (id <CCEventsViewProtocol>)buildEventsModule;
+- (id <CCEventsViewProtocol>)buildModule;
 
 @end

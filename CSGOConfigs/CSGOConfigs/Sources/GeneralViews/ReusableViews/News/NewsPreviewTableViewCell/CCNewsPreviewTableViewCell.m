@@ -8,8 +8,8 @@
 
 #import "CCNewsPreviewTableViewCell.h"
 #import "CCNewsPreviewViewModel.h"
-#import "UIColor+CC.h"
 #import "UIImageView+URL.h"
+#import "UIColor+CC.h"
 #import "UIFont+CC.h"
 #import "Masonry.h"
 
@@ -31,7 +31,7 @@
     return self;
 }
 
-#pragma mark - View
+#pragma mark - UI Setup
 
 - (void)imageViewzSetup {
     self.imageViewz = [[UIImageView alloc] initWithFrame:CGRectZero];

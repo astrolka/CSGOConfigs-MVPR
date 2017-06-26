@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol CCEventsViewProtocol;
 @protocol CCEventsRouterProtocol;
+@protocol CCEventsViewProtocol;
 
 @interface CCEventsPresenter : NSObject
 

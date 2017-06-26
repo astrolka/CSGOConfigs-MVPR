@@ -9,7 +9,7 @@
 #import <MapKit/MapKit.h>
 @class CCEventPinAnnotationView;
 
-typedef void(^descriptionBlock)(CCEventPinAnnotationView *eventPinAnnotationView, UIButton *button);
+typedef void(^descriptionBlock)(CCEventPinAnnotationView *eventPinAnnotationView);
 
 @interface CCEventPinAnnotationView : MKPinAnnotationView
 

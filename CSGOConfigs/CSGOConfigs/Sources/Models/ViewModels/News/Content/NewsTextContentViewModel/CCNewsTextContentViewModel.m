@@ -14,6 +14,8 @@
 
 @end
 
+
+
 @implementation CCNewsTextContentViewModelBuilder
 
 + (CCNewsTextContentViewModel *)buildWithServerModel:(CCNewsDescriptionContentServerModel *)serverModel {

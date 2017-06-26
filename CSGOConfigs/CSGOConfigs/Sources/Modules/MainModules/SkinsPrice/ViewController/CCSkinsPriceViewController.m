@@ -7,11 +7,11 @@
 //
 
 #import "CCSkinsPriceViewController.h"
-#import "CCSkinViewModel.h"
-#import "Masonry.h"
-#import "UIView+CCSpiner.h"
 #import "UIView+CCMessageView.h"
 #import "CCSkinTableViewCell.h"
+#import "CCSkinViewModel.h"
+#import "UIView+CCSpiner.h"
+#import "Masonry.h"
 
 @interface CCSkinsPriceViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -39,6 +39,8 @@
     
     [self.viewAction skinsPriceViewDidSet:self];
 }
+
+#pragma mark - UI Setup
 
 - (void)sknisTableViewSetup {
     self.skinsTableView = [[UITableView alloc] initWithFrame:CGRectZero];

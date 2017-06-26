@@ -7,8 +7,8 @@
 //
 
 #import "CCRouter+ViewModelAlertPresenter.h"
-#import "CCViewModelAlert.h"
 #import "CCViewModelAlertTransformer.h"
+#import "CCViewModelAlert.h"
 
 @implementation CCRouter (ViewModelAlertPresenter)
 

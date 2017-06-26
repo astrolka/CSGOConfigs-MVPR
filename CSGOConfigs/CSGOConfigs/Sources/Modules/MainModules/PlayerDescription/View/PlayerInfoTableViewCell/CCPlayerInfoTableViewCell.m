@@ -29,7 +29,7 @@
     return self;
 }
 
-#pragma mark - View
+#pragma mark - UI Setup
 
 - (void)pointViewSetup {
     self.pointView = [[UIView alloc] initWithFrame:CGRectZero];

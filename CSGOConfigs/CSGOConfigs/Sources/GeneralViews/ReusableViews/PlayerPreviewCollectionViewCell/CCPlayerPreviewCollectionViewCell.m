@@ -7,8 +7,8 @@
 //
 
 #import "CCPlayerPreviewCollectionViewCell.h"
-#import "UIImageView+URL.h"
 #import "CCPlayerPreviewViewModel.h"
+#import "UIImageView+URL.h"
 #import "UIColor+CC.h"
 #import "UIFont+CC.h"
 #import "Masonry.h"
@@ -34,20 +34,7 @@
     return self;
 }
 
-#pragma mark - Public
-
-+ (CGFloat)cellHeightWithoutImageView {
-    return 35.f;
-}
-
-- (void)setPlayer:(CCPlayerPreviewViewModel *)player {
-    _player = player;
-    
-    self.nickNameLabel.text = player.nickName;
-    [self.profileImageView cc_setImageWithURL:player.imageURL];
-}
-
-#pragma mark - Private
+#pragma mark - UI Setup
 
 - (void)nickLabelSetup {
     self.nickNameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -72,5 +59,19 @@
         make.bottom.equalTo(self.nickNameLabel.mas_top);
     }];
 }
+
+#pragma mark - Public
+
++ (CGFloat)cellHeightWithoutImageView {
+    return 35.f;
+}
+
+- (void)setPlayer:(CCPlayerPreviewViewModel *)player {
+    _player = player;
+    
+    self.nickNameLabel.text = player.nickName;
+    [self.profileImageView cc_setImageWithURL:player.imageURL];
+}
+
 
 @end

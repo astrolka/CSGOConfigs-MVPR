@@ -7,11 +7,11 @@
 //
 
 #import "CCBannerService.h"
+#import <UIKit/UIScreen.h>
 #import "CCRestServiceProtocol.h"
 #import "CCLocalStorageServiceProtocol.h"
 #import "CCBannerServerModel.h"
 #import "CCBannerCoreDataModel+CoreDataProperties.h"
-#import <UIKit/UIScreen.h>
 
 @interface CCBannerService ()
 
@@ -29,8 +29,8 @@ NSString *const kBannerSizeSpechialChar = @"x"; // server responce: "320x640"
 - (void)getBanners:(bannerDataBlock)banners {
     [self.ioc_restService makeGETRequestWithURL:[NSURL URLWithString:@"bannersData.json"] onSucess:^(NSArray *bannersResponce) {
         NSMutableArray <CCBannerServerModel *> *serverModels  = [[NSMutableArray alloc] init];
-        [bannersResponce enumerateObjectsUsingBlock:^(NSDictionary *bannerResponce, NSUInteger idx, BOOL * _Nonnull stop) {
-            CCBannerServerModel *bannerServerModel = [[CCBannerServerModel alloc] initWithServerResponce:bannerResponce];
+        [bannersResponce enumerateObjectsUsingBlock:^(NSDictionary *responce, NSUInteger idx, BOOL * _Nonnull stop) {
+            CCBannerServerModel *bannerServerModel = [[CCBannerServerModel alloc] initWithServerResponce:responce];
             [serverModels addObject:bannerServerModel];
         }];
         
@@ -41,6 +41,7 @@ NSString *const kBannerSizeSpechialChar = @"x"; // server responce: "320x640"
         }];
     } onFailure:^(NSError *error) {
         NSArray <CCBannerCoreDataModel *> *coreDataModels = [self.ioc_localStorageService getBanners];
+        
         [CCBannerViewModelBuilder buildWithCoreDataModel:coreDataModels viewModel:^(NSArray<CCBannerViewModel *> *viewModels) {
             banners(viewModels, [self bannerSizeFromCoreDataModels:coreDataModels]);
         }];
@@ -49,17 +50,17 @@ NSString *const kBannerSizeSpechialChar = @"x"; // server responce: "320x640"
 
 #pragma mark - Private
 
-- (CGFloat)bannerSizeFromServerModels:(NSArray <CCBannerServerModel *> *)dataArray {
-    if (dataArray.count > 0) {
-        return [self bannerSizeFromString:[dataArray firstObject].imageSize];
+- (CGFloat)bannerSizeFromServerModels:(NSArray <CCBannerServerModel *> *)serverModels {
+    if (serverModels.count > 0) {
+        return [self bannerSizeFromString:[serverModels firstObject].imageSize];
     } else {
         return 0.f;
     }
 }
 
-- (CGFloat)bannerSizeFromCoreDataModels:(NSArray <CCBannerCoreDataModel *> *)dataArray {
-    if (dataArray.count > 0) {
-        return [self bannerSizeFromString:[dataArray firstObject].imageSize];
+- (CGFloat)bannerSizeFromCoreDataModels:(NSArray <CCBannerCoreDataModel *> *)coreDataModels {
+    if (coreDataModels.count > 0) {
+        return [self bannerSizeFromString:[coreDataModels firstObject].imageSize];
     } else {
         return 0.f;
     }

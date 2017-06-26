@@ -11,7 +11,7 @@
 @implementation UIColor (CC)
 
 + (UIColor *)cc_themeColor {
-    return [UIColor redColor];
+    return [UIColor colorWithRed:74.0f/255.0f green:92.0f/255.f blue:152.0f/255.0f alpha:1];
 }
 
 @end

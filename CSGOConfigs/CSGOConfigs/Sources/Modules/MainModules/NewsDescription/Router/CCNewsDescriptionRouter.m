@@ -7,8 +7,8 @@
 //
 
 #import "CCNewsDescriptionRouter.h"
-#import "CCNewsDescriptionViewProtocol.h"
 #import "CCNewsDescriptionViewController.h"
+#import "CCNewsDescriptionViewProtocol.h"
 #import "CCNewsDescriptionPresenter.h"
 #import "CCRouter+WebScreen.h"
 
@@ -27,7 +27,7 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-#pragma mark - Private
+#pragma mark - Module Build
 
 - (id <CCNewsDescriptionViewProtocol>)buildModuleWithNewsID:(NSInteger)newsID {
     CCNewsDescriptionViewController *view = [[CCNewsDescriptionViewController alloc] init];

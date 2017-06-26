@@ -14,12 +14,12 @@
 #import "RESideMenu.h"
 #import "UIColor+CC.h"
 
-#import "CCPlayersPreviewRouter.h"
-#import "CCAppToolsRouter.h"
 #import "CCFavoritePlayersRouter.h"
-#import "CCEventsRouter.h"
+#import "CCPlayersPreviewRouter.h"
 #import "CCNewsPreviewRouter.h"
 #import "CCSkinsPriceRouter.h"
+#import "CCAppToolsRouter.h"
+#import "CCEventsRouter.h"
 #import "CCTeamsRouter.h"
 
 @interface CCSideMenuRouter ()
@@ -36,11 +36,10 @@
 - (void)goToAppFromWindow:(UIWindow *)window {
     NSParameterAssert(window);
 
-    self.sideMenuView = [self buildSideMenuModule];
-    
+    self.sideMenuView = [self buildModule];
     self.navigationController = [[UINavigationController alloc] initWithNavigationBarClass:[BMYScrollableNavigationBar class] toolbarClass:nil];
     CCPlayersPreviewRouter *playersRouter = [[CCPlayersPreviewRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCPlayersPreviewViewProtocol> playersView = [playersRouter buildPlayersPreviewModule];
+    id <CCPlayersPreviewViewProtocol> playersView = [playersRouter buildModule];
     [self.navigationController setViewControllers:@[playersView] animated:NO];
     RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:self.navigationController
                                                       leftMenuViewController:(UIViewController *)self.sideMenuView
@@ -54,43 +53,43 @@
 
 - (void)goToPlayersPreviewScreen {
     CCPlayersPreviewRouter *router = [[CCPlayersPreviewRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCPlayersPreviewViewProtocol> view = [router buildPlayersPreviewModule];
+    id <CCPlayersPreviewViewProtocol> view = [router buildModule];
     [self goToViewController:(UIViewController *)view];
 }
 
 - (void)goToTeamsScreen {
     CCTeamsRouter *router = [[CCTeamsRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCTeamsViewProtocol> view = [router buildTeamsModule];
+    id <CCTeamsViewProtocol> view = [router buildModule];
     [self goToViewController:(UIViewController *)view];
 }
 
 - (void)goToFavoritePlayersScreen {
     CCFavoritePlayersRouter *router = [[CCFavoritePlayersRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCFavoritePlayersViewProtocol> view = [router buildFavoritePlayersModule];
+    id <CCFavoritePlayersViewProtocol> view = [router buildModule];
     [self goToViewController:(UIViewController *)view];
 }
 
 - (void)goToNewsPreviewScreen {
     CCNewsPreviewRouter *router = [[CCNewsPreviewRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCNewsPreviewViewProtocol> view = [router buildNewsPreviewModule];
+    id <CCNewsPreviewViewProtocol> view = [router buildModule];
     [self goToViewController:(UIViewController *)view];
 }
 
 - (void)goToMapEventsScreen {
     CCEventsRouter *router = [[CCEventsRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCEventsViewProtocol> view = [router buildEventsModule];
+    id <CCEventsViewProtocol> view = [router buildModule];
     [self goToViewController:(UIViewController *)view];
 }
 
 - (void)goToSkinsScreen {
     CCSkinsPriceRouter *router = [[CCSkinsPriceRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCSkinsPriceViewProtocol> view = [router buildSkinsPriceModule];
+    id <CCSkinsPriceViewProtocol> view = [router buildModule];
     [self goToViewController:(UIViewController *)view];
 }
 
 - (void)goToAppToolsScreen {
     CCAppToolsRouter *router = [[CCAppToolsRouter alloc] initWithNavigationController:self.navigationController];
-    id <CCAppToolsViewProtocol> view = [router buildAppToolsModule];
+    id <CCAppToolsViewProtocol> view = [router buildModule];
     [self goToViewController:(UIViewController *)view];
 }
 
@@ -103,12 +102,16 @@
     [sideMenuViewController.sideMenuViewController hideMenuViewController];
 }
 
-- (id <CCSideMenuViewProtocol>)buildSideMenuModule {
+#pragma mark - Module Build
+
+- (id <CCSideMenuViewProtocol>)buildModule {
     CCSideMenuViewController *viewController = [[CCSideMenuViewController alloc] init];
     CCSideMenuPresenter *presenter = [[CCSideMenuPresenter alloc] initWithView:viewController router:self];
     #pragma unused(presenter)
     return viewController;
 }
+
+#pragma mark - Private
 
 - (void)navigationBarSetup {
     // Router can setup his "navigation" components

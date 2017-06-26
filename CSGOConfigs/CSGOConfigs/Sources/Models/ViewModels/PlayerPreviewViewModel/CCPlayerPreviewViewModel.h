@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CGBase.h>
-@class CCPlayerPreviewServerModel;
 @class CCPlayerPreviewCoreDataModel;
+@class CCPlayerPreviewServerModel;
 
 @interface CCPlayerPreviewViewModel : NSObject
 

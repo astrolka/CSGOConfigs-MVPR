@@ -17,7 +17,7 @@
 
 @implementation CCSkinViewModelBuilder
 
-static const NSInteger kNoPrice = 0;
+static NSInteger const kNoPrice = 0;
 
 + (void)buildWithServerModels:(CCSkinServerModel *)serverModel viewModel:(skinDataBlock)viewModelData {
     CCSkinViewModel *viewModel = [[CCSkinViewModel alloc] init];

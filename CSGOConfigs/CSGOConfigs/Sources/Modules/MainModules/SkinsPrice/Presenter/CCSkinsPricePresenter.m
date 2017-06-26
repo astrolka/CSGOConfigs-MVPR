@@ -7,8 +7,8 @@
 //
 
 #import "CCSkinsPricePresenter.h"
-#import "CCSkinsPriceViewProtocol.h"
 #import "CCSkinsPriceRouterProtocol.h"
+#import "CCSkinsPriceViewProtocol.h"
 #import "CCSkinsServiceProtocol.h"
 
 @interface CCSkinsPricePresenter () <CCSkinsPriceViewActionProtocol>
@@ -25,9 +25,9 @@
 - (instancetype)initWithView:(id <CCSkinsPriceViewProtocol>)view router:(id <CCSkinsPriceRouterProtocol>)router {
     self = [super init];
     if (self) {
+        self.router = router;
         self.view = view;
         self.view.viewAction = self;
-        self.router = router;
     }
     return self;
 }
@@ -35,7 +35,6 @@
 #pragma mark - CCSkinsPriceViewActionProtocol
 
 - (void)skinsPriceViewDidSet:(id <CCSkinsPriceViewProtocol>)view {
-    
     [self subscribeForSkinPrices];
 }
 

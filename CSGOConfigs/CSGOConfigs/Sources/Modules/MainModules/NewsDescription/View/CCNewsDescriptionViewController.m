@@ -7,19 +7,19 @@
 //
 
 #import "CCNewsDescriptionViewController.h"
-#import "Masonry.h"
-#import "UIView+CCSpiner.h"
-#import "UIView+CCMessageView.h"
-#import "CCNewsContentViewModel.h"
-#import "CCNewsTextContentViewModel.h"
-#import "CCNewsImageContentViewModel.h"
-#import "CCNewsTextContentTableViewCell.h"
 #import "CCNewsImageContentTableViewCell.h"
+#import "CCNewsTextContentTableViewCell.h"
+#import "CCNewsImageContentViewModel.h"
 #import "CCNewsDescriptionHeaderView.h"
+#import "CCNewsTextContentViewModel.h"
+#import "CCNewsContentViewModel.h"
+#import "UIView+CCMessageView.h"
+#import "UIView+CCSpiner.h"
+#import "Masonry.h"
 
 @interface CCNewsDescriptionViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UITableView *newsTableView;
 @property (nonatomic, strong) CCNewsDescriptionHeaderView *newsDescriptionHeaderView;
 
 @property (nonatomic, strong) CCNewsDescriptionViewModel *newsDescriptionViewModel;
@@ -41,28 +41,28 @@
     [self.viewAction newsDescriptionViewDidSet:self];
 }
 
-#pragma mark - View
+#pragma mark - View Setup
 
 - (void)tableViewSetup {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.estimatedRowHeight = 300.f;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.alpha = 0.f;
-    [self.tableView registerClass:[CCNewsTextContentTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CCNewsTextContentTableViewCell class])];
-    [self.tableView registerClass:[CCNewsImageContentTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CCNewsImageContentTableViewCell class])];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    self.newsTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    self.newsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.newsTableView.estimatedRowHeight = 300.f;
+    self.newsTableView.rowHeight = UITableViewAutomaticDimension;
+    self.newsTableView.alpha = 0.f;
+    [self.newsTableView registerClass:[CCNewsTextContentTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CCNewsTextContentTableViewCell class])];
+    [self.newsTableView registerClass:[CCNewsImageContentTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CCNewsImageContentTableViewCell class])];
+    self.newsTableView.dataSource = self;
+    self.newsTableView.delegate = self;
     
-    [self.view addSubview:self.tableView];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.newsTableView];
+    [self.newsTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
 }
 
 - (void)newsDescriptionHeaderViewSetup {
-    self.newsDescriptionHeaderView = [[CCNewsDescriptionHeaderView alloc] initWithFrame:CGRectZero];
     __weak typeof(self)weakSelf = self;
+    self.newsDescriptionHeaderView = [[CCNewsDescriptionHeaderView alloc] initWithFrame:CGRectZero];
     self.newsDescriptionHeaderView.pressDescriptionButton = ^(CCNewsDescriptionHeaderView *newsDescriptionHeaderView) {
         [weakSelf.viewAction newsDescriptionViewDidPressMoreInfoButton:weakSelf];
     };
@@ -114,9 +114,9 @@
 - (void)showNewsDescription:(CCNewsDescriptionViewModel *)viewModel {
     self.newsDescriptionViewModel = viewModel;
     self.newsDescriptionHeaderView.newsDescriptionViewModel = viewModel;
-    [self.tableView reloadData];
+    [self.newsTableView reloadData];
     [UIView animateWithDuration:0.3 animations:^{
-        self.tableView.alpha = 1.f;
+        self.newsTableView.alpha = 1.f;
     }];
 }
 

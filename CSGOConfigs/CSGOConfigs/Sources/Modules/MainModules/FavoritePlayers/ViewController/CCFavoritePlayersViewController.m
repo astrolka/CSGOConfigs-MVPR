@@ -7,12 +7,12 @@
 //
 
 #import "CCFavoritePlayersViewController.h"
-#import "CCBannerView.h"
 #import "CCPlayersListView.h"
-#import "Masonry.h"
 #import "CCSideMenuFactory.h"
+#import "CCBannerView.h"
 #import "UIColor+CC.h"
 #import "UIFont+CC.h"
+#import "Masonry.h"
 
 @interface CCFavoritePlayersViewController () <CCPlayersListViewActionProtocol>
 
@@ -20,8 +20,8 @@
 
 @end
 
-static const CGFloat kCellSpaces = 6.f;
-static const NSUInteger kColumnsInSection = 3;
+static CGFloat const kCellSpaces = 6.f;
+static NSUInteger const kColumnsInSection = 3;
 
 @implementation CCFavoritePlayersViewController
 
@@ -33,11 +33,13 @@ static const NSUInteger kColumnsInSection = 3;
     self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self noFavoritePlayersLabelSetup];
+    [self emptyDataLabelSetup];
     [self playersViewSetup];
     [self menuButtonSetup];
     [self.viewAction favoritePlayersViewDidSet:self];
 }
+
+#pragma mark - UI Setup
 
 - (void)playersViewSetup {
     self.playersListView = [[CCPlayersListView alloc] initWithColumnsInSection:kColumnsInSection cellSpaces:kCellSpaces];
@@ -52,7 +54,7 @@ static const NSUInteger kColumnsInSection = 3;
     }];
 }
 
-- (void)noFavoritePlayersLabelSetup {
+- (void)emptyDataLabelSetup {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.text = NSLocalizedString(@"kNoFavoritePlayersLabel", nil);
     label.textColor = [UIColor cc_themeColor];

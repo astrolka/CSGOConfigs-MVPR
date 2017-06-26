@@ -11,7 +11,7 @@
 
 /*
  
- I don't have params in the project, cuz i use Firebase, so "params" generating from an url
+    I don't have params in the project, cuz i use Firebase, so "params" generating from an url
  
 */
 

@@ -7,19 +7,19 @@
 //
 
 #import "CCPlayerDescriptionViewController.h"
-#import "Masonry.h"
-#import "UIView+CCSpiner.h"
-#import "UIView+CCMessageView.h"
 #import "CCPlayerDescriptionViewModel.h"
-#import "UITableView+Animation.h"
 #import "CCPlayerInfoTableViewCell.h"
 #import "CCPlayerPersonalInfoView.h"
-#import "CCCenterButtonView.h"
 #import "CCSelectableSectionView.h"
+#import "UITableView+Animation.h"
+#import "UIView+CCMessageView.h"
+#import "CCCenterButtonView.h"
+#import "UIView+CCSpiner.h"
+#import "Masonry.h"
 
 @interface CCPlayerDescriptionViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UITableView *playerTableView;
 
 @property (nonatomic, strong) UIButton *favoritePlayerButton;
 
@@ -45,22 +45,22 @@
     [self.viewAction playersPreviewViewDidSet:self];
 }
 
-#pragma mark - View
+#pragma mark - UI Setup
 
 - (void)tableViewSetup {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero];
-    self.tableView.allowsSelection = NO;
-    self.tableView.alpha = 0.f;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    [self.tableView registerClass:[CCPlayerInfoTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CCPlayerInfoTableViewCell class])];
-    [self.tableView registerClass:[CCPlayerPersonalInfoView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([CCPlayerPersonalInfoView class])];
-    [self.tableView registerClass:[CCCenterButtonView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([CCCenterButtonView class])];
-    [self.tableView registerClass:[CCSelectableSectionView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([CCSelectableSectionView class])];
+    self.playerTableView = [[UITableView alloc] initWithFrame:CGRectZero];
+    self.playerTableView.allowsSelection = NO;
+    self.playerTableView.alpha = 0.f;
+    self.playerTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.playerTableView.dataSource = self;
+    self.playerTableView.delegate = self;
+    [self.playerTableView registerClass:[CCPlayerInfoTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CCPlayerInfoTableViewCell class])];
+    [self.playerTableView registerClass:[CCPlayerPersonalInfoView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([CCPlayerPersonalInfoView class])];
+    [self.playerTableView registerClass:[CCCenterButtonView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([CCCenterButtonView class])];
+    [self.playerTableView registerClass:[CCSelectableSectionView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([CCSelectableSectionView class])];
     
-    [self.view addSubview:self.tableView];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.playerTableView];
+    [self.playerTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
 }
@@ -118,6 +118,7 @@
                 };
                 return playerDescriptionHeaderView;
         }
+            
         case PlayerInfoSectionTypeHardwareInformation: {
                 CCSelectableSectionView *selectableHeaderView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([CCSelectableSectionView class])];
                 selectableHeaderView.title = NSLocalizedString(@"sdfsdf", nil);
@@ -126,6 +127,7 @@
                 };
                 return selectableHeaderView;
         }
+            
         case PlayerInfoSectionTypeSettingsInformation: {
                 CCSelectableSectionView *selectableHeaderView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([CCSelectableSectionView class])];
                 selectableHeaderView.title = NSLocalizedString(@"sdfsdf", nil);
@@ -134,6 +136,7 @@
                 };
                 return selectableHeaderView;
         }
+            
         default:
             return nil;
     }
@@ -179,15 +182,15 @@
 
 - (void)showPlayerInfo:(CCPlayerDescriptionViewModel *)playerDescriptionViewModel {
     self.playerDescriptionViewModel = playerDescriptionViewModel;
-    [self.tableView reloadData];
+    [self.playerTableView reloadData];
     [UIView animateWithDuration:0.3 animations:^{
-        self.tableView.alpha = 1.f;
+        self.playerTableView.alpha = 1.f;
     }];
 }
 
 - (void)updateOpenSections {
     //TODO: Add animation
-    [self.tableView reloadData];
+    [self.playerTableView reloadData];
 }
 
 - (void)updatePlayerFavoriteStatus:(BOOL)favorite {

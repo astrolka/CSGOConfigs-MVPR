@@ -12,11 +12,13 @@
 
 @interface CCBannerViewModel : NSObject
 
-@property (nonatomic, strong) NSURL *imageURL;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, assign) NSInteger playerID;
+@property (nonatomic, strong) NSURL *imageURL;
 
 @end
+
+
 
 typedef void(^bannersDataBlock)(NSArray <CCBannerViewModel *> *banners);
 

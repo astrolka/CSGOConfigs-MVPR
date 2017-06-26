@@ -20,7 +20,6 @@
 
 
 
-
 @interface CCNewsImageContentViewModelBuilder : NSObject
 
 + (CCNewsImageContentViewModel *)buildWithServerModel:(CCNewsDescriptionContentServerModel *)serverModel;

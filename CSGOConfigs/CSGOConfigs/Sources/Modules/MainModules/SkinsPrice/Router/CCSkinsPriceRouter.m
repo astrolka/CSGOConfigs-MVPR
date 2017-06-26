@@ -19,7 +19,9 @@
     [self cc_openSideMenu];
 }
 
-- (id <CCSkinsPriceViewProtocol>)buildSkinsPriceModule {
+#pragma mark - Module Build
+
+- (id <CCSkinsPriceViewProtocol>)buildModule {
     CCSkinsPriceViewController *view = [[CCSkinsPriceViewController alloc] init];
     CCSkinsPricePresenter *presenter = [[CCSkinsPricePresenter alloc] initWithView:view router:self];
     #pragma unused(presenter)

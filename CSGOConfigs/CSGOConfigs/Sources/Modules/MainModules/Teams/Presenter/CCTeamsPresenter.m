@@ -7,9 +7,9 @@
 //
 
 #import "CCTeamsPresenter.h"
-#import "CCTeamsViewProtocol.h"
-#import "CCTeamsRouterProtocol.h"
 #import "CCTeamsServiceProtocol.h"
+#import "CCTeamsRouterProtocol.h"
+#import "CCTeamsViewProtocol.h"
 
 @interface CCTeamsPresenter () <CCTeamsViewActionProtocol>
 
@@ -25,7 +25,7 @@
 
 @implementation CCTeamsPresenter
 
-static const NSInteger kLoadingLimitd = 6;
+static NSInteger const kLoadingLimitd = 6;
 
 - (instancetype)initWithView:(id <CCTeamsViewProtocol>)view router:(id <CCTeamsRouterProtocol>)router {
     self = [super init];
@@ -33,6 +33,7 @@ static const NSInteger kLoadingLimitd = 6;
         self.view = view;
         self.view.viewAction = self;
         self.router = router;
+        
         self.countOfTeamsOnServer = 0;
         self.teams = [[NSMutableArray alloc] init];
     }
@@ -65,7 +66,9 @@ static const NSInteger kLoadingLimitd = 6;
 
 - (void)loadTeamsWithSpiner:(BOOL)spiner {
     if (self.teams.count == 0 || self.teams.count < self.countOfTeamsOnServer) {
-        !(spiner) ?: [self.view showSpiner];
+        if (spiner) {
+            [self.view showSpiner];
+        }
         [self.ioc_teamsService getTeamsWithOffset:self.teams.count data:^(NSArray<CCTeamViewModel *> *teams, BOOL fromServer, NSInteger countOfPlayersOnServer) {
             [self.teams addObjectsFromArray:teams];
             [self.view showTeams:self.teams];

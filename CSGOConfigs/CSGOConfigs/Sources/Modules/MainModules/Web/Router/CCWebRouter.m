@@ -7,9 +7,10 @@
 //
 
 #import "CCWebRouter.h"
+#import "CCRouter+ShareActivityPresenter.h"
+#import "CCWebPresentationService.h"
 #import "CCWebViewController.h"
 #import "CCWebPresenter.h"
-#import "CCWebPresentationService.h"
 
 @interface CCWebRouter ()
 
@@ -24,7 +25,13 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-#pragma mark - Module build
+#pragma mark - CCShareRoutingProtocol
+
+- (void)openShareScreenWithShareInfo:(CCShareInfo *)shareInfo {
+    [self cc_presentShareActivityViewControllerWithShareInfo:shareInfo];
+}
+
+#pragma mark - Module Build
 
 - (id <CCWebViewProtocol>)buildModuleWithURL:(NSURL *)url {
     CCWebViewController *view = [[CCWebViewController alloc] init];

@@ -11,7 +11,7 @@
 #import "UIColor+CC.h"
 #import "Masonry.h"
 
-CGFloat const kAnimationDuration = 0.3f;
+static CGFloat const kAnimationDuration = 0.3;
 
 @implementation UIView (CCMessageView)
 
@@ -36,14 +36,10 @@ CGFloat const kAnimationDuration = 0.3f;
         make.bottom.equalTo(self).offset(-4);
     }];
     
-    [self cc_showView:messageView];
-}
-
-- (void)cc_showView:(UIView *)view {
     [UIView animateWithDuration:kAnimationDuration delay:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        view.alpha = 1.f;
+        messageView.alpha = 1.f;
     } completion:^(BOOL finished) {
-        [self cc_hideView:view afterDelay:0.2f];
+        [self cc_hideView:messageView afterDelay:0.2f];
     }];
 }
 

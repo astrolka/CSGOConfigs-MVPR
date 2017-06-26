@@ -8,13 +8,11 @@
 
 #import "CCNewsDescriptionHeaderView.h"
 #import "CCNewsDescriptionViewModel.h"
-#import "Masonry.h"
-#import "UIFont+CC.h"
 #import "UIColor+CC.h"
+#import "UIFont+CC.h"
+#import "Masonry.h"
 
 @interface CCNewsDescriptionHeaderView ()
-
-@property (nonatomic, strong) MASConstraint *subtitleHeightConstraint;
 
 @property (nonatomic, strong) UILabel *subtitleLabel;
 @property (nonatomic, strong) UILabel *dateLabel;
@@ -36,7 +34,7 @@
     return self;
 }
 
-#pragma mark - UI
+#pragma mark - UI Setup
 
 - (void)subtitleLabelSetup {
     self.subtitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -74,6 +72,23 @@
     }];
 }
 
+- (UILabel *)subtitleStyleLabelWithTopView:(UIView *)topView {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.textColor = [UIColor darkGrayColor];
+    label.textAlignment = NSTextAlignmentLeft;
+    label.font = [UIFont cc_mediumFontWithSize:15];
+    
+    [self.contentView addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.contentView).offset(8);
+        make.right.equalTo(self.contentView).offset(-8);
+        make.top.equalTo(topView.mas_bottom).offset(8);
+        make.height.equalTo(@17);
+    }];
+    
+    return label;
+}
+
 #pragma mark - Public
 
 - (void)setNewsDescriptionViewModel:(CCNewsDescriptionViewModel *)newsDescriptionViewModel {
@@ -90,25 +105,6 @@
     if (self.pressDescriptionButton) {
         self.pressDescriptionButton(self);
     }
-}
-
-#pragma mark - Private
-
-- (UILabel *)subtitleStyleLabelWithTopView:(UIView *)topView {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    label.textColor = [UIColor darkGrayColor];
-    label.textAlignment = NSTextAlignmentLeft;
-    label.font = [UIFont cc_mediumFontWithSize:15];
-    
-    [self.contentView addSubview:label];
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(8);
-        make.right.equalTo(self.contentView).offset(-8);
-        make.top.equalTo(topView.mas_bottom).offset(8);
-        make.height.equalTo(@17);
-    }];
-    
-    return label;
 }
 
 @end

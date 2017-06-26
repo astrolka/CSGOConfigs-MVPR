@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "CCSettingsDataSource.h"
 
+/*
+    Better API for working with static tableview
+    No more switch hell
+*/
+
 @interface CCSettingsView : UIView
 
 @property (nonatomic, strong, readonly) UITableView *tableView;

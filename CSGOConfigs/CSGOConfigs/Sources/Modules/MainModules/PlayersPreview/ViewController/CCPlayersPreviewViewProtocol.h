@@ -8,14 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CGBase.h>
-#import "CCSpinerViewProtocol.h"
 #import "CCMessageViewProtocol.h"
+#import "CCSpinerViewProtocol.h"
 #import "CCBannerViewProtocol.h"
-#import "CCBannerViewProtocol.h"
-@class UIView;
+@protocol CCPlayersPreviewViewProtocol;
 @class CCPlayerPreviewViewModel;
 @class CCBannerViewModel;
-@protocol CCPlayersPreviewViewProtocol;
+@class UIView;
 
 @protocol CCPlayersPreviewViewActionProtocol <NSObject>
 

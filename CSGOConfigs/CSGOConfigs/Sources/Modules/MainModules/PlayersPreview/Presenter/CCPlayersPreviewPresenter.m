@@ -7,34 +7,34 @@
 //
 
 #import "CCPlayersPreviewPresenter.h"
-#import "CCPlayersPreviewViewProtocol.h"
 #import "CCPlayersPreviewRouterProtocol.h"
+#import "CCPlayersPreviewViewProtocol.h"
 #import "CCPlayersServiceProtocol.h"
-#import "CCRestServiceProtocol.h"
 #import "CCPlayerPreviewViewModel.h"
+#import "CCRestServiceProtocol.h"
 
 @interface CCPlayersPreviewPresenter () <CCPlayersPreviewViewActionProtocol>
 
+@property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
+
 @property (nonatomic, weak) id <CCPlayersPreviewViewProtocol> view;
 @property (nonatomic, strong) id <CCPlayersPreviewRouterProtocol> router;
-
-@property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
 
 @property (nonatomic, strong) NSMutableArray <CCPlayerPreviewViewModel *> *players;
 @property (nonatomic, assign) NSUInteger countOfPlayersOnServer; // pagination logic
 
 @end
 
-static const CGFloat kLoadingLimit = 6.f;
+static CGFloat const kLoadingLimit = 6.f;
 
 @implementation CCPlayersPreviewPresenter
 
 - (instancetype)initWithView:(id <CCPlayersPreviewViewProtocol>)view router:(id <CCPlayersPreviewRouterProtocol>)router {
     self = [super init];
     if (self) {
+        self.router = router;
         self.view = view;
         self.view.viewAction = self;
-        self.router = router;
         
         self.countOfPlayersOnServer = 0;
         self.players = [[NSMutableArray alloc] init];
@@ -67,7 +67,9 @@ static const CGFloat kLoadingLimit = 6.f;
 
 - (void)loadPlayersWithSpiner:(BOOL)spiner {
     if (self.players.count == 0 || self.players.count < self.countOfPlayersOnServer) {
-        !(spiner) ?: [self.view showSpiner];
+        if (spiner) {
+            [self.view showSpiner];
+        }
         [self.ioc_playersService getPlayersPreviewWithOffset:self.players.count containerWidth:[self.view cellContainerWidth] data:^(NSArray<CCPlayerPreviewViewModel *> *players, BOOL fromServer, NSInteger countOfPlayersOnServer) {
             self.countOfPlayersOnServer = countOfPlayersOnServer;
             [self.players addObjectsFromArray:players];

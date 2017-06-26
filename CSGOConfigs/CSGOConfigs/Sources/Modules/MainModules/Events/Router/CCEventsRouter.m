@@ -9,18 +9,11 @@
 
 #import "CCEventsRouter.h"
 #import "CCEventsViewController.h"
-#import "CCEventsPresenter.h"
 #import "CCRouter+OpenSideMenu.h"
 #import "CCRouter+WebScreen.h"
+#import "CCEventsPresenter.h"
 
 @implementation CCEventsRouter
-
-- (id <CCEventsViewProtocol>)buildEventsModule {
-    CCEventsViewController *view = [[CCEventsViewController alloc] init];
-    CCEventsPresenter *presenter = [[CCEventsPresenter alloc] initWithView:view router:self];
-    #pragma unused(presenter)
-    return view;
-}
 
 #pragma mark - CCOpenSideMenuRoutingProtocol
 
@@ -33,5 +26,15 @@
 - (void)goToWebScreenWithURL:(NSURL *)url {
     [self cc_goToWebScreenWithURL:url];
 }
+
+#pragma mark - Module Build
+
+- (id <CCEventsViewProtocol>)buildModule {
+    CCEventsViewController *view = [[CCEventsViewController alloc] init];
+    CCEventsPresenter *presenter = [[CCEventsPresenter alloc] initWithView:view router:self];
+    #pragma unused(presenter)
+    return view;
+}
+
 
 @end

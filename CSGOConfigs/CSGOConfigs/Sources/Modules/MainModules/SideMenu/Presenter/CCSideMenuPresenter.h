@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol CCSideMenuViewProtocol;
 @protocol CCSideMenuRouterProtocol;
+@protocol CCSideMenuViewProtocol;
 
 @interface CCSideMenuPresenter : NSObject
 

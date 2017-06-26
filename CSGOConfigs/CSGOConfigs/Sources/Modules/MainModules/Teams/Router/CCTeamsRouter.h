@@ -12,6 +12,6 @@
 
 @interface CCTeamsRouter : CCRouter <CCTeamsRouterProtocol>
 
-- (id <CCTeamsViewProtocol>)buildTeamsModule;
+- (id <CCTeamsViewProtocol>)buildModule;
 
 @end

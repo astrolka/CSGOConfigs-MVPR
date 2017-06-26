@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@class CCEventServerModel;
 @class CCEventCoreDataModel;
+@class CCEventServerModel;
 
 @interface CCEventViewModel : NSObject
 

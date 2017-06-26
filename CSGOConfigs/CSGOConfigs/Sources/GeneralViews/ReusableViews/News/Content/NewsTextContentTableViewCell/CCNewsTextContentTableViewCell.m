@@ -7,10 +7,10 @@
 //
 
 #import "CCNewsTextContentTableViewCell.h"
-#import "CCNewsContentViewModel.h"
 #import "CCNewsTextContentViewModel.h"
-#import "Masonry.h"
+#import "CCNewsContentViewModel.h"
 #import "UIFont+CC.h"
+#import "Masonry.h"
 
 @interface CCNewsTextContentTableViewCell ()
 
@@ -28,7 +28,7 @@
     return self;
 }
 
-#pragma mark - View
+#pragma mark - Setup UI
 
 - (void)textLabelzSetup {
     self.textLabelz = [[UILabel alloc] initWithFrame:CGRectZero];

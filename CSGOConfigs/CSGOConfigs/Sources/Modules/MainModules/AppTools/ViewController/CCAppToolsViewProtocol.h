@@ -12,6 +12,8 @@
 
 @protocol CCAppToolsViewActionProtocol <NSObject>
 
+- (void)appToolsViewDidSet:(id <CCAppToolsViewProtocol>)view;
+
 - (void)appToolsViewDidOpenMenu:(id <CCAppToolsViewProtocol>)view;
 
 - (void)appToolsViewDidSelectClearCache:(id <CCAppToolsViewProtocol>)view;

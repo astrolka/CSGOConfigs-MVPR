@@ -8,10 +8,10 @@
 
 #import "CCPlayerDescriptionRouter.h"
 #import "CCPlayerDescriptionViewController.h"
-#import "CCPlayerDescriptionPresenter.h"
-#import "CCRouter+WebScreen.h"
-#import "CCMailScreenRouting.h"
 #import "CCRouter+ViewModelAlertPresenter.h"
+#import "CCPlayerDescriptionPresenter.h"
+#import "CCMailScreenRouting.h"
+#import "CCRouter+WebScreen.h"
 
 @implementation CCPlayerDescriptionRouter
 
@@ -35,6 +35,8 @@
 - (void)goToWebScreenWithURL:(NSURL *)url {
     [self cc_goToWebScreenWithURL:url];
 }
+
+#pragma mark - Public
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
     CCPlayerDescriptionViewController *view = [[CCPlayerDescriptionViewController alloc] init];

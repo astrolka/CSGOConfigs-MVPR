@@ -7,11 +7,11 @@
 //
 
 #import "CCTextViewAlertController.h"
-#import "Masonry.h"
-#import "UIFont+CC.h"
-#import "CCViewModelAlertAction.h"
 #import "CCAlertButtonsContainerView.h"
 #import "CCAlertControllerAnimator.h"
+#import "CCViewModelAlertAction.h"
+#import "UIFont+CC.h"
+#import "Masonry.h"
 
 @interface CCTextViewAlertController () <UIViewControllerTransitioningDelegate>
 
@@ -46,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.4f];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.4];
     [self setupAlertView];
     [self setupTitleView];
     [self setupButtonsContainerView];
@@ -57,7 +57,7 @@
 
 - (void)setupAlertView {
     self.alertView = [[UIView alloc] init];
-    self.alertView.layer.cornerRadius = 13.0f;
+    self.alertView.layer.cornerRadius = 13.f;
     self.alertView.clipsToBounds = YES;
     self.alertView.backgroundColor = [UIColor whiteColor];
     
@@ -190,7 +190,7 @@
 }
 
 - (UIButton *)buttonWithAlertAction:(CCViewModelAlertAction *)alertAction {
-    UIButton *button = [UIButton new];
+    UIButton *button = [[UIButton alloc] init];
     button.backgroundColor = [UIColor clearColor];
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self configureButton:button withAlertAction:alertAction];
@@ -232,7 +232,7 @@
 #pragma mark - Private
 
 - (UIColor *)iosAlertButtonsColor {
-    return [UIColor colorWithRed:0.0f green:122 / 255.0f blue:1.0f alpha:1.0f];
+    return [UIColor colorWithRed:0.f green:122.f/255.f blue:1.f/255.f alpha:1.f];
 }
 
 @end

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-@class CCNewsDescriptionViewModel;
 @class CCNewsDescriptionHeaderView;
+@class CCNewsDescriptionViewModel;
 
 typedef void(^pressDesscriptionBlock)(CCNewsDescriptionHeaderView *newsDescriptionHeaderView);
 

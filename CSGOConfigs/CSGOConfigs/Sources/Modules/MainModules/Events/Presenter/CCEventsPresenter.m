@@ -7,16 +7,16 @@
 //
 
 #import "CCEventsPresenter.h"
-#import "CCEventsViewProtocol.h"
-#import "CCEventsRouterProtocol.h"
 #import "CCEventsServiceProtocol.h"
+#import "CCEventsRouterProtocol.h"
+#import "CCEventsViewProtocol.h"
 
 @interface CCEventsPresenter () <CCEventsViewActionProtocol>
 
+@property (nonatomic, strong) id <CCEventsServiceProtocol> ioc_eventsService;
+
 @property (nonatomic, strong) id <CCEventsViewProtocol> view;
 @property (nonatomic, strong) id <CCEventsRouterProtocol> router;
-
-@property (nonatomic, strong) id <CCEventsServiceProtocol> ioc_eventsService;
 
 @property (nonatomic, strong) NSArray <CCEventViewModel *> *events;
 
@@ -56,7 +56,9 @@
 #pragma mark - Private
 
 - (void)loadEventsWithSpiner:(BOOL)spiner {
-    !(spiner) ?: [self.view showSpiner];
+    if (spiner) {
+        [self.view showSpiner];
+    }
     [self.ioc_eventsService getEvents:^(NSArray<CCEventViewModel *> *events, NSArray<CCAnnotationEventViewModel *> *annotationEvents, BOOL fromServer) {
         self.events = events;
         [self.view showEvents:events];

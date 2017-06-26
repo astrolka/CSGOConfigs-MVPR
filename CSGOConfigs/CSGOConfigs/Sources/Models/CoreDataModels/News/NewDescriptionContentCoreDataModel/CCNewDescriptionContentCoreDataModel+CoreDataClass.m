@@ -13,7 +13,7 @@
 @implementation CCNewDescriptionContentCoreDataModel
 
 - (void)updateWithServerModel:(CCNewsDescriptionContentServerModel *)serverModel {
-    // don't try use absoluteString, crush with empty string
+    // don't try to use absoluteString, crush with empty string
     self.coverImageURL = [NSString stringWithFormat:@"%@",serverModel.coverImageURL];
     self.text = serverModel.text;
     self.isImage = serverModel.isImage;

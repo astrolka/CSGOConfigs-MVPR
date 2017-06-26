@@ -7,22 +7,13 @@
 //
 
 #import "CCPlayersPreviewRouter.h"
+#import "CCRouter+CCPlayerDescriptionScreen.h"
 #import "CCPlayersPreviewViewController.h"
 #import "CCPlayersPreviewPresenter.h"
-#import "CCRouter+CCPlayerDescriptionScreen.h"
-#import "CCBannerRouter.h"
 #import "CCRouter+OpenSideMenu.h"
+#import "CCBannerRouter.h"
 
 @implementation CCPlayersPreviewRouter
-
-- (id <CCPlayersPreviewViewProtocol>)buildPlayersPreviewModule {
-    CCBannerRouter *bannerRouter = [[CCBannerRouter alloc] initWithNavigationController:self.navigationController];
-    
-    CCPlayersPreviewViewController *view = [[CCPlayersPreviewViewController alloc] initWithBannerView:[bannerRouter buildBannerModule]];
-    CCPlayersPreviewPresenter *presenter = [[CCPlayersPreviewPresenter alloc] initWithView:view router:self];
-    #pragma unused(presenter)
-    return view;
-}
 
 #pragma mark - CCOpenSideMenuRoutingProtocol
 
@@ -34,6 +25,16 @@
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
     [self cc_goToPlayerDescriptionScreenWithPlayerID:playerID];
+}
+
+#pragma mark - Module Build
+
+- (id <CCPlayersPreviewViewProtocol>)buildModule {
+    CCBannerRouter *bannerRouter = [[CCBannerRouter alloc] initWithNavigationController:self.navigationController];
+    CCPlayersPreviewViewController *view = [[CCPlayersPreviewViewController alloc] initWithBannerView:[bannerRouter buildModule]];
+    CCPlayersPreviewPresenter *presenter = [[CCPlayersPreviewPresenter alloc] initWithView:view router:self];
+    #pragma unused(presenter)
+    return view;
 }
 
 @end

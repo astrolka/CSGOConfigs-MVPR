@@ -17,7 +17,6 @@
 
 @implementation CCAlertButtonsContainerView
 
-// TODO: 
 - (instancetype)initWithInterButtonSeparatorLayer:(BOOL)interButtonSeparatorLayer {
     self = [super initWithFrame:CGRectZero];
     if (self) {

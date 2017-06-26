@@ -8,18 +8,19 @@
 
 #import "CCWebPresenter.h"
 #import "CCWebPresentationServiceProtocol.h"
-#import "CCWebViewProtocol.h"
+#import "CCOpenURLServiceProtocol.h"
 #import "CCWebRouterProtocol.h"
-#import "CCWebPresentationServiceProtocol.h"
+#import "CCWebViewProtocol.h"
 
 @interface CCWebPresenter () <CCWebViewActionProtocol>
 
+@property (nonatomic, strong) id <CCOpenURLServiceProtocol> ioc_openURLService;
 @property (nonatomic, strong) id <CCWebPresentationServiceProtocol> webPresentationService;
-
-@property (nonatomic, strong) NSURL *url;
 
 @property (nonatomic, strong) id <CCWebViewProtocol> view;
 @property (nonatomic, strong) id <CCWebRouterProtocol> router;
+
+@property (nonatomic, strong) NSURL *url;
 
 @end
 
@@ -28,11 +29,12 @@
 - (instancetype)initWithURL:(NSURL *)url view:(id<CCWebViewProtocol>)view router:(id<CCWebRouterProtocol>)router webPresentationService:(id<CCWebPresentationServiceProtocol>)webPresentationService {
     self = [super init];
     if (self) {
-        self.url = url;
-        self.webPresentationService = webPresentationService;
         self.router = router;
         self.view = view;
         self.view.viewAction = self;
+        
+        self.url = url;
+        self.webPresentationService = webPresentationService;
     }
     return self;
 }
@@ -59,11 +61,13 @@
 }
 
 - (void)webViewDidPressShareButton:(id <CCWebViewProtocol>)view {
-    
+    CCShareInfo *shareInfo = [[CCShareInfo alloc] init];
+    shareInfo.url = [self.webPresentationService currentURL];
+    [self.router openShareScreenWithShareInfo:shareInfo];
 }
 
 - (void)webViewDidPressSafariButton:(id <CCWebViewProtocol>)view {
-    
+    [self.ioc_openURLService openWebURL:[self.webPresentationService currentURL]];
 }
 
 @end

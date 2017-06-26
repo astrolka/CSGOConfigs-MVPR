@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/NSManagedObject.h>
 @class CCNewsDescriptionServerModel;
-
 @class CCNewDescriptionContentCoreDataModel;
 
 NS_ASSUME_NONNULL_BEGIN

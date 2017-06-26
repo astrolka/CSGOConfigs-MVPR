@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCSkinViewModel.h"
-#import "CCSpinerViewProtocol.h"
 #import "CCMessageViewProtocol.h"
+#import "CCSpinerViewProtocol.h"
+#import "CCSkinViewModel.h"
 @protocol CCSkinsPriceViewProtocol;
 
 @protocol CCSkinsPriceViewActionProtocol <NSObject>

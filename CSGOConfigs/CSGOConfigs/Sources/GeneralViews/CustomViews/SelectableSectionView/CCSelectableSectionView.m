@@ -31,7 +31,7 @@
     return self;
 }
 
-#pragma mark - View
+#pragma mark - UI Setup
 
 - (void)lineViewSetup {
     self.lineView = [[UIView alloc] initWithFrame:CGRectZero];

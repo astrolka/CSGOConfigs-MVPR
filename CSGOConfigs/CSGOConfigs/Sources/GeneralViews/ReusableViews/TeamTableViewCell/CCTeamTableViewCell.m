@@ -25,7 +25,7 @@
 
 @implementation CCTeamTableViewCell
 
-static const CGFloat kTitleHeaderHeight = 35.f;
+static CGFloat const kTitleHeaderHeight = 35.f;
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -38,7 +38,7 @@ static const CGFloat kTitleHeaderHeight = 35.f;
     return self;
 }
 
-#pragma mark - View
+#pragma mark - UI Setup
 
 - (void)titleContainerViewSetup {
     self.titleContainerView = [[UIView alloc] initWithFrame:CGRectZero];

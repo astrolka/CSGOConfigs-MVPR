@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 @protocol CCWebPresentationServiceProtocol;
-@protocol CCWebViewProtocol;
 @protocol CCWebRouterProtocol;
-@protocol CCWebPresentationServiceProtocol;
+@protocol CCWebViewProtocol;
 
 @interface CCWebPresenter : NSObject
 

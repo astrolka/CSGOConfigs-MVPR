@@ -7,20 +7,21 @@
 //
 
 #import "CCTeamsViewController.h"
-#import "Masonry.h"
-#import "UIView+CCSpiner.h"
-#import "UIView+CCMessageView.h"
-#import "CCBannerView.h"
-#import "CCSideMenuFactory.h"
-#import "CCTeamTableViewCell.h"
 #import "UITableView+Animation.h"
+#import "UIView+CCMessageView.h"
+#import "CCTeamTableViewCell.h"
+#import "CCSideMenuFactory.h"
+#import "UIView+CCSpiner.h"
+#import "CCBannerView.h"
+#import "Masonry.h"
 
 @interface CCTeamsViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *teamsTableView;
-@property (nonatomic, strong) NSArray <CCTeamViewModel *> *teams;
-
 @property (strong, nonatomic) UIView <CCBannerViewProtocol> *bannerView;
+
+@property (nonatomic, strong) UITableView *teamsTableView;
+
+@property (nonatomic, strong) NSArray <CCTeamViewModel *> *teams;
 
 @end
 
@@ -47,6 +48,8 @@
     [self teamsTableViewSetup];
     [self.viewAction teamsViewDidSet:self];
 }
+
+#pragma mark - UI Setup
 
 - (void)teamsTableViewSetup {
     self.teamsTableView = [[UITableView alloc] initWithFrame:CGRectZero];

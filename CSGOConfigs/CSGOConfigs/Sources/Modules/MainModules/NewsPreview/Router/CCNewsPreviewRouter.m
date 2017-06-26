@@ -8,8 +8,8 @@
 
 #import "CCNewsPreviewRouter.h"
 #import "CCNewsPreviewViewController.h"
-#import "CCNewsPreviewPresenter.h"
 #import "CCNewsDescriptionRouter.h"
+#import "CCNewsPreviewPresenter.h"
 #import "CCRouter+OpenSideMenu.h"
 
 @implementation CCNewsPreviewRouter
@@ -27,9 +27,9 @@
     [self cc_openSideMenu];
 }
 
-#pragma mark - BuildModule
+#pragma mark - Module Build
 
-- (id <CCNewsPreviewViewProtocol>)buildNewsPreviewModule {
+- (id <CCNewsPreviewViewProtocol>)buildModule {
     CCNewsPreviewViewController *view = [[CCNewsPreviewViewController alloc] init];
     CCNewsPreviewPresenter *presenter = [[CCNewsPreviewPresenter alloc] initWithView:view router:self];
     #pragma unused(presenter)

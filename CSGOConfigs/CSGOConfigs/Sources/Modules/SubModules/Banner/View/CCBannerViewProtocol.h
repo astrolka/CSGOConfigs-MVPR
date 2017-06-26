@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CGBase.h>
-#import "CCBannerViewModel.h"
 #import "CCSpinerViewProtocol.h"
+#import "CCBannerViewModel.h"
 @protocol CCBannerViewProtocol;
 
 @protocol CCBannerViewActionProtocol <NSObject>

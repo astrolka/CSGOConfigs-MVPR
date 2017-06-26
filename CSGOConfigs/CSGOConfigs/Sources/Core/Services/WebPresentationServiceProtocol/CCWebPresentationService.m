@@ -12,8 +12,6 @@
 
 @interface CCWebPresentationService () <UIWebViewDelegate>
 
-#pragma mark - CCWebPresentationServiceProtocol
-
 @property (nonatomic, readwrite) BOOL canGoBack;
 @property (nonatomic, readwrite) BOOL canGoForward;
 @property (nonatomic, readwrite) BOOL loading;
@@ -75,6 +73,10 @@
     return self.webView.canGoForward;
 }
 
+- (NSURL *)currentURL {
+    return self.webView.request.URL;
+}
+
 #pragma mark - UIWebViewDelegate
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
@@ -90,7 +92,7 @@
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    CCLog(@"Web presentation service did fail load with error: %@", error);
+    CCLog(@"WebPresentationService did fail load with error: %@", error);
     if (self.failLoadBlock) {
         self.failLoadBlock(error);
     }

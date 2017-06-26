@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCSpinerViewProtocol.h"
 #import "CCMessageViewProtocol.h"
-@class UIWebView;
+#import "CCSpinerViewProtocol.h"
 @protocol CCWebViewProtocol;
+@class UIWebView;
 
 @protocol CCWebViewActionProtocol <NSObject>
 

@@ -13,10 +13,10 @@
 
 @interface CCNewsPreviewPresenter () <CCNewsPreviewViewActionProtocol>
 
+@property (nonatomic, strong) id <CCNewsServiceProtocol> ioc_newsService;
+
 @property (nonatomic, weak) id <CCNewsPreviewViewProtocol> view;
 @property (nonatomic, strong) id <CCNewsPreviewRouterProtocol> router;
-
-@property (nonatomic, strong) id <CCNewsServiceProtocol> ioc_newsService;
 
 @property (nonatomic, strong) NSMutableArray <CCNewsPreviewViewModel *> *news;
 @property (nonatomic, assign) NSUInteger countOfNewsOnServer; // pagination logic
@@ -28,9 +28,9 @@
 - (instancetype)initWithView:(id <CCNewsPreviewViewProtocol>)view router:(id <CCNewsPreviewRouterProtocol>)router {
     self = [super init];
     if (self) {
+        self.router = router;
         self.view = view;
         self.view.viewAction = self;
-        self.router = router;
         
         self.news = [[NSMutableArray alloc] init];
         self.countOfNewsOnServer = 0;
@@ -65,7 +65,9 @@
 
 - (void)loadNewsFromRefresh:(BOOL)refresh {
     if (self.news.count == 0 || self.news.count < self.countOfNewsOnServer) {
-        !(refresh) ?: [self.view showSpiner];
+        if (!refresh) {
+            [self.view showSpiner];
+        }
         [self.ioc_newsService getNewsPreviewWithOffset:self.news.count data:^(NSArray<CCNewsPreviewViewModel *> *news, BOOL fromServer, NSInteger countOfNewsOnServer) {
             self.countOfNewsOnServer = countOfNewsOnServer;
             [self.news addObjectsFromArray:news];

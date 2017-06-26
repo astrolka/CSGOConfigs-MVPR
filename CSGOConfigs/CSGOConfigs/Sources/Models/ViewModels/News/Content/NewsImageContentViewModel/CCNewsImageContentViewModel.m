@@ -16,8 +16,8 @@
 @end
 
 // Image always comes with this resoulution
-static const CGFloat kServerImageHeight = 533.f;
-static const CGFloat kServerImageWidth = 800.f;
+static CGFloat const kServerImageHeight = 533.f;
+static CGFloat const kServerImageWidth = 800.f;
 
 
 @implementation CCNewsImageContentViewModelBuilder

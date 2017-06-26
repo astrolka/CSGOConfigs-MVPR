@@ -10,7 +10,7 @@
 
 @interface CCAlertButtonsContainerView : UIView
 
-//TODO: Make buttons more flexible (their count)
-- (instancetype)initWithInterButtonSeparatorLayer:(BOOL)interButtonSeparatorLayer NS_REQUIRES_SUPER;
+//TODO: Make count of buttons more flexible
+- (instancetype)initWithInterButtonSeparatorLayer:(BOOL)interButtonSeparatorLayer;
 
 @end

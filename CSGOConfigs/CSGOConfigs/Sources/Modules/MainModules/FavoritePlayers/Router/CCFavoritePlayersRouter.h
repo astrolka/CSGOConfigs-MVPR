@@ -12,6 +12,6 @@
 
 @interface CCFavoritePlayersRouter : CCRouter <CCFavoritePlayersRouterProtocol>
 
-- (id <CCFavoritePlayersViewProtocol>)buildFavoritePlayersModule;
+- (id <CCFavoritePlayersViewProtocol>)buildModule;
 
 @end

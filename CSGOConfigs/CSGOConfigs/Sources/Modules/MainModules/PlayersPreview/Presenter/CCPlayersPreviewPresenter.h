@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol CCPlayersPreviewViewProtocol;
 @protocol CCPlayersPreviewRouterProtocol;
+@protocol CCPlayersPreviewViewProtocol;
 
 @interface CCPlayersPreviewPresenter : NSObject
 

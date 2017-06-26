@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger, CCViewModelAlertButtonPosition) {
 
 @implementation CCViewModelAlertTransformer
 
+#pragma mark - Public
+
 + (UIViewController *)alertControllerFromViewModelAlert:(CCViewModelAlert *)viewModel {
     switch (viewModel.style) {
         case CCViewModelAlertStyleAlert:
@@ -32,6 +34,8 @@ typedef NS_ENUM(NSInteger, CCViewModelAlertButtonPosition) {
         }
     }
 }
+
+#pragma mark - Private
 
 + (UIViewController *)standardAlertControllerForViewModel:(CCViewModelAlert *)viewModel {
     UIAlertControllerStyle style = [self alertControllerStyleFromViewModelAlertStyle:viewModel.style];
@@ -59,18 +63,17 @@ typedef NS_ENUM(NSInteger, CCViewModelAlertButtonPosition) {
                                                                                             error: nil];
     alertController.attributedAlertText = [attributedString copy];
     switch (viewModel.actions.count) {
-        case CCViewModelAlertButtonPositionRight: { // right button
+        case CCViewModelAlertButtonPositionRight: {
             CCViewModelAlertAction *action = viewModel.actions[1];
             alertController.rightButtonAction = [self textViewAlertActionFromActionViewModel:action];
         }
-        case CCViewModelAlertButtonPositionLeft: { // left button
+        case CCViewModelAlertButtonPositionLeft: {
             CCViewModelAlertAction *action = viewModel.actions[0];
             alertController.leftButtonAction = [self textViewAlertActionFromActionViewModel:action];
             break;
         }
         default: break;
     }
-    
     return alertController;
 }
 
@@ -80,9 +83,6 @@ typedef NS_ENUM(NSInteger, CCViewModelAlertButtonPosition) {
 
 + (UIAlertActionStyle)alertActionStyleFromViewModelActionStyle:(CCViewModelAlertActionStyle)viewModelActionStyle {
     switch (viewModelActionStyle) {
-        case CCViewModelAlertActionStyleBold:
-            return UIAlertActionStyleCancel;
-            
         case CCViewModelAlertActionStyleDestructive:
             return UIAlertActionStyleDestructive;
             

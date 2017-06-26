@@ -7,9 +7,9 @@
 //
 
 #import "CCEventPinAnnotationView.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "CCAnnotationEventViewModel.h"
 #import "UIColor+CC.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CCEventPinAnnotationView ()
 
@@ -19,13 +19,10 @@
 
 @implementation CCEventPinAnnotationView
 
-#pragma mark - LifeCycle
-
 - (instancetype)initWithAnnotation:(CCAnnotationEventViewModel *)annotation reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.canShowCallout = YES;
-        self.animatesDrop = YES;
+        self.canShowCallout = self.animatesDrop = YES;
         self.pinTintColor = [UIColor cc_themeColor];
         [self descriptionButtonSetup];
         [self updateDescriptionButtonWithImageURL:annotation.logoImageURL];
@@ -39,7 +36,7 @@
     self.leftCalloutAccessoryView = nil;
 }
 
-#pragma mark - View
+#pragma mark - Setup UI
 
 - (void)descriptionButtonSetup {
     self.descriptionButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -52,21 +49,21 @@
 
 - (void)updateDescriptionButtonWithImageURL:(NSURL *)url {
     // TODO: move SDWebImageManager to a wrapper class
-    [[SDWebImageManager sharedManager]downloadImageWithURL:url
-                                                   options:SDWebImageAllowInvalidSSLCertificates
-                                                  progress:nil
-                                                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                                                     UIImageView * imageView = [[UIImageView alloc] initWithImage:image];
-                                                     imageView.contentMode = UIViewContentModeScaleToFill;
-                                                     self.leftCalloutAccessoryView = imageView;
-                                                 }];
+    [[SDWebImageManager sharedManager] downloadImageWithURL:url
+                                                    options:SDWebImageAllowInvalidSSLCertificates
+                                                   progress:nil
+                                                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                                      UIImageView * imageView = [[UIImageView alloc] initWithImage:image];
+                                                      imageView.contentMode = UIViewContentModeScaleToFill;
+                                                      self.leftCalloutAccessoryView = imageView;
+                                                  }];
 }
 
 #pragma mark - Action
 
 - (void)actionDescriptionButton:(UIButton *)button {
     if (self.pressDescriptionButton) {
-        self.pressDescriptionButton(self, button);
+        self.pressDescriptionButton(self);
     }
 }
 

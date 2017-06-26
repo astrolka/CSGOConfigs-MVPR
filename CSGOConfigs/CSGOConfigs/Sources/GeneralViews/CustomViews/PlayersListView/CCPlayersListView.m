@@ -7,9 +7,9 @@
 //
 
 #import "CCPlayersListView.h"
-#import "CCPlayerPreviewViewModel.h"
 #import "PDKTCollectionViewWaterfallLayout.h"
 #import "CCPlayerPreviewCollectionViewCell.h"
+#import "CCPlayerPreviewViewModel.h"
 #import "Masonry.h"
 
 @interface CCPlayersListView () <UICollectionViewDataSource, UICollectionViewDelegate, PDKTCollectionViewWaterfallLayoutDelegate>
@@ -37,6 +37,8 @@
     }
     return self;
 }
+
+#pragma mark - UI Setup
 
 - (void)collectionViewSetup {
     PDKTCollectionViewWaterfallLayout *layout = [[PDKTCollectionViewWaterfallLayout alloc] init];

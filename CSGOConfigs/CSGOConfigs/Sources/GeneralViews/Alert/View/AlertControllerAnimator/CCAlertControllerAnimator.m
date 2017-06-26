@@ -15,12 +15,12 @@
 
 @implementation CCAlertControllerAnimator
 
-static const float kAnimatorDuration = 0.3;
+static CGFloat const kAnimationDuration = 0.3;
 
 #pragma mark - UIViewControllerAnimatedTransitioning
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return kAnimatorDuration;
+    return kAnimationDuration;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -34,17 +34,16 @@ static const float kAnimatorDuration = 0.3;
     
     if (self.isPresenting) {
         [containerView addSubview:animatingView];
-        
         animatingView.transform = CGAffineTransformMakeScale(1.2, 1.2);
         animatingView.alpha = 0.5;
-        [UIView animateWithDuration:kAnimatorDuration animations:^{
+        [UIView animateWithDuration:kAnimationDuration animations:^{
             animatingView.transform = CGAffineTransformMakeScale(1, 1);
             animatingView.alpha = 1.0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:finished];
         }];
     } else {
-        [UIView animateWithDuration:kAnimatorDuration animations:^{
+        [UIView animateWithDuration:kAnimationDuration animations:^{
             animatingView.alpha = 0.0;
         } completion:^(BOOL finished) {
             if (finished) {

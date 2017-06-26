@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCSpinerViewProtocol.h"
-#import "CCMessageViewProtocol.h"
 #import "CCNewsDescriptionViewModel.h"
+#import "CCMessageViewProtocol.h"
+#import "CCSpinerViewProtocol.h"
 @protocol CCNewsDescriptionViewProtocol;
 
 @protocol CCNewsDescriptionViewActionProtocol <NSObject>

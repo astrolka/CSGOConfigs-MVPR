@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCEventViewModel.h"
 #import "CCAnnotationEventViewModel.h"
-#import "CCSpinerViewProtocol.h"
 #import "CCMessageViewProtocol.h"
+#import "CCSpinerViewProtocol.h"
+#import "CCEventViewModel.h"
 @protocol CCEventsViewProtocol;
 
 @protocol CCEventsViewActionProtocol <NSObject>
@@ -31,6 +31,6 @@
 
 - (void)showEvents:(NSArray <CCEventViewModel *> *)events;
 
-- (void)showAnnotationEvents:(NSArray <CCAnnotationEventViewModel *> *)annotationEvents;
+- (void)showAnnotationEvents:(NSArray <CCAnnotationEventViewModel *> *)annotations;
 
 @end

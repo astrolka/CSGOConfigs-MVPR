@@ -30,9 +30,8 @@
         
         NSMutableArray <CCPlayerPreviewServerModel *> *players = [[NSMutableArray alloc] init];
         NSArray * playersResponceArray = serverResponce[@"players"];
-        [playersResponceArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            NSDictionary * singlePlayerResponce = playersResponceArray[idx];
-            CCPlayerPreviewServerModel * playerPreviewServerModel = [[CCPlayerPreviewServerModel alloc] initWithServerResponce:singlePlayerResponce];
+        [playersResponceArray enumerateObjectsUsingBlock:^(NSDictionary *responce, NSUInteger idx, BOOL * _Nonnull stop) {
+            CCPlayerPreviewServerModel *playerPreviewServerModel = [[CCPlayerPreviewServerModel alloc] initWithServerResponce:responce];
             [players addObject:playerPreviewServerModel];
         }];
         self.players = [NSArray arrayWithArray:players];

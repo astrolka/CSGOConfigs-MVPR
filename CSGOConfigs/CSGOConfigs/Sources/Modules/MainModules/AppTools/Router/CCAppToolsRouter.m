@@ -7,12 +7,12 @@
 //
 
 #import "CCAppToolsRouter.h"
-#import "CCAppToolsViewController.h"
-#import "CCAppToolsPresenter.h"
-#import "CCRouter+OpenSideMenu.h"
-#import "CCMailScreenRouting.h"
 #import "CCRouter+ViewModelAlertPresenter.h"
-#import "CCRouter+CCShareActivityPresenter.h"
+#import "CCRouter+ShareActivityPresenter.h"
+#import "CCAppToolsViewController.h"
+#import "CCRouter+OpenSideMenu.h"
+#import "CCAppToolsPresenter.h"
+#import "CCMailScreenRouting.h"
 
 @implementation CCAppToolsRouter
 
@@ -43,7 +43,9 @@
     [self cc_openSideMenu];
 }
 
-- (id <CCAppToolsViewProtocol>)buildAppToolsModule {
+#pragma mark - Module build
+
+- (id <CCAppToolsViewProtocol>)buildModule {
     CCAppToolsViewController *view = [[CCAppToolsViewController alloc] init];
     CCAppToolsPresenter *presenter = [[CCAppToolsPresenter alloc] initWithView:view router:self];
     #pragma unused(presenter)

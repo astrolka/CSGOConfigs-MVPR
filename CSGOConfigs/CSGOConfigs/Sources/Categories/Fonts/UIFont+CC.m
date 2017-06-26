@@ -11,15 +11,15 @@
 @implementation UIFont (CC)
 
 + (UIFont *)cc_regualarFontWithSize:(CGFloat)size {
-    return [UIFont systemFontOfSize:size];
+    return [UIFont fontWithName:@"AvenirNextCondensed-Regular" size:size];
 }
 
 + (UIFont *)cc_mediumFontWithSize:(CGFloat)size {
-    return [UIFont systemFontOfSize:size];
+    return [UIFont fontWithName:@"AvenirNextCondensed-MediumItalic" size:size];
 }
 
 + (UIFont *)cc_boldFontWithSize:(CGFloat)size {
-    return [UIFont systemFontOfSize:size];
+    return [UIFont fontWithName:@"AvenirNextCondensed-BoldItalic" size:size];
 }
 
 @end

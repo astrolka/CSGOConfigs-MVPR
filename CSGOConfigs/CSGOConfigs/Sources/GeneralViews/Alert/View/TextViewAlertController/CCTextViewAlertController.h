@@ -11,7 +11,7 @@
 
 @interface CCTextViewAlertController : UIViewController
 
-//TODO: Make buttons more flexible (their count)
+//TODO: Make count of buttons more flexible
 @property (nonatomic, strong) CCViewModelAlertAction *leftButtonAction;
 @property (nonatomic, strong) CCViewModelAlertAction *rightButtonAction;
 

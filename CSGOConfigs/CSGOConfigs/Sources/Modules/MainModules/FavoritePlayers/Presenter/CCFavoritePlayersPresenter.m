@@ -7,17 +7,17 @@
 //
 
 #import "CCFavoritePlayersPresenter.h"
-#import "CCFavoritePlayersViewProtocol.h"
 #import "CCFavoritePlayersRouterProtocol.h"
+#import "CCFavoritePlayersViewProtocol.h"
 #import "CCPlayerPreviewViewModel.h"
 #import "CCPlayersServiceProtocol.h"
 
 @interface CCFavoritePlayersPresenter () <CCFavoritePlayersViewActionProtocol>
 
+@property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
+
 @property (nonatomic, strong) id <CCFavoritePlayersViewProtocol> view;
 @property (nonatomic, strong) id <CCFavoritePlayersRouterProtocol> router;
-
-@property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
 
 @property (nonatomic, strong) NSArray <CCPlayerPreviewViewModel *> *players;
 
@@ -28,9 +28,9 @@
 - (instancetype)initWithView:(id <CCFavoritePlayersViewProtocol>)view router:(id <CCFavoritePlayersRouterProtocol>)router {
     self = [super init];
     if (self) {
+        self.router = router;
         self.view = view;
         self.view.viewAction = self;
-        self.router = router;
     }
     return self;
 }

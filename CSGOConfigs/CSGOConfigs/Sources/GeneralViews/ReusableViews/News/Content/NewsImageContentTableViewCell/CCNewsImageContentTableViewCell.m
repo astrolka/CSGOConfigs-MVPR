@@ -7,10 +7,10 @@
 //
 
 #import "CCNewsImageContentTableViewCell.h"
-#import "CCNewsContentViewModel.h"
 #import "CCNewsImageContentViewModel.h"
-#import "Masonry.h"
+#import "CCNewsContentViewModel.h"
 #import "UIImageView+URL.h"
+#import "Masonry.h"
 
 @interface CCNewsImageContentTableViewCell ()
 
@@ -28,7 +28,7 @@
     return self;
 }
 
-#pragma mark - UI
+#pragma mark - UI Setup
 
 - (void)coverImageViewSetup {
     self.coverImageView = [[UIImageView alloc] initWithFrame:CGRectZero];

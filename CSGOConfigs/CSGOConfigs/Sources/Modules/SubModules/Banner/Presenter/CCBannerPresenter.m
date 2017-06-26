@@ -7,16 +7,16 @@
 //
 
 #import "CCBannerPresenter.h"
-#import "CCBannerViewProtocol.h"
-#import "CCBannerRouterProtocol.h"
 #import "CCBannerServiceProtocol.h"
+#import "CCBannerRouterProtocol.h"
+#import "CCBannerViewProtocol.h"
 
 @interface CCBannerPresenter () <CCBannerViewActionProtocol>
 
+@property (nonatomic, strong) id <CCBannerServiceProtocol> ioc_bannersService;
+
 @property (nonatomic, strong) id<CCBannerViewProtocol> view;
 @property (nonatomic, strong) id<CCBannerRouterProtocol> router;
-
-@property (nonatomic, strong) id <CCBannerServiceProtocol> ioc_bannersService;
 
 @property (nonatomic, strong) NSArray <CCBannerViewModel *> *banners;
 

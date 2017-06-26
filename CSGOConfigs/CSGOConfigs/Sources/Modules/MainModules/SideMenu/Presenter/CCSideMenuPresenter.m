@@ -7,8 +7,8 @@
 //
 
 #import "CCSideMenuPresenter.h"
-#import "CCSideMenuViewProtocol.h"
 #import "CCSideMenuRouterProtocol.h"
+#import "CCSideMenuViewProtocol.h"
 
 @interface CCSideMenuPresenter () <CCSideMenuViewActionProtocol>
 

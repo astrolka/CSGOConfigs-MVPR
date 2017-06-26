@@ -7,9 +7,9 @@
 //
 
 #import "CCCoreDataService.h"
+#import "SDImageCache.h"
 #import "AppDelegate.h"
 #import "CCLog.h"
-#import "SDImageCache.h"
 
 @interface CCCoreDataService ()
 
@@ -51,18 +51,18 @@ NSString *const kPersistentContainerName = @"CCConfigs";
 
 #pragma mark - NewsDescription
 
-- (void)updateNewsDescription:(CCNewsDescriptionServerModel *)newsDescriptionServerModel {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"newsID == %d", newsDescriptionServerModel.newsID];
+- (void)updateNewsDescription:(CCNewsDescriptionServerModel *)newsDescription {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"newsID == %d", newsDescription.newsID];
     NSArray *dataEntity = [self getEntityWithName:NSStringFromClass([CCNewsDescriptionCoreDataModel class]) predicate:predicate];
     if (dataEntity.count > 0) {
         CCNewsDescriptionCoreDataModel *newsDescriptionCoreDataModel = [dataEntity firstObject];
-        [newsDescriptionCoreDataModel updateWithServerModel:newsDescriptionServerModel];
-        [self updateNewsDescriptionCoreDataModel:newsDescriptionCoreDataModel newDescriptionContent:newsDescriptionServerModel.content];
+        [newsDescriptionCoreDataModel updateWithServerModel:newsDescription];
+        [self updateNewsDescriptionCoreDataModel:newsDescriptionCoreDataModel newDescriptionContent:newsDescription.content];
     } else {
         CCNewsDescriptionCoreDataModel *newsDescriptionCoreDataModel = (CCNewsDescriptionCoreDataModel *)[NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([CCNewsDescriptionCoreDataModel class])
                                                                                                                                         inManagedObjectContext:self.persistentContainer.viewContext];
-        [newsDescriptionCoreDataModel updateWithServerModel:newsDescriptionServerModel];
-        [self updateNewsDescriptionCoreDataModel:newsDescriptionCoreDataModel newDescriptionContent:newsDescriptionServerModel.content];
+        [newsDescriptionCoreDataModel updateWithServerModel:newsDescription];
+        [self updateNewsDescriptionCoreDataModel:newsDescriptionCoreDataModel newDescriptionContent:newsDescription.content];
     }
     [self save];
 }

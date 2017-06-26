@@ -8,8 +8,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCOpenSideMenuRoutingProtocol.h"
 #import "CCPlayerDescriptionRoutingProtocol.h"
+#import "CCOpenSideMenuRoutingProtocol.h"
 
 @protocol CCPlayersPreviewRouterProtocol <CCOpenSideMenuRoutingProtocol, CCPlayerDescriptionRoutingProtocol>
 

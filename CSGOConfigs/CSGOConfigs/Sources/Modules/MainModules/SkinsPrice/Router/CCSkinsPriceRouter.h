@@ -7,11 +7,11 @@
 //
 
 #import "CCRouter.h"
-#import "CCSkinsPriceRouterProtocol.h"
 #import "CCSkinsPriceViewProtocol.h"
+#import "CCSkinsPriceRouterProtocol.h"
 
 @interface CCSkinsPriceRouter : CCRouter <CCSkinsPriceRouterProtocol>
 
-- (id <CCSkinsPriceViewProtocol>)buildSkinsPriceModule;
+- (id <CCSkinsPriceViewProtocol>)buildModule;
 
 @end

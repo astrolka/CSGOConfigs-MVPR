@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCTeamViewModel.h"
-#import "CCSpinerViewProtocol.h"
 #import "CCMessageViewProtocol.h"
+#import "CCSpinerViewProtocol.h"
 #import "CCBannerViewProtocol.h"
-@class UIView;
+#import "CCTeamViewModel.h"
 @protocol CCTeamsViewProtocol;
+@class UIView;
 
 @protocol CCTeamsViewActionProtocol <NSObject>
 

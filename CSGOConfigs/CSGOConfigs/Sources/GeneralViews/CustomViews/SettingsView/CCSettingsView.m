@@ -29,7 +29,7 @@
     return self;
 }
 
-#pragma mark - View
+#pragma mark - Setup UI
 
 - (void)tableViewSetup {
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];

@@ -1,17 +1,17 @@
 //
-//  CCRouter+CCShareActivityPresenter.m
+//  CCRouter+ShareActivityPresenter.m
 //  CSGOConfigs
 //
 //  Created by Петрічук Олег Аркадійовіч on 25.06.17.
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
-#import "CCRouter+CCShareActivityPresenter.h"
-#import "CCShareInfo.h"
+#import "CCRouter+ShareActivityPresenter.h"
 #import <UIKit/UIActivityViewController.h>
 #import <UIKit/UIActivity.h>
+#import "CCShareInfo.h"
 
-@implementation CCRouter (CCShareActivityPresenter)
+@implementation CCRouter (ShareActivityPresenter)
 
 - (void)cc_presentShareActivityViewControllerWithShareInfo:(CCShareInfo *)shareInfo {
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:[shareInfo objectsToShareInArray] applicationActivities:nil];

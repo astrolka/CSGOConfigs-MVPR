@@ -7,12 +7,12 @@
 //
 
 #import "CCPlayersPreviewViewController.h"
-#import "CCBannerView.h"
+#import "UIView+CCMessageView.h"
 #import "CCPlayersListView.h"
-#import "Masonry.h"
 #import "CCSideMenuFactory.h"
 #import "UIView+CCSpiner.h"
-#import "UIView+CCMessageView.h"
+#import "CCBannerView.h"
+#import "Masonry.h"
 
 @interface CCPlayersPreviewViewController () <CCPlayersListViewActionProtocol>
 
@@ -21,8 +21,8 @@
 
 @end
 
-static const CGFloat kCellSpaces = 6.f;
-static const NSUInteger kColumnsInSection = 3;
+static CGFloat const kCellSpaces = 6.f;
+static NSUInteger const kColumnsInSection = 3;
 
 @implementation CCPlayersPreviewViewController
 
@@ -45,8 +45,11 @@ static const NSUInteger kColumnsInSection = 3;
     [self bannerViewSetup];
     [self playersViewSetup];
     [self menuButtonSetup];
+    
     [self.viewAction playersPreviewViewDidSet:self];
 }
+
+#pragma mark - View Setup
 
 - (void)playersViewSetup {
     self.playersListView = [[CCPlayersListView alloc] initWithColumnsInSection:kColumnsInSection cellSpaces:kCellSpaces];

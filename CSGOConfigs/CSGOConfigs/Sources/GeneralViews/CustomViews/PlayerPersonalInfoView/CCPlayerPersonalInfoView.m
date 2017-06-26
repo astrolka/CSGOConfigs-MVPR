@@ -7,11 +7,11 @@
 //
 
 #import "CCPlayerPersonalInfoView.h"
+#import "CCPlayerDescriptionViewModel.h"
+#import "UIImageView+URL.h"
 #import "UIColor+CC.h"
 #import "UIFont+CC.h"
 #import "Masonry.h"
-#import "CCPlayerDescriptionViewModel.h"
-#import "UIImageView+URL.h"
 
 @interface CCPlayerPersonalInfoView ()
 
@@ -47,7 +47,7 @@
     return self;
 }
 
-#pragma mark - View
+#pragma mark - Setup UI
 
 - (void)profileImageViewSetup {
     self.profileImageContainerView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -189,14 +189,6 @@
     }];
 }
 
-#pragma mark - Action
-
-- (void)actionMoreInfo:(UIButton *)button {
-    if (self.moreInfoButton) {
-        self.moreInfoButton(self);
-    }
-}
-
 #pragma mark - Public
 
 - (void)updateWithViewModel:(CCPlayerDescriptionViewModel *)viewModel {
@@ -210,6 +202,14 @@
     self.countryTitleLabel.text = [NSString stringWithFormat:@"%@:", NSLocalizedString(@"", nil)];
     self.countryLabel.text = viewModel.country;
     [self.countryImageView cc_setImageWithURL:viewModel.countryImageURL];
+}
+
+#pragma mark - Action
+
+- (void)actionMoreInfo:(UIButton *)button {
+    if (self.moreInfoButton) {
+        self.moreInfoButton(self);
+    }
 }
 
 @end

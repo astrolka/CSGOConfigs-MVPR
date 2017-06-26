@@ -7,19 +7,12 @@
 //
 
 #import "CCFavoritePlayersRouter.h"
-#import "CCFavoritePlayersPresenter.h"
-#import "CCFavoritePlayersViewController.h"
 #import "CCRouter+CCPlayerDescriptionScreen.h"
+#import "CCFavoritePlayersViewController.h"
+#import "CCFavoritePlayersPresenter.h"
 #import "CCRouter+OpenSideMenu.h"
 
 @implementation CCFavoritePlayersRouter
-
-- (id <CCFavoritePlayersViewProtocol>)buildFavoritePlayersModule {
-    CCFavoritePlayersViewController *view = [[CCFavoritePlayersViewController alloc] init];
-    CCFavoritePlayersPresenter *presenter = [[CCFavoritePlayersPresenter alloc] initWithView:view router:self];
-    #pragma unused(presenter)
-    return view;
-}
 
 #pragma mark - CCOpenSideMenuRoutingProtocol
 
@@ -31,6 +24,15 @@
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
     [self cc_goToPlayerDescriptionScreenWithPlayerID:playerID];
+}
+
+#pragma mark - Module Build
+
+- (id <CCFavoritePlayersViewProtocol>)buildModule {
+    CCFavoritePlayersViewController *view = [[CCFavoritePlayersViewController alloc] init];
+    CCFavoritePlayersPresenter *presenter = [[CCFavoritePlayersPresenter alloc] initWithView:view router:self];
+    #pragma unused(presenter)
+    return view;
 }
 
 @end

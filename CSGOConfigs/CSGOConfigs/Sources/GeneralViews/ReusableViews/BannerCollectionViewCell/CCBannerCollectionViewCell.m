@@ -32,12 +32,7 @@
     return self;
 }
 
-- (void)setBanner:(CCBannerViewModel *)banner {
-    _banner = banner;
-    
-    self.titleLabel.text = banner.title;
-    [self.imageView cc_setImageWithURL:banner.imageURL];
-}
+#pragma mark - UI Setup
 
 - (void)titleLabelSetup {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -62,5 +57,15 @@
         make.edges.equalTo(self.contentView);
     }];
 }
+
+#pragma mark - Public
+
+- (void)setBanner:(CCBannerViewModel *)banner {
+    _banner = banner;
+    
+    self.titleLabel.text = banner.title;
+    [self.imageView cc_setImageWithURL:banner.imageURL];
+}
+
 
 @end

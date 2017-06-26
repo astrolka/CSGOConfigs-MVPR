@@ -7,22 +7,13 @@
 //
 
 #import "CCTeamsRouter.h"
-#import "CCTeamsViewController.h"
-#import "CCTeamsPresenter.h"
 #import "CCRouter+CCPlayerDescriptionScreen.h"
-#import "CCBannerRouter.h"
+#import "CCTeamsViewController.h"
 #import "CCRouter+OpenSideMenu.h"
+#import "CCTeamsPresenter.h"
+#import "CCBannerRouter.h"
 
 @implementation CCTeamsRouter
-
-- (id <CCTeamsViewProtocol>)buildTeamsModule {
-    CCBannerRouter *bannerRouter = [[CCBannerRouter alloc] initWithNavigationController:self.navigationController];
-    
-    CCTeamsViewController *view = [[CCTeamsViewController alloc] initWithBannerView:[bannerRouter buildBannerModule]];
-    CCTeamsPresenter *presenter = [[CCTeamsPresenter alloc] initWithView:view router:self];
-    #pragma unused(presenter)
-    return view;
-}
 
 #pragma mark - CCOpenSideMenuRoutingProtocol
 
@@ -34,6 +25,16 @@
 
 - (void)goToPlayerDescriptionScreenWithPlayerID:(NSUInteger)playerID {
     [self cc_goToPlayerDescriptionScreenWithPlayerID:playerID];
+}
+
+#pragma mark - Module Build
+
+- (id <CCTeamsViewProtocol>)buildModule {
+    CCBannerRouter *bannerRouter = [[CCBannerRouter alloc] initWithNavigationController:self.navigationController];
+    CCTeamsViewController *view = [[CCTeamsViewController alloc] initWithBannerView:[bannerRouter buildModule]];
+    CCTeamsPresenter *presenter = [[CCTeamsPresenter alloc] initWithView:view router:self];
+    #pragma unused(presenter)
+    return view;
 }
 
 @end

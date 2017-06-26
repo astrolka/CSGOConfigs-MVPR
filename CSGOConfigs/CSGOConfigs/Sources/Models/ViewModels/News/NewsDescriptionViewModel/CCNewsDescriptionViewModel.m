@@ -18,7 +18,11 @@
 
 @end
 
+
+
 @implementation CCNewsDescriptionViewModelBuilder
+
+#pragma mark - Public
 
 + (void)buildWithServerModels:(CCNewsDescriptionServerModel *)serverModel
                    viewModels:(newsDescriptionDataBlock)viewModel {

@@ -12,6 +12,6 @@
 
 @interface CCAppToolsRouter : CCRouter <CCAppToolsRouterProtocol>
 
-- (id <CCAppToolsViewProtocol>)buildAppToolsModule;
+- (id <CCAppToolsViewProtocol>)buildModule;
 
 @end

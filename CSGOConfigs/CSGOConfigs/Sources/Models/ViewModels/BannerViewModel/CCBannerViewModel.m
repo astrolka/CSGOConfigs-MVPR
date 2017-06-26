@@ -17,11 +17,11 @@
 
 @implementation CCBannerViewModelBuilder
 
-typedef NS_ENUM(NSInteger, DAYS) {
-    OneDay = 1,
-    TwoDays = 2,
-    ThreeDays = 3,
-    TwoWeaks = 14
+typedef NS_ENUM(NSInteger, CCDays) {
+    CCOneDay = 1,
+    CCTwoDays = 2,
+    CCThreeDays = 3,
+    CCTwoWeaks = 14
 };
 
 #pragma mark - Public
@@ -84,11 +84,11 @@ typedef NS_ENUM(NSInteger, DAYS) {
     daysBetweenDates = secondsBetweenDates / kSecondsInDay;
     
     switch (daysBetweenDates) {
-        case OneDay:
+        case CCOneDay:
             return NSLocalizedString(@"kTodayTitle", nil);
-        case TwoDays:
+        case CCTwoDays:
             return NSLocalizedString(@"kYesterdayTitle", nil);
-        case ThreeDays...TwoWeaks:
+        case CCThreeDays...CCTwoWeaks:
             return [NSString stringWithFormat:@"%ld %@",(long)daysBetweenDates, NSLocalizedString(@"kDaysAgoTitle", nil)];
         default:
             return [NSString stringWithFormat:@"%@ %@",[dateFormatter stringFromDate:date], NSLocalizedString(@"kWasUpdateCFGTitle", nil)];

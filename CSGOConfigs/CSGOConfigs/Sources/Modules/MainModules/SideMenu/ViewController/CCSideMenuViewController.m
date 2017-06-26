@@ -7,16 +7,16 @@
 //
 
 #import "CCSideMenuViewController.h"
-#import "CCSideMenuModel.h"
 #import "CCSideMenuTableViewCell.h"
+#import "CCSideMenuModel.h"
 #import "UIColor+CC.h"
 #import "Masonry.h"
 
 @interface CCSideMenuViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) NSArray<CCSideMenuModel*> *sideMenuItems;
-
 @property (strong, nonatomic) UITableView *sideMenuTableView;
+
+@property (strong, nonatomic) NSArray<CCSideMenuModel*> *sideMenuItems;
 
 @end
 

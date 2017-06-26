@@ -1,5 +1,5 @@
 //
-//  CCRouter+CCShareActivityPresenter.h
+//  CCRouter+ShareActivityPresenter.h
 //  CSGOConfigs
 //
 //  Created by Петрічук Олег Аркадійовіч on 25.06.17.
@@ -9,7 +9,7 @@
 #import "CCRouter.h"
 @class CCShareInfo;
 
-@interface CCRouter (CCShareActivityPresenter)
+@interface CCRouter (ShareActivityPresenter)
 
 - (void)cc_presentShareActivityViewControllerWithShareInfo:(CCShareInfo *)shareInfo;
 

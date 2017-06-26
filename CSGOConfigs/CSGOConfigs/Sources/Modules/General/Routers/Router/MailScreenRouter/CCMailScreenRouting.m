@@ -27,6 +27,8 @@
     return self;
 }
 
+#pragma mark - CCMailScreenRoutingProtocol
+
 - (void)openEmailScreenWithEmailInfo:(CCEmailInfo *)emailInfo withResult:(mailResultBlock)result {
     self.resultBlock = result;
     if ([MFMailComposeViewController canSendMail]) {

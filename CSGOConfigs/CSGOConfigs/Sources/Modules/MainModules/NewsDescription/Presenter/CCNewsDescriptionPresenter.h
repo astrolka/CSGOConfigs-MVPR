@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol CCNewsDescriptionViewProtocol;
 @protocol CCNewsDescriptionRouterProtocol;
+@protocol CCNewsDescriptionViewProtocol;
 
 @interface CCNewsDescriptionPresenter : NSObject
 

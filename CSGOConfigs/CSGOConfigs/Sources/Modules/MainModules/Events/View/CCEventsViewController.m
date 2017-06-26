@@ -8,15 +8,15 @@
 
 #import "CCEventsViewController.h"
 #import <MapKit/MapKit.h>
-#import "Masonry.h"
 #import "CCAnnotationEventViewModel.h"
 #import "CCEventPinAnnotationView.h"
-#import "UIColor+CC.h"
 #import "CCEventTableViewCell.h"
-#import "CCEventViewModel.h"
-#import "UIView+CCSpiner.h"
 #import "UIView+CCMessageView.h"
 #import "CCSideMenuFactory.h"
+#import "CCEventViewModel.h"
+#import "UIView+CCSpiner.h"
+#import "UIColor+CC.h"
+#import "Masonry.h"
 
 @interface CCEventsViewController () <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -35,7 +35,7 @@
 
 @implementation CCEventsViewController
 
-static const CGFloat kCloseEventsTableViewContainerHeight = 52.f;
+static CGFloat const kCloseEventsTableViewContainerHeight = 52.f;
 
 @synthesize viewAction;
 
@@ -54,6 +54,8 @@ static const CGFloat kCloseEventsTableViewContainerHeight = 52.f;
     
     [self.viewAction eventsViewDidSet:self];
 }
+
+#pragma mark - UI Setup
 
 - (void)menuButtonSetup {
     self.navigationItem.leftBarButtonItem = [CCSideMenuFactory menuBarButtonWithSelector:@selector(actionOpenSideMenu:) forObject:self];
@@ -139,7 +141,7 @@ static const CGFloat kCloseEventsTableViewContainerHeight = 52.f;
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(CCAnnotationEventViewModel *)annotationEvent {
     CCEventPinAnnotationView *annotationView = [[CCEventPinAnnotationView alloc] initWithAnnotation:annotationEvent reuseIdentifier:NSStringFromClass([CCAnnotationEventViewModel class])];
-    annotationView.pressDescriptionButton = ^(CCEventPinAnnotationView *eventPinAnnotationView, UIButton *button) {
+    annotationView.pressDescriptionButton = ^(CCEventPinAnnotationView *eventPinAnnotationView) {
         [self.viewAction eventsView:self didSelectEventAtIndex:[self.annotationEvents indexOfObject:annotationEvent]];
     };
     return annotationView;
@@ -175,8 +177,8 @@ static const CGFloat kCloseEventsTableViewContainerHeight = 52.f;
     [self.eventsTableView reloadData];
 }
 
-- (void)showAnnotationEvents:(NSArray <CCAnnotationEventViewModel *> *)annotationEvents {
-    self.annotationEvents = annotationEvents;
+- (void)showAnnotationEvents:(NSArray <CCAnnotationEventViewModel *> *)annotations {
+    self.annotationEvents = annotations;
     [self.eventsMapView addAnnotations:self.annotationEvents];
 }
 

@@ -28,26 +28,30 @@
 #import "CCNewDescriptionContentCoreDataModel+CoreDataClass.h"
 #import "CCUserFavoritesPlayersIDCoreDataModel+CoreDataClass.h"
 
+/*
+ 
+    Work with local storage, now it's works via CoreData and all methods returns NSManagedObject objects, what is bad, cuz we can't move to another DataBase (about this problem you can read in Rambler&Co blogs)
+    TODO: Make methods цршср returns PONSO object with data
+ 
+*/
+
 @protocol CCLocalStorageServiceProtocol <AppleGuiceInjectable>
 
 #pragma mark - Base
 
 - (void)saveContext;
 
-
 #pragma mark - NewsDescription
 
-- (void)updateNewsDescription:(CCNewsDescriptionServerModel *)newsDescriptionServerModel;
+- (void)updateNewsDescription:(CCNewsDescriptionServerModel *)newsDescription;
 
 - (CCNewsDescriptionCoreDataModel *)getNewsDescriptionWithID:(NSInteger)newsID;
-
 
 #pragma mark - NewsPreview
 
 - (void)updateNewsPreview:(NSArray <CCNewsPreviewServerModel *> *)newsPreview;
 
 - (NSArray <CCNewsPreviewCoreDataModel *> *)getNewsPreview;
-
 
 #pragma mark - FavoritePlayers
 
@@ -65,9 +69,7 @@
 
 - (void)updatePlayerDescription:(CCPlayerDescriptionServerModel *)playerDescriptionServerModel;
 
-// this method can return nil (similar to another methods when retrun a empty array), it's mean no data about player with this ID
 - (CCPlayerDescriptionCoreDataModel *)getPlayerDescriptionWithPlayerID:(NSInteger)playerID;
-
 
 #pragma mark - PlayersPreview
 
@@ -75,9 +77,7 @@
 
 - (NSArray <CCPlayerPreviewCoreDataModel *> *)getPlayersPreview;
 
-// put in arrayOfID id's of players and i woud return you them
 - (NSArray <CCPlayerPreviewCoreDataModel *> *)getPlayersPreviewWithContainsID:(NSArray *)arrayOfID;
-
 
 #pragma mark - Banners
 
@@ -85,13 +85,11 @@
 
 - (NSArray <CCBannerCoreDataModel *> *)getBanners;
 
-
 #pragma mark - Teams
 
 - (void)updateTeams:(NSArray <CCTeamServerModel *> *)teams;
 
 - (NSArray <CCTeamCoreDataModel *> *)getTeams;
-
 
 #pragma mark - Events
 

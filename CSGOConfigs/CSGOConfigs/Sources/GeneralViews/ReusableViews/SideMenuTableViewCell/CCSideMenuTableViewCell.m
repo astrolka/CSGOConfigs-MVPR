@@ -8,8 +8,8 @@
 
 #import "CCSideMenuTableViewCell.h"
 #import "CCSideMenuModel.h"
-#import "UIFont+CC.h"
 #import "UIColor+CC.h"
+#import "UIFont+CC.h"
 #import "Masonry.h"
 
 @interface CCSideMenuTableViewCell ()
@@ -31,17 +31,7 @@
     return self;
 }
 
-- (void)setSideMenuModel:(CCSideMenuModel *)sideMenuModel {
-    _sideMenuModel = sideMenuModel;
-    self.titleLabel.text = sideMenuModel.title;
-    self.iconImageView.image = sideMenuModel.icon;
-}
-
-+ (CGFloat)defaultCellHeight {
-    return 50.f;
-}
-
-#pragma mark - Private
+#pragma mark - UI Setup
 
 - (void)setupTitleLabel {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -67,6 +57,19 @@
         make.centerY.equalTo(self.contentView);
         make.height.width.equalTo(@25);
     }];
+}
+
+#pragma mark - Public
+
+- (void)setSideMenuModel:(CCSideMenuModel *)sideMenuModel {
+    _sideMenuModel = sideMenuModel;
+    
+    self.titleLabel.text = sideMenuModel.title;
+    self.iconImageView.image = sideMenuModel.icon;
+}
+
++ (CGFloat)defaultCellHeight {
+    return 50.f;
 }
 
 @end

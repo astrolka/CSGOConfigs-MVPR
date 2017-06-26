@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/NSManagedObject.h>
 @class CCPlayerDescriptionServerModel;
-
 @class CCPlayerPreviewCoreDataModel;
 
 NS_ASSUME_NONNULL_BEGIN

@@ -7,13 +7,13 @@
 //
 
 #import "CCAppToolsPresenter.h"
-#import "CCAppToolsViewProtocol.h"
-#import "CCAppToolsRouterProtocol.h"
 #import "CCLocalStorageServiceProtocol.h"
+#import "CCAppToolsRouterProtocol.h"
 #import "CCOpenURLServiceProtocol.h"
+#import "CCAppToolsViewProtocol.h"
 #import "CCEmailInfoFactory.h"
-#import "CCViewModelAlert.h"
 #import "CCShareInfoFactory.h"
+#import "CCViewModelAlert.h"
 
 @interface CCAppToolsPresenter () <CCAppToolsViewActionProtocol>
 
@@ -30,27 +30,26 @@
 - (instancetype)initWithView:(id <CCAppToolsViewProtocol>)view router:(id <CCAppToolsRouterProtocol>)router {
     self = [super init];
     if (self) {
+        self.router = router;
         self.view = view;
         self.view.viewAction = self;
-        self.router = router;
     }
     return self;
 }
 
 #pragma mark - CCAppToolsViewActionProtocol
 
+- (void)appToolsViewDidSet:(id <CCAppToolsViewProtocol>)view {
+    [self updateCacheSize];
+}
+
 - (void)appToolsViewDidOpenMenu:(id <CCAppToolsViewProtocol>)view {
     [self.router openSideMenu];
 }
 
 - (void)appToolsViewDidSelectClearCache:(id <CCAppToolsViewProtocol>)view {
-    NSUInteger cacheSizeInt = [self.ioc_localStorageService getImageCacheSize];
-    if (cacheSizeInt == 0) {
-        [self.view updateAppCache:NSLocalizedString(@"", nil)];
-    } else {
-        CGFloat cacheSizeFloat = (CGFloat)cacheSizeInt / 1000000;
-        [self.view updateAppCache:[NSString stringWithFormat:@"%.02f M", cacheSizeFloat]];
-    }
+    [self.ioc_localStorageService clearImagesCache];
+    [self.view showMessageWithText:NSLocalizedString(@"", nil)];
 }
 
 - (void)appToolsViewDidSelectDonate:(id <CCAppToolsViewProtocol>)view {
@@ -83,6 +82,16 @@
     }];
     [alert addAction:settingsAlertAction];
     [self.router showViewModelAlert:alert];
+}
+
+- (void)updateCacheSize {
+    NSUInteger cacheSizeInt = [self.ioc_localStorageService getImageCacheSize];
+    if (cacheSizeInt == 0) {
+        [self.view updateAppCache:NSLocalizedString(@"", nil)];
+    } else {
+        CGFloat cacheSizeFloat = (CGFloat)cacheSizeInt / 1000000;
+        [self.view updateAppCache:[NSString stringWithFormat:@"%.02f M", cacheSizeFloat]];
+    }
 }
 
 @end

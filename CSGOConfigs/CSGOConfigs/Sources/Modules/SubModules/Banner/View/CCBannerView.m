@@ -7,20 +7,20 @@
 //
 
 #import "CCBannerView.h"
-#import "CCBannerViewModel.h"
 #import "CCBannerCollectionViewCell.h"
+#import "UIView+CCMessageView.h"
+#import "CCBannerViewModel.h"
+#import "UIView+CCSpiner.h"
 #import "UIColor+CC.h"
 #import "UIFont+CC.h"
 #import "Masonry.h"
-#import "UIView+CCSpiner.h"
-#import "UIView+CCMessageView.h"
 
 @interface CCBannerView () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) NSArray <CCBannerViewModel *> *banners;
-
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIPageControl *pageControl;
+
+@property (nonatomic, strong) NSArray <CCBannerViewModel *> *banners;
 
 @end
 
@@ -41,7 +41,7 @@
     [self.viewAction bannerViewDidSet:self];
 }
 
-#pragma mark - View
+#pragma mark - UI Setup
 
 - (void)collectionViewSetup {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];

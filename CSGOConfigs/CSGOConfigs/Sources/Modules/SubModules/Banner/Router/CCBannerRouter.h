@@ -13,6 +13,6 @@
 
 @interface CCBannerRouter : CCRouter <CCBannerRouterProtocol>
 
-- (UIView <CCBannerViewProtocol> *)buildBannerModule;
+- (UIView <CCBannerViewProtocol> *)buildModule;
 
 @end

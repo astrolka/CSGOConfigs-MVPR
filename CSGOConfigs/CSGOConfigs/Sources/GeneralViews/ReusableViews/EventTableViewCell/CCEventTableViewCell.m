@@ -41,7 +41,7 @@
     return self;
 }
 
-#pragma mark - View
+#pragma mark - UI Setup
 
 - (void)logoImageViewSetup {
     self.logoImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
@@ -71,7 +71,6 @@
 - (void)cityTitleLabelSetup {
     self.cityTitleLabel = [self subStyleLabel];
     self.cityTitleLabel.text = NSLocalizedString(@"", nil);
-    self.cityTitleLabel.text = @"dfsdf";
     
     [self.contentView addSubview:self.cityTitleLabel];
     [self.cityTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -123,7 +122,6 @@
         make.left.equalTo(self.contentView).offset(8);
         make.top.equalTo(self.dateLabel.mas_bottom).offset(8);
         make.right.equalTo(self.contentView).offset(-8);
-        //make.height.equalTo(@19);
     }];
 }
 

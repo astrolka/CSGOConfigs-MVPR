@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "CCNewsPreviewViewModel.h"
-#import "CCSpinerViewProtocol.h"
 #import "CCMessageViewProtocol.h"
+#import "CCSpinerViewProtocol.h"
 
 @protocol CCNewsPreviewViewProtocol;
 

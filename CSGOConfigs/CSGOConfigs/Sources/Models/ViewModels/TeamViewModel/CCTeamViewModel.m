@@ -15,7 +15,9 @@
 
 @end
 
-static const CGFloat kNoNeedSize = 0.f;
+
+
+static CGFloat const kNoNeedSize = 0.f;
 
 @implementation CCTeamViewModelBuilder
 

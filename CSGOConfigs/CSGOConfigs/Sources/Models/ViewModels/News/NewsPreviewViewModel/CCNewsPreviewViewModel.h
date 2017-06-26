@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-@class CCNewsPreviewViewModel;
-@class CCNewsPreviewServerModel;
 @class CCNewsPreviewCoreDataModel;
+@class CCNewsPreviewServerModel;
+@class CCNewsPreviewViewModel;
 
 @interface CCNewsPreviewViewModel : NSObject
 

@@ -12,6 +12,6 @@
 
 @interface CCPlayersPreviewRouter : CCRouter <CCPlayersPreviewRouterProtocol>
 
-- (id <CCPlayersPreviewViewProtocol>)buildPlayersPreviewModule;
+- (id <CCPlayersPreviewViewProtocol>)buildModule;
 
 @end

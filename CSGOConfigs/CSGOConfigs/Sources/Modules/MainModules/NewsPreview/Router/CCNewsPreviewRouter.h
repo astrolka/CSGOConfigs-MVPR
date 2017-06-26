@@ -12,6 +12,6 @@
 
 @interface CCNewsPreviewRouter : CCRouter <CCNewsPreviewRouterProtocol>
 
-- (id <CCNewsPreviewViewProtocol>)buildNewsPreviewModule;
+- (id <CCNewsPreviewViewProtocol>)buildModule;
 
 @end

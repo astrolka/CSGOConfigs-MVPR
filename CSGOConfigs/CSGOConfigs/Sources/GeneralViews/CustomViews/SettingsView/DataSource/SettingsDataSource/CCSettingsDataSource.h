@@ -21,9 +21,6 @@
 
 - (void)removeSectionAtIndex:(NSUInteger)index;
 
-/*
-    Methods for CCSettingsView
-*/
 
 - (NSInteger)numberOfSections;
 

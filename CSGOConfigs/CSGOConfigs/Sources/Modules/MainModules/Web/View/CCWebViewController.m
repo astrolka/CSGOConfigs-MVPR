@@ -7,10 +7,10 @@
 //
 
 #import "CCWebViewController.h"
-#import "Masonry.h"
-#import "UIView+CCSpiner.h"
 #import "UIView+CCMessageView.h"
+#import "UIView+CCSpiner.h"
 #import "UIColor+CC.h"
+#import "Masonry.h"
 
 @interface CCWebViewController () <UIWebViewDelegate>
 
@@ -42,6 +42,8 @@
     [self.viewAction webViewDidSet:self];
 }
 
+#pragma mark - UI Setup
+
 - (void)webViewSetup {
     [self.view addSubview:self.webView];
     [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -56,7 +58,6 @@
     UIBarButtonItem *shareButton = [self barButtonWithImage:[UIImage imageNamed:@"shareWebViewIcon"] selector:@selector(actionShare:)];
     UIBarButtonItem *safariButton = [self barButtonWithImage:[UIImage imageNamed:@"safariIcon"] selector:@selector(actionOpenInSafari:)];
     NSArray *toolBarItems = @[backButton, flexibleSpace, forwardButton, flexibleSpace, shareButton, flexibleSpace, safariButton];
-    
     
     UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectZero];
     toolBar.items = toolBarItems;

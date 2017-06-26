@@ -9,8 +9,6 @@
 #import "CCEventsListView.h"
 #import "CCEventTableViewCell.h"
 #import "CCEventViewModel.h"
-#import "CCEventTableViewCell.h"
-#import "CCEventViewModel.h"
 #import "Masonry.h"
 
 @interface CCEventsListView () <UITableViewDataSource, UITableViewDelegate>
@@ -31,7 +29,7 @@
     return self;
 }
 
-#pragma mark - View
+#pragma mark - Setup UI
 
 - (void)tableViewSetup {
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero];

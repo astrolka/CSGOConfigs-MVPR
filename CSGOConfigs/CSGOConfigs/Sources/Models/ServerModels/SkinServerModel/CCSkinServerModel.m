@@ -38,7 +38,7 @@ NSString *const kImageBaseURL = @"https://cdn.csgo.com/item_%@_%@.png";
 
 #pragma mark - Private
 
-- (CCSkinServerModel *)buildSkinModelWithServerResponce:(NSString *)serverResponce {
+- (CCSkinServerModel *)buildSkinModelWithServerResponce:(NSString *)serverResponce { // hell responce
     CCSkinServerModel *skinServerModel = [[CCSkinServerModel alloc] init];
     skinServerModel.gunName = [self buildGunNameWithServerResponce:serverResponce];
     skinServerModel.gunSkin = [self buildGunSkinWithServerResponce:serverResponce];

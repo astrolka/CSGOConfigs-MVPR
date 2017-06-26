@@ -28,6 +28,8 @@
     return self;
 }
 
+#pragma mark - Setup UI
+
 - (void)buttonSetup {
     self.button = [[UIButton alloc] initWithFrame:CGRectZero];
     self.button.titleLabel.font = [UIFont cc_regualarFontWithSize:16];
@@ -43,6 +45,8 @@
         make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(10, 10, 10, 10));
     }];
 }
+
+#pragma mark - Public
 
 - (void)setButtonTitle:(NSString *)buttonTitle {
     _buttonTitle = buttonTitle;

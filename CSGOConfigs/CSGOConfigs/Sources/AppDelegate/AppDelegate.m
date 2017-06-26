@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "CCSideMenuRouter.h"
 #import "CCDIManager.h"
+#import "CCSideMenuRouter.h"
 #import "CCLocalStorageServiceProtocol.h"
-#import "CCCoreDataService.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +27,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self navigationSetup];
+    for (NSString *familyName in [UIFont familyNames]){
+        NSLog(@"Family name: %@", familyName);
+        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+            NSLog(@"--Font name: %@", fontName);
+        }
+    }
     return YES;
 }
 

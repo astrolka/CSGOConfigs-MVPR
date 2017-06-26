@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <AppleGuice/AppleGuiceInjectable.h>
-#import "CCBannerViewModel.h"
 #import <CoreGraphics/CGBase.h>
+#import "CCBannerViewModel.h"
 
 typedef void(^bannerDataBlock)(NSArray <CCBannerViewModel *> *banners, CGFloat bannerHeight);
 

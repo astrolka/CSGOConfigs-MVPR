@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCShareRoutingProtocol.h"
 
-@protocol CCWebRouterProtocol <NSObject>
+@protocol CCWebRouterProtocol <CCShareRoutingProtocol>
 
 @end

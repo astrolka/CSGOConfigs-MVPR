@@ -14,6 +14,8 @@
 
 @end
 
+
+
 NSString *const kPlayerPreviewImageSizeSeparateChar = @"x";  // responce format: "320x640"
 
 @implementation CCPlayerPreviewViewModelBuilder

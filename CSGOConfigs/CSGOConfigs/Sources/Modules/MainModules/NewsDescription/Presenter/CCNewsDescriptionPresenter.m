@@ -7,16 +7,16 @@
 //
 
 #import "CCNewsDescriptionPresenter.h"
-#import "CCNewsDescriptionViewProtocol.h"
 #import "CCNewsDescriptionRouterProtocol.h"
+#import "CCNewsDescriptionViewProtocol.h"
 #import "CCNewsServiceProtocol.h"
 
 @interface CCNewsDescriptionPresenter () <CCNewsDescriptionViewActionProtocol>
 
+@property (nonatomic, strong) id <CCNewsServiceProtocol> ioc_newsService;
+
 @property (nonatomic, strong) id <CCNewsDescriptionViewProtocol> view;
 @property (nonatomic, strong) id <CCNewsDescriptionRouterProtocol> router;
-
-@property (nonatomic, strong) id <CCNewsServiceProtocol> ioc_newsService;
 
 @property (nonatomic, strong) CCNewsDescriptionViewModel *newsDescriptionViewModel;
 
@@ -32,6 +32,7 @@
         self.router = router;
         self.view = view;
         self.view.viewAction = self;
+        
         self.newsID = newsID;
     }
     return self;

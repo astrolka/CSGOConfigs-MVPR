@@ -7,14 +7,14 @@
 //
 
 #import "CCPlayerDescriptionPresenter.h"
-#import "CCPlayerDescriptionViewProtocol.h"
 #import "CCPlayerDescriptionRouterProtocol.h"
-#import "CCPlayersServiceProtocol.h"
+#import "CCPlayerDescriptionViewProtocol.h"
 #import "CCLocalStorageServiceProtocol.h"
 #import "CCPlayerDescriptionViewModel.h"
+#import "CCPlayersServiceProtocol.h"
+#import "CCOpenURLServiceProtocol.h"
 #import "CCEmailInfoFactory.h"
 #import "CCViewModelAlert.h"
-#import "CCOpenURLServiceProtocol.h"
 
 @interface CCPlayerDescriptionPresenter () <CCPlayerDescriptionViewActionProtocol>
 
@@ -26,7 +26,6 @@
 @property (nonatomic, strong) id <CCPlayerDescriptionRouterProtocol> router;
 
 @property (nonatomic, strong) CCPlayerDescriptionViewModel *playerDescriptionViewModel;
-
 @property (nonatomic, assign) BOOL playerIsFavorite;
 @property (nonatomic, assign) NSUInteger playerID;
 
@@ -37,10 +36,11 @@
 - (instancetype)initWithView:(id <CCPlayerDescriptionViewProtocol>)view router:(id <CCPlayerDescriptionRouterProtocol>)router playerID:(NSUInteger)playerID {
     self = [super init];
     if (self) {
-        self.playerID = playerID;
         self.router = router;
         self.view = view;
         self.view.viewAction = self;
+        
+        self.playerID = playerID;
     }
     return self;
 }
@@ -54,7 +54,9 @@
 
 - (void)playersPreviewViewDidPressLoadCFGButton:(id <CCPlayerDescriptionViewProtocol>)view {
      [self.router openEmailScreenWithEmailInfo:[CCEmailInfoFactory emailInfoWihtPlayer:self.playerDescriptionViewModel] withResult:^(CCMailResult result) {
-         
+         if (result == CCMailResultNoAccount) {
+             [self showNoEmailAccountAlert];
+         }
      }];
 }
 
@@ -107,7 +109,6 @@
     if (self.playerIsFavorite) {
         self.playerIsFavorite = NO;
         [self.ioc_localStorageService removePlayerFromFavoritesWithID:self.playerID];
-        
     } else {
         self.playerIsFavorite = YES;
         [self.ioc_localStorageService addPlayerToFavoritesWithPlayerID:self.playerID];

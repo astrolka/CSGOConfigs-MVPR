@@ -11,7 +11,6 @@
 typedef NS_ENUM(NSInteger, CCViewModelAlertActionStyle) {
     CCViewModelAlertActionStyleDefault,  // by default
     CCViewModelAlertActionStyleDestructive,
-    CCViewModelAlertActionStyleBold,
     CCViewModelAlertActionStyleCancel,
 };
 
@@ -21,8 +20,8 @@ typedef void(^CCViewModelAlertActionBlock)();
 
 - (instancetype)initWithTitle:(NSString *)title action:(CCViewModelAlertActionBlock)action;
 
+@property (nonatomic, strong) NSString *title;
 @property (nonatomic, assign) CCViewModelAlertActionStyle style;
-@property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) CCViewModelAlertActionBlock action;
 
 + (instancetype)cancelActionWithAction:(CCViewModelAlertActionBlock)action;

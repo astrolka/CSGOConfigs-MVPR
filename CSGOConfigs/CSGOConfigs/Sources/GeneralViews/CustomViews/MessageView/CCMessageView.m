@@ -27,11 +27,7 @@
     return self;
 }
 
-- (void)setMessage:(NSString *)message {
-    _message = message;
-    
-    self.messageLabel.text = message;
-}
+#pragma mark - Setup UI
 
 - (void)messageLabelSetup {
     self.messageLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -44,6 +40,14 @@
     [self.messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(8, 6, 8, 6));
     }];
+}
+
+#pragma mark - Public
+
+- (void)setMessage:(NSString *)message {
+    _message = message;
+    
+    self.messageLabel.text = message;
 }
 
 @end

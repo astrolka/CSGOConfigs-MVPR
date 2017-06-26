@@ -9,7 +9,6 @@
 #import "CCSkinsService.h"
 #import "CCWebSocketServiceProtocol.h"
 #import "CCSkinServerModel.h"
-#import "CCSkinViewModel.h"
 
 @interface CCSkinsService ()
 

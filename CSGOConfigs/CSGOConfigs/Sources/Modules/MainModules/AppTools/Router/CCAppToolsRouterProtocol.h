@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCViewModelAlertRoutingProtocol.h"
 #import "CCOpenSideMenuRoutingProtocol.h"
 #import "CCMailScreenRoutingProtocol.h"
-#import "CCViewModelAlertRoutingProtocol.h"
 #import "CCShareRoutingProtocol.h"
 
 @protocol CCAppToolsRouterProtocol <CCOpenSideMenuRoutingProtocol, CCMailScreenRoutingProtocol, CCViewModelAlertRoutingProtocol, CCShareRoutingProtocol>

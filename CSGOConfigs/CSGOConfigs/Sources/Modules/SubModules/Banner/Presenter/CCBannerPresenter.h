@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol CCBannerViewProtocol;
 @protocol CCBannerRouterProtocol;
+@protocol CCBannerViewProtocol;
 
 @interface CCBannerPresenter : NSObject
 

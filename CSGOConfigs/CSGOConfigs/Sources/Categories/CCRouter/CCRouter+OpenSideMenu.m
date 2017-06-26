@@ -7,7 +7,6 @@
 //
 
 #import "CCRouter+OpenSideMenu.h"
-#import <UIKit/UIViewController.h>
 #import <RESideMenu/RESideMenu.h>
 
 @implementation CCRouter (OpenSideMenu)

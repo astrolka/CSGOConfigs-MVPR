@@ -24,8 +24,7 @@
         [self addSubview:spinerView];
         [spinerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self);
-            make.width.equalTo(@(spinerSize));
-            make.height.equalTo(@(spinerSize));
+            make.width.height.equalTo(@(spinerSize));
         }];
         [spinerView startAnimating];
     }
@@ -38,7 +37,7 @@
 
 - (DGActivityIndicatorView *)cc_findSpinerView {
     __block DGActivityIndicatorView *spinerView = nil;
-    [self.subviews enumerateObjectsUsingBlock:^(UIView * subView, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.subviews enumerateObjectsUsingBlock:^(UIView *subView, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([subView isKindOfClass:[DGActivityIndicatorView class]]) {
             spinerView = (DGActivityIndicatorView *)subView;
             *stop = YES;
