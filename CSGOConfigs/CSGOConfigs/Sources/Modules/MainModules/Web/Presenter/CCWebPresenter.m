@@ -2,7 +2,7 @@
 //  CCWebPresenter.m
 //  CSGOConfigs
 //
-//  Created by Петрічук Олег Аркадійовіч on 22.06.17.
+//  Created by Petrychuk Oleg on 22.06.17.
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 

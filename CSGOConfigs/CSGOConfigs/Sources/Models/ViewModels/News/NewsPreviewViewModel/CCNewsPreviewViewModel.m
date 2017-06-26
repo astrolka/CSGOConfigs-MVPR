@@ -2,7 +2,7 @@
 //  CCNewsPreviewViewModel.m
 //  CSGOConfigs
 //
-//  Created by Петрічук Олег Аркадійовіч on 18.06.17.
+//  Created by Petrychuk Oleg on 18.06.17.
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 

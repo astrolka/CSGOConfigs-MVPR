@@ -2,7 +2,7 @@
 //  CCTeamCoreDataModel+CoreDataProperties.h
 //  
 //
-//  Created by Петрічук Олег Аркадійовіч on 27.05.17.
+//  Created by Petrychuk Oleg on 27.05.17.
 //
 //
 

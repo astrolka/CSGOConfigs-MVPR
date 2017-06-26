@@ -2,7 +2,7 @@
 //  CSGOConfigsTests.m
 //  CSGOConfigsTests
 //
-//  Created by Петрічук Олег Аркадійовіч on 03.05.17.
+//  Created by Petrychuk Oleg on 03.05.17.
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
