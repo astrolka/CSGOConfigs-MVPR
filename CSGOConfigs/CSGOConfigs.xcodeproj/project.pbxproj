@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264E6722A6F8EEEDF74F8095 /* libPods-CSGOConfigs-CSGOConfigsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D56B2B49D3FFC4C40553D2C /* libPods-CSGOConfigs-CSGOConfigsTests.a */; };
 		404948A75EF559A68F9349F0 /* libPods-CSGOConfigs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5EC4207C582A5EB77824E1 /* libPods-CSGOConfigs.a */; };
-		A642CB1D1EBA491B00BFD470 /* CSGOConfigsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */; };
+		A62F92021F0148C700152A0F /* CCSkinServerModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A62F92011F0148C700152A0F /* CCSkinServerModelTests.m */; };
 		A68CE3051F01158700B8755E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68CE3041F01158700B8755E /* Assets.xcassets */; };
 		A6E01EC51F00E0C600F7B82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CBB1F00E0C600F7B82A /* AppDelegate.m */; };
 		A6E01EC61F00E0C600F7B82A /* CCRouter+OpenSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CC01F00E0C600F7B82A /* CCRouter+OpenSideMenu.m */; };
@@ -169,11 +170,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		267D60AB85A9EE2CD1C05B4D /* Pods-CSGOConfigs-CSGOConfigsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOConfigs-CSGOConfigsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSGOConfigs-CSGOConfigsTests/Pods-CSGOConfigs-CSGOConfigsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2DECB3A2F0C8EE77851075B8 /* Pods-CSGOConfigs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOConfigs.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSGOConfigs/Pods-CSGOConfigs.release.xcconfig"; sourceTree = "<group>"; };
+		4D56B2B49D3FFC4C40553D2C /* libPods-CSGOConfigs-CSGOConfigsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSGOConfigs-CSGOConfigsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80CC47E941882B41B55784CE /* Pods-CSGOConfigs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOConfigs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSGOConfigs/Pods-CSGOConfigs.debug.xcconfig"; sourceTree = "<group>"; };
+		9123E46EE86A05E200F5B433 /* Pods-CSGOConfigs-CSGOConfigsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOConfigs-CSGOConfigsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSGOConfigs-CSGOConfigsTests/Pods-CSGOConfigs-CSGOConfigsTests.release.xcconfig"; sourceTree = "<group>"; };
+		A62F92011F0148C700152A0F /* CCSkinServerModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSkinServerModelTests.m; sourceTree = "<group>"; };
 		A642CAFC1EBA491B00BFD470 /* CSGOConfigs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGOConfigs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642CB181EBA491B00BFD470 /* CSGOConfigsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOConfigsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGOConfigsTests.m; sourceTree = "<group>"; };
 		A642CB1E1EBA491B00BFD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A68CE3041F01158700B8755E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6E01CBA1F00E0C600F7B82A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -523,6 +527,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264E6722A6F8EEEDF74F8095 /* libPods-CSGOConfigs-CSGOConfigsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +539,8 @@
 			children = (
 				80CC47E941882B41B55784CE /* Pods-CSGOConfigs.debug.xcconfig */,
 				2DECB3A2F0C8EE77851075B8 /* Pods-CSGOConfigs.release.xcconfig */,
+				267D60AB85A9EE2CD1C05B4D /* Pods-CSGOConfigs-CSGOConfigsTests.debug.xcconfig */,
+				9123E46EE86A05E200F5B433 /* Pods-CSGOConfigs-CSGOConfigsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -561,7 +568,7 @@
 		A642CB1B1EBA491B00BFD470 /* CSGOConfigsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A642CB1C1EBA491B00BFD470 /* CSGOConfigsTests.m */,
+				A62F92011F0148C700152A0F /* CCSkinServerModelTests.m */,
 				A642CB1E1EBA491B00BFD470 /* Info.plist */,
 			);
 			path = CSGOConfigsTests;
@@ -2452,6 +2459,7 @@
 			children = (
 				A6FD2FE11EF9DEE200211F9A /* MapKit.framework */,
 				CB5EC4207C582A5EB77824E1 /* libPods-CSGOConfigs.a */,
+				4D56B2B49D3FFC4C40553D2C /* libPods-CSGOConfigs-CSGOConfigsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2483,9 +2491,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A642CB241EBA491B00BFD470 /* Build configuration list for PBXNativeTarget "CSGOConfigsTests" */;
 			buildPhases = (
+				42D363832B9BF0973BBB2B80 /* [CP] Check Pods Manifest.lock */,
 				A642CB141EBA491B00BFD470 /* Sources */,
 				A642CB151EBA491B00BFD470 /* Frameworks */,
 				A642CB161EBA491B00BFD470 /* Resources */,
+				D845E4B0C602E34AB0589C29 /* [CP] Embed Pods Frameworks */,
+				D6F9726F17C38BF39F3F7334 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2578,6 +2589,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSGOConfigs/Pods-CSGOConfigs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		42D363832B9BF0973BBB2B80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		7AF0F5C5F37ADD29A27BF91E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2591,6 +2617,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSGOConfigs/Pods-CSGOConfigs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6F9726F17C38BF39F3F7334 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSGOConfigs-CSGOConfigsTests/Pods-CSGOConfigs-CSGOConfigsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D845E4B0C602E34AB0589C29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSGOConfigs-CSGOConfigsTests/Pods-CSGOConfigs-CSGOConfigsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DCE9116B47B4AC87A6FD479F /* [CP] Check Pods Manifest.lock */ = {
@@ -2763,7 +2819,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A642CB1D1EBA491B00BFD470 /* CSGOConfigsTests.m in Sources */,
+				A62F92021F0148C700152A0F /* CCSkinServerModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2914,6 +2970,7 @@
 		};
 		A642CB251EBA491B00BFD470 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 267D60AB85A9EE2CD1C05B4D /* Pods-CSGOConfigs-CSGOConfigsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4F885Z8V5T;
@@ -2927,6 +2984,7 @@
 		};
 		A642CB261EBA491B00BFD470 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9123E46EE86A05E200F5B433 /* Pods-CSGOConfigs-CSGOConfigsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4F885Z8V5T;

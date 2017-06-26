@@ -16,4 +16,10 @@ target "CSGOConfigs" do
     
     # DI
     pod 'AppleGuice'
+    
+    target "CSGOConfigsTests" do
+        pod 'OCMock'
+        pod 'AppleGuice'
+        pod 'Expecta', '~> 1.0'
+    end
 end

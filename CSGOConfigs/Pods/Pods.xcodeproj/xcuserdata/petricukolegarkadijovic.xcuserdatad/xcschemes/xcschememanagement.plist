@@ -24,12 +24,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Expecta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LCAnimatedPageControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OCMock.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CSGOConfigs-CSGOConfigsTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -53,6 +68,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1C8F18174D7BF9901BC87FC46656FD78</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F501FE84845EAD97B9087DAFCBBEE0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4A2CAA839F2722C796C6F1DFDC806B92</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +108,11 @@
 			<true/>
 		</dict>
 		<key>D0CB80DD71CB50FB1BA89247DF2A499C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D24677939244988D41BB9B9910C0059D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
