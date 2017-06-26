@@ -35,7 +35,7 @@
             viewModel.desctiptionURL = [NSURL URLWithString:coreDataModel.descriptionURL];
             viewModel.date = [self generateStringWithBeginDate:coreDataModel.beginDate finishDate:coreDataModel.finishDate];
             viewModel.logoImageURL = [NSURL URLWithString:coreDataModel.logoImageURL];
-            viewModel.prizePool = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.prizePool];
+            viewModel.prizePool = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"events.list.cell.prize_pool", nil), coreDataModel.prizePool];
             [viewModelsData addObject:viewModel];
         }];
     });
@@ -62,7 +62,7 @@
             viewModel.desctiptionURL = serverModel.desctiptionURL;
             viewModel.date = [self generateStringWithBeginDate:serverModel.beginDate finishDate:serverModel.finishDate];
             viewModel.logoImageURL = serverModel.logoImageURL;
-            viewModel.prizePool = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.prizePool];
+            viewModel.prizePool = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"events.list.cell.prize_pool", nil), serverModel.prizePool];
             [viewModelsData addObject:viewModel];
         }];
     });
@@ -79,7 +79,7 @@
 + (NSString *)generateStringWithBeginDate:(NSDate *)beginDate finishDate:(NSDate *)finishDate {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd.MM.yyyy"];
-    return [NSString stringWithFormat:@"%@: %@ - %@", NSLocalizedString(@"", nil), [dateFormatter stringFromDate:beginDate], [dateFormatter stringFromDate:finishDate]];
+    return [NSString stringWithFormat:@"%@: %@ - %@", NSLocalizedString(@"events.list.cell.date", nil), [dateFormatter stringFromDate:beginDate], [dateFormatter stringFromDate:finishDate]];
 }
 
 @end

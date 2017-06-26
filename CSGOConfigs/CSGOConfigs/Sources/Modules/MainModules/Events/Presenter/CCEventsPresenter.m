@@ -64,7 +64,7 @@
         [self.view showEvents:events];
         [self.view showAnnotationEvents:annotationEvents];
         [self.view hideSpiner];
-        (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+        (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"message.offline_mode", nil)];
     }];
 }
 

@@ -53,7 +53,7 @@
     
     [self addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(0, self.cellSpaces, 0, self.cellSpaces));
+        make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(0, self.cellSpaces, self.cellSpaces, self.cellSpaces));
     }];
 }
 

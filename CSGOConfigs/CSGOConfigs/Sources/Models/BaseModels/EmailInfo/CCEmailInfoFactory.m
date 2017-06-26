@@ -14,15 +14,15 @@
 + (CCEmailInfo *)emailInfoWihtPlayer:(CCPlayerDescriptionViewModel *)player {
     CCEmailInfo *emailInfo = [[CCEmailInfo alloc] init];
     emailInfo.recipients = @[@""];
-    emailInfo.body = NSLocalizedString(@"", nil);
-    emailInfo.subject = NSLocalizedString(@"", nil);
+    emailInfo.body = NSLocalizedString(@"email.player.subject", nil);
+    emailInfo.subject = NSLocalizedString(@"email.player.body.part1", nil);
     return emailInfo;
 }
 
 + (CCEmailInfo *)emailInfoForContactWithDeveloper {
     CCEmailInfo *emailInfo = [[CCEmailInfo alloc] init];
     emailInfo.recipients = @[@"olehpetruch@gmail.com"];
-    emailInfo.body = NSLocalizedString(@"", nil);
+    emailInfo.body = NSLocalizedString(@"email.player.subject", nil);
     emailInfo.subject = NSLocalizedString(@"", nil);
     return emailInfo;
 }

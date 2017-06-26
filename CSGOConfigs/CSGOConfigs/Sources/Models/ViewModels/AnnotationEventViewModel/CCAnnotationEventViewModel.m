@@ -29,7 +29,7 @@
             CCAnnotationEventViewModel *viewModel = [[CCAnnotationEventViewModel alloc] init];
             viewModel.coordinate = CLLocationCoordinate2DMake(coreDataModel.lat, coreDataModel.lng);
             viewModel.title = coreDataModel.name;
-            viewModel.subtitle = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.city];
+            viewModel.subtitle = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"events.list.cell.location", nil), coreDataModel.city];
             viewModel.desctiptionURL = [NSURL URLWithString:coreDataModel.descriptionURL];
             viewModel.logoImageURL = [NSURL URLWithString:coreDataModel.logoImageURL];
             [viewModelsData addObject:viewModel];
@@ -54,7 +54,7 @@
             CCAnnotationEventViewModel *viewModel = [[CCAnnotationEventViewModel alloc] init];
             viewModel.coordinate = CLLocationCoordinate2DMake(serverModel.lat, serverModel.lng);
             viewModel.title = serverModel.name;
-            viewModel.subtitle = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.city];
+            viewModel.subtitle = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"events.list.cell.location", nil), serverModel.city];
             viewModel.desctiptionURL = serverModel.desctiptionURL;
             viewModel.logoImageURL = serverModel.logoImageURL;
             [viewModelsData addObject:viewModel];

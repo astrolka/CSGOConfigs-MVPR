@@ -93,9 +93,9 @@
         if (playerInfoViewModel) {
             self.playerDescriptionViewModel = playerInfoViewModel;
             [self.view showPlayerInfo:playerInfoViewModel];
-            (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+            (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"message.offline_mode", nil)];
         } else {
-            [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+            [self.view showMessageWithText:NSLocalizedString(@"message.no_cashe", nil)];
         }
     }];
 }
@@ -112,15 +112,15 @@
     } else {
         self.playerIsFavorite = YES;
         [self.ioc_localStorageService addPlayerToFavoritesWithPlayerID:self.playerID];
-        [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+        [self.view showMessageWithText:NSLocalizedString(@"player_add_to_favorite.message", nil)];
     }
     [self.view updatePlayerFavoriteStatus:self.playerIsFavorite];
 }
 
 - (void)showNoEmailAccountAlert {
-    CCViewModelAlert *alert = [[CCViewModelAlert alloc] initWithTitle:NSLocalizedString(@"", nil) message:NSLocalizedString(@"", nil)];
+    CCViewModelAlert *alert = [[CCViewModelAlert alloc] initWithTitle:NSLocalizedString(@"email.no_account_message", nil) message:NSLocalizedString(@"email.no_account_message", nil)];
     [alert addAction:[CCViewModelAlertAction cancelActionWithAction:nil]];
-    CCViewModelAlertAction *settingsAlertAction = [[CCViewModelAlertAction alloc] initWithTitle:NSLocalizedString(@"", nil) action:^{
+    CCViewModelAlertAction *settingsAlertAction = [[CCViewModelAlertAction alloc] initWithTitle:NSLocalizedString(@"alerts.settings_button.title", nil) action:^{
         [self.ioc_openURLService openApplicationSettings];
     }];
     [alert addAction:settingsAlertAction];

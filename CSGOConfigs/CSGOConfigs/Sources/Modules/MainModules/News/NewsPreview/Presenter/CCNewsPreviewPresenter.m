@@ -77,7 +77,7 @@
                 [self.view showMoreNews:news];
                 [self.view hideSpiner];
             }
-            (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+            (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"message.offline_mode", nil)];
         }];
     }
 }

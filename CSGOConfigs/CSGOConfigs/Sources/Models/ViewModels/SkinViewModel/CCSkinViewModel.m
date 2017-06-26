@@ -25,15 +25,15 @@ static NSInteger const kNoPrice = 0;
     const char *classNameChar = [NSStringFromClass([CCSkinViewModelBuilder class]) UTF8String];
     dispatch_queue_t queue = dispatch_queue_create(classNameChar, DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
-        viewModel.name = [NSString stringWithFormat:@"%@: %@ %@", NSLocalizedString(@"", nil), serverModel.gunName, serverModel.gunSkin];
-        viewModel.exterior = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.exterior];
-        viewModel.price = [NSString stringWithFormat:@"%@: %ld", NSLocalizedString(@"", nil), (long)serverModel.price];
+        viewModel.name = [NSString stringWithFormat:@"%@: %@ %@", NSLocalizedString(@"skin.cell.name", nil), serverModel.gunName, serverModel.gunSkin];
+        viewModel.exterior = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"skin.cell.exterior", nil), serverModel.exterior];
+        viewModel.price = [NSString stringWithFormat:@"%@: %ld", NSLocalizedString(@"skin.cell.price", nil), (long)serverModel.price];
         viewModel.coverImageURL = serverModel.coverImageURL;
         if (serverModel.price == kNoPrice) {
-            viewModel.price = [NSString stringWithFormat:@"%@: 0.1$", NSLocalizedString(@"", nil)];
+            viewModel.price = [NSString stringWithFormat:@"%@: 0.1$", NSLocalizedString(@"skin.cell.price", nil)];
         }
         else {
-            viewModel.price = [NSString stringWithFormat:@"%@: %.02f$", NSLocalizedString(@"", nil), serverModel.price];
+            viewModel.price = [NSString stringWithFormat:@"%@: %.02f$", NSLocalizedString(@"skin.cell.price", nil), serverModel.price];
         }
     });
     

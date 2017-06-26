@@ -33,13 +33,13 @@
 }
 
 - (void)dataSourceSetup {
-    CCSideMenuModel *players = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"players.title", nil) icon:[UIImage imageNamed:@"playerIcon"] appSection:CCSideMenuViewPlayersAppSection];
-    CCSideMenuModel *teams = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"teams.title", nil) icon:[UIImage imageNamed:@"teamIcon"] appSection:CCSideMenuViewTeamsAppSection];
-    CCSideMenuModel *favorites = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"favorites.title", nil) icon:[UIImage imageNamed:@"favoritePlayersIcon"] appSection:CCSideMenuViewFavoritesAppSection];
-    CCSideMenuModel *news = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"news.title", nil) icon:[UIImage imageNamed:@"newsIcon"] appSection:CCSideMenuViewNewsAppSection];
-    CCSideMenuModel *map = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"map_events.title", nil) icon:[UIImage imageNamed:@"mapeventsIcon"] appSection:CCSideMenuViewMapEventsAppSection];
-    CCSideMenuModel *skins = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"skins_price.title", nil) icon:[UIImage imageNamed:@"skinsPriceIcon"] appSection:CCSideMenuViewSkinsAppSection];
-    CCSideMenuModel *appTools = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"app_tools.title", nil) icon:[UIImage imageNamed:@"appToolsIcon"] appSection:CCSideMenuViewToolsAppSection];
+    CCSideMenuModel *players = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"side_menu.cell.title.players", nil) icon:[UIImage imageNamed:@"playerIcon"] appSection:CCSideMenuViewPlayersAppSection];
+    CCSideMenuModel *teams = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"side_menu.cell.title.teams", nil) icon:[UIImage imageNamed:@"teamIcon"] appSection:CCSideMenuViewTeamsAppSection];
+    CCSideMenuModel *favorites = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"side_menu.cell.title.favorite_players", nil) icon:[UIImage imageNamed:@"favoritePlayersIcon"] appSection:CCSideMenuViewFavoritesAppSection];
+    CCSideMenuModel *news = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"side_menu.cell.title.news", nil) icon:[UIImage imageNamed:@"newsIcon"] appSection:CCSideMenuViewNewsAppSection];
+    CCSideMenuModel *map = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"side_menu.cell.title.events", nil) icon:[UIImage imageNamed:@"mapeventsIcon"] appSection:CCSideMenuViewMapEventsAppSection];
+    CCSideMenuModel *skins = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"side_menu.cell.title.skins_price", nil) icon:[UIImage imageNamed:@"skinsPriceIcon"] appSection:CCSideMenuViewSkinsAppSection];
+    CCSideMenuModel *appTools = [[CCSideMenuModel alloc] initWithTitle:NSLocalizedString(@"side_menu.cell.title.app_tools", nil) icon:[UIImage imageNamed:@"appToolsIcon"] appSection:CCSideMenuViewToolsAppSection];
     self.sideMenuItems = @[ players, teams, favorites, news, map, skins, appTools ];
 }
 

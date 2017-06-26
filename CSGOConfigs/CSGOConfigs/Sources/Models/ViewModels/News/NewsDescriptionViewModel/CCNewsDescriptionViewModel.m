@@ -33,7 +33,7 @@
     dispatch_async(queue, ^{
         newsViewModel.newsID = serverModel.newsID;
         newsViewModel.subtitle = serverModel.subtitle;
-        newsViewModel.author = [NSString stringWithFormat:@"%@: %@",NSLocalizedString(@"", nil), serverModel.author];
+        newsViewModel.author = [NSString stringWithFormat:@"%@: %@",NSLocalizedString(@"news_description_header.author", nil), serverModel.author];
         newsViewModel.descriptionURL = serverModel.descriptionURL;
         newsViewModel.date = [self dateStringFromDate:serverModel.date];
         
@@ -67,7 +67,7 @@
     dispatch_async(queue, ^{
         newsViewModel.newsID = (NSInteger)coreDataModels.newsID;
         newsViewModel.subtitle = coreDataModels.subtitle;
-        newsViewModel.author = [NSString stringWithFormat:@"%@: %@",NSLocalizedString(@"", nil), coreDataModels.author];
+        newsViewModel.author = [NSString stringWithFormat:@"%@: %@",NSLocalizedString(@"news_description_header.author", nil), coreDataModels.author];
         newsViewModel.descriptionURL = [NSURL URLWithString:coreDataModels.descriptionURL];
         newsViewModel.date = [self dateStringFromDate:coreDataModels.date];
         
@@ -97,7 +97,7 @@
 + (NSString *)dateStringFromDate:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd.MM.yyyy"];
-    return [NSString stringWithFormat:@"%@: %@",NSLocalizedString(@"", nil), [dateFormatter stringFromDate:date]];
+    return [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), [dateFormatter stringFromDate:date]];
 }
 
 @end

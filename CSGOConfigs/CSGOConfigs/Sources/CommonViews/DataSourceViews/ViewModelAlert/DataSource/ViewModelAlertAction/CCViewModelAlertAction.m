@@ -20,7 +20,7 @@
 }
 
 + (instancetype)cancelActionWithAction:(CCViewModelAlertActionBlock)action {
-    CCViewModelAlertAction *alertAction = [[self alloc] initWithTitle:NSLocalizedString(@"", nil) action:action];
+    CCViewModelAlertAction *alertAction = [[self alloc] initWithTitle:NSLocalizedString(@"alerts.canel_button.title", nil) action:action];
     return alertAction;
 }
 

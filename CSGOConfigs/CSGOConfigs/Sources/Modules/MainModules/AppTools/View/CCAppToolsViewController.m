@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
+    self.title = NSLocalizedString(@"app_tools.title", nil);
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self menuButtonSetup];
     [self dataSourceSetup];
@@ -58,40 +58,38 @@
 }
 
 - (CCSettingsSectionDataSource *)storageSectionSetup {
-    self.cacheRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolCache"] title:NSLocalizedString(@"hello", nil) detail:nil];
+    self.cacheRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolCache"] title:NSLocalizedString(@"app_tools.cell.clear_cache", nil) detail:nil];
     __weak __typeof(self)wself = self;
     self.cacheRow.selectAction = ^() {
         [wself.viewAction appToolsViewDidSelectClearCache:wself];
     };
     
     CCSettingsSectionDataSource *storageSection = [[CCSettingsSectionDataSource alloc] initWithRows:@[self.cacheRow]];
-    storageSection.headerTitle = NSLocalizedString(@"", nil);
     return storageSection;
 }
 
 - (CCSettingsSectionDataSource *)socailSectionSetup {
-    CCSettingsRowDataSource *donateRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolDonate"] title:NSLocalizedString(@"hello", nil) detail:nil];
+    CCSettingsRowDataSource *donateRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolDonate"] title:NSLocalizedString(@"app_tools.cell.donate", nil) detail:nil];
     donateRow.selectAction = ^() {
         [self.viewAction appToolsViewDidSelectDonate:self];
     };
     
-    CCSettingsRowDataSource *shareRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolShare"] title:NSLocalizedString(@"hello", nil) detail:nil];
+    CCSettingsRowDataSource *shareRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolShare"] title:NSLocalizedString(@"app_tools.cell.share", nil) detail:nil];
     shareRow.selectAction = ^() {
         [self.viewAction appToolsViewDidSelectShareApp:self];
     };
     
-    CCSettingsRowDataSource *rateAppRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolRateApp"] title:NSLocalizedString(@"hello", nil) detail:nil];
+    CCSettingsRowDataSource *rateAppRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolRateApp"] title:NSLocalizedString(@"app_tools.cell.rate_app", nil) detail:nil];
     rateAppRow.selectAction = ^() {
         [self.viewAction appToolsViewDidSelectRateApp:self];
     };
     
-    CCSettingsRowDataSource *contactWithDevRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolContact"] title:NSLocalizedString(@"", nil) detail:nil];
+    CCSettingsRowDataSource *contactWithDevRow = [[CCSettingsRowDataSource alloc] initWithImage:[UIImage imageNamed:@"appToolContact"] title:NSLocalizedString(@"app_tools.cell.contact_with_dev", nil) detail:nil];
     contactWithDevRow.selectAction = ^() {
         [self.viewAction appToolsViewDidSelectContactWithDeveloper:self];
     };
     
     CCSettingsSectionDataSource *socialSection = [[CCSettingsSectionDataSource alloc] initWithRows:@[donateRow, shareRow, rateAppRow, contactWithDevRow]];
-    socialSection.headerTitle = NSLocalizedString(@"", nil);
     return socialSection;
 }
 

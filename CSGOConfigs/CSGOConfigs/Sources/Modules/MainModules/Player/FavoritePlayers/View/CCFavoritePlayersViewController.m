@@ -30,7 +30,7 @@ static NSUInteger const kColumnsInSection = 3;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
+    self.title = NSLocalizedString(@"favorite_players.title", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self emptyDataLabelSetup];
@@ -56,7 +56,7 @@ static NSUInteger const kColumnsInSection = 3;
 
 - (void)emptyDataLabelSetup {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    label.text = NSLocalizedString(@"kNoFavoritePlayersLabel", nil);
+    label.text = NSLocalizedString(@"favorite_players.empty_data", nil);
     label.textColor = [UIColor cc_themeColor];
     label.font = [UIFont cc_regualarFontWithSize:20];
     

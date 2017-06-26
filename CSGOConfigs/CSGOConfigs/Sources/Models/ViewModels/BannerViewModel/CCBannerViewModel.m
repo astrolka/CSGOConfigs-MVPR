@@ -85,13 +85,13 @@ typedef NS_ENUM(NSInteger, CCDays) {
     
     switch (daysBetweenDates) {
         case CCOneDay:
-            return NSLocalizedString(@"kTodayTitle", nil);
+            return NSLocalizedString(@"banner.date.today.title", nil);
         case CCTwoDays:
-            return NSLocalizedString(@"kYesterdayTitle", nil);
+            return NSLocalizedString(@"banner.date.yesterday.title", nil);
         case CCThreeDays...CCTwoWeaks:
-            return [NSString stringWithFormat:@"%ld %@",(long)daysBetweenDates, NSLocalizedString(@"kDaysAgoTitle", nil)];
+            return [NSString stringWithFormat:@"%ld %@",(long)daysBetweenDates, NSLocalizedString(@"banner.date.n_days.title", nil)];
         default:
-            return [NSString stringWithFormat:@"%@ %@",[dateFormatter stringFromDate:date], NSLocalizedString(@"kWasUpdateCFGTitle", nil)];
+            return [NSString stringWithFormat:@"%@ %@",[dateFormatter stringFromDate:date], NSLocalizedString(@"banner.update_sub_string", nil)];
     }
 }
 

@@ -53,7 +53,7 @@
     [self.view connectionButtonEnabled:NO];
     
     [self.ioc_skinsService subscribeForSkinPrices:^{
-        [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+        [self.view showMessageWithText:NSLocalizedString(@"skis.connect.message", nil)];
         [self.view hideSpiner];
         
     } receiveNewSkinPrice:^(CCSkinViewModel *skin) {
@@ -61,7 +61,7 @@
         
     } disconnect:^(NSError *error) {
         [self.view connectionButtonEnabled:YES];
-        [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+        [self.view showMessageWithText:NSLocalizedString(@"skis.disconnect.message", nil)];
     }];
 }
 

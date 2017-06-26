@@ -40,34 +40,34 @@ NSString *const kEmptyDataDisplay = @"";  // server can send empty string, so no
         viewModel.countryImageURL = [NSURL URLWithString:coreDataModel.flagImageURL];
         
         if (![coreDataModel.mouse isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.mouse]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.mouse", nil), coreDataModel.mouse]];
         
         if (![coreDataModel.mousepad isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.mousepad]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.mouse_pad", nil), coreDataModel.mousepad]];
         
         if (![coreDataModel.monitor isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.monitor]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.monitor", nil), coreDataModel.monitor]];
         
         if (![coreDataModel.keyboard isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.keyboard]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.keyboard", nil), coreDataModel.keyboard]];
         
         if (![coreDataModel.headSet isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.headSet]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.headset", nil), coreDataModel.headSet]];
         
         if (![coreDataModel.mouse isEqualToString:kEmptyDataDisplay])
             viewModel.hardwareCharacterictics = [NSArray arrayWithArray:hardwareCharacterictics];
         
         if (![coreDataModel.effectiveDPI isEqualToString:kEmptyDataDisplay])
-            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.effectiveDPI]];
+            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.effective_DPI", nil), coreDataModel.effectiveDPI]];
         
         if (![coreDataModel.gameResolution isEqualToString:kEmptyDataDisplay])
-            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.gameResolution]];
+            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.game_resolution", nil), coreDataModel.gameResolution]];
         
         if (![coreDataModel.windowsSensitivity isEqualToString:kEmptyDataDisplay])
-            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.windowsSensitivity]];
+            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.windows_sens", nil), coreDataModel.windowsSensitivity]];
         
         if (![coreDataModel.pollingRate isEqualToString:kEmptyDataDisplay])
-            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), coreDataModel.pollingRate]];
+            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.polling", nil), coreDataModel.pollingRate]];
         viewModel.gameSettingCharacterictics = [NSArray arrayWithArray:gameSettingCharacterictics];
         
         viewModel.downloadURL = [NSURL URLWithString:coreDataModel.downloadURL];
@@ -101,34 +101,34 @@ NSString *const kEmptyDataDisplay = @"";  // server can send empty string, so no
         viewModel.countryImageURL = serverModel.flagImageURL;
         
         if (![serverModel.mouse isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.mouse]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.mouse", nil), serverModel.mouse]];
         
         if (![serverModel.mousepad isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.mousepad]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.mouse_pad", nil), serverModel.mousepad]];
         
         if (![serverModel.monitor isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.monitor]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.monitor", nil), serverModel.monitor]];
         
         if (![serverModel.keyboard isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.keyboard]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.keyboard", nil), serverModel.keyboard]];
         
         if (![serverModel.headSet isEqualToString:kEmptyDataDisplay])
-            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.headSet]];
+            [hardwareCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.headset", nil), serverModel.headSet]];
         
         if (![serverModel.mouse isEqualToString:kEmptyDataDisplay])
             viewModel.hardwareCharacterictics = [NSArray arrayWithArray:hardwareCharacterictics];
         
         if (![serverModel.effectiveDPI isEqualToString:kEmptyDataDisplay])
-            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.effectiveDPI]];
+            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.effective_DPI", nil), serverModel.effectiveDPI]];
         
         if (![serverModel.gameResolution isEqualToString:kEmptyDataDisplay])
-            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.gameResolution]];
+            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.game_resolution", nil), serverModel.gameResolution]];
         
         if (![serverModel.windowsSensitivity isEqualToString:kEmptyDataDisplay])
-            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.windowsSensitivity]];
+            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.windows_sens", nil), serverModel.windowsSensitivity]];
         
         if (![serverModel.pollingRate isEqualToString:kEmptyDataDisplay])
-            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"", nil), serverModel.pollingRate]];
+            [gameSettingCharacterictics addObject:[NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"player_description.info.polling", nil), serverModel.pollingRate]];
         viewModel.gameSettingCharacterictics = [NSArray arrayWithArray:gameSettingCharacterictics];
         
         viewModel.downloadURL = serverModel.downloadURL;

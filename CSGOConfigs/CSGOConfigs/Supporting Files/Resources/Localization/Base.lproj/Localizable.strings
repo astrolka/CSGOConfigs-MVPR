@@ -1,106 +1,101 @@
-"kApplicationName" = "CS:GO Configs";
 
-// AppSectionTitles
-
-"kPlayerNavigationTitle" = "Payers";
-"kTeamsNavigationTitle" = "Teams";
-"kFavoritePlayerNavigationTitle" = "Favorite";
-"kNewsNavigationTitle" = "News";
-"kMapEventsNavigationTitle" = "Map Events";
-"kSkinPriceNavigationTitle" = "Skinks price";
-"kAppToolsNavigationTitle" = "About app";
-
-// Banner
-
-"kTodayTitle" = "Today CGF was updated";
-"kYesterdayTitle" = "Yesterday CFG was updated";
-"kDaysAgoTitle" = "days ago CFG was updated";
-"kWasUpdateCFGTitle" = "was updated CFG";
-
-// NotificationMessage
-
-"kOfflineModeNotificationText" = "You are working in offline mode";
-"kNoDataNotificationText" = "You don't have any cashe data";
-
-// MapEvents
-
-"kPrizePool" = "Prize pool";
-"kDate" = "Date";
-"kLocation" = "Location";
-"kDescription" = "Description";
+// General
+"general.app_name" = "CS:GO Configs";
 
 // Errors
+"error.unknown" = "Oops, something went wrong";
 
-"kSomeWentWrongText" = "Oops, something went wrong";
+// Alerts
+"alerts.canel_button.title" = "Cancel";
+"alerts.ok_button.title" = "Ok";
+"alerts.settings_button.title" = "Settings";
 
-// PlayerDescription
+// Side menu
+"side_menu.cell.title.players" = "Players";
+"side_menu.cell.title.teams" = "Teams";
+"side_menu.cell.title.favorite_players" = "Favorite Players";
+"side_menu.cell.title.news" = "News";
+"side_menu.cell.title.events" = "Events";
+"side_menu.cell.title.skins_price" = "Skinks price";
+"side_menu.cell.title.app_tools" = "App tools";
 
-"kPlayerDescriptionNavigationTitle" = "Description";
-"kTeamLabel" = "Team";
-"kCountryLabel" = "Country";
-"kMoreInfoButton" = "More information";
-"kHardwareSectionTitle" = "Hardware";
-"kGameSectionTitle" = "Game settings";
-"kDownloadButton" = "Download";
-"kMouseCellLabel" = "Mouse";
-"kMousePadCellLabel" = "Mousepad";
-"kMonitorCellLabel" = "Monitor";
-"kKeyboardCellLabel" = "Keyboard";
-"kHeadsetCellLabel" = "Headset";
-"kEffectiveDPICellLabel" = "DPI";
-"kGameResoulutionCellLabel" = "Game resolution";
-"kWindowsSensitivyCellLabel" = "Windows sensitivity";
-"kPollingRateCellLabel" = "Polling";
+// Banner
+"banner.date.today.title" = "Today CGF was updated";
+"banner.date.yesterday.title" = "Yesterday CFG was updated";
+"banner.date.n_days.title" = "days ago CFG was updated";
+"banner.update_sub_string" = "was updated CFG";
 
-"kPlayerAddedToFavoritesText" = "The player successfully added to \"Favorites\"";
+// Messages
+"message.offline_mode" = "You are working in offline mode";
+"message.no_cashe" = "You don't have any cashe data";
+
+// Events
+"events.title" = "Events";
+"events.list.cell.prize_pool" = "Prize pool";
+"events.list.cell.date" = "Date";
+"events.list.cell.location" = "Location";
+"events.list.cell.description" = "Description";
+
+// Teams
+"teams.title" = "Teams";
+
+// Players Preview
+"players_preview.title" = "Players";
+
+// Player Description
+"player_description.title" = "Player Description";
+"player_description.info.team" = "Team";
+"player_description.info.country" = "Country";
+"player_description.info.hardware_section.title" = "Hardware";
+"player_description.info.game_section.title" = "Game settings";
+"player_description.info.mouse" = "Mouse";
+"player_description.info.mouse_pad" = "Mousepad";
+"player_description.info.monitor" = "Monitor";
+"player_description.info.keyboard" = "Keyboard";
+"player_description.info.headset" = "Headset";
+"player_description.info.effective_DPI" = "DPI";
+"player_description.info.game_resolution" = "Game resolution";
+"player_description.info.windows_sens" = "Windows sensitivity";
+"player_description.info.polling" = "Polling";
+"player_description.download_button.title" = "Download";
+"player_description.more_info_button.title" = "More information";
+
+"player_add_to_favorite.message" = "The player successfully added to \"Favorites\"";
 
 // Email
+"email.no_account_message" = "No email account on your device";
+"email.player.subject" = "cfg file by CS:GO Configs";
+"email.player.body.part1" = "Your .cfg file is waiting for you! Click on the link and download config b";
+"email.player.body.part2" = "Download";
+"email.player.body.part3" = "Thanks";
 
-"kNoEmailAccountMessageText" = "No email account on your device";
-"kEmailDownloadSubjectText" = "cfg file by CS:GO Configs";
-"kEmailBodyTextPart1" = "Your .cfg file is waiting for you! Click on the link and download config b";
-"kEmailBodyTextPart2" = "Download";
-"kEmailBodyTextPart3" = "Thanks";
+// Favorite Players
+"favorite_players.title" = "Favorite Players";
+"favorite_players.empty_data" = "You don't have favorite players";
 
-// FavoritePlayers
+// News Description
+"news_description.title" = "News Description";
+"news_description_header.time" = "Time";
+"news_description_header.author" = "Author";
 
-"kNoFavoritePlayersLabel" = "You don't have favorite players";
-
-// NewsDescription
-
-"kPostDateLabel" = "Time";
-"kAuthorLabel" = "Author";
+// News Preview
+"news_preview.title" = "News";
 
 // Skins
+"skins.title" = "Skin prices";
+"skin.cell.name" = "Name";
+"skin.cell.exterior" = "Exterior";
+"skin.cell.price" = "Price";
+"skis.connect.message" = "You are connected, wait for the updates";
+"skis.disconnect.message" = "You are disconnected";
 
-"kSkinNameCell" = "Name";
-"kSkinExteriorCell" = "Exterior";
-"kSkinPriceCell" = "Price";
-
-"kConnectedText" = "You are connected, wait for the updates";
-"kNoConnectionText" = "You are disconnected";
-
-// Tutorial
-
-"kSkipButton" = "Skip";
-
-// Tutorial
-
-"kPlayerText" = "Look for your player in the \"Players\" section";
-"kTeamsText" = "Look for your player in the \"Teams\" section";
-"kFavoritesText" = "Add favorite players for easy access";
-"kNewsTutorialText" = "Keep up to date with the latest news in the world of CS:GO";
-"kEventsTutorialText" = "Easily view the next tournament on the map";
-"kSkinPriceTutorialText" = "Watch for updates skins prices";
-
-// AppTools
-
-"kFAQNavigationTitle" = "FAQ";
-"kTutorialCell" = "Watch tutorial";
-"kClearCacheCell" = "Clear cache";
-"kDonateSteamCell" = "Donate on Steam";
-"kContactWithDeveloperCell" = "Write to developer";
-"kShareWithFriendsCell" = "Share with friends";
-"kRateAppCell" = "Rate app in App Store";
-"kNoCasheCell" = "No cache";
-"kShareAppText" = "With this app you will always be up to date with the latest updates";
+// App Tools
+"app_tools.title" = "App Tools";
+"app_tools.cell.clear_cache" = "Clear cache";
+"app_tools.cell.no_cache" = "No cache";
+"app_tools.clean_cache.message" = "The cache was cleaned";
+"app_tools.cell.donate" = "Donate on Steam";
+"app_tools.cell.contact_with_dev" = "Write to developer";
+"app_tools.cell.share" = "Share with friends";
+"app_tools.cell.rate_app" = "Rate app in App Store";
+"app_tools.share_app.text" = "With this app you will always be up to date with the latest updates";

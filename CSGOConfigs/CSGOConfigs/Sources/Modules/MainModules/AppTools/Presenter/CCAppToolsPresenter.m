@@ -49,7 +49,7 @@
 
 - (void)appToolsViewDidSelectClearCache:(id <CCAppToolsViewProtocol>)view {
     [self.ioc_localStorageService clearImagesCache];
-    [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+    [self.view showMessageWithText:NSLocalizedString(@"app_tools.clean_cache.message", nil)];
 }
 
 - (void)appToolsViewDidSelectDonate:(id <CCAppToolsViewProtocol>)view {
@@ -75,9 +75,9 @@
 #pragma mark - Private
 
 - (void)showNoEmailAccountAlert {
-    CCViewModelAlert *alert = [[CCViewModelAlert alloc] initWithTitle:NSLocalizedString(@"", nil) message:NSLocalizedString(@"", nil)];
+    CCViewModelAlert *alert = [[CCViewModelAlert alloc] initWithTitle:NSLocalizedString(@"email.no_account_message", nil) message:NSLocalizedString(@"email.no_account_message", nil)];
     [alert addAction:[CCViewModelAlertAction cancelActionWithAction:nil]];
-    CCViewModelAlertAction *settingsAlertAction = [[CCViewModelAlertAction alloc] initWithTitle:NSLocalizedString(@"", nil) action:^{
+    CCViewModelAlertAction *settingsAlertAction = [[CCViewModelAlertAction alloc] initWithTitle:NSLocalizedString(@"alerts.settings_button.title", nil) action:^{
         [self.ioc_openURLService openApplicationSettings];
     }];
     [alert addAction:settingsAlertAction];
@@ -87,7 +87,7 @@
 - (void)updateCacheSize {
     NSUInteger cacheSizeInt = [self.ioc_localStorageService getImageCacheSize];
     if (cacheSizeInt == 0) {
-        [self.view updateAppCache:NSLocalizedString(@"", nil)];
+        [self.view updateAppCache:NSLocalizedString(@"app_tools.cell.no_cache", nil)];
     } else {
         CGFloat cacheSizeFloat = (CGFloat)cacheSizeInt / 1000000;
         [self.view updateAppCache:[NSString stringWithFormat:@"%.02f M", cacheSizeFloat]];

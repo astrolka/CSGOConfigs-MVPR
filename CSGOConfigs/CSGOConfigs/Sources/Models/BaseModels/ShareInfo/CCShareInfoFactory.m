@@ -13,7 +13,7 @@
 
 + (CCShareInfo *)appShareInfo {
     CCShareInfo *shareInfo = [[CCShareInfo alloc] init];
-    shareInfo.title = NSLocalizedString(@"", nil);
+    shareInfo.title = NSLocalizedString(@"app_tools.share_app.text", nil);
     shareInfo.image = [UIImage imageNamed:@"whiteAppIcon"];
     shareInfo.url = [NSURL URLWithString:@""];
     return shareInfo;

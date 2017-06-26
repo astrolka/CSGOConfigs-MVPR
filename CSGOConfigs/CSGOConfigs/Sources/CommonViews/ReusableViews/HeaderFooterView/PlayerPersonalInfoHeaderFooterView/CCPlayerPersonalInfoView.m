@@ -175,7 +175,7 @@
     button.titleLabel.textColor = [UIColor whiteColor];
     button.titleLabel.font = [UIFont cc_regualarFontWithSize:16];
     [button addTarget:self action:@selector(actionMoreInfo:) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitle:NSLocalizedString(@"", nil) forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"player_description.more_info_button.title", nil) forState:UIControlStateNormal];
     button.layer.cornerRadius = 6.f;
     button.layer.shadowOffset = CGSizeMake(0, 6);
     button.layer.shadowRadius = 4;
@@ -195,11 +195,11 @@
     self.nameLabel.text = viewModel.name;
     [self.profileImageView cc_setImageWithURL:viewModel.profileImageURL];
     
-    self.teamTitleLabel.text = [NSString stringWithFormat:@"%@:", NSLocalizedString(@"", nil)];;
+    self.teamTitleLabel.text = [NSString stringWithFormat:@"%@:", NSLocalizedString(@"player_description.info.team", nil)];;
     self.teamLabel.text = viewModel.teamName;
     [self.teamImageView cc_setImageWithURL:viewModel.temaImageURL];
     
-    self.countryTitleLabel.text = [NSString stringWithFormat:@"%@:", NSLocalizedString(@"", nil)];
+    self.countryTitleLabel.text = [NSString stringWithFormat:@"%@:", NSLocalizedString(@"player_description.info.country", nil)];
     self.countryLabel.text = viewModel.country;
     [self.countryImageView cc_setImageWithURL:viewModel.countryImageURL];
 }

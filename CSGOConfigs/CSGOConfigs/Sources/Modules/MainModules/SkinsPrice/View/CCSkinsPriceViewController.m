@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
     self.skins = [[NSMutableArray alloc] init];
-    self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
+    self.title = NSLocalizedString(@"skins.title", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self sknisTableViewSetup];

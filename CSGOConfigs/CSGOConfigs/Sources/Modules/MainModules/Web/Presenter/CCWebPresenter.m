@@ -48,7 +48,7 @@
         [self.view hideSpiner];
     } failLoad:^(NSError *error) {
         [self.view hideSpiner];
-        [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+        [self.view showMessageWithText:NSLocalizedString(@"error.unknown", nil)];
     }];
 }
 

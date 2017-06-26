@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
+    //self.title = NSLocalizedString(@"", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self webViewSetup];

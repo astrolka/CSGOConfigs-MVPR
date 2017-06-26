@@ -38,7 +38,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
+    self.title = NSLocalizedString(@"player_description.title", nil);
     [self tableViewSetup];
     [self favoriteButtonSetup];
     
@@ -121,7 +121,7 @@
             
         case PlayerInfoSectionTypeHardwareInformation: {
                 CCSelectableSectionView *selectableHeaderView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([CCSelectableSectionView class])];
-                selectableHeaderView.title = NSLocalizedString(@"sdfsdf", nil);
+                selectableHeaderView.title = NSLocalizedString(@"player_description.info.hardware_section.title", nil);
                 selectableHeaderView.pressSection = ^(CCSelectableSectionView *selectableSectionView) {
                     [self.viewAction playersPreviewView:self didSelectSection:section];
                 };
@@ -130,7 +130,7 @@
             
         case PlayerInfoSectionTypeSettingsInformation: {
                 CCSelectableSectionView *selectableHeaderView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([CCSelectableSectionView class])];
-                selectableHeaderView.title = NSLocalizedString(@"sdfsdf", nil);
+                selectableHeaderView.title = NSLocalizedString(@"player_description.info.game_section.title", nil);
                 selectableHeaderView.pressSection = ^(CCSelectableSectionView *selectableSectionView) {
                     [self.viewAction playersPreviewView:self didSelectSection:section];
                 };
@@ -146,7 +146,7 @@
     switch (section) {
         case PlayerInfoSectionTypeDownloadCFG: {
             CCCenterButtonView *buttonFooterView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([CCCenterButtonView class])];
-            buttonFooterView.buttonTitle = NSLocalizedString(@"dfsd", nil);
+            buttonFooterView.buttonTitle = NSLocalizedString(@"player_description.download_button.title", nil);
             buttonFooterView.pressButton = ^(CCCenterButtonView *centerButtonView) {
                 [self.viewAction playersPreviewViewDidPressLoadCFGButton:self];
             };

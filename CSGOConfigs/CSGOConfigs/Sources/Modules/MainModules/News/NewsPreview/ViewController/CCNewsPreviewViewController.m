@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
+    self.title = NSLocalizedString(@"news_preview.title", nil);
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.newsDataArray = [[NSMutableArray alloc] init];
     [self tableViewSetup];

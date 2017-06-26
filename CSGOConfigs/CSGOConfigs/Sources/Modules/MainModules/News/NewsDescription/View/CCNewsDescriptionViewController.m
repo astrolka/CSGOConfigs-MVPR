@@ -35,7 +35,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.title = NSLocalizedString(@"sdf", nil);
+    self.title = NSLocalizedString(@"news_description.title", nil);
     [self newsDescriptionHeaderViewSetup];
     [self tableViewSetup];
     [self.viewAction newsDescriptionViewDidSet:self];

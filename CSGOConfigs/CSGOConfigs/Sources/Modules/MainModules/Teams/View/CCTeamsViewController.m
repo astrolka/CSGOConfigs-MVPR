@@ -40,7 +40,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = NSLocalizedString(@"kTeamsNavigationTitle", nil);
+    self.title = NSLocalizedString(@"teams.title", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self menuButtonSetup];

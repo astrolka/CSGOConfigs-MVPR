@@ -73,7 +73,7 @@ static NSInteger const kLoadingLimitd = 6;
             [self.teams addObjectsFromArray:teams];
             [self.view showTeams:self.teams];
             [self.view hideSpiner];
-            (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+            (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"message.offline_mode", nil)];
         }];
     }
 }

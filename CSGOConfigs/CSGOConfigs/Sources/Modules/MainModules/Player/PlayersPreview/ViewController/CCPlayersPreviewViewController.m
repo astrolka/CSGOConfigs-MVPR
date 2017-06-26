@@ -39,7 +39,7 @@ static NSUInteger const kColumnsInSection = 3;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
+    self.title = NSLocalizedString(@"players_preview.title", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self bannerViewSetup];

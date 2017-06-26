@@ -56,9 +56,9 @@
         [self.view hideSpiner];
         if (newsDescriptionViewModel) {
             [self.view showNewsDescription:newsDescriptionViewModel];
-            (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+            (fromServer) ?: [self.view showMessageWithText:NSLocalizedString(@"message.offline_mode", nil)];
         } else {
-            [self.view showMessageWithText:NSLocalizedString(@"", nil)];
+            [self.view showMessageWithText:NSLocalizedString(@"message.no_cashe", nil)];
         }
     }];
 }

@@ -42,7 +42,7 @@ static CGFloat const kCloseEventsTableViewContainerHeight = 52.f;
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    self.title = NSLocalizedString(@"kPlayerNavigationTitle", nil);
+    self.title = NSLocalizedString(@"events.title", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self menuButtonSetup];

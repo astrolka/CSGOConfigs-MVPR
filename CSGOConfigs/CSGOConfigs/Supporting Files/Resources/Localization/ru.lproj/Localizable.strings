@@ -1,136 +1,101 @@
-// Application
-"application.name" = "CS:GO Configs";
 
-// Players
-"players.title" = "Игроки";
+// General
+"general.app_name" = "CS:GO Configs";
+
+// Errors
+"error.unknown" = "Что-то пошло не так";
+
+// Alerts
+"alerts.canel_button.title" = "Отмена";
+"alerts.ok_button.title" = "Ок";
+"alerts.settings_button.title" = "Настройки";
+
+// Side menu
+"side_menu.cell.title.players" = "Игроки";
+"side_menu.cell.title.teams" = "Команды";
+"side_menu.cell.title.favorite_players" = "Любимые игроки";
+"side_menu.cell.title.news" = "Новости";
+"side_menu.cell.title.events" = "События";
+"side_menu.cell.title.skins_price" = "Цена скинов";
+"side_menu.cell.title.app_tools" = "Еще";
+
+// Banner
+"banner.date.today.title" = "Сегодня был обновлен CFG";
+"banner.date.yesterday.title" = "Вчера был обновлен CFG";
+"banner.date.n_days.title" = "дней назад был обнавлен CFG";
+"banner.update_sub_string" = "был обнавлен CFG";
+
+// Messages
+"message.offline_mode" = "Вы работаете в оффлайн режиме";
+"message.no_cashe" = "У вас нету кеша";
+
+// Events
+"events.title" = "События";
+"events.list.cell.prize_pool" = "Призовой фонд";
+"events.list.cell.date" = "Дата";
+"events.list.cell.location" = "Локация";
+"events.list.cell.description" = "Детали";
 
 // Teams
 "teams.title" = "Команды";
 
-// Favorites
-"favorites.title" = "Избранные";
+// Players Preview
+"players_preview.title" = "Игроки";
 
-// News
-"news.title" = "Новости";
+// Player Description
+"player_description.title" = "Детали";
+"player_description.info.team" = "Команда";
+"player_description.info.country" = "Страна";
+"player_description.info.hardware_section.title" = "Железо";
+"player_description.info.game_section.title" = "Игровые настройки";
+"player_description.info.mouse" = "Мышь";
+"player_description.info.mouse_pad" = "Коврик";
+"player_description.info.monitor" = "Монитор";
+"player_description.info.keyboard" = "Клавиатура";
+"player_description.info.headset" = "Наушники";
+"player_description.info.effective_DPI" = "DPI";
+"player_description.info.game_resolution" = "Разрешение в игре";
+"player_description.info.windows_sens" = "Чувствительность мишки";
+"player_description.info.polling" = "Polling";
+"player_description.download_button.title" = "Скачать";
+"player_description.more_info_button.title" = "Подробнее";
 
-// Map events
-"map_events.title" = "Карта событий";
-
-// Skins price
-"skins_price.title" = "Цены скинов";
-
-// About
-"app_tools.title" = "О приложении";
-
-
-
-
-
-
-
-
-
-
-
-// AppSectionTitles
-"kPlayerNavigationTitle" = "Игроки";
-"kTeamsNavigationTitle" = "Команды";
-"kFavoritePlayerNavigationTitle" = "Избранные";
-"kNewsNavigationTitle" = "Новости";
-"kMapEventsNavigationTitle" = "Карта событий";
-"kSkinPriceNavigationTitle" = "Цены скинов";
-"kAppToolsNavigationTitle" = "О приложении";
-
-// Banner
-
-"kTodayTitle" = "Сегодня был обнавлен CFG";
-"kYesterdayTitle" = "Вчера был обнавлен CFG";
-"kDaysAgoTitle" = "дней назад был обновлен CFG";
-"kWasUpdateCFGTitle" = "был обнавлен CFG";
-
-// NotificationMessage
-
-"kOfflineModeNotificationText" = "Вы работаете в режиме оффлайн";
-"kNoDataNotificationText" = "У вас нету данных в кэше";
-
-// MapEvents
-
-"kPrizePool" = "Призовой фонд";
-"kDate" = "Дата";
-"kLocation" = "Локация";
-"kDescription" = "Детальные";
-
-// Errors
-
-"kSomeWentWrongText" = "Что то пошло не так";
-
-// PlayerDescription
-
-"kPlayerDescriptionNavigationTitle" = "Описание";
-"kTeamLabel" = "Команда";
-"kCountryLabel" = "Страна";
-"kMoreInfoButton" = "Больше информации";
-"kHardwareSectionTitle" = "Девайсы";
-"kGameSectionTitle" = "Иговые настройки";
-"kDownloadButton" = "Скачать";
-"kMouseCellLabel" = "Мышь";
-"kMousePadCellLabel" = "Коврик";
-"kMonitorCellLabel" = "Монитор";
-"kKeyboardCellLabel" = "Клавиатура";
-"kHeadsetCellLabel" = "Наушники";
-"kEffectiveDPICellLabel" = "DPI";
-"kGameResoulutionCellLabel" = "Разришение";
-"kWindowsSensitivyCellLabel" = "Чувствительность";
-"kPollingRateCellLabel" = "Частота";
-"kPlayerAddedToFavoritesText" = "Игрок успешно добавлен в \"Избранные\"";
+"player_add_to_favorite.message" = "Игрок добавлен в раздел \"Избранные\"";
 
 // Email
+"email.no_account_message" = "Нету аккаунта на девайсе";
+"email.player.subject" = "cfg файл от CS:GO Configs";
+"email.player.body.part1" = "Your .cfg file is waiting for you! Click on the link and download config b";
+"email.player.body.part2" = "Скачать";
+"email.player.body.part3" = "Спасибо";
 
-"kNoEmailAccountMessageText" = "Нет учетной записи электронной почты на устройстве";
-"kEmailDownloadSubjectText" = "cfg файл от CS:GO Configs";
-"kEmailBodyTextPart1" = "Твой .cfg файл ждет тебя! Кликай на ссылку и качай конфиг от";
-"kEmailBodyTextPart2" = "Скачать";
-"kEmailBodyTextPart3" = "Спасибо";
+// Favorite Players
+"favorite_players.title" = "Любимые игроки";
+"favorite_players.empty_data" = "У вас нету любимых игроков";
 
-// FavoritePlayers
+// News Description
+"news_description.title" = "Подробнее";
+"news_description_header.time" = "Время";
+"news_description_header.author" = "Автор";
 
-"kNoFavoritePlayersLabel" = "У вас нет любимых игроков";
-
-// NewsDescription
-
-"kPostDateLabel" = "Время";
-"kAuthorLabel" = "Автор";
+// News Preview
+"news_preview.title" = "Новасти";
 
 // Skins
+"skins.title" = "Цена скинов";
+"skin.cell.name" = "Имя";
+"skin.cell.exterior" = "Внешность";
+"skin.cell.price" = "Цена";
+"skis.connect.message" = "Вы подключени";
+"skis.disconnect.message" = "Вы отключены";
 
-"kSkinNameCell" = "Название";
-"kSkinExteriorCell" = "Состояние";
-"kSkinPriceCell" = "Цена";
-
-"kConnectedText" = "Вы подключены, ждите обновления";
-"kNoConnectionText" = "Вы отключены";
-
-// Tutorial
-
-"kSkipButton" = "Пропустить";
-
-// Tutorial
-
-"kPlayerText" = "Look for your player in the \"Players\" section";
-"kTeamsText" = "Look for your player in the \"Teams\" section";
-"kFavoritesText" = "Add favorite players for easy access";
-"kNewsTutorialText" = "Keep up to date with the latest news in the world of CS:GO";
-"kEventsTutorialText" = "Easily view the next tournament on the map";
-"kSkinPriceTutorialText" = "Watch for updates skins prices";
-
-// AppTools
-
-"kFAQNavigationTitle" = "FAQ";
-"kTutorialCell" = "Посмотреть туториал";
-"kClearCacheCell" = "Очистить кэш";
-"kDonateSteamCell" = "Донат в Steam";
-"kContactWithDeveloperCell" = "Написать разработчику";
-"kShareWithFriendsCell" = "Поделится с друзьями";
-"kRateAppCell" = "Оценить приложение в App Store";
-"kNoCasheCell" = "Пусто";
-"kShareAppText" = "С этим приложениям ты всегда будешь в курсе последних обновлений";
+// App Tools
+"app_tools.title" = "Еще";
+"app_tools.cell.clear_cache" = "Очистить кэш";
+"app_tools.cell.no_cache" = "Нету кэша";
+"app_tools.clean_cache.message" = "The cache was cleaned";
+"app_tools.cell.donate" = "Донат в Steam";
+"app_tools.cell.contact_with_dev" = "Написать разработчику";
+"app_tools.cell.share" = "Поделится";
+"app_tools.cell.rate_app" = "Оценить в AppStore";
+"app_tools.share_app.text" = "С помощью этого приложения вы всегда будете в курсе последних обновлений";

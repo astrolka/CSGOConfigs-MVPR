@@ -70,7 +70,7 @@
 
 - (void)cityTitleLabelSetup {
     self.cityTitleLabel = [self subStyleLabel];
-    self.cityTitleLabel.text = NSLocalizedString(@"", nil);
+    self.cityTitleLabel.text = NSLocalizedString(@"events.list.cell.location", nil);
     
     [self.contentView addSubview:self.cityTitleLabel];
     [self.cityTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
