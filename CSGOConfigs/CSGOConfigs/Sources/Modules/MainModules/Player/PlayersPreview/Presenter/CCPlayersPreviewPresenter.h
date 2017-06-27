@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol CCPlayersPreviewRouterProtocol;
-@protocol CCPlayersPreviewViewProtocol;
+#import "CCPlayersPreviewRouterProtocol.h"
+#import "CCPlayersPreviewViewProtocol.h"
+#import "CCPlayersServiceProtocol.h"
 
-@interface CCPlayersPreviewPresenter : NSObject
+@interface CCPlayersPreviewPresenter : NSObject <CCPlayersPreviewViewActionProtocol>
 
 - (instancetype)initWithView:(id <CCPlayersPreviewViewProtocol>)view router:(id <CCPlayersPreviewRouterProtocol>)router;
+
+@property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
 
 @end

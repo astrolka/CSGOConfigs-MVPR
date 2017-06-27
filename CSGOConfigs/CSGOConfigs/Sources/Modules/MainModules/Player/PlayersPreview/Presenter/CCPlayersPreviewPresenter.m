@@ -7,15 +7,9 @@
 //
 
 #import "CCPlayersPreviewPresenter.h"
-#import "CCPlayersPreviewRouterProtocol.h"
-#import "CCPlayersPreviewViewProtocol.h"
-#import "CCPlayersServiceProtocol.h"
 #import "CCPlayerPreviewViewModel.h"
-#import "CCRestServiceProtocol.h"
 
-@interface CCPlayersPreviewPresenter () <CCPlayersPreviewViewActionProtocol>
-
-@property (nonatomic, strong) id <CCPlayersServiceProtocol> ioc_playersService;
+@interface CCPlayersPreviewPresenter ()
 
 @property (nonatomic, weak) id <CCPlayersPreviewViewProtocol> view;
 @property (nonatomic, strong) id <CCPlayersPreviewRouterProtocol> router;
@@ -66,10 +60,12 @@ static CGFloat const kLoadingLimit = 6.f;
 #pragma mark - Private
 
 - (void)loadPlayersWithSpiner:(BOOL)spiner {
+    
     if (self.players.count == 0 || self.players.count < self.countOfPlayersOnServer) {
         if (spiner) {
             [self.view showSpiner];
         }
+        
         [self.ioc_playersService getPlayersPreviewWithOffset:self.players.count containerWidth:[self.view cellContainerWidth] data:^(NSArray<CCPlayerPreviewViewModel *> *players, BOOL fromServer, NSInteger countOfPlayersOnServer) {
             self.countOfPlayersOnServer = countOfPlayersOnServer;
             [self.players addObjectsFromArray:players];
