@@ -21,6 +21,16 @@
 		A62F92121F02707900152A0F /* CCPlayerPreviewServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01DE21F00E0C600F7B82A /* CCPlayerPreviewServerModel.m */; };
 		A62F92131F0277AB00152A0F /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01DBF1F00E0C600F7B82A /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m */; };
 		A62F92141F0277AE00152A0F /* CCPlayerPreviewCoreDataModel+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01DBD1F00E0C600F7B82A /* CCPlayerPreviewCoreDataModel+CoreDataClass.m */; };
+		A62F92151F02988000152A0F /* CCAppToolsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01E2A1F00E0C600F7B82A /* CCAppToolsPresenter.m */; };
+		A62F92171F02992800152A0F /* CCAppToolsPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A62F92161F02992800152A0F /* CCAppToolsPresenterTests.m */; };
+		A62F92181F02A69000152A0F /* CCViewModelAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CFE1F00E0C600F7B82A /* CCViewModelAlert.m */; };
+		A62F92191F02A69400152A0F /* CCViewModelAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01D011F00E0C600F7B82A /* CCViewModelAlertAction.m */; };
+		A62F921A1F02A6A500152A0F /* CCShareInfoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01D961F00E0C600F7B82A /* CCShareInfoFactory.m */; };
+		A62F921B1F02A6BA00152A0F /* CCEmailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01D8F1F00E0C600F7B82A /* CCEmailInfo.m */; };
+		A62F921C1F02A6BD00152A0F /* CCShareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01D941F00E0C600F7B82A /* CCShareInfo.m */; };
+		A62F921D1F02A6D600152A0F /* CCEmailInfoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01D911F00E0C600F7B82A /* CCEmailInfoFactory.m */; };
+		A62F921E1F02A6FB00152A0F /* CCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01E171F00E0C600F7B82A /* CCRouter.m */; };
+		A62F92261F02B1C400152A0F /* EXPMatchers+CCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A62F92251F02B1C400152A0F /* EXPMatchers+CCViewModel.m */; };
 		A68CE3051F01158700B8755E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68CE3041F01158700B8755E /* Assets.xcassets */; };
 		A6E01EC51F00E0C600F7B82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CBB1F00E0C600F7B82A /* AppDelegate.m */; };
 		A6E01EC61F00E0C600F7B82A /* CCRouter+OpenSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CC01F00E0C600F7B82A /* CCRouter+OpenSideMenu.m */; };
@@ -189,6 +199,9 @@
 		A62F92011F0148C700152A0F /* CCSkinServerModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSkinServerModelTests.m; sourceTree = "<group>"; };
 		A62F92031F0150DE00152A0F /* CCPlayersPreviewPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersPreviewPresenterTests.m; sourceTree = "<group>"; };
 		A62F920D1F02686500152A0F /* CCPlayersServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersServiceTests.m; sourceTree = "<group>"; };
+		A62F92161F02992800152A0F /* CCAppToolsPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAppToolsPresenterTests.m; sourceTree = "<group>"; };
+		A62F92241F02B1C400152A0F /* EXPMatchers+CCViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+CCViewModel.h"; sourceTree = "<group>"; };
+		A62F92251F02B1C400152A0F /* EXPMatchers+CCViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+CCViewModel.m"; sourceTree = "<group>"; };
 		A642CAFC1EBA491B00BFD470 /* CSGOConfigs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGOConfigs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642CB181EBA491B00BFD470 /* CSGOConfigsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOConfigsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642CB1E1EBA491B00BFD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -558,6 +571,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A62F92231F02B1C400152A0F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A62F92241F02B1C400152A0F /* EXPMatchers+CCViewModel.h */,
+				A62F92251F02B1C400152A0F /* EXPMatchers+CCViewModel.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		A642CAF31EBA491A00BFD470 = {
 			isa = PBXGroup;
 			children = (
@@ -581,6 +603,8 @@
 		A642CB1B1EBA491B00BFD470 /* CSGOConfigsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A62F92231F02B1C400152A0F /* Helpers */,
+				A62F92161F02992800152A0F /* CCAppToolsPresenterTests.m */,
 				A62F920D1F02686500152A0F /* CCPlayersServiceTests.m */,
 				A62F92031F0150DE00152A0F /* CCPlayersPreviewPresenterTests.m */,
 				A62F92011F0148C700152A0F /* CCSkinServerModelTests.m */,
@@ -2835,6 +2859,10 @@
 			files = (
 				A62F92141F0277AE00152A0F /* CCPlayerPreviewCoreDataModel+CoreDataClass.m in Sources */,
 				A62F92041F0150DE00152A0F /* CCPlayersPreviewPresenterTests.m in Sources */,
+				A62F92151F02988000152A0F /* CCAppToolsPresenter.m in Sources */,
+				A62F92181F02A69000152A0F /* CCViewModelAlert.m in Sources */,
+				A62F921B1F02A6BA00152A0F /* CCEmailInfo.m in Sources */,
+				A62F921E1F02A6FB00152A0F /* CCRouter.m in Sources */,
 				A62F92071F0167DA00152A0F /* CCSkinServerModel.m in Sources */,
 				A62F92091F01681200152A0F /* CCPlayersPreviewPresenter.m in Sources */,
 				A62F920F1F02702700152A0F /* CCPlayersService.m in Sources */,
@@ -2842,9 +2870,15 @@
 				A62F92021F0148C700152A0F /* CCSkinServerModelTests.m in Sources */,
 				A62F92121F02707900152A0F /* CCPlayerPreviewServerModel.m in Sources */,
 				A62F920E1F02686500152A0F /* CCPlayersServiceTests.m in Sources */,
+				A62F92191F02A69400152A0F /* CCViewModelAlertAction.m in Sources */,
 				A62F920C1F01AC3100152A0F /* CCPlayerPreviewViewModel.m in Sources */,
 				A62F92131F0277AB00152A0F /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m in Sources */,
+				A62F921C1F02A6BD00152A0F /* CCShareInfo.m in Sources */,
+				A62F92171F02992800152A0F /* CCAppToolsPresenterTests.m in Sources */,
+				A62F921D1F02A6D600152A0F /* CCEmailInfoFactory.m in Sources */,
+				A62F92261F02B1C400152A0F /* EXPMatchers+CCViewModel.m in Sources */,
 				A62F92111F02706C00152A0F /* CCPlayerDescriptionServerModel.m in Sources */,
+				A62F921A1F02A6A500152A0F /* CCShareInfoFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

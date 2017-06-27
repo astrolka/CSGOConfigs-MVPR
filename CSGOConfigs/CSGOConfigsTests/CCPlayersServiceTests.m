@@ -2,7 +2,7 @@
 //  CCPlayersServiceTests.m
 //  CSGOConfigs
 //
-//  Created by Петрічук Олег Аркадійовіч on 27.06.17.
+//  Created by Oleg Petruchyk on 27.06.17.
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
@@ -50,8 +50,6 @@ static NSInteger const kPlayerID = 1;
 
 - (void)restServiceMakeSendError {
     [OCMStub([self.playersService.ioc_restService makeGETRequestWithURL:OCMOCK_ANY onSucess:OCMOCK_ANY onFailure:OCMOCK_ANY]) andDo:^(NSInvocation *invocation) {
-      
-        
         __unsafe_unretained errorBlock errorBlock;
         [invocation getArgument:&errorBlock atIndex:4];
         errorBlock([NSError errorWithDomain:@"" code:0 userInfo:@{}]);
@@ -94,7 +92,7 @@ static NSInteger const kPlayerID = 1;
 }
 
 - (void)testPlayerIsFavoriteStatusCheak {
-    OCMStub([self.playersService.ioc_localStorageService playerIsFavorite:kPlayerID]).andReturn(YES);\
+    OCMStub([self.playersService.ioc_localStorageService playerIsFavorite:kPlayerID]).andReturn(YES);
     [self.playersService playerIsFavorite:kPlayerID];
     
     OCMVerify([self.playersService.ioc_localStorageService playerIsFavorite:kPlayerID]);

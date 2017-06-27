@@ -2,7 +2,7 @@
 //  CCPlayersPreviewPresenterTests.m
 //  CSGOConfigs
 //
-//  Created by Петрічук Олег Аркадійовіч on 26.06.17.
+//  Created by Oleg Petruchyk on 26.06.17.
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
@@ -43,13 +43,11 @@ static CGFloat const kCellContainerWidth = 100.f;
 }
 
 - (void)getPlayersMethodStubFromServer:(BOOL)fromServer {
-    void (^proxyBlock)(NSInvocation *) = ^(NSInvocation *invocation) {
+    [OCMStub([self.playersPreviewPresenter.ioc_playersService getPlayersPreviewWithOffset:0 containerWidth:kCellContainerWidth data:OCMOCK_ANY]) andDo:^(NSInvocation *invocation) {
         __unsafe_unretained playersPreviewDataBlock playersPreview;
         [invocation getArgument:&playersPreview atIndex:4];
         playersPreview(self.playersDataFromService, fromServer, 10);
-    };
-    
-    [OCMStub([self.playersPreviewPresenter.ioc_playersService getPlayersPreviewWithOffset:0 containerWidth:kCellContainerWidth data:OCMOCK_ANY]) andDo:proxyBlock];
+    }];
 }
 
 - (void)moduleSetup {

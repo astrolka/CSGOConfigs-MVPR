@@ -2,7 +2,7 @@
 //  CCSkinServerModelTests.m
 //  CSGOConfigs
 //
-//  Created by Петрічук Олег Аркадійовіч on 26.06.17.
+//  Created by Oleg Petruchyk on 26.06.17.
 //  Copyright © 2017 Oleg Petruchyk. All rights reserved.
 //
 
@@ -29,14 +29,14 @@
 
 - (void)testStickerParsing {
     NSString *responce = @"{type:history_go,data:[341291325,188530139,Sticker | Luck Skill,Сегодня 17:16,3735,Наклейка | Везунчик,#000000]}";
-    CCSkinServerModel *skinServerModel = [[CCSkinServerModel alloc]initWithServerResponce:responce];
+    CCSkinServerModel *skinServerModel = [[CCSkinServerModel alloc] initWithServerResponce:responce];
     
     expect(skinServerModel).to.beNil;
 }
 
 - (void)testCaseParsing {
     NSString *responce = @"{type:history_go,data:[1797256701,0,Gamma Case,Сегодня 00:24,118,Gamma Case,#000000]}";
-    CCSkinServerModel *skinServerModel = [[CCSkinServerModel alloc]initWithServerResponce:responce];
+    CCSkinServerModel *skinServerModel = [[CCSkinServerModel alloc] initWithServerResponce:responce];
 
     expect(skinServerModel).to.beNil;
 }

@@ -15,8 +15,8 @@
 
 @interface CCBannerService ()
 
-@property (strong, nonatomic) id <CCRestServiceProtocol> ioc_restService;
-@property (strong, nonatomic) id <CCLocalStorageServiceProtocol> ioc_localStorageService;
+@property (nonatomic, strong) id <CCRestServiceProtocol> ioc_restService;
+@property (nonatomic, strong) id <CCLocalStorageServiceProtocol> ioc_localStorageService;
 
 @end
 

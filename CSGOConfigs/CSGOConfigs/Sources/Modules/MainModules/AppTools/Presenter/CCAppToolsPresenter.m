@@ -7,23 +7,9 @@
 //
 
 #import "CCAppToolsPresenter.h"
-#import "CCLocalStorageServiceProtocol.h"
-#import "CCAppToolsRouterProtocol.h"
-#import "CCOpenURLServiceProtocol.h"
-#import "CCAppToolsViewProtocol.h"
 #import "CCEmailInfoFactory.h"
 #import "CCShareInfoFactory.h"
 #import "CCViewModelAlert.h"
-
-@interface CCAppToolsPresenter () <CCAppToolsViewActionProtocol>
-
-@property (nonatomic, strong) id <CCLocalStorageServiceProtocol> ioc_localStorageService;
-@property (nonatomic, strong) id <CCOpenURLServiceProtocol> ioc_openURLService;
-
-@property (nonatomic, weak) id <CCAppToolsViewProtocol> view;
-@property (nonatomic, strong) id <CCAppToolsRouterProtocol> router;
-
-@end
 
 @implementation CCAppToolsPresenter
 
@@ -60,7 +46,7 @@
 - (void)appToolsViewDidSelectContactWithDeveloper:(id <CCAppToolsViewProtocol>)view {
     [self.router openEmailScreenWithEmailInfo:[CCEmailInfoFactory emailInfoForContactWithDeveloper] withResult:^(CCMailResult result) {
         if (result == CCMailResultNoAccount) {
-            [self showNoEmailAccountAlert];
+            [self.router showViewModelAlert:[self noEmailAccountAlert]];
         }
     }];
 }
@@ -75,14 +61,14 @@
 
 #pragma mark - Private
 
-- (void)showNoEmailAccountAlert {
+- (CCViewModelAlert *)noEmailAccountAlert {
     CCViewModelAlert *alert = [[CCViewModelAlert alloc] initWithTitle:NSLocalizedString(@"email.no_account_message", nil) message:NSLocalizedString(@"email.no_account_message", nil)];
     [alert addAction:[CCViewModelAlertAction cancelActionWithAction:nil]];
     CCViewModelAlertAction *settingsAlertAction = [[CCViewModelAlertAction alloc] initWithTitle:NSLocalizedString(@"alerts.settings_button.title", nil) action:^{
         [self.ioc_openURLService openApplicationSettings];
     }];
     [alert addAction:settingsAlertAction];
-    [self.router showViewModelAlert:alert];
+    return alert;
 }
 
 - (void)updateCacheSize {
