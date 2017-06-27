@@ -16,6 +16,8 @@
 
 @implementation CCSkinServerModelTests
 
+#pragma mark - Tests
+
 - (void)testWeaponParsing {
     NSString *responce = @"{type:history_go,data:[310776580,302028390,G3SG1 | Jungle Dashed (Field-Tested),Сегодня 00:19,53,G3SG1 | Тропическая штриховка (После полевых испытаний),#000000]}";
     CCSkinServerModel * skinServerModel = [[CCSkinServerModel alloc] initWithServerResponce:responce];

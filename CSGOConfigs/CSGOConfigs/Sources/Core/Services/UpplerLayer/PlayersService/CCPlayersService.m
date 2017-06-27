@@ -16,9 +16,6 @@
 
 @interface CCPlayersService ()
 
-@property (strong, nonatomic) id <CCRestServiceProtocol> ioc_restService;
-@property (strong, nonatomic) id <CCLocalStorageServiceProtocol> ioc_localStorageService;
-
 @end
 
 @implementation CCPlayersService

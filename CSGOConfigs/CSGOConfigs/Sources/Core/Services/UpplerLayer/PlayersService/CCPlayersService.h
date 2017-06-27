@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCLocalStorageServiceProtocol.h"
 #import "CCPlayersServiceProtocol.h"
+#import "CCRestServiceProtocol.h"
 
 @interface CCPlayersService : NSObject <CCPlayersServiceProtocol>
+
+@property (nonatomic, strong) id <CCRestServiceProtocol> ioc_restService;
+@property (nonatomic, strong) id <CCLocalStorageServiceProtocol> ioc_localStorageService;
 
 @end

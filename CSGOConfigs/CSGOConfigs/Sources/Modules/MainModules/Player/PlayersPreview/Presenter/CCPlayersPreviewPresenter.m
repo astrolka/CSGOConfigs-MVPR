@@ -60,7 +60,6 @@ static CGFloat const kLoadingLimit = 6.f;
 #pragma mark - Private
 
 - (void)loadPlayersWithSpiner:(BOOL)spiner {
-    
     if (self.players.count == 0 || self.players.count < self.countOfPlayersOnServer) {
         if (spiner) {
             [self.view showSpiner];

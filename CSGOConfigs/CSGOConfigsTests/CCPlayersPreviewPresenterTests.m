@@ -56,7 +56,6 @@ static CGFloat const kCellContainerWidth = 100.f;
     self.view = OCMProtocolMock(@protocol(CCPlayersPreviewViewProtocol));
     self.router = OCMProtocolMock(@protocol(CCPlayersPreviewRouterProtocol));
     [OCMStub([self.view cellContainerWidth]) andReturnValue:OCMOCK_VALUE(kCellContainerWidth)];
-    
     self.playersPreviewPresenter = [[CCPlayersPreviewPresenter alloc] initWithView:self.view router:self.router];
 }
 

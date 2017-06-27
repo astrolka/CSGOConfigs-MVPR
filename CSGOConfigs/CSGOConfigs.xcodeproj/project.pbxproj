@@ -14,6 +14,13 @@
 		A62F92071F0167DA00152A0F /* CCSkinServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01DE51F00E0C600F7B82A /* CCSkinServerModel.m */; };
 		A62F92091F01681200152A0F /* CCPlayersPreviewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01E741F00E0C600F7B82A /* CCPlayersPreviewPresenter.m */; };
 		A62F920C1F01AC3100152A0F /* CCPlayerPreviewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01E0A1F00E0C600F7B82A /* CCPlayerPreviewViewModel.m */; };
+		A62F920E1F02686500152A0F /* CCPlayersServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A62F920D1F02686500152A0F /* CCPlayersServiceTests.m */; };
+		A62F920F1F02702700152A0F /* CCPlayersService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01D781F00E0C600F7B82A /* CCPlayersService.m */; };
+		A62F92101F02705500152A0F /* CCPlayerDescriptionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01E071F00E0C600F7B82A /* CCPlayerDescriptionViewModel.m */; };
+		A62F92111F02706C00152A0F /* CCPlayerDescriptionServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01DDF1F00E0C600F7B82A /* CCPlayerDescriptionServerModel.m */; };
+		A62F92121F02707900152A0F /* CCPlayerPreviewServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01DE21F00E0C600F7B82A /* CCPlayerPreviewServerModel.m */; };
+		A62F92131F0277AB00152A0F /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01DBF1F00E0C600F7B82A /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m */; };
+		A62F92141F0277AE00152A0F /* CCPlayerPreviewCoreDataModel+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01DBD1F00E0C600F7B82A /* CCPlayerPreviewCoreDataModel+CoreDataClass.m */; };
 		A68CE3051F01158700B8755E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68CE3041F01158700B8755E /* Assets.xcassets */; };
 		A6E01EC51F00E0C600F7B82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CBB1F00E0C600F7B82A /* AppDelegate.m */; };
 		A6E01EC61F00E0C600F7B82A /* CCRouter+OpenSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E01CC01F00E0C600F7B82A /* CCRouter+OpenSideMenu.m */; };
@@ -181,6 +188,7 @@
 		9123E46EE86A05E200F5B433 /* Pods-CSGOConfigs-CSGOConfigsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOConfigs-CSGOConfigsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSGOConfigs-CSGOConfigsTests/Pods-CSGOConfigs-CSGOConfigsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A62F92011F0148C700152A0F /* CCSkinServerModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSkinServerModelTests.m; sourceTree = "<group>"; };
 		A62F92031F0150DE00152A0F /* CCPlayersPreviewPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersPreviewPresenterTests.m; sourceTree = "<group>"; };
+		A62F920D1F02686500152A0F /* CCPlayersServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlayersServiceTests.m; sourceTree = "<group>"; };
 		A642CAFC1EBA491B00BFD470 /* CSGOConfigs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGOConfigs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642CB181EBA491B00BFD470 /* CSGOConfigsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOConfigsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642CB1E1EBA491B00BFD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -573,6 +581,7 @@
 		A642CB1B1EBA491B00BFD470 /* CSGOConfigsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A62F920D1F02686500152A0F /* CCPlayersServiceTests.m */,
 				A62F92031F0150DE00152A0F /* CCPlayersPreviewPresenterTests.m */,
 				A62F92011F0148C700152A0F /* CCSkinServerModelTests.m */,
 				A642CB1E1EBA491B00BFD470 /* Info.plist */,
@@ -2824,11 +2833,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A62F92141F0277AE00152A0F /* CCPlayerPreviewCoreDataModel+CoreDataClass.m in Sources */,
 				A62F92041F0150DE00152A0F /* CCPlayersPreviewPresenterTests.m in Sources */,
 				A62F92071F0167DA00152A0F /* CCSkinServerModel.m in Sources */,
 				A62F92091F01681200152A0F /* CCPlayersPreviewPresenter.m in Sources */,
+				A62F920F1F02702700152A0F /* CCPlayersService.m in Sources */,
+				A62F92101F02705500152A0F /* CCPlayerDescriptionViewModel.m in Sources */,
 				A62F92021F0148C700152A0F /* CCSkinServerModelTests.m in Sources */,
+				A62F92121F02707900152A0F /* CCPlayerPreviewServerModel.m in Sources */,
+				A62F920E1F02686500152A0F /* CCPlayersServiceTests.m in Sources */,
 				A62F920C1F01AC3100152A0F /* CCPlayerPreviewViewModel.m in Sources */,
+				A62F92131F0277AB00152A0F /* CCPlayerPreviewCoreDataModel+CoreDataProperties.m in Sources */,
+				A62F92111F02706C00152A0F /* CCPlayerDescriptionServerModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
